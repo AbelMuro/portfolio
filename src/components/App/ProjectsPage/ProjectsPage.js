@@ -8,7 +8,7 @@ function ProjectsPage() {
     useEffect(() => {
         setTimeout(() => {
             setLoading(false) 
-        }, 1000)
+        }, 400)
     },[])
 
 
