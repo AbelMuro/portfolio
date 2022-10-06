@@ -1,3 +1,60 @@
 .container{
-    display: inline-grid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 70px;
+    width: 1000px;
+    margin: 150px auto;
 }   
+
+.whiteBox{
+    background-color: white;
+    width: 500px;
+    transform: rotate(-10deg);
+    transition: all 0.2s ease-in;
+}
+.whiteBox:hover{
+    transform: rotate(10deg);
+}
+
+
+.titleOne, .titleTwo{
+    color: white;
+}
+
+.titleOne{
+    font-family: "AbelFont";
+    font-size: 60px;
+    font-weight: 900;
+}
+
+.titleTwo{
+    font-family: "AbelFont";
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.abelImage{
+    object-fit: contain;
+    width: 400px;
+}
+
+.greyBox{
+    width: 400px;
+    padding: 50px;
+    background-color: grey;
+    transform: rotate(10deg);
+    transition: all 0.2s ease-in;
+}
+
+.greyBox:hover{
+    transform: rotate(0deg);
+}
+
+.loadingIcon{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-top: 20%;
+}

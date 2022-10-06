@@ -1,3 +1,14 @@
+@font-face{
+    font-family: "AbelFont";
+    src: url(./CustomFonts/Nunito-VariableFont_wght.ttf);
+}
+
+
+body{
+    background-image: url("./images/cool shape background.jpg");
+    background-size: cover;
+    background-position: center;
+}
 
 *{
     padding: 0px;
