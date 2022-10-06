@@ -42,3 +42,16 @@
     margin: auto;
     margin-top: 20%;
 }
+
+.projectContainer{
+    padding: 20px;
+}
+
+.imageLink{
+    cursor: pointer;
+}
+
+.projectImage{
+    object-fit: contain;
+    width: 200px;
+}

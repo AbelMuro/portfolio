@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import styles from './styles.module.css';
 import CircularProgress from '@mui/material/CircularProgress';
+import images from './images';
 
 function ProjectsPage() {
     const [loading, setLoading] = useState(true);
@@ -10,8 +11,6 @@ function ProjectsPage() {
             setLoading(false) 
         }, 400)
     },[])
-
-
     return(
         loading ? <CircularProgress className={styles.loadingIcon}/> :
         <section className={styles.container}>
@@ -26,42 +25,55 @@ function ProjectsPage() {
                 </p>                
             </div>
 
-            <a className={styles.projectLink}>
-                <img src="" className={styles.projectImage}/>
+            <div className={styles.projectContainer}>
+                <a className={styles.imageLink}>
+                    <img src={images["darkPinkMasterCard"]} className={styles.projectImage}/>
+                </a>
                 <p className={styles.projectTitle}>
                     Solar Systems Website
                 </p>
-            </a>
-            <a className={styles.projectLink}>
-                <img src="" className={styles.projectImage}/>
+            </div>
+            <div className={styles.projectContainer}>
+                <a className={styles.imageLink}>
+                    <img src={images["foodDasherApp"]} className={styles.projectImage}/>  
+                </a>
                 <p className={styles.projectTitle}>
                     Food Dasher App
                 </p>
-            </a>
-            <a className={styles.projectLink}>
-                <img src="" className={styles.projectImage}/>
+            </div>
+            <div className={styles.projectContainer}>
+                <a className={styles.imageLink}>
+                    <img src={images["jackInTheBox"]} className={styles.projectImage}/>
+                </a>
                 <p className={styles.projectTitle}>
                     Sky Lunar Designs Website
                 </p>
-            </a>
-            <a className={styles.projectLink}>
-                <img src="" className={styles.projectImage}/>
+            </div>
+            <div className={styles.projectContainer}>
+                <a className={styles.imageLink}>
+                    <img src={images["recruitmentWebsite"]} className={styles.projectImage}/>                    
+                </a>
                 <p className={styles.projectTitle}>
                     Dark Pink Mastercard Website
                 </p>
-            </a>
-            <a className={styles.projectLink}>
-                <img src="" className={styles.projectImage}/>
+            </div>
+            <div className={styles.projectContainer}>
+                <a className={styles.imageLink}>
+                    <img src={images["solarSystemWebsite"]} className={styles.projectImage}/>                    
+                </a>
+
                 <p className={styles.projectTitle}>
                     Recruitment Website Mockup
                 </p>
-            </a>
-            <a className={styles.projectLink}>
-                <img src="" className={styles.projectImage}/>
+            </div>
+            <div className={styles.projectContainer}>
+                <a className={styles.imageLink}>
+                    <img src={images["skyLunarDesigns"]} className={styles.projectImage}/>                    
+                </a>
                 <p className={styles.projectTitle}>
                     Jack In The Box Website Clone
                 </p>
-            </a>
+            </div>
 
             <div className={styles.disclaimer}>
                 DISCLAIMER: The two projects; 

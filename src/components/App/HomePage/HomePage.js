@@ -6,6 +6,14 @@ import CircularProgress from '@mui/material/CircularProgress';
 function HomePage() {
     const [loading, setLoading] = useState(true);
 
+
+    const handleHover = (e) => {
+        let blackBox = e.target.querySelector("." + styles.greyBox);
+        blackBox.style
+    }
+
+
+
     useEffect(() => {
         setTimeout(() => {
             setLoading(false) 
@@ -16,7 +24,7 @@ function HomePage() {
     return(
         loading ? <CircularProgress className={styles.loadingIcon}/> :
         <section className={styles.container}> 
-            <div className={styles.whiteBox}>
+            <div className={styles.boxContainer} onHover={handleHover}>
                 <div className={styles.greyBox}>
                     <h1 className={styles.titleOne}>
                         Hello, <br/>
@@ -25,7 +33,8 @@ function HomePage() {
                     <h2 className={styles.titleTwo}>
                         Web Developer
                     </h2>                    
-                </div>
+                </div>    
+                <div className={styles.blackBox}></div>
             </div>
 
             <div className={styles.greyImageContainer}>

@@ -3,18 +3,14 @@
     justify-content: center;
     align-items: center;
     column-gap: 70px;
-    width: 1000px;
+    width: 1300px;
     margin: 150px auto;
 }   
 
-.whiteBox{
-    background-color: white;
+.boxContainer{
     width: 500px;
-    transform: rotate(-10deg);
-    transition: all 0.2s ease-in;
-}
-.whiteBox:hover{
-    transform: rotate(10deg);
+    height: 300px;
+    position: relative;
 }
 
 
@@ -43,16 +39,26 @@
     width: 400px;
     padding: 50px;
     background-color: grey;
-    transform: rotate(10deg);
-    transition: all 0.2s ease-in;
+    position: absolute;
+    z-index: 1;
 }
 
-.greyBox:hover{
-    transform: rotate(0deg);
+.blackBox{
+    width: 400px;
+    padding: 50px;
+    height: 200px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background-color: black;
+    transform: rotate(-10deg);
+    transition: transform 0.2s ease-in;
 }
+
 
 .loadingIcon{
     position: absolute;
+    z-index: 0;
     left: 0;
     right: 0;
     margin: auto;
