@@ -97,7 +97,6 @@ function ProjectsPage() {
 
             <div className={styles.footerContainer}>
                 <div className={styles.disclaimer} onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
-                    <span className={styles.eventBubbling}>
                         DISCLAIMER: The two projects; 
                         jack in the box website and
                         recruitment website were NOT
@@ -114,7 +113,6 @@ function ProjectsPage() {
                         <a href="https://nicepage.com/website-templates/preview/resume-page-525132?device=desktop" target="_blank" className={styles.links}>
                             nicepage.com
                         </a>
-                    </span>
                 </div>
                 <div className={styles.footerBlackBox}></div>
             </div>

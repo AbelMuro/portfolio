@@ -1,4 +1,4 @@
-.container{
+.flexContainerOne{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,7 +30,7 @@
     font-weight: 300;
 }
 
-.greyBox{
+.introBox{
     width: 400px;
     padding: 50px;
     background-color: grey;
@@ -81,4 +81,52 @@
     height: 430px;
     transform: rotate(-10deg);
     transition: transform 0.2s ease-in;
+}
+
+
+.aboutMeContainer{
+    display: block;
+    margin: auto;
+    position: relative;
+    width: 1100px;
+    height: 309px;
+}
+
+.aboutMe{
+    background-color: grey;
+    padding: 50px;
+    width: 1000px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 2;
+}
+
+.aboutMeTitle, .aboutMeDesc{
+    font-family: "AbelFont";
+    color: white;
+}
+
+.aboutMeTitle{
+    font-size: 40px;
+    display: block;
+    width: 300px;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+.aboutMeDesc{
+    font-size: 20px;
+}
+
+.aboutMeBlackBox{
+    background-color: black;
+    width: 1100px;
+    height: 309px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+    transition: transform 0.2s ease-in;
+    transform: rotate(-5deg);
 }
