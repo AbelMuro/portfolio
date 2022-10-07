@@ -27,19 +27,15 @@ function ProjectsPage() {
         <section className={styles.container}>
             <div className={styles.boxContainer}>
                 <div className={styles.greyBox} onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
-                    <h1 className={styles.title}>
-                        <span className={styles.eventBubbling}>
+                    <h1 className={[styles.title, styles.eventBubbling].join(" ")}>
                             My Projects
-                        </span>
+
                     </h1>
-                    <p className={styles.desc}>
-                        <span className={styles.eventBubbling}>
-                            I have used the following frameworks/libraries
-                            for my projects below: React, Redux, GSAP, JQuery,
-                            and SASS.
-                        </span>
+                    <p className={[styles.desc, styles.eventBubbling].join(" ")}>
+                        I have used the following frameworks/libraries
+                        for my projects below: React, Redux, GSAP, JQuery,
+                        and SASS.
                     </p>   
-                            
                 </div>
                 <div className={styles.blackBox}></div>
             </div>
