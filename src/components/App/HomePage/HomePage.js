@@ -7,9 +7,14 @@ function HomePage() {
     const [loading, setLoading] = useState(true);
 
 
-    const handleHover = (e) => {
-        let blackBox = e.target.querySelector("." + styles.greyBox);
-        blackBox.style
+    const handleEnter = (e) => {
+        let blackBox = e.target.nextElementSibling;
+        blackBox.style.transform = 'rotate(10deg)';
+    }
+
+    const handleLeave = (e) => {
+        let blackBox = e.target.nextElementSibling;
+        blackBox.style.transform = '';
     }
 
 
@@ -24,8 +29,8 @@ function HomePage() {
     return(
         loading ? <CircularProgress className={styles.loadingIcon}/> :
         <section className={styles.container}> 
-            <div className={styles.boxContainer} onHover={handleHover}>
-                <div className={styles.greyBox}>
+            <div className={styles.boxContainer}>
+                <div className={styles.greyBox} onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
                     <h1 className={styles.titleOne}>
                         Hello, <br/>
                         I'm Abel Muro
@@ -37,8 +42,9 @@ function HomePage() {
                 <div className={styles.blackBox}></div>
             </div>
 
-            <div className={styles.greyImageContainer}>
-                <img src={abelImage} className={styles.abelImage}/>
+            <div className={styles.imageContainer}>           
+                <img src={abelImage} className={styles.abelImage} onMouseEnter={handleEnter} onMouseLeave={handleLeave}/>
+                <div className={styles.blackBoxImage}></div>
             </div>
         </section>
     )

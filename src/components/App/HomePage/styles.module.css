@@ -30,11 +30,6 @@
     font-weight: 300;
 }
 
-.abelImage{
-    object-fit: contain;
-    width: 400px;
-}
-
 .greyBox{
     width: 400px;
     padding: 50px;
@@ -63,4 +58,27 @@
     right: 0;
     margin: auto;
     margin-top: 20%;
+}
+
+.imageContainer{
+    position: relative;
+    width: 400px;
+    height: 430px;
+}
+
+.abelImage{
+    object-fit: contain;
+    width: 400px;
+    position: absolute;
+    z-index: 2
+}
+
+.blackBoxImage{
+    position: absolute;
+    z-index: 1;
+    background-color: black;
+    width: 400px;
+    height: 430px;
+    transform: rotate(-10deg);
+    transition: transform 0.2s ease-in;
 }

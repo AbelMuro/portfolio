@@ -13,7 +13,10 @@ function NavigationBar() {
             <Link to="/projects">
                 <FontAwesomeIcon icon={faSheetPlastic} className={styles.icon} title={"Projects"}/>                
             </Link>
-            <FontAwesomeIcon icon={faUser} className={styles.icon} title={"Contact Me"}/>
+            <Link to="/contactme">
+                <FontAwesomeIcon icon={faUser} className={styles.icon} title={"Contact Me"}/>            
+            </Link>
+
         </nav>
     )
 }

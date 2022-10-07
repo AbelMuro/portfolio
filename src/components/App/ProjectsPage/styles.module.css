@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     width: 700px;
+    row-gap:20px; 
     margin: 30px auto;
 }
 
@@ -21,10 +22,43 @@
     font-weight: 600;
 }
 
-.greyBox{    
+
+
+
+.boxContainer{
     grid-column: 1/4;
+    position: relative;
+    width: 700px;
+    height: 236px;
+}
+
+.greyBox{    
     background-color: grey;
     padding: 50px;
+    position: absolute;
+    top: 0px;
+    z-index: 2;
+}
+
+.blackBox{
+    background-color: black;
+    width: 700px;
+    height: 236px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+    transform: rotate(-5deg);
+    transition: all 0.2s ease-in;
+}
+
+
+
+
+.footerContainer{
+    position: relative;
+    width: 700px;
+    height: 188px;
 }
 
 .disclaimer{
@@ -33,7 +67,25 @@
     grid-column: 1/4;
     background-color: grey;
     padding: 50px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
 }
+.footerBlackBox{
+    z-index: 1;
+    background-color: black;
+    width: 700px;
+    height: 188px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transform: rotate(-5deg);
+    transition: transform 0.2s ease-in;
+}
+
+
+
 
 .loadingIcon{
     position: absolute;
@@ -48,10 +100,40 @@
 }
 
 .imageLink{
+    display: block;
     cursor: pointer;
+    overflow: hidden;
+    width: 200px;
+    height: 163px;
+    border-radius: 30px;
 }
 
 .projectImage{
     object-fit: contain;
     width: 200px;
+    transition: transform 0.2s ease-in;
+}
+
+.projectTitle{
+    font-family: "AbelFont";
+    text-align: center;
+    background-color: white;
+    padding: 10px;
+}
+
+.projectImage:hover{
+    transform: scale(1.3, 1.3);
+}
+
+.links{
+    color: white;
+    font-family: "AbelFont";
+}
+
+.links:hover{
+    color: black;
+}
+
+.eventBubbling{
+    pointer-events: none;
 }
