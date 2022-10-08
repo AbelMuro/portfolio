@@ -3,13 +3,6 @@
     src: url(./CustomFonts/Nunito-VariableFont_wght.ttf);
 }
 
-body{
-    background-image: url("./images/binary code.gif");
-    background-size: 300px;
-    background-repeat: repeat;
-    background-position: center;
-}
-
 *{
     padding: 0px;
     margin: 0px;

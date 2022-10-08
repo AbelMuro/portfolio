@@ -1,0 +1,51 @@
+.container{
+    background-image: url("./images/binary code.gif");
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    height: 1000px;
+}
+
+.imageContainer{
+    position: relative;
+    width: 300px;
+    height: 323px;
+}
+
+.selfImage{
+    object-fit: contain;
+    width: 300px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 2;
+}
+
+.blackBox{
+    background-color: black;
+    width: 300px;
+    height: 323px;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    z-index: 1;
+    transform: rotate(-10deg);
+    transition: transform 0.2s ease-in;
+}
+
+.aboutMeTitle{
+    font-family: 'AbelFont';
+    font-size: 60px;
+    background-color: white;
+    margin-bottom: 30px;
+    
+}
+
+.aboutMeDesc{
+    font-family: 'AbelFont';
+    font-size: 20px;
+    width: 600px;
+    background-color: white;
+}
