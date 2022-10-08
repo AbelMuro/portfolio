@@ -7,10 +7,13 @@ function HomeSection() {
             <div className={styles.introBox}>
                 <h1 className={styles.introTitle}>Hello,<br/> I'm Abel</h1>
                 <p className={styles.introDesc}>Web Developer</p>
+                <p className={styles.credit}>
+                    Background Image from 
+                    <a target="_blank" href="https://gfycat.com/obvioustheseamericanbadger" className={styles.creditLink}> Gfycat</a>                    
+                </p>
             </div>
         </section>
     )
 }
 export default HomeSection;
 
-//<a href="https://gfycat.com/obvioustheseamericanbadger">via Gfycat</a></p>

@@ -16,7 +16,7 @@
 
 .selfImage{
     object-fit: contain;
-    width: 300px;
+    width: 400px;
     position: absolute;
     left: 0px;
     top: 0px;
@@ -25,8 +25,8 @@
 
 .blackBox{
     background-color: black;
-    width: 300px;
-    height: 323px;
+    width: 400px;
+    height: 430px;
     position: absolute;
     left: 0px;
     right: 0px;

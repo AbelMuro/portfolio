@@ -1,18 +1,19 @@
 import React from 'react';
 import NavigationBar from './NavigationBar';
 import HomeSection from './HomeSection';
-import AboutMeSection from './AboutMeSection'
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import AboutMeSection from './AboutMeSection';
+import ProjectSection from './ProjectSection';
 import './styles.css';
 
 
 function App() {
     return(
-    <BrowserRouter>
-        <NavigationBar />
-        <HomeSection />
-        <AboutMeSection/>
-    </BrowserRouter>
+        <main>
+            <NavigationBar />
+            <HomeSection />
+            <AboutMeSection/>
+            <ProjectSection/>
+        </main>
     )
 }
 

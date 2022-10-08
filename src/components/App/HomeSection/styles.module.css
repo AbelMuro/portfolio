@@ -26,3 +26,14 @@
     color: white;
     font-weight: 300;
 }
+
+.credit, .creditLink{
+    color: white;
+    font-family: "AbelFont";
+    font-size: 15px;
+}
+
+.creditLink:hover{
+    color: grey;
+    cursor: pointer;
+}
