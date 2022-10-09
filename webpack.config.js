@@ -29,12 +29,8 @@ module.exports = {
                 use: [{loader: 'style-loader'}, {loader: 'css-loader'}]
             },
             {
-                test: /\.(png|jpg|webp)$/,
+                test: /\.(png|jpg|webp|wav|mp4)$/,
                 type: 'asset/resource'
-            },
-            {
-                test: /\.mp4$/,
-                use: 'file-loader?name=videos/[name].[ext]'
             },
         ]
     },

@@ -34,25 +34,71 @@
     font-size: 15px;
 }
 
+.credit{
+    margin-top: 30px;
+}
+
 .creditLink:hover{
     color: grey;
     cursor: pointer;
 }
 
-.videoContainer{
-    position: relative;
-    width: 100%;
-    height: 800px;
-    overflow: hidden;
-    
+#audio{
+    position: absolute;
+    bottom: 160px;
+    left: 30px;
 }
 
-video{
+.audioCredit{
     position: absolute;
-    top: 0;
-    left: 0;
+    bottom: 250px;
+    left: 50px;
+    font-size: 15px;
+}
 
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
+.audioLink, .audioCredit{
+    color: white;
+    font-family: "AbelFont";
+}
+
+.audioLink:hover{
+    color: grey;
+}
+
+@keyframes iconAnimation{
+    from {transform: translateY(-10px)}
+    to {transform: translateY(10px)}
+}
+
+.scrollDown{
+    position: absolute;
+    bottom: 80px;
+    left: 50px;
+    color: white;
+    font-family: "AbelFont";
+    font-size: 30px;
+}
+
+.icon{
+    animation-name: iconAnimation;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+
+@media (max-width: 500px){
+    .introTitle{
+        font-size: 50px;
+    }
+    .introDesc{
+        font-size: 25px;
+    }
+
+    .audioCredit{
+        bottom: 350px;
+    }
+    #audio{
+        bottom: 250px;
+    }
+
 }

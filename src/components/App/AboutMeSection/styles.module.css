@@ -1,7 +1,8 @@
 .container{
     background-image: url("./images/binary code.gif");
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 150px;
     align-items: center;
     width: 100%;
     margin: auto;
@@ -48,4 +49,55 @@
     font-size: 20px;
     width: 600px;
     background-color: white;
+}
+
+@media (max-width: 1160px){
+    .container{
+        gap: 50px;
+    }
+
+    .selfImage{
+        width: 300px;
+    }
+    .blackBox{
+        width: 300px;
+        height: 323px;
+    }
+
+    .aboutMeTitle{
+        font-size: 40px;
+    }
+
+    .aboutMeDesc{
+        font-size: 18px;
+        width: 350px;
+    }
+}
+
+@media (max-width: 775px){
+    .container{
+        flex-direction: column;
+    }
+    .aboutMeTitle{
+        text-align: center;
+    }
+}
+
+@media(max-width: 430px){
+    .selfImage{
+        width: 250px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    .blackBox{
+        width: 250px;
+        height: 269px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    .aboutMeDesc{
+        width: 300px;
+    }
 }

@@ -4,14 +4,14 @@ import images from './images';
 
 function ProjectSection () {
     return(
-        <section className={styles.container} id={"projects"}>
+        <section className={styles.container} id="projects">
             <div className={styles.titleBox}>
                 <h1 className={styles.title}>
                     My Projects
                 </h1>    
                 <p className={styles.desc}>
                     I have used the following frameworks/libraries
-                    for my projects; React, Redux, GSAP, Jquery, SASS,
+                    for my projects; React, Redux, GSAP, JQuery, SASS,
                     bootstrap and MUI    
                 </p>            
             </div>
@@ -19,8 +19,7 @@ function ProjectSection () {
             <div className={styles.projectContainer}>
                 <a className={styles.imageLink} target="_blank" href={"https://dark-pink-mastercard.netlify.app"}>
                    <img className={styles.projectImage} src={images["dark pink mastercard"]}/> 
-                </a>
-                
+                </a>   
                 <p className={styles.projectTitle}>
                     Dark Pink Mastercard Website
                 </p>

@@ -53,3 +53,29 @@
     background-color: white;
     width: 400px;
 }
+
+@media (max-width: 1000px){
+    .container{
+        flex-direction: column;
+    }
+    .contactMeContainer{
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 500px) {
+    .container{
+        height: 900px;
+    }
+    .inputMessage{
+        width:300px;
+    }
+    .formContainer{
+        width: 300px;
+    }
+    
+}
+
+@media (max-width: 440px){
+
+}
