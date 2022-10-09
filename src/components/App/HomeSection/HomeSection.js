@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './styles.module.css';
+import backgroundVideo from './videos/purple-smoke-video.mp4';
 
 function HomeSection() {
     return(
@@ -17,3 +18,11 @@ function HomeSection() {
 }
 export default HomeSection;
 
+
+//rememebr to write the video configuration into your notes for webpack
+<div className={styles.videoContainer}>
+    <video autoPlay muted loop>
+        <source src={backgroundVideo} type="video/mp4"/>
+        browser doesnt support video tag
+    </video>
+</div>
