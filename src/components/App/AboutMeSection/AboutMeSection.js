@@ -15,7 +15,7 @@ function AboutMeSection() {
     }
 
     return(
-        <section className={styles.container}>
+        <section className={styles.container} id={"aboutMe"}>
             <div className={styles.imageContainer}>
                 <img src={selfImage} className={styles.selfImage} onMouseEnter={handleEnter} onMouseLeave={handleLeave}/>
                 <div className={styles.blackBox}></div>

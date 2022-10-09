@@ -3,6 +3,10 @@
     src: url(./CustomFonts/Nunito-VariableFont_wght.ttf);
 }
 
+body{
+    scroll-behavior: smooth;
+}
+
 *{
     padding: 0px;
     margin: 0px;
