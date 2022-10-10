@@ -11,7 +11,6 @@ function ContactMeSection() {
         alert("Your Message has been submitted");
         allForms.reset();        
         e.preventDefault;
-
     }
 
     return(

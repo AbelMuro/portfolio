@@ -45,13 +45,13 @@
 
 #audio{
     position: absolute;
-    bottom: 160px;
+    bottom: 180px;
     left: 30px;
 }
 
 .audioCredit{
     position: absolute;
-    bottom: 250px;
+    bottom: 270px;
     left: 50px;
     font-size: 15px;
 }
