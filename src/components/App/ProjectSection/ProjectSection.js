@@ -53,7 +53,7 @@ function ProjectSection () {
             </div>
 
             <div className={styles.projectContainer}>
-                <a className={styles.imageLink} target="_blank" href={"https://sky-lunar-designs.netlify.app"}>
+                <a className={styles.imageLink} target="_blank" href={"https://sky-lunar-designs.netlify.app/"}>
                     <img className={styles.projectImage} src={images["skyLunarDesigns"]}/>
                 </a>
                 <p className={styles.projectTitle}>

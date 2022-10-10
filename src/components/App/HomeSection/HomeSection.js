@@ -7,7 +7,7 @@ import {faAngleDown} from '@fortawesome/free-solid-svg-icons';
 function HomeSection() {
 
     const setHalfVolume = (e) => {
-        e.target.volume /= 4;
+        e.target.volume /= 5;
     }
 
     useEffect(() => {
