@@ -1,7 +1,8 @@
 .homeContainer{
     background-color: black;
     background-image: url('./images/purple smoke.gif');
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     background-position: center;
     width: 100%;
     height: 900px;
@@ -84,6 +85,12 @@
     animation-duration: 1s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in;
+}
+
+@media (max-width: 1618px){
+    .homeContainer{
+        background-size: cover;
+    }
 }
 
 @media (max-width: 500px){
