@@ -25,17 +25,18 @@ function HomeSection() {
                     Background Image from &nbsp;
                     <a target="_blank" href="https://gfycat.com/obvioustheseamericanbadger" className={styles.creditLink}>Gfycat</a>                    
                 </p>
+                <div className={styles.audioCredit}>
+                    Background Audio from &nbsp;
+                    <a target="_blank" href="https://clemensruh.bandcamp.com/track/days-of-wonder" className={styles.audioLink}>Clemens Ruh</a>
+                </div>
+                <audio src={daysOfWonder} controls id={styles.audio} controlsList="nodownload" autoPlay loop></audio>
+
+                <div className={styles.scrollDown}>
+                    Scroll down <FontAwesomeIcon icon={faAngleDown} className={styles.icon}/>
+                </div>
             </div>
 
-            <div className={styles.audioCredit}>
-                Background Audio from &nbsp;
-                <a target="_blank" href="https://clemensruh.bandcamp.com/track/days-of-wonder" className={styles.audioLink}>Clemens Ruh</a>
-            </div>
-            <audio src={daysOfWonder} controls id={styles.audio} controlsList="nodownload" autoPlay loop></audio>
 
-            <div className={styles.scrollDown}>
-                Scroll down <FontAwesomeIcon icon={faAngleDown} className={styles.icon}/>
-            </div>
         </section>
     )
 }

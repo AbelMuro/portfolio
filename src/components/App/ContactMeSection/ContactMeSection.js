@@ -3,6 +3,7 @@ import styles from './styles.module.css';
 import TextField from '@mui/material/TextField';
 import Map from './Map';
 import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
 
 function ContactMeSection() {
 
@@ -37,7 +38,10 @@ function ContactMeSection() {
                             multiline
                             rows={8}
                             required/>  
-                        <Button type="submit" variant="contained">Submit</Button> 
+                        <Box className={styles.button}>
+                            <Button type="submit" variant="contained">Submit</Button>                             
+                        </Box>
+
                     </form>                    
                 </div>
             </div>   
