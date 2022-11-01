@@ -77,6 +77,15 @@ function ProjectSection () {
                     Instant Chatter Box App
                 </p>
             </div>
+            <div className={styles.projectContainer}>
+                <a className={styles.imageLink} target="_blank" href={""}>
+                    <img className={styles.projectImage} src={"http://dummyimage.com/100x100.png/dddddd/000000"}/>
+                </a>
+                <p className={styles.projectTitle}>
+                    Employee Management App
+                </p>
+            </div>
+
             <div className={styles.disclaimerContainer}>
                 <h1 className={styles.disclaimerTitle}>
                     DISCLAIMER
