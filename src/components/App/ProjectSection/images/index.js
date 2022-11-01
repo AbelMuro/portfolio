@@ -4,6 +4,7 @@ import jackInTheBox from './jack in the box clone.png';
 import recruitmentAgency from './recruitment agency mockup.png';
 import skyLunarDesigns from './sky lunar designs.png';
 import solarSystemWebsite from './solar systems website.png';
+import instantChatterBox from './instant chatter box app.png';
 
 export default {
     "dark pink mastercard": darkPinkMastercard,
@@ -11,5 +12,6 @@ export default {
     "jack in the box clone" : jackInTheBox,
     "recruitmentAgency" : recruitmentAgency,
     "skyLunarDesigns" : skyLunarDesigns,
-    "solarSystemWebsite": solarSystemWebsite
+    "solarSystemWebsite": solarSystemWebsite,
+    "instantChatterBox": instantChatterBox
 }

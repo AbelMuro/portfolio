@@ -69,6 +69,14 @@ function ProjectSection () {
                     Solar Systems Website
                 </p>
             </div>
+            <div className={styles.projectContainer}>
+                <a className={styles.imageLink} target="_blank" href={"https://instant-chatter-box.netlify.app/"}>
+                    <img className={styles.projectImage} src={images["instantChatterBox"]}/>
+                </a>
+                <p className={styles.projectTitle}>
+                    Instant Chatter Box App
+                </p>
+            </div>
             <div className={styles.disclaimerContainer}>
                 <h1 className={styles.disclaimerTitle}>
                     DISCLAIMER
