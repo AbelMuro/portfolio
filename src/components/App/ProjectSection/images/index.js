@@ -5,6 +5,8 @@ import recruitmentAgency from './recruitment agency mockup.png';
 import skyLunarDesigns from './sky lunar designs.png';
 import solarSystemWebsite from './solar systems website.png';
 import instantChatterBox from './instant chatter box app.png';
+import employeeManagementApp from './employee management app.png';
+import worldViewApp from './world view app.png';
 
 export default {
     "dark pink mastercard": darkPinkMastercard,
@@ -13,5 +15,7 @@ export default {
     "recruitmentAgency" : recruitmentAgency,
     "skyLunarDesigns" : skyLunarDesigns,
     "solarSystemWebsite": solarSystemWebsite,
-    "instantChatterBox": instantChatterBox
+    "instantChatterBox": instantChatterBox,
+    "employeeManagementApp" : employeeManagementApp,
+    "worldViewApp" : worldViewApp
 }
