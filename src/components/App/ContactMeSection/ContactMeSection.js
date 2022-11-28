@@ -25,7 +25,7 @@ function ContactMeSection() {
                         Questions? Concerns? Please message me 
                         and I will respond as soon as I can.
                     </p>
-                    <form className={styles.formContainer} id="reset" onSubmit={handleSubmit} name="contact" netlify>
+                    <form className={styles.formContainer} id="reset" onSubmit={handleSubmit} name="contact" method="POST" netlify>
                         <TextField id="outlined-basic" label="Enter Name" variant="outlined" className={styles.inputs} name="name" required/>
                         <br/>
                         <TextField id="outlined-basic" label="Enter Email" variant="outlined" className={styles.inputs} name="email" required/>

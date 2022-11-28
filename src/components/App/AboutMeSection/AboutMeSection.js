@@ -28,12 +28,14 @@ function AboutMeSection() {
                 <p className={styles.aboutMeDesc}>
                     Driven, motivated, self-taught web developer that has
                     a strong passion for developing websites and web apps with
-                    React and other technologies. I understand that programming in 
-                    general is a process of continuous learning. So long as I live,
-                    I will continue to learn new technologies to improve as a programmer
-                    and as a person as well. I love working with people of different 
-                    backgrounds and nationalities and enjoy hearing their stories 
-                    and journeys.
+                    React and other technologies. I have been developing websites 
+                    and apps on my free time while working a dead-end job. I also 
+                    enjoy working out and playing some games with a few of my friends.
+                    Although sometimes I struggle a bit due to my depression, I no longer let it 
+                    control my life and still aspire to achieve my dream of becoming a 
+                    web developer. I'm the type of person that will admit to my mistakes 
+                    and would learn from them.
+                    
                 </p>
 
             </div>
