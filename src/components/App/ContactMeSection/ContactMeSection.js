@@ -25,10 +25,10 @@ function ContactMeSection() {
                         Questions? Concerns? Please message me 
                         and I will respond as soon as I can.
                     </p>
-                    <form className={styles.formContainer} id="reset" onSubmit={handleSubmit} name="contact" method="POST" netlify>
-                        <TextField id="outlined-basic" label="Enter Name" variant="outlined" className={styles.inputs} name="name" required/>
+                    <form className={styles.formContainer} id="reset" onSubmit={handleSubmit} name="contact" method="post">
+                        <TextField id="outlined-basic" label="Enter Name" variant="outlined" className={styles.inputs} type="text" name="name" required/>
                         <br/>
-                        <TextField id="outlined-basic" label="Enter Email" variant="outlined" className={styles.inputs} name="email" required/>
+                        <TextField id="outlined-basic" label="Enter Email" variant="outlined" className={styles.inputs} type="email" name="email" required/>
                         <br/>
                         <TextField
                             name="message"
@@ -41,7 +41,7 @@ function ContactMeSection() {
                         <Box className={styles.button}>
                             <Button type="submit" variant="contained">Submit</Button>                             
                         </Box>
-
+                        <input type="hidden" name="form-name" value="contact" />
                     </form>                    
                 </div>
             </div>   
