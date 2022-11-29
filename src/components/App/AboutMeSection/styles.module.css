@@ -7,6 +7,7 @@
     width: 100%;
     margin: auto;
     height: 1000px;
+    padding: 30px 0px;
 }
 
 .imageContainer{
@@ -36,12 +37,17 @@
     transition: transform 0.2s ease-in;
 }
 
+.aboutMeContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 .aboutMeTitle{
     font-family: 'AbelFont';
     font-size: 60px;
     background-color: white;
-    margin-bottom: 30px;
-    
+    text-align: center;
 }
 
 .aboutMeDesc{
@@ -49,6 +55,20 @@
     font-size: 20px;
     width: 600px;
     background-color: white;
+}
+
+.resumeLink{
+    text-align: center;
+    font-family: "AbelFont";
+    background-color: white;
+    padding: 10px;
+    color: blue;
+    cursor: pointer;
+}
+
+.resumeLink:hover{
+    color:grey;
+
 }
 
 @media (max-width: 1160px){

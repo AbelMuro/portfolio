@@ -1,6 +1,13 @@
 import React from 'react';
 import styles from './styles.module.css';
 import selfImage from './images/random image.webp';
+import {Button} from '@mui/material';
+import {styled} from '@mui/system';
+
+const StyledButton = styled(Button)`
+    width: 300px;
+    align-self: center;
+`
 
 function AboutMeSection() {
 
@@ -27,17 +34,17 @@ function AboutMeSection() {
                 </h1>
                 <p className={styles.aboutMeDesc}>
                     Driven, motivated, self-taught web developer that has
-                    a strong passion for developing websites and web apps with
-                    React and other technologies. I have been developing websites 
-                    and apps on my free time while working a dead-end job. I also 
-                    enjoy working out and playing some games with a few of my friends.
-                    Although sometimes I struggle a bit due to my depression, I no longer let it 
-                    control my life and still aspire to achieve my dream of becoming a 
-                    web developer. I'm the type of person that will admit to my mistakes 
-                    and would learn from them.
-                    
+                    a strong passion for developing websites and web apps primarily with
+                    React and other technologies. I have been developing software on my free time 
+                    while working a dead-end job. Although sometimes I struggle a bit because 
+                    of my depression, I no longer let it control my life and still aspire to 
+                    achieve my dream of becoming a web developer. I'm the type of person that 
+                    will admit to my mistakes and would learn from them. I take it as constructive 
+                    criticism when a teammate advices me on how I can improve my skills in javascript. 
+                    For as long as I live, I will continue to learn new technologies and improve 
+                    as a programmer.
                 </p>
-
+                <StyledButton variant="contained">Check out my resume!</StyledButton>
             </div>
             
         </section>
