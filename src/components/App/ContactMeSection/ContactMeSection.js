@@ -24,20 +24,21 @@ function ContactMeSection() {
     }
     
     const encode = (data) => {
-        return Object.keys(data)
-            .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        return Object.keys(data)                                                        
+            .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))  
             .join("&");
     }
 
     const handleSubmit = async (e) => {
+
         try{
             alert("Message has been submitted")             //i am forced to put the alert before making the fetch request 
             await fetch("/" , {                             //because netlify is not displaying the alert if i put it after the fetch request (not sure whats going on here)
                 method: "POST",
                 headers: {"Content-Type" : "application/x-www-form-urlencoded"},
                 body: encode({"form-name" : "contact", name: name, email: email, message: message})
-            });      
-            e.preventDefault();
+            });             
+            e.preventDefault(); 
         }
         catch(error){
             alert(error);
