@@ -23,16 +23,20 @@ export default App;
 
 
 {/*  	
-function addNumbers() {
+ 	function addNumbers() {
     	let first = "2234535";
         let second = "2765";
     	let shortestString;
+        let longestString;
     	if(first.length < second.length){
         	shortestString = first
+            longestString = second;
         }
-        else
+        else{
         	shortestString = second;
-            
+            longestString = first;
+        }
+        	
         let carry = 0;
         let totalSum = "";
              
@@ -47,10 +51,15 @@ function addNumbers() {
             }
             else{
             	carry = 0;
-                totalSum += (currentSum + "");  
+                totalSum += (currentSum + "");
+                
             }                    	
         }   
         
+        if(totalSum.length > shortestString){
+        	longestString.charAt()
+        }
         console.log(totalSum);
             
-    }*/}
+    } */
+}
