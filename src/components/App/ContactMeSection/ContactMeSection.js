@@ -41,7 +41,6 @@ function ContactMeSection() {
             e.preventDefault(); 
         }
         catch(error){
-            alert(error);
         }
    
     }
