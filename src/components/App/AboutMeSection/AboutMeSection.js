@@ -7,6 +7,13 @@ import {styled} from '@mui/system';
 const StyledButton = styled(Button)`
     width: 300px;
     align-self: center;
+    background-color: black;
+    color: white;
+
+    &:hover{
+        background-color: rgb(177, 177, 177);
+        color: black;
+    }
 `
 
 function AboutMeSection() {
@@ -44,7 +51,7 @@ function AboutMeSection() {
                     For as long as I live, I will continue to learn new technologies and improve 
                     as a programmer.
                 </p>
-                <StyledButton variant="contained">Check out my resume!</StyledButton>
+                <StyledButton variant="contained" href="https://drive.google.com/file/d/1yoJvKpQdyXVZKlsoUN2PV-pHcXOwhVMy/view?usp=sharing" target="_blank">Check out my resume!</StyledButton>
             </div>
             
         </section>

@@ -10,9 +10,9 @@ function ProjectSection () {
                     My Projects
                 </h1>    
                 <p className={styles.desc}>
-                    I have used the following frameworks/libraries
+                    I have used the following technologies
                     for my projects; React, Redux, GSAP, JQuery, SASS,
-                    bootstrap and MUI    
+                    bootstrap, MUI, Firestore,    
                 </p>            
             </div>
 
