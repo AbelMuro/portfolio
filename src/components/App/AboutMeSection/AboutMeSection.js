@@ -51,7 +51,7 @@ function AboutMeSection() {
                     For as long as I live, I will continue to learn new technologies and improve 
                     as a programmer.
                 </p>
-                <StyledButton variant="contained" href="https://drive.google.com/file/d/1yoJvKpQdyXVZKlsoUN2PV-pHcXOwhVMy/view?usp=sharing" target="_blank">Check out my resume!</StyledButton>
+                <StyledButton variant="contained" href="https://drive.google.com/file/d/1LERO_8-mB2DTMo6QakzPwsggBjZbxwjH/view?usp=sharing" target="_blank">Check out my resume!</StyledButton>
             </div>
             
         </section>
