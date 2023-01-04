@@ -10,9 +10,9 @@ function ProjectSection () {
                     My Projects
                 </h1>    
                 <p className={styles.desc}>
-                    I have used the following technologies
+                    I have used the following frameworks/libraries
                     for my projects; React, Redux, GSAP, JQuery, SASS,
-                    bootstrap, MUI, Firestore,    
+                    bootstrap and MUI    
                 </p>            
             </div>
 
@@ -89,6 +89,14 @@ function ProjectSection () {
                 </a>
                 <p className={styles.projectTitle}>
                     Recruitment Agency Website
+                </p>
+            </div>
+            <div className={styles.projectContainer}>
+                <a className={styles.imageLink} target="_blank" href={"https://my-kanto-pokedex.netlify.app/"}>
+                    <img className={styles.projectImage} src={images["pokedexApp"]}/>
+                </a>
+                <p className={styles.projectTitle}>
+                    Pokedex App
                 </p>
             </div>
 
