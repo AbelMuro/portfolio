@@ -9,6 +9,7 @@ const StyledButton = styled(Button)`
     align-self: center;
     background-color: black;
     color: white;
+    font-family: "AbelFont";
 
     &:hover{
         background-color: rgb(177, 177, 177);
