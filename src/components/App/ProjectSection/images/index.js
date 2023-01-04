@@ -7,6 +7,7 @@ import solarSystemWebsite from './solar systems website.png';
 import instantChatterBox from './instant chatter box app.png';
 import employeeManagementApp from './employee management app.png';
 import worldViewApp from './world view app.png';
+import pokedexApp from './pokedex.png';
 
 export default {
     "dark pink mastercard": darkPinkMastercard,
@@ -17,5 +18,6 @@ export default {
     "solarSystemWebsite": solarSystemWebsite,
     "instantChatterBox": instantChatterBox,
     "employeeManagementApp" : employeeManagementApp,
-    "worldViewApp" : worldViewApp
+    "worldViewApp" : worldViewApp,
+    "pokedexApp" : pokedexApp
 }
