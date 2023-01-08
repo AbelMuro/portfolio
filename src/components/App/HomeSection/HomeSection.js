@@ -11,8 +11,8 @@ function HomeSection() {
     }
 
     useEffect(() => {
-        document.querySelector("#" + styles.audio).addEventListener("play", setHalfVolume)
-        return () => {removeEventListener("play", setHalfVolume)}
+        document.querySelector("#" + styles.audio).addEventListener("play", setHalfVolume);
+        return () => {removeEventListener("play", setHalfVolume)};
     })
 
 
