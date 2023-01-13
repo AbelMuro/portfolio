@@ -8,6 +8,7 @@ import instantChatterBox from './instant chatter box app.png';
 import employeeManagementApp from './employee management app.png';
 import worldViewApp from './world view app.png';
 import pokedexApp from './pokedex.png';
+import calculatorApp from './calculator app.png';
 
 export default {
     "dark pink mastercard": darkPinkMastercard,
@@ -19,5 +20,6 @@ export default {
     "instantChatterBox": instantChatterBox,
     "employeeManagementApp" : employeeManagementApp,
     "worldViewApp" : worldViewApp,
-    "pokedexApp" : pokedexApp
+    "pokedexApp" : pokedexApp,
+    "calculatorApp" : calculatorApp
 }

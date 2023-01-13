@@ -41,16 +41,16 @@ function AboutMeSection() {
                     About Me
                 </h1>
                 <p className={styles.aboutMeDesc}>
-                    Driven, motivated, self-taught web developer that has
+                    Driven, motivated, aspiring, self-taught front-end developer that has
                     a strong passion for developing websites and web apps primarily with
-                    React and other technologies. I have been developing software on my free time 
+                    React and Redux. I have been developing software on my free time 
                     while working a dead-end job. Although sometimes I struggle a bit because 
                     of my depression, I no longer let it control my life and still aspire to 
-                    achieve my dream of becoming a web developer. I'm the type of person that 
-                    will admit to my mistakes and would learn from them. I take it as constructive 
-                    criticism when a teammate advices me on how I can improve my skills in javascript. 
-                    For as long as I live, I will continue to learn new technologies and improve 
-                    as a programmer.
+                    achieve my dream of becoming a web developer. During the time I used to develop 
+                    apps, I managed to solve alot of high level challenges. Which, in turn, made me 
+                    into a better programmer and problem solver. I understand that programming in general 
+                    is a process of continuous learning, and I will always strive to improve by taking a teammates
+                    advice as constructive criticism.
                 </p>
                 <StyledButton variant="contained" href="https://drive.google.com/file/d/1LERO_8-mB2DTMo6QakzPwsggBjZbxwjH/view?usp=sharing" target="_blank">Check out my resume!</StyledButton>
             </div>

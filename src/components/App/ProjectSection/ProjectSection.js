@@ -24,23 +24,6 @@ function ProjectSection () {
                     Dark Pink Mastercard Website
                 </p>
             </div>
-
-            <div className={styles.projectContainer}>
-                <a className={styles.imageLink} target="_blank" href={"https://food-dasher-app.netlify.app"}>
-                    <img className={styles.projectImage} src={images["food dasher app"]}/>
-                </a>
-                <p className={styles.projectTitle}>
-                    Food Dasher App
-                </p>
-            </div>
-            <div className={styles.projectContainer}>
-                <a className={styles.imageLink} target="_blank" href={"https://world-view-app.netlify.app/"}>
-                    <img className={styles.projectImage} src={images["worldViewApp"]}/>
-                </a>
-                <p className={styles.projectTitle}>
-                    World View App
-                </p>
-            </div>
             <div className={styles.projectContainer}>
                 <a className={styles.imageLink} target="_blank" href={"https://sky-lunar-designs.netlify.app/"}>
                     <img className={styles.projectImage} src={images["skyLunarDesigns"]}/>
@@ -59,6 +42,38 @@ function ProjectSection () {
                 </p>
             </div>
             <div className={styles.projectContainer}>
+                <a className={styles.imageLink} target="_blank" href={"https://jack-in-the-box-clone.netlify.app"}>
+                    <img className={styles.projectImage} src={images["jack in the box clone"]}/>
+                </a>
+                <p className={styles.projectTitle}>
+                    Jack In The Box Website
+                </p>
+            </div>
+            <div className={styles.projectContainer}>
+                <a className={styles.imageLink} target="_blank" href={"https://recruitment-website-mockup.netlify.app"}>
+                    <img className={styles.projectImage} src={images["recruitmentAgency"]}/>
+                </a>
+                <p className={styles.projectTitle}>
+                    Recruitment Agency Website
+                </p>
+            </div>
+            <div className={styles.projectContainer}>
+                <a className={styles.imageLink} target="_blank" href={"https://food-dasher-app.netlify.app"}>
+                    <img className={styles.projectImage} src={images["food dasher app"]}/>
+                </a>
+                <p className={styles.projectTitle}>
+                    Food Dasher App
+                </p>
+            </div>
+            <div className={styles.projectContainer}>
+                <a className={styles.imageLink} target="_blank" href={"https://world-view-app.netlify.app/"}>
+                    <img className={styles.projectImage} src={images["worldViewApp"]}/>
+                </a>
+                <p className={styles.projectTitle}>
+                    World View App
+                </p>
+            </div>
+            <div className={styles.projectContainer}>
                 <a className={styles.imageLink} target="_blank" href={"https://instant-chatter-box.netlify.app/"}>
                     <img className={styles.projectImage} src={images["instantChatterBox"]}/>
                 </a>
@@ -74,29 +89,20 @@ function ProjectSection () {
                     Employee Management App
                 </p>
             </div>
-
-            <div className={styles.projectContainer}>
-                <a className={styles.imageLink} target="_blank" href={"https://jack-in-the-box-clone.netlify.app"}>
-                    <img className={styles.projectImage} src={images["jack in the box clone"]}/>
-                </a>
-                <p className={styles.projectTitle}>
-                    Jack In The Box Clone
-                </p>
-            </div>
-            <div className={styles.projectContainer}>
-                <a className={styles.imageLink} target="_blank" href={"https://recruitment-website-mockup.netlify.app"}>
-                    <img className={styles.projectImage} src={images["recruitmentAgency"]}/>
-                </a>
-                <p className={styles.projectTitle}>
-                    Recruitment Agency Website
-                </p>
-            </div>
             <div className={styles.projectContainer}>
                 <a className={styles.imageLink} target="_blank" href={"https://my-kanto-pokedex.netlify.app/"}>
                     <img className={styles.projectImage} src={images["pokedexApp"]}/>
                 </a>
                 <p className={styles.projectTitle}>
                     Pokedex App
+                </p>
+            </div>
+            <div className={styles.projectContainer}>
+                <a className={styles.imageLink} target="_blank" href={"https://calculator-buddy.netlify.app/"}>
+                    <img className={styles.projectImage} src={images["calculatorApp"]}/>
+                </a>
+                <p className={styles.projectTitle}>
+                    Calculator App
                 </p>
             </div>
 
