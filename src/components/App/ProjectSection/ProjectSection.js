@@ -105,6 +105,14 @@ function ProjectSection () {
                     Calculator App
                 </p>
             </div>
+            <div className={styles.projectContainer}>
+                <a className={styles.imageLink} target="_blank" href={"https://crypto-coins-currency.netlify.app/"}>
+                    <img className={styles.projectImage} src={images["cryptoCurrencyApp"]}/>
+                </a>
+                <p className={styles.projectTitle}>
+                    Crypto Currency App
+                </p>
+            </div>
 
             <div className={styles.disclaimerContainer}>
                 <h1 className={styles.disclaimerTitle}>

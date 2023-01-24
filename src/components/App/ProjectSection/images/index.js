@@ -9,6 +9,7 @@ import employeeManagementApp from './employee management app.png';
 import worldViewApp from './world view app.png';
 import pokedexApp from './pokedex.png';
 import calculatorApp from './calculator app.png';
+import cryptoCurrencyApp from './crypto currency app.png';
 
 export default {
     "dark pink mastercard": darkPinkMastercard,
@@ -21,5 +22,6 @@ export default {
     "employeeManagementApp" : employeeManagementApp,
     "worldViewApp" : worldViewApp,
     "pokedexApp" : pokedexApp,
-    "calculatorApp" : calculatorApp
+    "calculatorApp" : calculatorApp,
+    "cryptoCurrencyApp" : cryptoCurrencyApp
 }
