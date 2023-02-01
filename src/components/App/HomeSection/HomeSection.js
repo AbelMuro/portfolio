@@ -32,14 +32,10 @@ function HomeSection() {
                 <div className={styles.audioContainer}>
                     <audio src={daysOfWonder} controls id={styles.audio} controlsList="nodownload" autoPlay loop></audio>
                 </div>
-                
-
                 <div className={styles.scrollDown}>
                     Scroll down <FontAwesomeIcon icon={faAngleDown} className={styles.icon}/>
                 </div>
             </div>
-
-
         </section>
     )
 }
