@@ -113,6 +113,14 @@ function ProjectSection () {
                     Crypto Currency App
                 </p>
             </div>
+            <div className={styles.projectContainer}>
+                <a className={styles.imageLink} target="_blank" href={"https://kick-ass-weather-app.netlify.app/"}>
+                    <img className={styles.projectImage} src={images["weatherApp"]}/>
+                </a>
+                <p className={styles.projectTitle}>
+                    Weather App
+                </p>
+            </div>
 
             <div className={styles.disclaimerContainer}>
                 <h1 className={styles.disclaimerTitle}>
