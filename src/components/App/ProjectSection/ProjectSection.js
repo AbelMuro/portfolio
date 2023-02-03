@@ -121,6 +121,14 @@ function ProjectSection () {
                     Weather App
                 </p>
             </div>
+            <div className={styles.projectContainer}>
+                <a className={styles.imageLink} target="_blank" href={"https://daily-horoscopess.netlify.app/"}>
+                    <img className={styles.projectImage} src={images["horoscopeApp"]}/>
+                </a>
+                <p className={styles.projectTitle}>
+                    Daily Horoscope App
+                </p>
+            </div>
 
             <div className={styles.disclaimerContainer}>
                 <h1 className={styles.disclaimerTitle}>

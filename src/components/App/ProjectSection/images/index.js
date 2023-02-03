@@ -11,6 +11,7 @@ import pokedexApp from './pokedex.png';
 import calculatorApp from './calculator app.png';
 import cryptoCurrencyApp from './crypto currency app.png';
 import weatherApp from './weather app.png';
+import horoscopeApp from './horoscope app.png'
 
 export default {
     "dark pink mastercard": darkPinkMastercard,
@@ -25,5 +26,6 @@ export default {
     "pokedexApp" : pokedexApp,
     "calculatorApp" : calculatorApp,
     "cryptoCurrencyApp" : cryptoCurrencyApp,
-    "weatherApp" : weatherApp
+    "weatherApp" : weatherApp,
+    "horoscopeApp" : horoscopeApp
 }
