@@ -17,14 +17,6 @@ function ProjectSection () {
             </div>
 
             <div className={styles.projectContainer}>
-                <a className={styles.imageLink} target="_blank" href={"https://dark-pink-mastercard.netlify.app"}>
-                   <img className={styles.projectImage} src={images["dark pink mastercard"]}/> 
-                </a>   
-                <p className={styles.projectTitle}>
-                    Dark Pink Mastercard Website
-                </p>
-            </div>
-            <div className={styles.projectContainer}>
                 <a className={styles.imageLink} target="_blank" href={"https://sky-lunar-designs.netlify.app/"}>
                     <img className={styles.projectImage} src={images["skyLunarDesigns"]}/>
                 </a>
@@ -32,6 +24,16 @@ function ProjectSection () {
                     Sky Lunar Designs Website
                 </p>
             </div>
+
+            <div className={styles.projectContainer}>
+                <a className={styles.imageLink} target="_blank" href={"https://dark-pink-mastercard.netlify.app"}>
+                   <img className={styles.projectImage} src={images["dark pink mastercard"]}/> 
+                </a>   
+                <p className={styles.projectTitle}>
+                    Dark Pink Mastercard Website
+                </p>
+            </div>
+
 
             <div className={styles.projectContainer}>
                 <a className={styles.imageLink} target="_blank" href={"https://solar-systems-website.netlify.app"}>
@@ -129,6 +131,33 @@ function ProjectSection () {
                     Daily Horoscope App
                 </p>
             </div>
+            <div className={styles.projectContainer}>
+                <a className={styles.imageLink} target="_blank" href={"https://my-dictionaryy-app.netlify.app/"}>
+                    <img className={styles.projectImage} src={images["dictionaryApp"]}/>
+                </a>
+                <p className={styles.projectTitle}>
+                    Dictionary App
+                </p>
+            </div>
+            <div className={styles.projectContainer}>
+                <a className={styles.imageLink} target="_blank" href={"https://multi-step-form-subscription.netlify.app/"}>
+                    <img className={styles.projectImage} src={images["multiFormApp"]}/>
+                </a>
+                <p className={styles.projectTitle}>
+                    Multi Step Form App
+                </p>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
 
             <div className={styles.disclaimerContainer}>
                 <h1 className={styles.disclaimerTitle}>

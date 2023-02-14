@@ -12,6 +12,8 @@ import calculatorApp from './calculator app.png';
 import cryptoCurrencyApp from './crypto currency app.png';
 import weatherApp from './weather app.png';
 import horoscopeApp from './horoscope app.png'
+import dictionaryApp from './dictionary app.png';
+import multiFormApp from './multi form app.png';
 
 export default {
     "dark pink mastercard": darkPinkMastercard,
@@ -27,5 +29,7 @@ export default {
     "calculatorApp" : calculatorApp,
     "cryptoCurrencyApp" : cryptoCurrencyApp,
     "weatherApp" : weatherApp,
-    "horoscopeApp" : horoscopeApp
+    "horoscopeApp" : horoscopeApp,
+    "dictionaryApp" : dictionaryApp,
+    "multiFormApp": multiFormApp
 }
