@@ -52,7 +52,9 @@ function AboutMeSection() {
                     is a process of continuous learning, and I will always strive to improve by taking a teammates
                     advice as constructive criticism.
                 </p>
-                <StyledButton variant="contained" href="https://drive.google.com/file/d/1LERO_8-mB2DTMo6QakzPwsggBjZbxwjH/view?usp=sharing" target="_blank">Check out my resume!</StyledButton>
+                <StyledButton variant="contained" href="https://drive.google.com/file/d/1LERO_8-mB2DTMo6QakzPwsggBjZbxwjH/view?usp=sharing" target="_blank">
+                    Check out my resume!
+                </StyledButton>
             </div>
             
         </section>

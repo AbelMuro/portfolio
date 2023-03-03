@@ -14,6 +14,8 @@ import weatherApp from './weather app.png';
 import horoscopeApp from './horoscope app.png'
 import dictionaryApp from './dictionary app.png';
 import multiFormApp from './multi form app.png';
+import audiophile from './audiophile website.png';
+import countryApp from './Countries data app.png';
 
 export default {
     "dark pink mastercard": darkPinkMastercard,
@@ -31,5 +33,7 @@ export default {
     "weatherApp" : weatherApp,
     "horoscopeApp" : horoscopeApp,
     "dictionaryApp" : dictionaryApp,
-    "multiFormApp": multiFormApp
+    "multiFormApp": multiFormApp,
+    "audiophile" : audiophile,
+    "countryApp" : countryApp,
 }

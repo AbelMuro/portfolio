@@ -147,7 +147,22 @@ function ProjectSection () {
                     Multi Step Form App
                 </p>
             </div>
-
+            <div className={styles.projectContainer}>
+                <a className={styles.imageLink} target="_blank" href={"https://front-end-audiophile-website.netlify.app/"}>
+                    <img className={styles.projectImage} src={images["audiophile"]}/>
+                </a>
+                <p className={styles.projectTitle}>
+                    Audiophile Website
+                </p>
+            </div>
+            <div className={styles.projectContainer}>
+                <a className={styles.imageLink} target="_blank" href={"https://country-app-data.netlify.app/"}>
+                    <img className={styles.projectImage} src={images["countryApp"]}/>
+                </a>
+                <p className={styles.projectTitle}>
+                    Countries Data App
+                </p>
+            </div>
 
 
 
@@ -164,8 +179,9 @@ function ProjectSection () {
                     DISCLAIMER
                 </h1>
                 <p className={styles.disclaimerDesc}>
-                    The two projects; Jack in the box website 
-                    and Recruitment Agency website were NOT 
+                    The following projects; Jack in the box website, 
+                    Recruitment Agency website, Audiophile website, 
+                    Multi-Step form app, and Countries Data app were NOT 
                     designed by me. I merely re-wrote the websites 
                     from scratch for learning purposes. The credit for 
                     designing these two websites goes to the 
@@ -173,9 +189,13 @@ function ProjectSection () {
                     <a target={"_blank"} href={"https://investors.jackinthebox.com/our-company/about-us/"} className={styles.disclaimerLink}>
                         Jack In The Box Company
                     </a>
-                    &nbsp;and&nbsp;
+                    ,&nbsp;
                     <a target={"_blank"} href={"https://nicepage.com/st/525132/resume-page-website-template"} className={styles.disclaimerLink}>
                         nicepage.com
+                    </a>
+                    ,&nbsp;
+                    <a target={"_blank"} href={"https://www.frontendmentor.io/home"} className={styles.disclaimerLink}>
+                        frontendmentor.io
                     </a>
                 </p>
             </div>
