@@ -163,16 +163,14 @@ function ProjectSection () {
                     Countries Data App
                 </p>
             </div>
-
-
-
-
-
-
-
-
-
-
+            <div className={styles.projectContainer}>
+                <a className={styles.imageLink} target="_blank" href={"https://designo-website-front-end.netlify.app/"}>
+                    <img className={styles.projectImage} src={images["designoWebsite"]}/>
+                </a>
+                <p className={styles.projectTitle}>
+                    Designo Website
+                </p>
+            </div>
 
             <div className={styles.disclaimerContainer}>
                 <h1 className={styles.disclaimerTitle}>
@@ -181,8 +179,8 @@ function ProjectSection () {
                 <p className={styles.disclaimerDesc}>
                     The following projects; Jack in the box website, 
                     Recruitment Agency website, Audiophile website, 
-                    Multi-Step form app, and Countries Data app were NOT 
-                    designed by me. I merely re-wrote the websites 
+                    Multi-Step form app, Countries Data app, and Designo website 
+                    were NOT designed by me. I merely re-wrote the websites 
                     from scratch for learning purposes. The credit for 
                     designing these two websites goes to the 
                     &nbsp;
