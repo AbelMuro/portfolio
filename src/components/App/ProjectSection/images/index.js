@@ -17,6 +17,8 @@ import multiFormApp from './multi form app.png';
 import audiophile from './audiophile website.png';
 import countryApp from './Countries data app.png';
 import designoWebsite from './designo website.png';
+import productFeedbackApp from './product feedback app.png';
+import rockPaperScissors from './rock paper scissors app.png';
 
 export default {
     "dark pink mastercard": darkPinkMastercard,
@@ -37,5 +39,7 @@ export default {
     "multiFormApp": multiFormApp,
     "audiophile" : audiophile,
     "countryApp" : countryApp,
-    "designoWebsite" : designoWebsite
+    "designoWebsite" : designoWebsite,
+    "productFeedbackApp" : productFeedbackApp,
+    "rockPaperScissorsApp": rockPaperScissors,
 }

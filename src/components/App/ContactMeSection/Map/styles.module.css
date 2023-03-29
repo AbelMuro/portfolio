@@ -5,7 +5,6 @@
 
 @media (max-width: 1000px){
     .mapContainer{
-        height:600px;
         background-color: rgb(177, 177, 177);
     }
 }

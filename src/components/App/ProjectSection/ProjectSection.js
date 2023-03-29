@@ -171,6 +171,22 @@ function ProjectSection () {
                     Designo Website
                 </p>
             </div>
+            <div className={styles.projectContainer}>
+                <a className={styles.imageLink} target="_blank" href={"https://product-feedback-front-end.netlify.app/"}>
+                    <img className={styles.projectImage} src={images["productFeedbackApp"]}/>
+                </a>
+                <p className={styles.projectTitle}>
+                    Product Feedback App
+                </p>
+            </div>
+            <div className={styles.projectContainer}>
+                <a className={styles.imageLink} target="_blank" href={"https://rock-paper-scissors-lizard-spock1.netlify.app/"}>
+                    <img className={styles.projectImage} src={images["rockPaperScissorsApp"]}/>
+                </a>
+                <p className={styles.projectTitle}>
+                    Rock, Paper, Scissors App
+                </p>
+            </div>
 
             <div className={styles.disclaimerContainer}>
                 <h1 className={styles.disclaimerTitle}>
@@ -179,10 +195,11 @@ function ProjectSection () {
                 <p className={styles.disclaimerDesc}>
                     The following projects; Jack in the box website, 
                     Recruitment Agency website, Audiophile website, 
-                    Multi-Step form app, Countries Data app, and Designo website 
+                    Multi-Step form app, Countries Data app, Designo website,
+                    Product Feedback app, and Rock Paper Scissors App  
                     were NOT designed by me. I merely re-wrote the websites 
                     from scratch for learning purposes. The credit for 
-                    designing these two websites goes to the 
+                    designing these websites goes to 
                     &nbsp;
                     <a target={"_blank"} href={"https://investors.jackinthebox.com/our-company/about-us/"} className={styles.disclaimerLink}>
                         Jack In The Box Company
