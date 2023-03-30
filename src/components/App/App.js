@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {lazy} from 'react';
 import NavigationBar from './NavigationBar';
 import HomeSection from './HomeSection';
 import AboutMeSection from './AboutMeSection';
-import ProjectSection from './ProjectSection';
+const ProjectSection = lazy(() => import('./ProjectSection'));
 import ContactMeSection from './ContactMeSection';
 import './styles.css';
 

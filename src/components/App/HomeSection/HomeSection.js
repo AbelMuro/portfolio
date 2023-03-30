@@ -7,7 +7,7 @@ import {faAngleDown} from '@fortawesome/free-solid-svg-icons';
 function HomeSection() {
 
     const setHalfVolume = (e) => {
-        e.target.volume /= 5;
+        e.target.volume = 0.2;
     }
 
     useEffect(() => {
@@ -30,7 +30,7 @@ function HomeSection() {
                     <a target="_blank" href="https://clemensruh.bandcamp.com/track/days-of-wonder" className={styles.audioLink}>Clemens Ruh</a>
                 </div>
                 <div className={styles.audioContainer}>
-                    <audio src={daysOfWonder} controls id={styles.audio} controlsList="nodownload" autoPlay loop></audio>
+                    <audio src={daysOfWonder} controls id={styles.audio} controlsList="nodownload" loop></audio>
                 </div>
                 <div className={styles.scrollDown}>
                     Scroll down <FontAwesomeIcon icon={faAngleDown} className={styles.icon}/>
