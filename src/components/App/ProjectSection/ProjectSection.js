@@ -1,4 +1,5 @@
 import React from 'react';
+import Project from './Project';
 import styles from './styles.module.css';
 import images from './images';
 
@@ -15,179 +16,31 @@ function ProjectSection () {
                     bootstrap and MUI    
                 </p>            
             </div>
+            <Project href="https://sky-lunar-designs.netlify.app/" src={images["skyLunarDesigns"]} projectTitle="Sky Lunar Designs Website"/>
+            <Project href="https://dark-pink-mastercard.netlify.app" src={images["dark pink mastercard"]} projectTitle="Dark Pink Mastercard"/>
+            <Project href="https://solar-systems-website.netlify.app" src={images["solarSystemWebsite"]} projectTitle="Solar Systems Website"/>
+            <Project href="https://jack-in-the-box-clone.netlify.app" src={images["jack in the box clone"]} projectTitle="Jack In The Box Website"/>
+            <Project href="https://recruitment-website-mockup.netlify.app" src={images["recruitmentAgency"]} projectTitle="Recruitment Agency Website"/>
+            <Project href="https://food-dasher-app.netlify.app" src={images["food dasher app"]} projectTitle="Food Dasher App"/>
+            <Project href="https://world-view-app.netlify.app/" src={images["worldViewApp"]} projectTitle="World View App"/>
+            <Project href="https://instant-chatter-box.netlify.app/" src={images["instantChatterBox"]} projectTitle="Instant Chatter Box App"/>
+            <Project href="https://employment-management.netlify.app/" src={images["employeeManagementApp"]} projectTitle="Employee Management App"/>
+            <Project href="https://my-kanto-pokedex.netlify.app/" src={images["pokedexApp"]} projectTitle="Pokedex App"/>
+            <Project href="https://calculator-buddy.netlify.app/" src={images["calculatorApp"]} projectTitle="calculatorApp"/>
+            <Project href="https://crypto-coins-currency.netlify.app/" src={images["cryptoCurrencyApp"]} projectTitle="Crypto Currency App"/>
+            <Project href="https://kick-ass-weather-app.netlify.app/" src={images["weatherApp"]} projectTitle="Weather App"/>
+            <Project href="https://daily-horoscopess.netlify.app/" src={images["horoscopeApp"]} projectTitle="Daily Horoscope App"/>
+            <Project href="https://my-dictionaryy-app.netlify.app/" src={images["dictionaryApp"]} projectTitle="Dictionary App"/>
+            <Project href="https://multi-step-form-subscription.netlify.app/" src={images["multiFormApp"]} projectTitle="Multi Step Form App"/>
+            <Project href="https://front-end-audiophile-website.netlify.app/" src={images["audiophile"]} projectTitle="Audiophile Website"/>
+            <Project href="https://country-app-data.netlify.app/" src={images["countryApp"]} projectTitle="Countries Data App"/>
+            <Project href="https://designo-website-front-end.netlify.app/" src={images["designoWebsite"]} projectTitle="Designo Website"/>
+            <Project href="https://product-feedback-front-end.netlify.app/" src={images["productFeedbackApp"]} projectTitle="Product Feedback App"/>
+            <Project href="https://rock-paper-scissors-lizard-spock1.netlify.app/" src={images["rockPaperScissorsApp"]} projectTitle="Rock, Paper, Scissors App"/>
+            <Project href="https://space-tourism-front-end.netlify.app/" src={images["spaceTourism"]} projectTitle="Space Tourism Website"/>
 
-            <div className={styles.projectContainer}>
-                <a className={styles.imageLink} target="_blank" href={"https://sky-lunar-designs.netlify.app/"}>
-                    <img className={styles.projectImage} src={images["skyLunarDesigns"]}/>
-                </a>
-                <p className={styles.projectTitle}>
-                    Sky Lunar Designs Website
-                </p>
-            </div>
 
-            <div className={styles.projectContainer}>
-                <a className={styles.imageLink} target="_blank" href={"https://dark-pink-mastercard.netlify.app"}>
-                   <img className={styles.projectImage} src={images["dark pink mastercard"]}/> 
-                </a>   
-                <p className={styles.projectTitle}>
-                    Dark Pink Mastercard Website
-                </p>
-            </div>
-
-
-            <div className={styles.projectContainer}>
-                <a className={styles.imageLink} target="_blank" href={"https://solar-systems-website.netlify.app"}>
-                    <img className={styles.projectImage} src={images["solarSystemWebsite"]}/>
-                </a>
-                <p className={styles.projectTitle}>
-                    Solar Systems Website
-                </p>
-            </div>
-            <div className={styles.projectContainer}>
-                <a className={styles.imageLink} target="_blank" href={"https://jack-in-the-box-clone.netlify.app"}>
-                    <img className={styles.projectImage} src={images["jack in the box clone"]}/>
-                </a>
-                <p className={styles.projectTitle}>
-                    Jack In The Box Website
-                </p>
-            </div>
-            <div className={styles.projectContainer}>
-                <a className={styles.imageLink} target="_blank" href={"https://recruitment-website-mockup.netlify.app"}>
-                    <img className={styles.projectImage} src={images["recruitmentAgency"]}/>
-                </a>
-                <p className={styles.projectTitle}>
-                    Recruitment Agency Website
-                </p>
-            </div>
-            <div className={styles.projectContainer}>
-                <a className={styles.imageLink} target="_blank" href={"https://food-dasher-app.netlify.app"}>
-                    <img className={styles.projectImage} src={images["food dasher app"]}/>
-                </a>
-                <p className={styles.projectTitle}>
-                    Food Dasher App
-                </p>
-            </div>
-            <div className={styles.projectContainer}>
-                <a className={styles.imageLink} target="_blank" href={"https://world-view-app.netlify.app/"}>
-                    <img className={styles.projectImage} src={images["worldViewApp"]}/>
-                </a>
-                <p className={styles.projectTitle}>
-                    World View App
-                </p>
-            </div>
-            <div className={styles.projectContainer}>
-                <a className={styles.imageLink} target="_blank" href={"https://instant-chatter-box.netlify.app/"}>
-                    <img className={styles.projectImage} src={images["instantChatterBox"]}/>
-                </a>
-                <p className={styles.projectTitle}>
-                    Instant Chatter Box App
-                </p>
-            </div>
-            <div className={styles.projectContainer}>
-                <a className={styles.imageLink} target="_blank" href={"https://employment-management.netlify.app/"}>
-                    <img className={styles.projectImage} src={images["employeeManagementApp"]}/>
-                </a>
-                <p className={styles.projectTitle}>
-                    Employee Management App
-                </p>
-            </div>
-            <div className={styles.projectContainer}>
-                <a className={styles.imageLink} target="_blank" href={"https://my-kanto-pokedex.netlify.app/"}>
-                    <img className={styles.projectImage} src={images["pokedexApp"]}/>
-                </a>
-                <p className={styles.projectTitle}>
-                    Pokedex App
-                </p>
-            </div>
-            <div className={styles.projectContainer}>
-                <a className={styles.imageLink} target="_blank" href={"https://calculator-buddy.netlify.app/"}>
-                    <img className={styles.projectImage} src={images["calculatorApp"]}/>
-                </a>
-                <p className={styles.projectTitle}>
-                    Calculator App
-                </p>
-            </div>
-            <div className={styles.projectContainer}>
-                <a className={styles.imageLink} target="_blank" href={"https://crypto-coins-currency.netlify.app/"}>
-                    <img className={styles.projectImage} src={images["cryptoCurrencyApp"]}/>
-                </a>
-                <p className={styles.projectTitle}>
-                    Crypto Currency App
-                </p>
-            </div>
-            <div className={styles.projectContainer}>
-                <a className={styles.imageLink} target="_blank" href={"https://kick-ass-weather-app.netlify.app/"}>
-                    <img className={styles.projectImage} src={images["weatherApp"]}/>
-                </a>
-                <p className={styles.projectTitle}>
-                    Weather App
-                </p>
-            </div>
-            <div className={styles.projectContainer}>
-                <a className={styles.imageLink} target="_blank" href={"https://daily-horoscopess.netlify.app/"}>
-                    <img className={styles.projectImage} src={images["horoscopeApp"]}/>
-                </a>
-                <p className={styles.projectTitle}>
-                    Daily Horoscope App
-                </p>
-            </div>
-            <div className={styles.projectContainer}>
-                <a className={styles.imageLink} target="_blank" href={"https://my-dictionaryy-app.netlify.app/"}>
-                    <img className={styles.projectImage} src={images["dictionaryApp"]}/>
-                </a>
-                <p className={styles.projectTitle}>
-                    Dictionary App
-                </p>
-            </div>
-            <div className={styles.projectContainer}>
-                <a className={styles.imageLink} target="_blank" href={"https://multi-step-form-subscription.netlify.app/"}>
-                    <img className={styles.projectImage} src={images["multiFormApp"]}/>
-                </a>
-                <p className={styles.projectTitle}>
-                    Multi Step Form App
-                </p>
-            </div>
-            <div className={styles.projectContainer}>
-                <a className={styles.imageLink} target="_blank" href={"https://front-end-audiophile-website.netlify.app/"}>
-                    <img className={styles.projectImage} src={images["audiophile"]}/>
-                </a>
-                <p className={styles.projectTitle}>
-                    Audiophile Website
-                </p>
-            </div>
-            <div className={styles.projectContainer}>
-                <a className={styles.imageLink} target="_blank" href={"https://country-app-data.netlify.app/"}>
-                    <img className={styles.projectImage} src={images["countryApp"]}/>
-                </a>
-                <p className={styles.projectTitle}>
-                    Countries Data App
-                </p>
-            </div>
-            <div className={styles.projectContainer}>
-                <a className={styles.imageLink} target="_blank" href={"https://designo-website-front-end.netlify.app/"}>
-                    <img className={styles.projectImage} src={images["designoWebsite"]}/>
-                </a>
-                <p className={styles.projectTitle}>
-                    Designo Website
-                </p>
-            </div>
-            <div className={styles.projectContainer}>
-                <a className={styles.imageLink} target="_blank" href={"https://product-feedback-front-end.netlify.app/"}>
-                    <img className={styles.projectImage} src={images["productFeedbackApp"]}/>
-                </a>
-                <p className={styles.projectTitle}>
-                    Product Feedback App
-                </p>
-            </div>
-            <div className={styles.projectContainer}>
-                <a className={styles.imageLink} target="_blank" href={"https://rock-paper-scissors-lizard-spock1.netlify.app/"}>
-                    <img className={styles.projectImage} src={images["rockPaperScissorsApp"]}/>
-                </a>
-                <p className={styles.projectTitle}>
-                    Rock, Paper, Scissors App
-                </p>
-            </div>
-
+  
             <div className={styles.disclaimerContainer}>
                 <h1 className={styles.disclaimerTitle}>
                     DISCLAIMER
@@ -196,7 +49,7 @@ function ProjectSection () {
                     The following projects; Jack in the box website, 
                     Recruitment Agency website, Audiophile website, 
                     Multi-Step form app, Countries Data app, Designo website,
-                    Product Feedback app, and Rock Paper Scissors App  
+                    Product Feedback app, Space Tourism website, Rock Paper Scissors App  
                     were NOT designed by me. I merely re-wrote the websites 
                     from scratch for learning purposes. The credit for 
                     designing these websites goes to 
