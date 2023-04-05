@@ -3,7 +3,7 @@ import NavigationBar from './NavigationBar';
 import HomeSection from './HomeSection';
 import AboutMeSection from './AboutMeSection';
 const ProjectSection = lazy(() => import('./ProjectSection'));
-import ContactMeSection from './ContactMeSection';
+const ContactMeSection = lazy(() => import('./ContactMeSection'));
 import './styles.css';
 
 
