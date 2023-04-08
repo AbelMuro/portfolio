@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './styles.module.css';
-import selfImage from './images/random image.webp';
+import selfImage from './images/Web-Developer-self-portrait.png';
 import {Button} from '@mui/material';
 import {styled} from '@mui/system';
 
@@ -11,7 +11,7 @@ const StyledButton = styled(Button)`
     color: white;
     font-family: "AbelFont";
 
-    &:hover{
+    &:hover {
         background-color: rgb(177, 177, 177);
         color: black;
     }
