@@ -20,6 +20,7 @@ import designoWebsite from './designo website.png';
 import productFeedbackApp from './product feedback app.png';
 import rockPaperScissors from './rock paper scissors app.png';
 import spaceTourism from './space-tourism website.png';
+import todoApp from './todo app.png';
 
 export default {
     "dark pink mastercard": darkPinkMastercard,
@@ -43,5 +44,6 @@ export default {
     "designoWebsite" : designoWebsite,
     "productFeedbackApp" : productFeedbackApp,
     "rockPaperScissorsApp": rockPaperScissors,
-    "spaceTourism" : spaceTourism
+    "spaceTourism" : spaceTourism,
+    "todoApp": todoApp,
 }

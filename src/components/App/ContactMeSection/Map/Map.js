@@ -9,7 +9,6 @@ function Map() {
         googleMapsApiKey: process.env.GOOGLE_MAP_KEY,
     });
 
-
     return( isLoaded ? 
         <GoogleMap
             mapContainerClassName={styles.mapContainer}
@@ -20,6 +19,7 @@ function Map() {
                 streetViewControl: false,
                 mapTypeControl: false,
                 fullscreenControl: false,
+                draggable: false
             }}>
 
             <Marker icon={{

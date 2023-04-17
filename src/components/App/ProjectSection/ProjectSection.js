@@ -38,7 +38,7 @@ function ProjectSection () {
             <Project href="https://product-feedback-front-end.netlify.app/" src={images["productFeedbackApp"]} projectTitle="Product Feedback App"/>
             <Project href="https://rock-paper-scissors-lizard-spock1.netlify.app/" src={images["rockPaperScissorsApp"]} projectTitle="Rock, Paper, Scissors App"/>
             <Project href="https://space-tourism-front-end.netlify.app/" src={images["spaceTourism"]} projectTitle="Space Tourism Website"/>
-
+            <Project href="https://kanban-task-manager-front-end.netlify.app/" src={images["todoApp"]} projectTitle="Kanban Todo App"/>
 
   
             <div className={styles.disclaimerContainer}>
