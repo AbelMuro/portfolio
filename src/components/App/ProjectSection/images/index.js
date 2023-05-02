@@ -21,6 +21,7 @@ import productFeedbackApp from './product feedback app.png';
 import rockPaperScissors from './rock paper scissors app.png';
 import spaceTourism from './space-tourism website.png';
 import todoApp from './todo app.png';
+import invoiceApp from './invoice app image.png';
 
 export default {
     "dark pink mastercard": darkPinkMastercard,
@@ -46,4 +47,5 @@ export default {
     "rockPaperScissorsApp": rockPaperScissors,
     "spaceTourism" : spaceTourism,
     "todoApp": todoApp,
+    "invoiceApp": invoiceApp
 }
