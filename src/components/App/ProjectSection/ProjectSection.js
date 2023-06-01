@@ -22,6 +22,7 @@ function ProjectSection () {
             <Project href="https://world-view-app.netlify.app/" src={images["worldViewApp"]} projectTitle="World View App"/>        
             <Project href="https://space-tourism-front-end.netlify.app/" src={images["spaceTourism"]} projectTitle="Space Tourism Website"/>                      
             <Project href="https://food-dasher-app.netlify.app" src={images["food dasher app"]} projectTitle="Food Dasher App"/>
+            <Project href="https://photosnap-front-end.netlify.app/" src={images["photosnapWebsite"]} projectTitle="Photosnap Website"/>
             <Project href="https://kick-ass-weather-app.netlify.app/" src={images["weatherApp"]} projectTitle="Weather App"/>
             <Project href="https://front-end-invoice-app.netlify.app/" src={images["invoiceApp"]} projectTitle="Invoice Management App"/>       
             <Project href="https://my-dictionaryy-app.netlify.app/" src={images["dictionaryApp"]} projectTitle="Dictionary App"/>
@@ -36,7 +37,7 @@ function ProjectSection () {
             <Project href="https://calculator-buddy.netlify.app/" src={images["calculatorApp"]} projectTitle="Calculator App"/>
             <Project href="https://crypto-coins-currency.netlify.app/" src={images["cryptoCurrencyApp"]} projectTitle="Crypto Currency App"/>
             <Project href="https://multi-step-form-subscription.netlify.app/" src={images["multiFormApp"]} projectTitle="Multi Step Form App"/>
-            <Project href="https://country-app-data.netlify.app/" src={images["countryApp"]} projectTitle="Countries Data App"/>       
+            <Project href="https://country-app-data.netlify.app/" src={images["countryApp"]} projectTitle="Countries Data App"/> 
             <Project href="https://product-feedback-front-end.netlify.app/" src={images["productFeedbackApp"]} projectTitle="Product Feedback App"/>
             <Project href="https://rock-paper-scissors-lizard-spock1.netlify.app/" src={images["rockPaperScissorsApp"]} projectTitle="Rock, Paper, Scissors App"/>
             <Project href="https://kanban-task-manager-front-end.netlify.app/" src={images["todoApp"]} projectTitle="Kanban Todo App"/>
