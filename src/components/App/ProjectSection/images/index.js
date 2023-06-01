@@ -23,6 +23,7 @@ import spaceTourism from './space-tourism website.png';
 import todoApp from './todo app.png';
 import invoiceApp from './invoice app image.png';
 import photosnapWebsite from './photosnap website.png';
+import entertainmentApp from './entertainment app.png';
 
 export default {
     "dark pink mastercard": darkPinkMastercard,
@@ -50,4 +51,5 @@ export default {
     "todoApp": todoApp,
     "invoiceApp": invoiceApp,
     "photosnapWebsite": photosnapWebsite,
+    "entertainmentApp": entertainmentApp
 }

@@ -17,10 +17,11 @@ function ProjectSection () {
                 </p>            
             </div>
             <Project href="https://front-end-audiophile-website.netlify.app/" src={images["audiophile"]} projectTitle="Audiophile Website"/>
-            <Project href="https://designo-website-front-end.netlify.app/" src={images["designoWebsite"]} projectTitle="Designo Website"/>   
+            <Project href="https://designo-website-front-end.netlify.app/" src={images["designoWebsite"]} projectTitle="Designo Website"/>               
             <Project href="https://daily-horoscopess.netlify.app/" src={images["horoscopeApp"]} projectTitle="Daily Horoscope App"/>              
             <Project href="https://world-view-app.netlify.app/" src={images["worldViewApp"]} projectTitle="World View App"/>        
-            <Project href="https://space-tourism-front-end.netlify.app/" src={images["spaceTourism"]} projectTitle="Space Tourism Website"/>                      
+            <Project href="https://space-tourism-front-end.netlify.app/" src={images["spaceTourism"]} projectTitle="Space Tourism Website"/>        
+            <Project href="https://entertainment-app-front-end.netlify.app/user/home" src={images["entertainmentApp"]} projectTitle="Entertainment App"/>                
             <Project href="https://food-dasher-app.netlify.app" src={images["food dasher app"]} projectTitle="Food Dasher App"/>
             <Project href="https://photosnap-front-end.netlify.app/" src={images["photosnapWebsite"]} projectTitle="Photosnap Website"/>
             <Project href="https://kick-ass-weather-app.netlify.app/" src={images["weatherApp"]} projectTitle="Weather App"/>
