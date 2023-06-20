@@ -26,6 +26,9 @@ import clockApp from './clock app.png';
 import shortenLinkApp from './shorten link app.png';
 import photosnapWebsite from './photosnap website.png';
 import entertainmentApp from './entertainment app.png';
+import githubUserApp from './github user search app.png';
+import ageCalculatorApp from './age calculator app.png';
+import ipAddressTrackerApp from './ip address tracker app.png';
 
 export default {
     "dark pink mastercard": darkPinkMastercard,
@@ -55,5 +58,8 @@ export default {
     "clockApp" : clockApp,
     "shortenLinkApp": shortenLinkApp,
     "photosnapWebsite": photosnapWebsite,
-    "entertainmentApp": entertainmentApp
+    "entertainmentApp": entertainmentApp,
+    "githubUserApp": githubUserApp,
+    "ageCalculatorApp" : ageCalculatorApp,
+    "ipAddressTrackerApp" : ipAddressTrackerApp,
 }
