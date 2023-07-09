@@ -21,6 +21,7 @@ import productFeedbackApp from './product feedback app.png';
 import rockPaperScissors from './rock paper scissors app.png';
 import spaceTourism from './space-tourism website.png';
 import todoApp from './todo app.png';
+import secondTodoApp from './second Todo app.png';
 import invoiceApp from './invoice app image.png';
 import clockApp from './clock app.png';
 import shortenLinkApp from './shorten link app.png';
@@ -29,6 +30,7 @@ import entertainmentApp from './entertainment app.png';
 import githubUserApp from './github user search app.png';
 import ageCalculatorApp from './age calculator app.png';
 import ipAddressTrackerApp from './ip address tracker app.png';
+import manageLandingPage from './Manage landing page.png';
 
 export default {
     "dark pink mastercard": darkPinkMastercard,
@@ -62,4 +64,6 @@ export default {
     "githubUserApp": githubUserApp,
     "ageCalculatorApp" : ageCalculatorApp,
     "ipAddressTrackerApp" : ipAddressTrackerApp,
+    "secondTodoApp" : secondTodoApp,
+    "manageLandingPage": manageLandingPage
 }

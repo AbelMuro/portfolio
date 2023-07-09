@@ -18,8 +18,9 @@ function ProjectSection () {
             </div>
             <Project href="https://front-end-audiophile-website.netlify.app/" src={images["audiophile"]} projectTitle="Audiophile Website"/>
             <Project href="https://designo-website-front-end.netlify.app/" src={images["designoWebsite"]} projectTitle="Designo Website"/>               
-            <Project href="https://daily-horoscopess.netlify.app/" src={images["horoscopeApp"]} projectTitle="Daily Horoscope App"/>              
-            <Project href="https://world-view-app.netlify.app/" src={images["worldViewApp"]} projectTitle="World View App"/>        
+            <Project href="https://daily-horoscopess.netlify.app/" src={images["horoscopeApp"]} projectTitle="Daily Horoscope App"/> 
+            <Project href="https://manage-landing-website.vercel.app/" src={images["manageLandingPage"]} projectTitle="Manage Landing Webpage"/>  
+            <Project href="https://world-view-app.netlify.app/" src={images["worldViewApp"]} projectTitle="World View App"/> 
             <Project href="https://space-tourism-front-end.netlify.app/" src={images["spaceTourism"]} projectTitle="Space Tourism Website"/>           
             <Project href="https://url-shortening-web-app-front-end.netlify.app/" src={images["shortenLinkApp"]} projectTitle="Shorten Link App"/>   
             <Project href="https://clock-app-front-end.netlify.app" src={images["clockApp"]} projectTitle="Clock App"/>                 
@@ -29,6 +30,7 @@ function ProjectSection () {
             <Project href="https://age-calculator-app-ashy.vercel.app/" src={images["ageCalculatorApp"]} projectTitle="Age Calculator App"/>
             <Project href="https://ip-address-app-front-end.netlify.app/" src={images["ipAddressTrackerApp"]} projectTitle="IP Address Tracker App"/>
             <Project href="https://photosnap-front-end.netlify.app/" src={images["photosnapWebsite"]} projectTitle="Photosnap Website"/>
+            <Project href="https://todo-app-fawn-eight.vercel.app/" src={images["secondTodoApp"]} projectTitle="Todo App"/>
             <Project href="https://kick-ass-weather-app.netlify.app/" src={images["weatherApp"]} projectTitle="Weather App"/>
             <Project href="https://front-end-invoice-app.netlify.app/" src={images["invoiceApp"]} projectTitle="Invoice Management App"/>       
             <Project href="https://my-dictionaryy-app.netlify.app/" src={images["dictionaryApp"]} projectTitle="Dictionary App"/>

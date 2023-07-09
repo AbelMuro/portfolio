@@ -13,3 +13,15 @@ body{
     margin: 0px;
     transition: all 0.2s linear;
 }
+
+/* ::-webkit-scrollbar will change the styling of the scroll bar's background*/
+::-webkit-scrollbar{
+    background-color: black;                               
+    width: 12px;                                             /* affects the vertical scrollbar*/
+}
+
+/* ::-webkit-scrollbar-thumb will change the styling of the thumb for the scroll bar*/
+::-webkit-scrollbar-thumb{
+    background-color: rgb(48, 0, 106);
+    border-radius: 14px;
+}
