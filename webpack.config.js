@@ -9,7 +9,6 @@ module.exports = {
         path: path.join(__dirname, '/dist'), 
         filename: 'bundle.js'                 
     },
-    systemvars: true,
     plugins: [                      
         new HtmlWebpackPlugin({              
             filename: 'index.html',   
