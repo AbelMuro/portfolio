@@ -6,7 +6,7 @@ import {GoogleMap, useLoadScript, Marker} from '@react-google-maps/api';
 function Map() {
 
     const {isLoaded} = useLoadScript({
-        googleMapsApiKey: process.env.GOOGLE_MAP_KEY,
+        googleMapsApiKey: AIzaSyDSJo88uqWG6bFiFqCXyIwW6iKHTn__eLA,
     });
 
     return( isLoaded ? 
