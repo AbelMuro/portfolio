@@ -31,6 +31,7 @@ import githubUserApp from './github user search app.png';
 import ageCalculatorApp from './age calculator app.png';
 import ipAddressTrackerApp from './ip address tracker app.png';
 import manageLandingPage from './Manage landing page.png';
+import devJobsApp from './dev-jobs-app.png';
 
 export default {
     "dark pink mastercard": darkPinkMastercard,
@@ -65,5 +66,6 @@ export default {
     "ageCalculatorApp" : ageCalculatorApp,
     "ipAddressTrackerApp" : ipAddressTrackerApp,
     "secondTodoApp" : secondTodoApp,
-    "manageLandingPage": manageLandingPage
+    "manageLandingPage": manageLandingPage,
+    "devJobsApp": devJobsApp,
 }
