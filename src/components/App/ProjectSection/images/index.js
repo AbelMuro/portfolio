@@ -32,6 +32,7 @@ import ageCalculatorApp from './age calculator app.png';
 import ipAddressTrackerApp from './ip address tracker app.png';
 import manageLandingPage from './Manage landing page.png';
 import devJobsApp from './dev-jobs-app.png';
+import linkSharingApp from './link sharing app.png';
 
 export default {
     "dark pink mastercard": darkPinkMastercard,
@@ -68,4 +69,5 @@ export default {
     "secondTodoApp" : secondTodoApp,
     "manageLandingPage": manageLandingPage,
     "devJobsApp": devJobsApp,
+    "linkSharingApp": linkSharingApp
 }
