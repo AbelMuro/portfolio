@@ -33,6 +33,8 @@ import ipAddressTrackerApp from './ip address tracker app.png';
 import manageLandingPage from './Manage landing page.png';
 import devJobsApp from './dev-jobs-app.png';
 import linkSharingApp from './link sharing app.png';
+import sunnysideWebsite from './sunnyside agency webpage.png';
+import newsWebsite from './news website.png';
 
 export default {
     "dark pink mastercard": darkPinkMastercard,
@@ -69,5 +71,7 @@ export default {
     "secondTodoApp" : secondTodoApp,
     "manageLandingPage": manageLandingPage,
     "devJobsApp": devJobsApp,
-    "linkSharingApp": linkSharingApp
+    "linkSharingApp": linkSharingApp,
+    "sunnysideWebsite": sunnysideWebsite,
+    "newsWebsite" : newsWebsite
 }

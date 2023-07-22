@@ -40,6 +40,8 @@ function ProjectSection () {
             <Project href="https://solar-systems-website.netlify.app" src={images["solarSystemWebsite"]} projectTitle="Solar Systems Website"/>
             <Project href="https://instant-chatter-box.netlify.app/" src={images["instantChatterBox"]} projectTitle="Instant Chatter Box App"/>
             <Project href="https://jack-in-the-box-clone.netlify.app" src={images["jack in the box clone"]} projectTitle="Jack In The Box Website"/>
+            <Project href="https://sunnyside-agency-webpage-front-end.netlify.app/" src={images["sunnysideWebsite"]} projectTitle="Sunnyside Agency Website"/>
+            <Project href="https://news-media-website-front-end.netlify.app/" src={images["newsWebsite"]} projectTitle="News Website"/>
             <Project href="https://recruitment-website-mockup.netlify.app" src={images["recruitmentAgency"]} projectTitle="Recruitment Agency Website"/>
             <Project href="https://sky-lunar-designs.netlify.app/" src={images["skyLunarDesigns"]} projectTitle="Sky Lunar Designs Website"/>            
             <Project href="https://employment-management.netlify.app/" src={images["employeeManagementApp"]} projectTitle="Employee Management App"/>
