@@ -35,6 +35,7 @@ import devJobsApp from './dev-jobs-app.png';
 import linkSharingApp from './link sharing app.png';
 import sunnysideWebsite from './sunnyside agency webpage.png';
 import newsWebsite from './news website.png';
+import creditCardApp from './creditCardApp.png';
 
 export default {
     "dark pink mastercard": darkPinkMastercard,
@@ -73,5 +74,6 @@ export default {
     "devJobsApp": devJobsApp,
     "linkSharingApp": linkSharingApp,
     "sunnysideWebsite": sunnysideWebsite,
-    "newsWebsite" : newsWebsite
+    "newsWebsite" : newsWebsite,
+    "creditCardApp" : creditCardApp
 }
