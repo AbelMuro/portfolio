@@ -36,6 +36,7 @@ import linkSharingApp from './link sharing app.png';
 import sunnysideWebsite from './sunnyside agency webpage.png';
 import newsWebsite from './news website.png';
 import creditCardApp from './creditCardApp.png';
+import easybankWebpage from './easybank webpage.png';
 
 export default {
     "dark pink mastercard": darkPinkMastercard,
@@ -75,5 +76,6 @@ export default {
     "linkSharingApp": linkSharingApp,
     "sunnysideWebsite": sunnysideWebsite,
     "newsWebsite" : newsWebsite,
-    "creditCardApp" : creditCardApp
+    "creditCardApp" : creditCardApp,
+    "easybankWebpage": easybankWebpage
 }
