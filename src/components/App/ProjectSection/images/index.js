@@ -37,6 +37,8 @@ import sunnysideWebsite from './sunnyside agency webpage.png';
 import newsWebsite from './news website.png';
 import creditCardApp from './creditCardApp.png';
 import easybankWebpage from './easybank webpage.png';
+import tipCalculatorApp from './tip calculator app.png';
+import crowdfundingWebpage from './crowdfunding webpage.png'
 
 export default {
     "dark pink mastercard": darkPinkMastercard,
@@ -77,5 +79,7 @@ export default {
     "sunnysideWebsite": sunnysideWebsite,
     "newsWebsite" : newsWebsite,
     "creditCardApp" : creditCardApp,
-    "easybankWebpage": easybankWebpage
+    "easybankWebpage": easybankWebpage,
+    "tipCalculatorApp": tipCalculatorApp,
+    "crowdfundingWebpage": crowdfundingWebpage
 }
