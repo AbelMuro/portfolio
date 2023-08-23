@@ -26,6 +26,7 @@ function ProjectSection () {
             <Project href="https://clock-app-front-end.netlify.app" src={images["clockApp"]} projectTitle="Clock App"/>         
             <Project href="https://world-view-app.netlify.app/" src={images["worldViewApp"]} projectTitle="World View App"/>         
             <Project href="https://food-dasher-app.netlify.app" src={images["food dasher app"]} projectTitle="Food Dasher App"/>
+            <Project href="https://connect-four-game-app.netlify.app/game" src={images["connectFourGame"]} projectTitle="Connect Four Game"/>
             <Project href="https://entertainment-app-front-end.netlify.app/user/home" src={images["entertainmentApp"]} projectTitle="Entertainment App"/>
             <Project href="https://github-user-app-one.vercel.app/" src={images["githubUserApp"]} projectTitle="Github User Search App"/>
             <Project href="https://dev-jobs-app-front.netlify.app/" src={images["devJobsApp"]} projectTitle="Dev Jobs App"/>
@@ -47,6 +48,7 @@ function ProjectSection () {
             <Project href="https://crowdfunding-product-webpage.netlify.app/" src={images["crowdfundingWebpage"]} projectTitle="Crowdfunding Webpage"/>
             <Project href="https://news-media-website-front-end.netlify.app/" src={images["newsWebsite"]} projectTitle="News Website"/>
             <Project href="https://recruitment-website-mockup.netlify.app" src={images["recruitmentAgency"]} projectTitle="Recruitment Agency Website"/>
+            <Project href="https://memory-game-abel.netlify.app/" src={images["memoryGame"]} projectTitle="Memory Game"/>
             <Project href="https://sky-lunar-designs.netlify.app/" src={images["skyLunarDesigns"]} projectTitle="Sky Lunar Designs Website"/>            
             <Project href="https://employment-management.netlify.app/" src={images["employeeManagementApp"]} projectTitle="Employee Management App"/>
             <Project href="https://my-kanto-pokedex.netlify.app/" src={images["pokedexApp"]} projectTitle="Pokedex App"/>
