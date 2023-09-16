@@ -41,6 +41,8 @@ import tipCalculatorApp from './tip calculator app.png';
 import crowdfundingWebpage from './crowdfunding webpage.png';
 import memoryGame from './memory game.png';
 import connectFourGame from './connect four game.png';
+import ticTacToeGame from './tic-tac-toe-game.png';
+import payApiWebsite from './pay-api-website.png';
 
 export default {
     "dark pink mastercard": darkPinkMastercard,
@@ -85,5 +87,7 @@ export default {
     "tipCalculatorApp": tipCalculatorApp,
     "crowdfundingWebpage": crowdfundingWebpage,
     "memoryGame": memoryGame,
-    "connectFourGame": connectFourGame
+    "connectFourGame": connectFourGame,
+    "ticTacToeGame": ticTacToeGame,
+    "payApiWebsite": payApiWebsite
 }
