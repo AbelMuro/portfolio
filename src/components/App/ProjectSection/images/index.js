@@ -43,6 +43,8 @@ import memoryGame from './memory game.png';
 import connectFourGame from './connect four game.png';
 import ticTacToeGame from './tic-tac-toe-game.png';
 import payApiWebsite from './pay-api-website.png';
+import markdownEditorApp from './markdown-editor.png';
+import myteamWebsite from './myteam-website.png';
 
 export default {
     "dark pink mastercard": darkPinkMastercard,
@@ -89,5 +91,7 @@ export default {
     "memoryGame": memoryGame,
     "connectFourGame": connectFourGame,
     "ticTacToeGame": ticTacToeGame,
-    "payApiWebsite": payApiWebsite
+    "payApiWebsite": payApiWebsite,
+    "markdownEditorApp": markdownEditorApp,
+    "myteamWebsite" : myteamWebsite
 }

@@ -21,11 +21,13 @@ function ProjectSection () {
             <Project href="https://connect-four-game-app.netlify.app" src={images["connectFourGame"]} projectTitle="Connect Four Game"/>
             <Project href="https://manage-landing-website.vercel.app/" src={images["manageLandingPage"]} projectTitle="Manage Landing Webpage"/>  
             <Project href="https://easy-bank-website-front.netlify.app/" src={images["easybankWebpage"]} projectTitle="Easy Bank Webpage"/>  
-
             <Project href="https://pay-api-front-end-mentor.netlify.app/" src={images["payApiWebsite"]} projectTitle="Pay API Website"/>  
-
             <Project href="https://space-tourism-front-end.netlify.app/" src={images["spaceTourism"]} projectTitle="Space Tourism Website"/>           
-            <Project href="https://url-shortening-web-app-front-end.netlify.app/" src={images["shortenLinkApp"]} projectTitle="Shorten Link App"/>   
+            <Project href="https://url-shortening-web-app-front-end.netlify.app/" src={images["shortenLinkApp"]} projectTitle="Shorten Link App"/>  
+
+            <Project href="https://myteam-website-front-end.netlify.app/" src={images['myteamWebsite']} projectTitle='MyTeam Website'/>
+
+            <Project href="https://markdown-editor-app-front-end.netlify.app/" src={images["markdownEditorApp"]} projectTitle="Markdown Editor App"/>    
             <Project href="https://clock-app-front-end.netlify.app" src={images["clockApp"]} projectTitle="Clock App"/>         
             <Project href="https://world-view-app.netlify.app/" src={images["worldViewApp"]} projectTitle="World View App"/>         
             <Project href="https://food-dasher-app.netlify.app" src={images["food dasher app"]} projectTitle="Food Dasher App"/>
