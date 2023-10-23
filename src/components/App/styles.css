@@ -5,6 +5,9 @@
 
 body{
     scroll-behavior: smooth;
+}
+
+html, body, #root{
     overflow-x: hidden;
 }
 
@@ -16,7 +19,7 @@ body{
 
 /* ::-webkit-scrollbar will change the styling of the scroll bar's background*/
 ::-webkit-scrollbar{
-    background-color: black;                               
+    background-color: transparent;                               
     width: 12px;                                             /* affects the vertical scrollbar*/
 }
 
