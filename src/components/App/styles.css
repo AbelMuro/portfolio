@@ -7,7 +7,7 @@ body{
     scroll-behavior: smooth;
 }
 
-html, body{
+html, body, #root{
     overflow-x: hidden;
     min-height: 100vh; 
 }
