@@ -3,7 +3,7 @@
     src: url(./CustomFonts/Nunito-VariableFont_wght.ttf);
 }
 
-body{
+html, body, #root{
     scroll-behavior: smooth;
     min-height: 100vh;  
     overflow-x: hidden;
