@@ -5,7 +5,7 @@
 
 html, body{
     scroll-behavior: smooth;
-    
+    overflow-x: h;
 }
 
 
@@ -13,6 +13,7 @@ html, body{
     padding: 0px;
     margin: 0px;
     transition: all 0.2s linear;
+    box-sizing: border-box;
 }
 
 /* ::-webkit-scrollbar will change the styling of the scroll bar's background*/
