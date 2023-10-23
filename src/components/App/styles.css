@@ -19,7 +19,7 @@ html, body, #root{
 
 /* ::-webkit-scrollbar will change the styling of the scroll bar's background*/
 ::-webkit-scrollbar{
-    background-color: transparent;                               
+    background-color: black;                               
     width: 12px;                                             /* affects the vertical scrollbar*/
 }
 
