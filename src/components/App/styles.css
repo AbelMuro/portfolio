@@ -5,11 +5,12 @@
 
 body{
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    min-height: 100vh;  
 }
 
 html, body, #root{
-    overflow-x: hidden;
-    min-height: 100vh; 
+
 }
 
 *{
