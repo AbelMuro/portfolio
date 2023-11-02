@@ -34,7 +34,7 @@ function ProjectSection () {
             <Project href="https://entertainment-app-front-end.netlify.app/user/home" src={images["entertainmentApp"]} projectTitle="Entertainment App"/>
             <Project href="https://github-user-app-one.vercel.app/" src={images["githubUserApp"]} projectTitle="Github User Search App"/>
             <Project href="https://dev-jobs-app-front.netlify.app/" src={images["devJobsApp"]} projectTitle="Dev Jobs App"/>
-            <Project href="https://link-sharing-app-front.vercel.app/" src={images["linkSharingApp"]} projectTitle="Link Sharing App"/>
+            <Project href="https://link-sharing-eqf6ito7z-abelmuro.vercel.app/" src={images["linkSharingApp"]} projectTitle="Link Sharing App"/>
             <Project href="https://age-calculator-app-ashy.vercel.app/" src={images["ageCalculatorApp"]} projectTitle="Age Calculator App"/>
             <Project href="https://front-end-invoice-app.netlify.app/" src={images["invoiceApp"]} projectTitle="Invoice Management App"/>   
             <Project href="https://todo-app-fawn-eight.vercel.app/" src={images["secondTodoApp"]} projectTitle="Todo App"/>    
