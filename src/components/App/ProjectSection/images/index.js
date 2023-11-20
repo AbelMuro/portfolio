@@ -45,6 +45,8 @@ import ticTacToeGame from './tic-tac-toe-game.png';
 import payApiWebsite from './pay-api-website.png';
 import markdownEditorApp from './markdown-editor.png';
 import myteamWebsite from './myteam-website.png';
+import quizApp from './quiz app.png';
+import scootWebsite from './Scoot website.png';
 
 export default {
     "dark pink mastercard": darkPinkMastercard,
@@ -93,5 +95,7 @@ export default {
     "ticTacToeGame": ticTacToeGame,
     "payApiWebsite": payApiWebsite,
     "markdownEditorApp": markdownEditorApp,
-    "myteamWebsite" : myteamWebsite
+    "myteamWebsite" : myteamWebsite,
+    "quizApp" : quizApp,
+    "scootWebsite": scootWebsite
 }
