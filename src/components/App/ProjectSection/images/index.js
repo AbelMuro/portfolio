@@ -47,6 +47,8 @@ import markdownEditorApp from './markdown-editor.png';
 import myteamWebsite from './myteam-website.png';
 import quizApp from './quiz app.png';
 import scootWebsite from './Scoot website.png';
+import archStudio from './arch-studio-website.png';
+import passwordGeneratorApp from './password-generator-app.png';
 
 export default {
     "dark pink mastercard": darkPinkMastercard,
@@ -97,5 +99,7 @@ export default {
     "markdownEditorApp": markdownEditorApp,
     "myteamWebsite" : myteamWebsite,
     "quizApp" : quizApp,
-    "scootWebsite": scootWebsite
+    "scootWebsite": scootWebsite,
+    "archStudio": archStudio,
+    "passwordGeneratorApp" : passwordGeneratorApp,
 }
