@@ -32,6 +32,7 @@ function ProjectSection () {
             <Project href="https://world-view-app.netlify.app/" src={images["worldViewApp"]} projectTitle="World View App"/>         
             <Project href="https://food-dasher-app.netlify.app" src={images["food dasher app"]} projectTitle="Food Dasher App"/>
             <Project href="https://daily-horoscopess.netlify.app/" src={images["horoscopeApp"]} projectTitle="Daily Horoscope App"/> 
+            <Project href="https://pomodoro-front-end-mentor.netlify.app/" src={images["pomodoroApp"]} projectTitle="Pomodoro App"/> 
             <Project href="https://tic-tac-toe-abel.netlify.app" src={images["ticTacToeGame"]} projectTitle="Tic Tac Toe Game"/>
             <Project href="https://entertainment-app-front-end.netlify.app" src={images["entertainmentApp"]} projectTitle="Entertainment App"/>
             <Project href="https://github-user-app-one.vercel.app/" src={images["githubUserApp"]} projectTitle="Github User Search App"/>
@@ -40,6 +41,7 @@ function ProjectSection () {
             <Project href="https://link-sharing-boqxtcz3a-abelmuro.vercel.app/" src={images["linkSharingApp"]} projectTitle="Link Sharing App"/>
             <Project href="https://age-calculator-app-ashy.vercel.app/" src={images["ageCalculatorApp"]} projectTitle="Age Calculator App"/>
             <Project href="https://arch-studio-website.netlify.app/" src={images['archStudio']} projectTitle='Arch Studio Website'/>
+            <Project href="https://galleria-front-end-mentor.netlify.app/" src={images['galleriaApp']} projectTitle='Galleria App'/>
             <Project href="https://front-end-invoice-app.netlify.app/" src={images["invoiceApp"]} projectTitle="Invoice Management App"/>   
             <Project href="https://todo-app-fawn-eight.vercel.app/" src={images["secondTodoApp"]} projectTitle="Todo App"/>    
             <Project href="https://tip-calculator-abel.netlify.app/" src={images["tipCalculatorApp"]} projectTitle="Tip Calculator App"/>    

@@ -49,6 +49,8 @@ import quizApp from './quiz app.png';
 import scootWebsite from './Scoot website.png';
 import archStudio from './arch-studio-website.png';
 import passwordGeneratorApp from './password-generator-app.png';
+import galleriaApp from './galleria app.png';
+import pomodoroApp from './pomodoro app.png';
 
 export default {
     "dark pink mastercard": darkPinkMastercard,
@@ -102,4 +104,6 @@ export default {
     "scootWebsite": scootWebsite,
     "archStudio": archStudio,
     "passwordGeneratorApp" : passwordGeneratorApp,
+    "galleriaApp" : galleriaApp,
+    "pomodoroApp": pomodoroApp
 }
