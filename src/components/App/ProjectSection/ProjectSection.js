@@ -1,5 +1,5 @@
-import React from 'react';
-import Project from './Project';
+import React, {lazy} from 'react';
+const Project = lazy(() => import('./Project'));
 import styles from './styles.module.css';
 import images from './images';
 
