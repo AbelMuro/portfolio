@@ -47,6 +47,8 @@ import markdownEditorApp from './markdown-editor.png';
 import myteamWebsite from './myteam-website.png';
 import quizApp from './quiz app.png';
 import scootWebsite from './Scoot website.png';
+import dineRestaurantWebsite from './dine-restaurant.png'
+import newCalculatorApp from './new-calculator-app.png';
 import archStudio from './arch-studio-website.png';
 import passwordGeneratorApp from './password-generator-app.png';
 import galleriaApp from './galleria app.png';
@@ -101,9 +103,5 @@ export default {
     "markdownEditorApp": markdownEditorApp,
     "myteamWebsite" : myteamWebsite,
     "quizApp" : quizApp,
-    "scootWebsite": scootWebsite,
-    "archStudio": archStudio,
-    "passwordGeneratorApp" : passwordGeneratorApp,
-    "galleriaApp" : galleriaApp,
-    "pomodoroApp": pomodoroApp
+    "scootWebsite": scootWebsite
 }
