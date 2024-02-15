@@ -103,5 +103,12 @@ export default {
     "markdownEditorApp": markdownEditorApp,
     "myteamWebsite" : myteamWebsite,
     "quizApp" : quizApp,
-    "scootWebsite": scootWebsite
+    "scootWebsite": scootWebsite,
+    "dineRestaurantWebsite" : dineRestaurantWebsite,
+    "newCalculatorApp" :  newCalculatorApp,
+    "archStudio" : archStudio,
+    "passwordGeneratorApp" : passwordGeneratorApp,
+    "galleriaApp": galleriaApp,
+    "pomodoroApp": pomodoroApp
+
 }
