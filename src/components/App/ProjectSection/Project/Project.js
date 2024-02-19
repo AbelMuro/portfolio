@@ -1,7 +1,14 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import styles from './styles.module.css';
 
-function Project({href, src, projectTitle}) {
+function Project({href, src, projectTitle, setCount}) {
+
+    useEffect(() => {
+        setCount((prev) => {
+            return prev + 1;
+        })
+    }, [])
+
     return(
         <div className={styles.projectContainer}>
             <a className={styles.imageLink} target="_blank" href={href}>
