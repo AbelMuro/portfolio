@@ -51,6 +51,7 @@ import archStudio from './arch-studio-website.png';
 import passwordGeneratorApp from './password-generator-app.png';
 import galleriaApp from './galleria app.png';
 import pomodoroApp from './pomodoro app.png';
+import planetFactWebsite from './planet fact website.png';
 
 export default {
     "dark pink mastercard": darkPinkMastercard,
@@ -105,5 +106,6 @@ export default {
     "archStudio": archStudio,
     "passwordGeneratorApp" : passwordGeneratorApp,
     "galleriaApp" : galleriaApp,
-    "pomodoroApp": pomodoroApp
+    "pomodoroApp": pomodoroApp,
+    "planetFactWebsite" : planetFactWebsite
 }
