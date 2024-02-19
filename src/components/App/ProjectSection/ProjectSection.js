@@ -33,6 +33,8 @@ function ProjectSection () {
             <Project href="https://myteam-website-front-end.netlify.app/" src={images['myteamWebsite']} projectTitle='MyTeam Website'/>
             <Project href="https://quiz-app-front-end-mentor.netlify.app/" src={images['quizApp']} projectTitle='Quiz App'/>
             <Project href="https://scoot-front-end.netlify.app/" src={images['scootWebsite']} projectTitle='Scoot Website'/>
+            <Project href="https://new-calculator-front-end.netlify.app/" src={images['newCalculatorApp']} projectTitle='New Calculator App'/>
+            <Project href="https://dine-restaurant-front-end.netlify.app/" src={images['dineRestaurantWebsite']} projectTitle='Dine Restaurant Website'/>
             <Project href="https://markdown-editor-app-front-end.netlify.app/" src={images["markdownEditorApp"]} projectTitle="Markdown Editor App"/>    
             <Project href="https://clock-app-front-end.netlify.app" src={images["clockApp"]} projectTitle="Clock App"/>         
             <Project href="https://world-view-app.netlify.app/" src={images["worldViewApp"]} projectTitle="World View App"/>         
