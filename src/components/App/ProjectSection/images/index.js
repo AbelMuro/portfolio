@@ -54,6 +54,7 @@ import passwordGeneratorApp from './password-generator-app.png';
 import galleriaApp from './galleria app.png';
 import pomodoroApp from './pomodoro app.png';
 import planetFactWebsite from './planet fact website.png';
+import hangmanGame from './Hangman game.png';
 
 export default {
     "dark pink mastercard": darkPinkMastercard,
@@ -111,5 +112,6 @@ export default {
     "passwordGeneratorApp" : passwordGeneratorApp,
     "galleriaApp": galleriaApp,
     "pomodoroApp": pomodoroApp,
-    "planetFactWebsite": planetFactWebsite
+    "planetFactWebsite": planetFactWebsite,
+    "hangmanGame": hangmanGame
 }
