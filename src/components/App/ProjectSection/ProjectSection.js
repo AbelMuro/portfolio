@@ -78,7 +78,6 @@ function ProjectSection () {
             <Project href="https://product-feedback-front-end.netlify.app/" src={images["productFeedbackApp"]} projectTitle="Product Feedback App" setCount={setCount}/>
             <Project href="https://rock-paper-scissors-lizard-spock1.netlify.app/" src={images["rockPaperScissorsApp"]} projectTitle="Rock, Paper, Scissors App" setCount={setCount}/>
             <Project href="https://kanban-task-manager-front-end.netlify.app/" src={images["todoApp"]} projectTitle="Kanban Todo App" setCount={setCount}/>
-
             <div className={styles.disclaimerContainer}>
                 <h1 className={styles.disclaimerTitle}>
                     DISCLAIMER
@@ -105,7 +104,6 @@ function ProjectSection () {
                     </a>
                 </p>
             </div>
-
         </section>
     )
 }
