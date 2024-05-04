@@ -29,9 +29,8 @@ function ProjectSection () {
             <Project href="https://space-tourism-front-end.netlify.app/" src={images["spaceTourism"]} projectTitle="Space Tourism Website" setCount={setCount}/>       
             <Project href="https://planet-facts-front-end.netlify.app/" src={images["planetFactWebsite"]} projectTitle="Planet Fact Website" setCount={setCount}/>  
             <Project href="https://url-shortening-web-app-front-end.netlify.app/" src={images["shortenLinkApp"]} projectTitle="Shorten Link App" setCount={setCount}/>  
-
             <Project href="https://bookmarking-front-end.netlify.app/" src={images["bookmarkWebsite"]} projectTitle="Bookmark Website" setCount={setCount}/>
-
+            <Project href="https://creative-single-page-website.netlify.app/" src={images["creativeWebsite"]} projectTitle="Creative Website" setCount={setCount}/>
             <Project href="https://myteam-website-front-end.netlify.app/" src={images['myteamWebsite']} projectTitle='MyTeam Website' setCount={setCount}/>
             <Project href="https://quiz-app-front-end-mentor.netlify.app/" src={images['quizApp']} projectTitle='Quiz App' setCount={setCount}/>
             <Project href="https://scoot-front-end.netlify.app/" src={images['scootWebsite']} projectTitle='Scoot Website' setCount={setCount}/>
@@ -39,9 +38,7 @@ function ProjectSection () {
             <Project href="https://dine-restaurant-front-end.netlify.app/" src={images['dineRestaurantWebsite']} projectTitle='Dine Restaurant Website' setCount={setCount}/>
             <Project href="https://markdown-editor-app-front-end.netlify.app/" src={images["markdownEditorApp"]} projectTitle="Markdown Editor App" setCount={setCount}/>    
             <Project href="https://clock-app-front-end.netlify.app" src={images["clockApp"]} projectTitle="Clock App" setCount={setCount}/>         
-
             <Project href="https://world-view-videos.netlify.app/" src={images["worldViewApp"]} projectTitle="World View App" setCount={setCount}/>      
-
             <Project href="https://food-dasher-app.netlify.app" src={images["food dasher app"]} projectTitle="Food Dasher App" setCount={setCount}/>
             <Project href="https://daily-horoscopess.netlify.app/" src={images["horoscopeApp"]} projectTitle="Daily Horoscope App" setCount={setCount}/> 
             <Project href="https://pomodoro-front-end-mentor.netlify.app/" src={images["pomodoroApp"]} projectTitle="Pomodoro App" setCount={setCount}/> 

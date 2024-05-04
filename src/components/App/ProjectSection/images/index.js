@@ -56,6 +56,7 @@ import pomodoroApp from './pomodoro app.png';
 import planetFactWebsite from './planet fact website.png';
 import hangmanGame from './Hangman game.png';
 import bookmarkWebsite from './bookmark website.png';
+import creativeWebsite from './creative website.png';
 
 export default {
     "dark pink mastercard": darkPinkMastercard,
@@ -115,5 +116,6 @@ export default {
     "pomodoroApp": pomodoroApp,
     "planetFactWebsite": planetFactWebsite,
     "hangmanGame": hangmanGame,
-    "bookmarkWebsite" : bookmarkWebsite
+    "bookmarkWebsite" : bookmarkWebsite,
+    "creativeWebsite": creativeWebsite
 }
