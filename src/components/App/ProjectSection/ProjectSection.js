@@ -39,7 +39,7 @@ function ProjectSection () {
             <Project href="https://markdown-editor-app-front-end.netlify.app/" src={images["markdownEditorApp"]} projectTitle="Markdown Editor App" setCount={setCount}/>    
             <Project href="https://clock-app-front-end.netlify.app" src={images["clockApp"]} projectTitle="Clock App" setCount={setCount}/>         
             <Project href="https://world-view-videos.netlify.app/" src={images["worldViewApp"]} projectTitle="World View App" setCount={setCount}/>      
-            <Project href="https://food-dasher-app.netlify.app" src={images["food dasher app"]} projectTitle="Food Dasher App" setCount={setCount}/>
+            <Project href="https://food-dasher-app-netlify.netlify.app/" src={images["food dasher app"]} projectTitle="Food Dasher App" setCount={setCount}/>
             <Project href="https://daily-horoscopess.netlify.app/" src={images["horoscopeApp"]} projectTitle="Daily Horoscope App" setCount={setCount}/> 
             <Project href="https://pomodoro-front-end-mentor.netlify.app/" src={images["pomodoroApp"]} projectTitle="Pomodoro App" setCount={setCount}/> 
             <Project href="https://tic-tac-toe-abel.netlify.app" src={images["ticTacToeGame"]} projectTitle="Tic Tac Toe Game" setCount={setCount}/>
