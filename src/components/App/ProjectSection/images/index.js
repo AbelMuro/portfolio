@@ -57,6 +57,8 @@ import planetFactWebsite from './planet fact website.png';
 import hangmanGame from './Hangman game.png';
 import bookmarkWebsite from './bookmark website.png';
 import creativeWebsite from './creative website.png';
+import productListWithCartWebsite from './product list with cart website.png';
+
 
 export default {
     "dark pink mastercard": darkPinkMastercard,
@@ -117,5 +119,6 @@ export default {
     "planetFactWebsite": planetFactWebsite,
     "hangmanGame": hangmanGame,
     "bookmarkWebsite" : bookmarkWebsite,
-    "creativeWebsite": creativeWebsite
+    "creativeWebsite": creativeWebsite,
+    "productListWithCartWebsite" : productListWithCartWebsite
 }
