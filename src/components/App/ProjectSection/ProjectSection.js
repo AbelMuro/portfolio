@@ -50,6 +50,7 @@ function ProjectSection () {
             <Project href="https://link-sharing-boqxtcz3a-abelmuro.vercel.app/" src={images["linkSharingApp"]} projectTitle="Link Sharing App" setCount={setCount}/>
             <Project href="https://age-calculator-app-ashy.vercel.app/" src={images["ageCalculatorApp"]} projectTitle="Age Calculator App" setCount={setCount}/>
             <Project href="https://arch-studio-website.netlify.app/" src={images['archStudio']} projectTitle='Arch Studio Website' setCount={setCount}/>
+            <Project href="https://mortgage-calculator-front-end.netlify.app/" src={images['mortgageCalculator']} projectTitle='Mortgage Repayment Calculator' setCount={setCount}/>
             <Project href="https://galleria-front-end-mentor.netlify.app/" src={images['galleriaApp']} projectTitle='Galleria App' setCount={setCount}/>
             <Project href="https://front-end-invoice-app.netlify.app/" src={images["invoiceApp"]} projectTitle="Invoice Management App" setCount={setCount}/>   
             <Project href="https://todo-app-fawn-eight.vercel.app/" src={images["secondTodoApp"]} projectTitle="Todo App" setCount={setCount}/>    

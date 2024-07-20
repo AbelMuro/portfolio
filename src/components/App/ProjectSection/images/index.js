@@ -58,6 +58,7 @@ import hangmanGame from './Hangman game.png';
 import bookmarkWebsite from './bookmark website.png';
 import creativeWebsite from './creative website.png';
 import productListWithCartWebsite from './product list with cart website.png';
+import mortgageCalculator from './mortgage calculator.png';
 
 
 export default {
@@ -120,5 +121,6 @@ export default {
     "hangmanGame": hangmanGame,
     "bookmarkWebsite" : bookmarkWebsite,
     "creativeWebsite": creativeWebsite,
-    "productListWithCartWebsite" : productListWithCartWebsite
+    "productListWithCartWebsite" : productListWithCartWebsite,
+    "mortgageCalculator": mortgageCalculator
 }
