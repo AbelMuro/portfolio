@@ -64,7 +64,7 @@ function ProjectSection () {
             <Project href="https://dark-pink-credit-card-app.netlify.app/" src={images["dark pink mastercard"]} projectTitle="Dark Pink Mastercard" setCount={setCount}/>
             <Project href="https://solar-system-website-gsap.netlify.app/" src={images["solarSystemWebsite"]} projectTitle="Solar Systems Website" setCount={setCount}/>
             <Project href="https://instant-chatter-box.netlify.app/" src={images["instantChatterBox"]} projectTitle="Instant Chatter Box App" setCount={setCount}/>
-            <Project href="https://jack-in-the-box-clone.netlify.app" src={images["jack in the box clone"]} projectTitle="Jack In The Box Website" setCount={setCount}/>
+            <Project href="https://jack-in-the-box-clone.netlify.app/" src={images["jack in the box clone"]} projectTitle="Jack In The Box Website" setCount={setCount}/>
             <Project href="https://sunnyside-agency-webpage-front-end.netlify.app/" src={images["sunnysideWebsite"]} projectTitle="Sunnyside Agency Website" setCount={setCount}/>
             <Project href="https://crowdfunding-product-webpage.netlify.app/" src={images["crowdfundingWebpage"]} projectTitle="Crowdfunding Webpage" setCount={setCount}/>
             <Project href="https://news-media-website-front-end.netlify.app/" src={images["newsWebsite"]} projectTitle="News Website" setCount={setCount}/>
