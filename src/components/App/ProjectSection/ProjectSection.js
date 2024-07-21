@@ -70,7 +70,7 @@ function ProjectSection () {
             <Project href="https://news-media-website-front-end.netlify.app/" src={images["newsWebsite"]} projectTitle="News Website" setCount={setCount}/>
             <Project href="https://recruitment-website-mockup.netlify.app" src={images["recruitmentAgency"]} projectTitle="Recruitment Agency Website" setCount={setCount}/>
             <Project href="https://memory-game-abel.netlify.app/" src={images["memoryGame"]} projectTitle="Memory Game" setCount={setCount}/>
-            <Project href="https://sky-lunar-designs.netlify.app/" src={images["skyLunarDesigns"]} projectTitle="Sky Lunar Designs Website" setCount={setCount}/>            
+            <Project href="https://sky-lunar-design.netlify.app/" src={images["skyLunarDesigns"]} projectTitle="Sky Lunar Designs Website" setCount={setCount}/>            
             <Project href="https://employment-management.netlify.app/" src={images["employeeManagementApp"]} projectTitle="Employee Management App" setCount={setCount}/>
             <Project href="https://my-kanto-pokedex.netlify.app/" src={images["pokedexApp"]} projectTitle="Pokedex App" setCount={setCount}/>
             <Project href="https://calculator-buddy.netlify.app/" src={images["calculatorApp"]} projectTitle="Calculator App" setCount={setCount}/>
