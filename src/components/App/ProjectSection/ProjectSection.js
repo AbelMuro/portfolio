@@ -35,6 +35,11 @@ function ProjectSection () {
             <Project href="https://quiz-app-front-end-mentor.netlify.app/" src={images['quizApp']} projectTitle='Quiz App' setCount={setCount}/>
             <Project href="https://scoot-front-end.netlify.app/" src={images['scootWebsite']} projectTitle='Scoot Website' setCount={setCount}/>
             <Project href="https://new-calculator-front-end.netlify.app/" src={images['newCalculatorApp']} projectTitle='New Calculator App' setCount={setCount}/>
+            <Project href="https://calculator-buddy.netlify.app/" src={images["oldCalculatorApp"]} projectTitle="Old Calculator App" setCount={setCount}/>               
+            <Project href="https://bmi-calculator-front-end.netlify.app/" src={images['bmiCalculatorApp']} projectTitle='BMI Calculator App' setCount={setCount}/>
+            <Project href="https://age-calculator-app-ashy.vercel.app/" src={images["ageCalculatorApp"]} projectTitle="Age Calculator App" setCount={setCount}/>      
+            <Project href="https://mortgage-calculator-front-end.netlify.app/" src={images['mortgageCalculator']} projectTitle='Mortgage Repayment Calculator' setCount={setCount}/>   
+            <Project href="https://tip-calculator-abel.netlify.app/" src={images["tipCalculatorApp"]} projectTitle="Tip Calculator App" setCount={setCount}/>              
             <Project href="https://dine-restaurant-front-end.netlify.app/" src={images['dineRestaurantWebsite']} projectTitle='Dine Restaurant Website' setCount={setCount}/>
             <Project href="https://markdown-editor-app-front-end.netlify.app/" src={images["markdownEditorApp"]} projectTitle="Markdown Editor App" setCount={setCount}/>    
             <Project href="https://clock-app-front-end.netlify.app" src={images["clockApp"]} projectTitle="Clock App" setCount={setCount}/>         
@@ -48,13 +53,10 @@ function ProjectSection () {
             <Project href="https://password-generator-front-end-mentor.netlify.app/" src={images["passwordGeneratorApp"]} projectTitle="Password Generator App" setCount={setCount}/>
             <Project href="https://dev-jobs-app-front.netlify.app/" src={images["devJobsApp"]} projectTitle="Dev Jobs App" setCount={setCount}/>
             <Project href="https://link-sharing-boqxtcz3a-abelmuro.vercel.app/" src={images["linkSharingApp"]} projectTitle="Link Sharing App" setCount={setCount}/>
-            <Project href="https://age-calculator-app-ashy.vercel.app/" src={images["ageCalculatorApp"]} projectTitle="Age Calculator App" setCount={setCount}/>
             <Project href="https://arch-studio-website.netlify.app/" src={images['archStudio']} projectTitle='Arch Studio Website' setCount={setCount}/>
-            <Project href="https://mortgage-calculator-front-end.netlify.app/" src={images['mortgageCalculator']} projectTitle='Mortgage Repayment Calculator' setCount={setCount}/>
             <Project href="https://galleria-front-end-mentor.netlify.app/" src={images['galleriaApp']} projectTitle='Galleria App' setCount={setCount}/>
             <Project href="https://front-end-invoice-app.netlify.app/" src={images["invoiceApp"]} projectTitle="Invoice Management App" setCount={setCount}/>   
             <Project href="https://todo-app-fawn-eight.vercel.app/" src={images["secondTodoApp"]} projectTitle="Todo App" setCount={setCount}/>    
-            <Project href="https://tip-calculator-abel.netlify.app/" src={images["tipCalculatorApp"]} projectTitle="Tip Calculator App" setCount={setCount}/>    
             <Project href="https://credit-card-app-front.netlify.app/" src={images["creditCardApp"]} projectTitle="Credit Card App" setCount={setCount}/>                  
             <Project href="https://photosnap-front-end.netlify.app/" src={images["photosnapWebsite"]} projectTitle="Photosnap Website" setCount={setCount}/>
             <Project href="https://product-list-with-cart-front-end.netlify.app/" src={images["productListWithCartWebsite"]} projectTitle="Product List Website" setCount={setCount}/>
@@ -73,7 +75,6 @@ function ProjectSection () {
             <Project href="https://sky-lunar-design.netlify.app/" src={images["skyLunarDesigns"]} projectTitle="Sky Lunar Designs Website" setCount={setCount}/>        
             <Project href="https://employment-management-application.netlify.app/" src={images["employeeManagementApp"]} projectTitle="Employee Management App" setCount={setCount}/>
             <Project href="https://my-kanto-pokedex.netlify.app/" src={images["pokedexApp"]} projectTitle="Pokedex App" setCount={setCount}/>
-            <Project href="https://calculator-buddy.netlify.app/" src={images["calculatorApp"]} projectTitle="Calculator App" setCount={setCount}/>
             <Project href="https://crypto-coins-currency.netlify.app/" src={images["cryptoCurrencyApp"]} projectTitle="Crypto Currency App" setCount={setCount}/>
             <Project href="https://multi-step-form-subscription.netlify.app/" src={images["multiFormApp"]} projectTitle="Multi Step Form App" setCount={setCount}/>
             <Project href="https://country-app-data.netlify.app/" src={images["countryApp"]} projectTitle="Countries Data App" setCount={setCount}/> 

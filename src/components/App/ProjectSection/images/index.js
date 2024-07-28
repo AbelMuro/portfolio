@@ -8,7 +8,7 @@ import instantChatterBox from './instant chatter box app.png';
 import employeeManagementApp from './employee management app.png';
 import worldViewApp from './world view app.png';
 import pokedexApp from './pokedex.png';
-import calculatorApp from './calculator app.png';
+import oldCalculatorApp from './old calculator app.png';
 import cryptoCurrencyApp from './crypto currency app.png';
 import weatherApp from './weather app.png';
 import horoscopeApp from './horoscope app.png';
@@ -59,7 +59,7 @@ import bookmarkWebsite from './bookmark website.png';
 import creativeWebsite from './creative website.png';
 import productListWithCartWebsite from './product list with cart website.png';
 import mortgageCalculator from './mortgage calculator.png';
-
+import bmiCalculatorApp from './bmi calculator app.png';
 
 export default {
     "dark pink mastercard": darkPinkMastercard,
@@ -72,7 +72,7 @@ export default {
     "employeeManagementApp" : employeeManagementApp,
     "worldViewApp" : worldViewApp,
     "pokedexApp" : pokedexApp,
-    "calculatorApp" : calculatorApp,
+    "oldCalculatorApp" : oldCalculatorApp,
     "cryptoCurrencyApp" : cryptoCurrencyApp,
     "weatherApp" : weatherApp,
     "horoscopeApp" : horoscopeApp,
@@ -122,5 +122,6 @@ export default {
     "bookmarkWebsite" : bookmarkWebsite,
     "creativeWebsite": creativeWebsite,
     "productListWithCartWebsite" : productListWithCartWebsite,
-    "mortgageCalculator": mortgageCalculator
+    "mortgageCalculator": mortgageCalculator,
+    "bmiCalculatorApp": bmiCalculatorApp
 }
