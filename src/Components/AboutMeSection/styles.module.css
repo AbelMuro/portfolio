@@ -1,18 +1,25 @@
 .container{
     background-image: url("./images/binary code.gif");
+    width: 100%;
+    margin: auto;
+    height: 100vh;
+    padding: 30px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content{
+    width: 1150px;
     display: flex;
     justify-content: center;
     gap: 150px;
     align-items: center;
-    width: 100%;
-    margin: auto;
-    height: 1000px;
-    padding: 30px 0px;
 }
 
 .imageContainer{
     position: relative;
-    width: 300px;
+    width: 400px;
     height: 323px;
 }
 
@@ -34,10 +41,11 @@
     right: 0px;
     z-index: 1;
     transform: rotate(-10deg);
-    transition: transform 0.2s ease-in;
+    transition: all 0.2s linear, transform 0.2s ease-in;
 }
 
 .aboutMeContainer{
+    width: 600px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -45,15 +53,14 @@
 
 .aboutMeTitle{
     font-family: var(--font);
-    font-size: 60px;
+    font-size: 3.75rem;
     background-color: white;
     text-align: center;
 }
 
 .aboutMeDesc{
     font-family: var(--font);
-    font-size: 20px;
-    width: 600px;
+    font-size: 1.25rem;
     background-color: white;
 }
 
@@ -71,10 +78,48 @@
 
 }
 
+@media(max-width: 1230px){
+    .content{
+        width: 90%;
+    }
+}
+
 @media (max-width: 1160px){
     .container{
         height: 800px;
         gap: 50px;
+    }
+
+    .aboutMeContainer{
+        width: 50%;
+    }
+
+    .aboutMeTitle{
+        font-size: 2.5rem;
+    }
+
+    .aboutMeDesc{
+        font-size: 1.125rem;
+    }
+}
+
+@media(max-width: 850px){
+    .content{
+        flex-direction: column;
+        gap: 70px;
+    }
+
+    .container{
+        height: auto;
+        padding: 80px 0px;
+    }    
+
+    .aboutMeContainer{
+        width: 400px;
+    }
+
+    .imageContainer{
+        width: 300px;
     }
 
     .selfImage{
@@ -84,29 +129,23 @@
         width: 300px;
         height: 323px;
     }
-
-    .aboutMeTitle{
-        font-size: 40px;
-    }
-
-    .aboutMeDesc{
-        font-size: 18px;
-        width: 350px;
-    }
-}
-
-@media (max-width: 775px){
-    .container{
-        height: auto;
-        padding: 80px 0px;
-        flex-direction: column;
-    }
     .aboutMeTitle{
         text-align: center;
     }
+
+    .aboutMeContainer{
+        width: 90%;
+    }
 }
 
-@media(max-width: 430px){
+@media(max-width: 500px){
+    .imageContainer{
+        width: 250px;
+    }
+
+    .content{
+        gap: 40px;
+    }
 
     .selfImage{
         width: 250px;
@@ -114,6 +153,7 @@
         right: 0;
         margin: auto;
     }
+
     .blackBox{
         width: 250px;
         height: 269px;
@@ -121,7 +161,5 @@
         right: 0;
         margin: auto;
     }
-    .aboutMeDesc{
-        width: 300px;
-    }
 }
+

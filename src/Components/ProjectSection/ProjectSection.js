@@ -9,16 +9,9 @@ function ProjectSection () {
 
     return(
         <section className={styles.container} id="projects">
-            <div className={styles.titleBox}>
-                <h1 className={styles.title}>
-                    My Projects ({count})
-                </h1>    
-                <p className={styles.desc}>
-                    I have used the following frameworks/libraries
-                    for my projects; React, Redux, GSAP, JQuery, SASS,
-                    bootstrap and MUI    
-                </p>            
-            </div>
+            <h1 className={styles.title}>
+                My Projects ({count})
+            </h1>          
             <Project href="https://front-end-audiophile-website.netlify.app/" src={images["audiophile"]} projectTitle="Audiophile Website" setCount={setCount}/>
             <Project href="https://designo-website-front-end.netlify.app/" src={images["designoWebsite"]} projectTitle="Designo Website" setCount={setCount}/>               
             <Project href="https://connect-four-game-app.netlify.app" src={images["connectFourGame"]} projectTitle="Connect Four Game" setCount={setCount}/>
@@ -82,32 +75,6 @@ function ProjectSection () {
             <Project href="https://product-feedback-front-end.netlify.app/" src={images["productFeedbackApp"]} projectTitle="Product Feedback App" setCount={setCount}/>
             <Project href="https://rock-paper-scissors-lizard-spock1.netlify.app/" src={images["rockPaperScissorsApp"]} projectTitle="Rock, Paper, Scissors App" setCount={setCount}/>
             <Project href="https://kanban-task-manager-front-end.netlify.app/" src={images["todoApp"]} projectTitle="Kanban Todo App" setCount={setCount}/>
-            <div className={styles.disclaimerContainer}>
-                <h1 className={styles.disclaimerTitle}>
-                    DISCLAIMER
-                </h1>
-                <p className={styles.disclaimerDesc}>
-                    The following projects; Jack in the box website, 
-                    Recruitment Agency website, Audiophile website, 
-                    Multi-Step form app, Countries Data app, Designo website,
-                    Product Feedback app, Space Tourism website, Rock Paper Scissors App  
-                    were NOT designed by me. I merely re-wrote the websites 
-                    from scratch for learning purposes. The credit for 
-                    designing these websites goes to 
-                    &nbsp;
-                    <a target={"_blank"} href={"https://investors.jackinthebox.com/our-company/about-us/"} className={styles.disclaimerLink}>
-                        Jack In The Box Company
-                    </a>
-                    ,&nbsp;
-                    <a target={"_blank"} href={"https://nicepage.com/st/525132/resume-page-website-template"} className={styles.disclaimerLink}>
-                        nicepage.com
-                    </a>
-                    ,&nbsp;
-                    <a target={"_blank"} href={"https://www.frontendmentor.io/home"} className={styles.disclaimerLink}>
-                        frontendmentor.io
-                    </a>
-                </p>
-            </div>
         </section>
     )
 }
