@@ -60,6 +60,7 @@ import creativeWebsite from './creative website.png';
 import productListWithCartWebsite from './product list with cart website.png';
 import mortgageCalculator from './mortgage calculator.png';
 import bmiCalculatorApp from './bmi calculator app.png';
+import officeliteWebsite from './officelite website.png';
 
 export default {
     "dark pink mastercard": darkPinkMastercard,
@@ -123,5 +124,6 @@ export default {
     "creativeWebsite": creativeWebsite,
     "productListWithCartWebsite" : productListWithCartWebsite,
     "mortgageCalculator": mortgageCalculator,
-    "bmiCalculatorApp": bmiCalculatorApp
+    "bmiCalculatorApp": bmiCalculatorApp,
+    "officeliteWebsite": officeliteWebsite
 }
