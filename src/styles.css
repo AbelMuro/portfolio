@@ -1,6 +1,6 @@
 @font-face{
-    font-family: "AbelFont";
-    src: url(./CustomFonts/Nunito-VariableFont_wght.ttf);
+    font-family: 'AbelFont';
+    src: url('/public/fonts/Nunito-VariableFont_wght.ttf');
 }
 
 html, body{
@@ -15,6 +15,10 @@ html, body{
     box-sizing: border-box;
 }
 
+:root{
+    --font: 'AbelFont';
+}
+
 /* ::-webkit-scrollbar will change the styling of the scroll bar's background*/
 ::-webkit-scrollbar{
     background-color: black;                               
@@ -23,6 +27,6 @@ html, body{
 
 /* ::-webkit-scrollbar-thumb will change the styling of the thumb for the scroll bar*/
 ::-webkit-scrollbar-thumb{
-    background-color: rgb(48, 0, 106);
+    background-color: #30006a;
     border-radius: 14px;
 }

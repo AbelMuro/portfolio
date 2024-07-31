@@ -15,30 +15,35 @@
 
 .introBox{
     width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
 
 .introTitle{
-    font-family: "AbelFont";
-    font-size: 80px;
+    font-family: var(--font);
+    font-size: 5rem;
     color: white;
     font-weight: 900;
+    margin: 0px;
 }
 
 .introDesc{
-    font-family: "AbelFont";
-    font-size: 30px;
+    font-family: var(--font);
+    font-size: 1.875rem;
     color: white;
     font-weight: 300;
+    margin: 0px;
 }
 
 .credit, .creditLink{
     color: white;
-    font-family: "AbelFont";
-    font-size: 15px;
+    font-family: var(--font);
+    font-size: 0.9375rem;
 }
 
 .credit{
-    margin: 30px 0px;
+    margin: 0px;
 }
 
 .creditLink:hover{
@@ -47,18 +52,18 @@
 }
 
 
-#audio{
-    margin-bottom: 20px;
+.audio{
+    margin: 0px;
 }
 
 .audioCredit{
-    font-size: 15px;
-    margin-bottom: 20px;
+    font-size: 0.9375rem;
+    margin: 0px;
 }
 
 .audioLink, .audioCredit{
     color: white;
-    font-family: "AbelFont";
+    font-family: var(--font);
 }
 
 .audioLink:hover{
@@ -72,8 +77,8 @@
 
 .scrollDown{
     color: white;
-    font-family: "AbelFont";
-    font-size: 30px;
+    font-family: var(--font);
+    font-size: 1.875rem;
 }
 
 .icon{
@@ -91,16 +96,16 @@
 
 @media (max-width: 500px){
     .introTitle{
-        font-size: 50px;
+        font-size: 3.125rem;
     }
     .introDesc{
-        font-size: 25px;
+        font-size: 1.5625rem;
     }
 
-    #audio{
+    .audio{
         width: 270px
     }
     .scrollDown{
-        font-size: 25px;
+        font-size: 1.5625rem;
     }
 }

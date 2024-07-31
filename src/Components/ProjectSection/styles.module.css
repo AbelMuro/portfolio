@@ -10,7 +10,7 @@
 }
 
 .title, .desc{
-    font-family: "AbelFont";
+    font-family: var(--font);
     color: white;
 
 }
@@ -44,7 +44,7 @@
 
 .disclaimerTitle, .disclaimerDesc, .disclaimerLink{
     color: white;
-    font-family: "AbelFont";
+    font-family: var(--font);
 }
 
 .disclaimerTitle{

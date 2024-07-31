@@ -44,14 +44,14 @@
 }
 
 .aboutMeTitle{
-    font-family: 'AbelFont';
+    font-family: var(--font);
     font-size: 60px;
     background-color: white;
     text-align: center;
 }
 
 .aboutMeDesc{
-    font-family: 'AbelFont';
+    font-family: var(--font);
     font-size: 20px;
     width: 600px;
     background-color: white;
@@ -59,7 +59,7 @@
 
 .resumeLink{
     text-align: center;
-    font-family: "AbelFont";
+    font-family: var(--font);
     background-color: white;
     padding: 10px;
     color: blue;

@@ -21,7 +21,7 @@
     width: 300px;
     margin: auto;
     text-align: center;
-    font-family: "AbelFont";
+    font-family: var(--font);
     padding-bottom: 30px;
     color: white;
 }
@@ -32,7 +32,7 @@
     padding-bottom: 30px;
     margin: auto;
     color: white;
-    font-family: "AbelFont";
+    font-family: var(--font);
 }
 
 .formContainer{

@@ -1,5 +1,6 @@
 const path = require('path');               
 const HtmlWebpackPlugin = require("html-webpack-plugin"); 
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 const dotenv = require("dotenv-webpack");
 
 module.exports = {
@@ -12,10 +13,13 @@ module.exports = {
     plugins: [                      
         new HtmlWebpackPlugin({              
             filename: 'index.html',   
-            favicon: './src/favicon.ico',       
+            favicon: './public/icons/favicon.ico',       
             template: './src/index.html'      
         }),
         new dotenv({systemvars: true}),
+        new CopyWebpackPlugin({
+            patterns: [{ from: 'public', to: '' }],        //this will copy all the files from the public folder to the build directory
+          }),
     ],
     
     module: {
