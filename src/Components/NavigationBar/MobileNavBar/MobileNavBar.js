@@ -15,7 +15,7 @@ function MobileNavBar() {
     return(
         <nav className={styles.container}>
             <button className={styles.hamburger} onClick={handleOpen}>
-                <FontAwesomeIcon icon={faBars} color='white' size='3x'/>  
+                <FontAwesomeIcon icon={faBars} className={styles.hamburger_icon} color='white' size='3x'/>  
             </button>
             <AnimatePresence>
                 {open && 
