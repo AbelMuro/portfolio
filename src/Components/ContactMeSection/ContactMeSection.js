@@ -49,7 +49,7 @@ function ContactMeSection() {
     return(
         <section className={styles.container} id="contactMe">
             <div className={styles.blackBox}>
-                <div className={styles.contactMeContainer}>
+                <div>
                     <h1 className={styles.contactMeTitle}>
                         Contact Me
                     </h1>
