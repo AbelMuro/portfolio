@@ -2,7 +2,7 @@
     background-image: url("./images/binary code.gif");
     width: 100%;
     margin: auto;
-    height: 100vh;
+    min-height: 100vh;
     padding: 30px 0px;
     display: flex;
     justify-content: center;
@@ -86,7 +86,6 @@
 
 @media (max-width: 1160px){
     .container{
-        height: 800px;
         gap: 50px;
     }
 
@@ -110,7 +109,6 @@
     }
 
     .container{
-        height: auto;
         padding: 80px 0px;
     }    
 
