@@ -4,6 +4,10 @@ import daysOfWonder from './audio/Clemens Ruh Days Of Wonder.wav';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faAngleDown} from '@fortawesome/free-solid-svg-icons';
 
+
+// i will need to create another background image that is optimized for websites
+// https://ezgif.com/optimize
+
 function HomeSection() {
 
     return(
