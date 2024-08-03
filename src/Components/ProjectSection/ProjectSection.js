@@ -51,11 +51,12 @@ function ProjectSection () {
             <Project href="https://galleria-front-end-mentor.netlify.app/" src={images['galleriaApp']} projectTitle='Galleria App' setCount={setCount}/>
             <Project href="https://front-end-invoice-app.netlify.app/" src={images["invoiceApp"]} projectTitle="Invoice Management App" setCount={setCount}/>   
             <Project href="https://todo-app-fawn-eight.vercel.app/" src={images["secondTodoApp"]} projectTitle="Todo App" setCount={setCount}/>    
-            <Project href="https://credit-card-app-front.netlify.app/" src={images["creditCardApp"]} projectTitle="Credit Card App" setCount={setCount}/>                  
-            <Project href="https://photosnap-front-end.netlify.app/" src={images["photosnapWebsite"]} projectTitle="Photosnap Website" setCount={setCount}/>
-            <Project href="https://product-list-with-cart-front-end.netlify.app/" src={images["productListWithCartWebsite"]} projectTitle="Product List Website" setCount={setCount}/>
-            <Project href="https://kick-ass-weather-app.netlify.app/" src={images["weatherApp"]} projectTitle="Weather App" setCount={setCount}/>
+            <Project href="https://credit-card-app-front.netlify.app/" src={images["creditCardApp"]} projectTitle="Credit Card App" setCount={setCount}/>    
             <Project href="https://ip-address-app-front-end.netlify.app/" src={images["ipAddressTrackerApp"]} projectTitle="IP Address Tracker App" setCount={setCount}/>
+            <Project href="https://kick-ass-weather-app.netlify.app/" src={images["weatherApp"]} projectTitle="Weather App" setCount={setCount}/>
+            <Project href="https://product-list-with-cart-front-end.netlify.app/" src={images["productListWithCartWebsite"]} projectTitle="Product List Website" setCount={setCount}/>
+            <Project href="https://product-ecommerce-website.vercel.app/" src={images["ecommerceProductWebpage"]} projectTitle="E-commerce Product Webpage" setCount={setCount}/>
+            <Project href="https://photosnap-front-end.netlify.app/" src={images["photosnapWebsite"]} projectTitle="Photosnap Website" setCount={setCount}/>
             <Project href="https://my-dictionaryy-app.netlify.app/" src={images["dictionaryApp"]} projectTitle="Dictionary App" setCount={setCount}/>
             <Project href="https://dark-pink-credit-card-app.netlify.app/" src={images["dark pink mastercard"]} projectTitle="Dark Pink Mastercard" setCount={setCount}/>
             <Project href="https://solar-system-website-gsap.netlify.app/" src={images["solarSystemWebsite"]} projectTitle="Solar Systems Website" setCount={setCount}/>
