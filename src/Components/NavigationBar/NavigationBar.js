@@ -7,7 +7,6 @@ import {useMediaQuery} from 'react-responsive';
 function NavigationBar() {
     const mobile = useMediaQuery({query: "(max-width: 600px)"});
 
-
     return mobile ? <MobileNavBar/>  : 
         <nav className={styles.navBar}>
             <ul className={styles.navItems}>

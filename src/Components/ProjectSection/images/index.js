@@ -63,6 +63,7 @@ import bmiCalculatorApp from './bmi calculator app.png';
 import officeliteWebsite from './officelite website.png';
 import ecommerceProductWebpage from './ecommerce-product webpage.png';
 import skilledElearningWebPage from './Skilled E-learning Webpage.png';
+import snapWebpage from './Snap Webpage.png';
 
 export default {
     "dark pink mastercard": darkPinkMastercard,
@@ -129,5 +130,6 @@ export default {
     "bmiCalculatorApp": bmiCalculatorApp,
     "officeliteWebsite": officeliteWebsite,
     "ecommerceProductWebpage": ecommerceProductWebpage,
-    "skilledElearningWebPage": skilledElearningWebPage
+    "skilledElearningWebPage": skilledElearningWebPage,
+    "snapWebpage": snapWebpage
 }
