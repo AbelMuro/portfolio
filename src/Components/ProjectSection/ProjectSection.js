@@ -25,7 +25,8 @@ function ProjectSection () {
             <Project href="https://bookmarking-front-end.netlify.app/" src={images["bookmarkWebsite"]} projectTitle="Bookmark Website" setCount={setCount}/>
             <Project href="https://creative-single-page-website.netlify.app/" src={images["creativeWebsite"]} projectTitle="Creative Website" setCount={setCount}/>
             <Project href="https://myteam-website-front-end.netlify.app/" src={images['myteamWebsite']} projectTitle='MyTeam Website' setCount={setCount}/>
-            <Project href="https://snap-webpage-front-end.netlify.app/" src={images['snapWebpage']} projectTitle='Snap Webpage' setCount={setCount}/>
+            <Project href="https://snap-webpage-front-end.netlify.app/" src={images['snapWebpage']} projectTitle='Snap Webpage' setCount={setCount}/>         
+            <Project href="https://art-gallery-front-end.netlify.app/" src={images['modernArtGallery']} projectTitle='Modern Art Gallery Website' setCount={setCount}/>          
             <Project href="https://quiz-app-front-end-mentor.netlify.app/" src={images['quizApp']} projectTitle='Quiz App' setCount={setCount}/>
             <Project href="https://scoot-front-end.netlify.app/" src={images['scootWebsite']} projectTitle='Scoot Website' setCount={setCount}/>
             <Project href="https://new-calculator-front-end.netlify.app/" src={images['newCalculatorApp']} projectTitle='New Calculator App' setCount={setCount}/>
