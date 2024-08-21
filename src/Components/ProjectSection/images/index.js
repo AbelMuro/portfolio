@@ -65,6 +65,7 @@ import ecommerceProductWebpage from './ecommerce-product webpage.png';
 import skilledElearningWebPage from './Skilled E-learning Webpage.png';
 import snapWebpage from './Snap Webpage.png';
 import modernArtGallery from './Modern Art Gallery website.png';
+import recipeWebpage from './recipe webpage.png';
 
 export default {
     "dark pink mastercard": darkPinkMastercard,
@@ -134,4 +135,5 @@ export default {
     "skilledElearningWebPage": skilledElearningWebPage,
     "snapWebpage": snapWebpage,
     "modernArtGallery":  modernArtGallery,
+    "recipeWebpage": recipeWebpage
 }
