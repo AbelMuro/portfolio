@@ -54,6 +54,7 @@ function ProjectSection () {
             <Project href="https://front-end-invoice-app.netlify.app/" src={images["invoiceApp"]} projectTitle="Invoice Management App" setCount={setCount}/>   
             <Project href="https://todo-app-fawn-eight.vercel.app/" src={images["secondTodoApp"]} projectTitle="Todo App" setCount={setCount}/>    
             <Project href="https://credit-card-app-front.netlify.app/" src={images["creditCardApp"]} projectTitle="Credit Card App" setCount={setCount}/>    
+            <Project href="https://contact-us-front-end.netlify.app/" src={images["contactFormWebpage"]} projectTitle="Contact Form Webpage" setCount={setCount}/>
             <Project href="https://ip-address-app-front-end.netlify.app/" src={images["ipAddressTrackerApp"]} projectTitle="IP Address Tracker App" setCount={setCount}/>
             <Project href="https://kick-ass-weather-app.netlify.app/" src={images["weatherApp"]} projectTitle="Weather App" setCount={setCount}/>
             <Project href="https://product-list-with-cart-front-end.netlify.app/" src={images["productListWithCartWebsite"]} projectTitle="Product List Website" setCount={setCount}/>

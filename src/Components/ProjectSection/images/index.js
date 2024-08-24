@@ -64,6 +64,7 @@ import officeliteWebsite from './officelite website.png';
 import ecommerceProductWebpage from './ecommerce-product webpage.png';
 import skilledElearningWebPage from './Skilled E-learning Webpage.png';
 import snapWebpage from './Snap Webpage.png';
+import contactFormWebpage from './contact form webpage.png';
 
 export default {
     "dark pink mastercard": darkPinkMastercard,
@@ -131,5 +132,6 @@ export default {
     "officeliteWebsite": officeliteWebsite,
     "ecommerceProductWebpage": ecommerceProductWebpage,
     "skilledElearningWebPage": skilledElearningWebPage,
-    "snapWebpage": snapWebpage
+    "snapWebpage": snapWebpage,
+    "contactFormWebpage": contactFormWebpage
 }
