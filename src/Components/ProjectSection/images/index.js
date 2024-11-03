@@ -67,6 +67,7 @@ import snapWebpage from './Snap Webpage.png';
 import contactFormWebpage from './contact form webpage.png';
 import modernArtGallery from './Modern Art Gallery website.png';
 import recipeWebpage from './recipe webpage.png';
+import personalFinanceApp from './personal-finance-app.png';
 
 export default {
     "dark pink mastercard": darkPinkMastercard,
@@ -137,5 +138,6 @@ export default {
     "snapWebpage": snapWebpage,
     "contactFormWebpage": contactFormWebpage,
     "modernArtGallery":  modernArtGallery,
-    "recipeWebpage": recipeWebpage
+    "recipeWebpage": recipeWebpage,
+    "personalFinanceApp": personalFinanceApp
 }

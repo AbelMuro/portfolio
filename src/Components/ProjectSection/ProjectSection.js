@@ -18,6 +18,7 @@ function ProjectSection () {
             <Project href="https://hangman-game-front-end.netlify.app/" src={images["hangmanGame"]} projectTitle="Hang-man Game" setCount={setCount}/> 
             <Project href="https://manage-landing-website.vercel.app/" src={images["manageLandingPage"]} projectTitle="Manage Landing Webpage" setCount={setCount}/>  
             <Project href="https://easy-bank-website-front.netlify.app/" src={images["easybankWebpage"]} projectTitle="Easy Bank Webpage" setCount={setCount}/>  
+            <Project href="https://personal-finance-app-front-end.netlify.app/" src={images["personalFinanceApp"]} projectTitle="Personal Finance App" setCount={setCount}/>  
             <Project href="https://pay-api-front-end-mentor.netlify.app/" src={images["payApiWebsite"]} projectTitle="Pay API Website" setCount={setCount}/>  
             <Project href="https://space-tourism-front-end.netlify.app/" src={images["spaceTourism"]} projectTitle="Space Tourism Website" setCount={setCount}/>       
             <Project href="https://planet-facts-front-end.netlify.app/" src={images["planetFactWebsite"]} projectTitle="Planet Fact Website" setCount={setCount}/>  
