@@ -10,8 +10,8 @@ import './styles.css';
 function App() {
     return(
         <>
-            <NavigationBar />
-            <HomeSection />
+            <NavigationBar/>
+            <HomeSection/>
             <AboutMeSection/>
             <ProjectSection/>
             <ContactMeSection/>

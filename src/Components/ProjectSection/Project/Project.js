@@ -1,13 +1,7 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import styles from './styles.module.css';
 
-function Project({href, src, projectTitle, setCount}) {
-
-    useEffect(() => {
-        setCount((prev) => {
-            return prev + 1;
-        })
-    }, [])
+function Project({href, src, projectTitle}) {
 
     return(
         <div className={styles.projectContainer}>
