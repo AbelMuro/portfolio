@@ -28,7 +28,7 @@ function ProjectSection () {
         const container = document.querySelector('.' + styles.container);
         let relativeScrollPosition = container.getBoundingClientRect().top;
         relativeScrollPosition = relativeScrollPosition > 0 ? 0 : Math.abs(relativeScrollPosition);
-        const newIndex = Math.floor(Math.abs(relativeScrollPosition) / ITEM_HEIGHT) * 3; 
+        const newIndex = Math.floor(relativeScrollPosition / ITEM_HEIGHT) * 3; 
         console.log(newIndex);
         if(newIndex !== startIndex) { 
             setStartIndex(newIndex); 
