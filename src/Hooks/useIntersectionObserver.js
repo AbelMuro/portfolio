@@ -1,21 +1,16 @@
-import { useEffect, useRef, useState } from 'react'; 
+import { useEffect, useState } from 'react'; 
 
 const useIntersectionObserver = (callback, options) => { 
     const [target, setTarget] = useState(null); 
-    const observer = useRef(null); 
 
     useEffect(() => { 
-        if (!observer.current) 
-            observer.current = new IntersectionObserver(callback, options); 
+        const observer = new IntersectionObserver(callback, options); 
+        target && observer.observe(target); 
         
-        const { current: currentObserver } = observer; 
-        if (target) 
-            currentObserver.observe(target); 
-        
-        return () => target && currentObserver.unobserve(target);  
+        return () => target &&  observer.unobserve(target);  
          
     }, [target, callback, options]); 
-
+    
     return setTarget; 
 }; 
 
