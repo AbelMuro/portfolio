@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import styles from './styles.module.css';
 import TextField from '@mui/material/TextField';
 import Map from './Map';
@@ -9,7 +9,6 @@ function ContactMeSection() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
-
 
     const handleName = (e) => {
         setName(e.target.value)

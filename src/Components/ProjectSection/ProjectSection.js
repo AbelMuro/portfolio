@@ -1,4 +1,4 @@
-import React, {lazy, useState, useEffect, useCallback} from 'react';
+import React, {lazy, useState, useEffect} from 'react';
 import {useIntersectionObserver, useColumns} from '../../Hooks';
 import projectData from './ProjectData';
 const Project = lazy(() => import('./Project'));
@@ -38,8 +38,22 @@ function ProjectSection () {
         return () => window.removeEventListener('scroll', handleScroll); 
     }, [inView]);
 
+
+    useEffect(() => {                                                                   
+        const handleNavLink = () => {
+            setVisibleItems(projectData);     
+            const contactMe = document.getElementById('contactMe');
+            contactMe.scrollIntoView();
+        }
+
+       document.addEventListener('display-all-projects', handleNavLink);                    //this event will add ALL projects into the array, then we will scroll down to the contactMe component
+
+        return () => document.removeEventListener('display-all-projects', handleNavLink);
+    }, [])
+
+
     return(
-        <section className={styles.container} ref={setTarget}>
+        <section className={styles.container} ref={setTarget} id='projects'>
             <h1 className={styles.title}>
                 My Projects ({projectData.length})
             </h1>

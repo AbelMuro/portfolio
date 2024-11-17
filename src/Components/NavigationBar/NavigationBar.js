@@ -7,6 +7,11 @@ import {useMediaQuery} from 'react-responsive';
 function NavigationBar() {
     const mobile = useMediaQuery({query: "(max-width: 600px)"});
 
+    const handleLink = () => {
+        const event = new Event('display-all-projects');        //this event will force the projectSection component to display ALL projects, then we will scroll down to the ContactMe component
+        document.dispatchEvent(event);
+    }
+
     return mobile ? <MobileNavBar/>  : 
         <nav className={styles.navBar}>
             <ul className={styles.navItems}>
@@ -26,7 +31,7 @@ function NavigationBar() {
                     </a>
                 </li>
                 <li className={styles.navItem}>
-                    <a href="#contactMe">
+                    <a href="#contactMe" onClick={handleLink}>          {/* Clicking on this link will not automatically scroll to the component in the app, which is why i have the onClick Event handler*/}
                         Contact Me
                     </a>
                 </li>                  
