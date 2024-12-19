@@ -68,6 +68,7 @@ import contactFormWebpage from './contact form webpage.png';
 import modernArtGallery from './Modern Art Gallery website.png';
 import recipeWebpage from './recipe webpage.png';
 import personalFinanceApp from './personal-finance-app.png';
+import noteTakingApp from './note taking app.png';
 
 export default {
     "dark pink mastercard": darkPinkMastercard,
@@ -139,5 +140,6 @@ export default {
     "contactFormWebpage": contactFormWebpage,
     "modernArtGallery":  modernArtGallery,
     "recipeWebpage": recipeWebpage,
-    "personalFinanceApp": personalFinanceApp
+    "personalFinanceApp": personalFinanceApp,
+    "noteTakingApp": noteTakingApp
 }
