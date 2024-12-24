@@ -35,6 +35,11 @@
       "projectTitle": "Personal Finance App"
     },
     {
+      "href": "https://note-taking-app-front-end.netlify.app/",
+      "src": "noteTakingApp",
+      "projectTitle": "Note Taking App"
+    },
+    {
       "href": "https://pay-api-front-end-mentor.netlify.app/",
       "src": "payApiWebsite",
       "projectTitle": "Pay API Website"
