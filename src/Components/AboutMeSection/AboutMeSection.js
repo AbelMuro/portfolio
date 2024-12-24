@@ -17,9 +17,6 @@ const StyledButton = styled(Button)`
     }
 `
 
-// i will need to create another background image that is optimized for websites
-// https://ezgif.com/optimize
-
 function AboutMeSection() {
 
     const handleEnter = (e) => {
