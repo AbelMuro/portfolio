@@ -140,6 +140,12 @@
       "projectTitle": "Skilled E-Learning Webpage"
     },
     {
+      "href": "https://tech-book-club.netlify.app/",
+      "src": "techBookClubLandingPage",
+      "projectTitle": "Tech Book Club Webpage"
+    },
+
+    {
       "href": "https://markdown-editor-app-front-end.netlify.app/",
       "src": "markdownEditorApp",
       "projectTitle": "Markdown Editor App"
