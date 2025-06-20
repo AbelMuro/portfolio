@@ -1,0 +1,6 @@
+.container{
+    transition: all 0.2s linear, transform 0.6s linear;
+    transform-style: preserve-3d;
+    backface-visibility: 'hidden';
+    perspective: 800
+}

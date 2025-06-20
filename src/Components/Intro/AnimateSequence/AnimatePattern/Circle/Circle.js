@@ -6,7 +6,7 @@ function Circle(props) {
     return(
         <>
             <circle {...props} fill='none' stroke='#0400ff'/>
-            <circle {...props} fill='none' stroke='#0400ff' strokeWidth={Number(props.strokeWidth) * 2.5} filter={'url(#glowEffect)'}/>
+            <circle {...props} fill='none' stroke='#0400ff' strokeWidth={Number(props.strokeWidth) * 2} filter={'url(#glowEffect)'}/>
         </>
         
     )

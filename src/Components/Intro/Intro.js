@@ -1,14 +1,25 @@
-import React from 'react';
-import AnimatePattern from './AnimatePattern';
+import React, {useRef, createContext} from 'react';
+import AnimateSequence from './AnimateSequence';
+import {useScroll, useMotionValueEvent} from 'framer-motion'
 import * as styles from './styles.module.css';
 
+export const ContainerContext = createContext();
 
 function Intro() {
+    const {scrollYProgress} = useScroll();
+    const MainContainerRef = useRef();
+
+    useMotionValueEvent(scrollYProgress, 'change', (value) => {
+        console.log(value);
+    })
 
     return(
-        <section className={styles.container} id={"home"}>
-            <AnimatePattern/>
-        </section>
+        <ContainerContext.Provider value={{MainContainerRef}}>
+            <header className={styles.container} id={"home"} ref={MainContainerRef}>
+                <AnimateSequence/>
+            </header>            
+        </ContainerContext.Provider>
+
     )
 }
 export default Intro;

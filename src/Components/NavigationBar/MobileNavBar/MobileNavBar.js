@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import styles from './styles.module.css';
+import * as styles from './styles.module.css';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'; 
 import {faBars, faClose} from '@fortawesome/free-solid-svg-icons';
 import {motion, AnimatePresence} from 'framer-motion';

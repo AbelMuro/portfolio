@@ -18,7 +18,7 @@ module.exports = {
         }),
         new dotenv({systemvars: true}),
         new CopyWebpackPlugin({
-            patterns: [{ from: 'public', to: '' }],        //this will copy all the files from the public folder to the build directory
+            patterns: [{ from: 'public', to: '' }],   
           }),
     ],
     
@@ -28,8 +28,27 @@ module.exports = {
                 test: /\.js$/, 
                 use: {
                     loader: 'babel-loader', 
-                    options: {presets: ['@babel/preset-env', '@babel/preset-react']} 
-                    }                                                                 
+                    options: {
+                        presets: ['@babel/preset-env', '@babel/preset-react'],
+                        plugins: [[
+                            'babel-plugin-root-import',
+                            {
+                                rootPathSuffix: './src',
+                                rootPathPrefix: '~/'
+                            },
+                            'src directory'
+                        ],
+                        [
+                            'babel-plugin-root-import',
+                            {
+                                rootPathSuffix: './src/Components',
+                                rootPathPrefix: '!/'
+                            },
+                            'components directory'
+                        ]
+                    ]
+                    } 
+                }                                                                 
             },
             {
                 test: /\.css$/,
