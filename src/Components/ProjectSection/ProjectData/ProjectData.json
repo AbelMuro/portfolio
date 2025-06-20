@@ -20,6 +20,11 @@
       "projectTitle": "Hang-man Game"
     },
     {
+      "href": "https://world-class-chess.netlify.app/",
+      "src": "onlineChessApp",
+      "projectTitle": "Online Chess App"
+    },
+    {
       "href": "https://manage-landing-website.vercel.app/",
       "src": "manageLandingPage",
       "projectTitle": "Manage Landing Webpage"

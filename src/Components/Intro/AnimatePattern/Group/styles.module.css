@@ -1,0 +1,7 @@
+.container{
+    transition: all 0.6s linear;
+}
+
+.group{
+    transition: none;
+}
