@@ -1,9 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import styles from './styles.module.css';
-import TextField from '@mui/material/TextField';
 import Map from './Map';
-import Button from '@mui/material/Button';
-import Box from '@mui/material/Box';
 
 function ContactMeSection() {
     const [name, setName] = useState("");
@@ -58,24 +55,6 @@ function ContactMeSection() {
                     </p>
                     {/* note to my future self: please check the index.html file in the outer most folder in src*/}
                     <form className={styles.formContainer} id="reset" onSubmit={handleSubmit}>                   
-                        <TextField id="outlined-basic" label="Enter Name" variant="outlined" className={styles.inputs} inputProps={{type: "text", name: "name"}} required value={name} onChange={handleName}/>
-                        <br/>
-                        <TextField id="outlined-basic" label="Enter Email" variant="outlined" className={styles.inputs} inputProps={{type: "email", name: "email"}} required value={email} onChange={handleEmail}/>
-                        <br/>
-                        <TextField
-                            inputProps={{name: "message"}}
-                            className={styles.inputMessage}
-                            id="outlined-multiline-static"
-                            label="Enter Message"
-                            multiline
-                            rows={8}
-                            required
-                            value={message}
-                            onChange={handleMessage}
-                            />  
-                        <Box className={styles.button}>
-                            <Button type="submit" variant="contained">Submit</Button>                             
-                        </Box>
 
                     </form>                    
                 </div>
