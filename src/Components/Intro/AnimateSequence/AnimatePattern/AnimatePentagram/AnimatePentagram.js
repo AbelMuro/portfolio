@@ -11,6 +11,10 @@ import * as styles from './styles.module.css';
     below into its own component that will load icons that represents my tech stack. 
 
     i also want to animate blue circles that come out of the pentagram as the user scrolls down
+
+    i will need to change the scale animation to a zoom-in animation for the ScaleGroup component (scale affects the performance)
+
+    dont forget to add icons to the MobileNavBar component
 */
 
 function AnimatePentagram({scrollThresholds, scaleThresholds}) {
