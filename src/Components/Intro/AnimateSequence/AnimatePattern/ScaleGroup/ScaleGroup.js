@@ -13,7 +13,6 @@ function ScaleGroup({children, scaleThresholds, scrollThresholds}) {
     useMotionValueEvent(scrollYProgress, 'change', (value) => {
         if(value >= 0.50)
             groupRef.current.style.display = 'none';
-        
         else
             groupRef.current.style.display = 'block';
     });

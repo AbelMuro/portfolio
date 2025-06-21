@@ -13,6 +13,7 @@ import * as styles from './styles.module.css';
     i also want to animate blue circles that come out of the pentagram as the user scrolls down
 
     i will need to change the scale animation to a zoom-in animation for the ScaleGroup component (scale affects the performance)
+    i may need to wrap around each g element with another SVG element and applying the zoom in effect with viewbox
 
     dont forget to add icons to the MobileNavBar component
 */
