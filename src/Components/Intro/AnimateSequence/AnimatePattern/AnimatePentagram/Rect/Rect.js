@@ -6,7 +6,7 @@ import * as styles from './styles.module.css';
 function Rect(props) {
     const {MainContainer} = useContext(ContainerContext);
     const {scrollYProgress} = useScroll(MainContainer);
-    const strokeDashoffset = useTransform(scrollYProgress, [0.35, 0.52], [50, 0])
+    const strokeDashoffset = useTransform(scrollYProgress, [0.30, 0.47], [50, 0])
     
 
     return(

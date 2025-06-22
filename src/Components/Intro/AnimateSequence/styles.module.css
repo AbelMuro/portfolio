@@ -3,8 +3,5 @@
     height: 100vh;
     position: sticky;
     top: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     z-index: var(--fourth-layer);
 }

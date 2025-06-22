@@ -1,19 +1,6 @@
-.container{
-    width: 100%;
-    height: 100vh;
+.pentagram{
     transform-style: preserve-3d;
     backface-visibility: 'hidden';
     perspective: 800;
     perspective-origin: center;
-}
-
-
-.group{
-    display: grid;
-    grid-template-columns: repeat(auto, 3);
-    
-}
-
-.pentagram{
-    transition: all 0.2s linear;
 }

@@ -1,31 +1,60 @@
-import React, {useRef} from 'react';
-import AnimateWelcome from './AnimateWelcome';
-import {motion, useScroll, useTransform, useMotionValueEvent} from 'framer-motion';
-import icons from '~/assets/icons';
+import React, {useEffect, useState, useContext} from 'react';
+import { ContainerContext } from '!/Intro';
+import {motion, useScroll, useMotionValueEvent, AnimatePresence} from 'framer-motion';
 import * as styles from './styles.module.css';
 
 function AnimateTitle() {
-    const {scrollYProgress} = useScroll();
-    const opacity = useTransform(scrollYProgress, [0, 0.20], [1, 0]);
-    const titleRef = useRef();
+    const {MainContainerRef} = useContext(ContainerContext)
+    const {scrollYProgress} = useScroll(MainContainerRef);
+    const [largeTitle, setLargeTitle] = useState('Welcome.');
+    const [smallerTitle, setSmallerTitle] = useState('');
 
     useMotionValueEvent(scrollYProgress, 'change', (value) => {
-        if(value > 0.25)
-            titleRef.current.style.display = 'none';
-        else
-            titleRef.current.style.display = 'flex';
-    })
+        if(value >= 0 && value <= 0.06)
+            setLargeTitle('Welcome.');
+        else if(value >= 0.06 && value <= 0.12){
+            setLargeTitle("I'm Abel.");
+            setSmallerTitle('');
+        }
+            
+        else if(value >= 0.12 && value <= 0.18){
+            setLargeTitle('');
+            setSmallerTitle('Full-Stack Web Developer.')
+        }
+            
+        else if(value >= 0.18 && value <= 0.28)
+            setSmallerTitle('Behold my Tech Stack.')
+        else 
+            setSmallerTitle('')
+    });
 
-    return(
-        <motion.div className={styles.container} style={{opacity}} ref={titleRef}>
-            <h1 className={styles.title}>
-                Welcome.
-            </h1>
-            <h2 className={styles.title_message}>
-                Scroll down.
-                <motion.img src={icons['arrowDown']} initial={{y: 0}} animate={{y: [0, 20, 0]}} transition={{duration: 1.5, repeat: Infinity}}/>
-            </h2>
-        </motion.div>
+
+    return (
+        <AnimatePresence>
+            {     
+            largeTitle &&
+                <motion.h1 
+                    key={largeTitle}
+                    className={styles.title} 
+                    initial={{opacity: 0}}
+                    animate={{opacity: 1}}
+                    exit={{opacity: 0}}>
+                        {largeTitle}
+                </motion.h1>
+            }  
+            {
+               smallerTitle && 
+                <motion.h2 
+                    key={smallerTitle}
+                    className={styles.smallerTitle} 
+                    initial={{opacity: 0}}
+                    animate={{opacity: 1}}
+                    exit={{opacity: 0}}>
+                        {smallerTitle}
+                </motion.h2>
+            }
+                       
+        </AnimatePresence>
     )
 }
 

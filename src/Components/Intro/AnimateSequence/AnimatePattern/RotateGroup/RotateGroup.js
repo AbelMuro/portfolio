@@ -3,14 +3,14 @@ import { ContainerContext } from '!/Intro';
 import {motion, useAnimationControls, useScroll, useMotionValueEvent} from 'framer-motion';
 import * as styles from './styles.module.css';
 
-function RotateGroup({children, from, to, duration, scrollThreshold}) {
+function RotateGroup({children, from, to, duration, stopRotate}) {
     const [animate, setAnimate] = useState(true);
     const {MainContainer} = useContext(ContainerContext);
     const {scrollYProgress} = useScroll(MainContainer);
     const controls = useAnimationControls();
 
     useMotionValueEvent(scrollYProgress, 'change', (value) => {
-        setAnimate(value < scrollThreshold); 
+        setAnimate(value < stopRotate); 
     }) 
 
     useEffect(() => {
@@ -22,8 +22,8 @@ function RotateGroup({children, from, to, duration, scrollThreshold}) {
 
     return(
         <motion.g className={styles.group} initial={{rotate: from}} animate={controls}>
-            {children}
-        </motion.g>  
+            {children} 
+        </motion.g> 
     )
 }
 
