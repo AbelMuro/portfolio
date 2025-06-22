@@ -1,25 +1,29 @@
 import React, {useRef, useContext} from 'react';
-import {motion, useMotionValueEvent, useScroll, useTransform} from 'framer-motion'
+import {motion, useMotionValueEvent, useScroll, useTransform, useSpring} from 'framer-motion';
 import {ContainerContext} from '!/Intro';
 import * as styles from './styles.module.css';
 
-function ScaleGroup({children, scaleThresholds, scrollThresholds}) {
+function ScaleGroup({children, scrollThresholds, scaleThresholds}) {
     const {MainContainerRef} = useContext(ContainerContext)
     const groupRef = useRef();
     const {scrollYProgress} = useScroll(MainContainerRef);
     const scale = useTransform(scrollYProgress, scrollThresholds, scaleThresholds);
-    const opacity = useTransform(scrollYProgress, [0.40, 0.45], [1, 0])
+    const scaleSpring = useSpring(scale, {stiffness: 150, damping: 40})
 
     useMotionValueEvent(scrollYProgress, 'change', (value) => {
-        if(value >= 0.50)
-            groupRef.current.style.display = 'none';
-        else
-            groupRef.current.style.display = 'block';
-    });
+        if(value >= scrollThresholds[1] + 0.10)
+            groupRef.current.style.visibility = 'hidden';
+        else 
+            groupRef.current.style.visibility = '';
+    })
 
     return(
-        <motion.g className={styles.container} style={{scale, opacity}} ref={groupRef} >
-            {children}          
+        <motion.g
+            className={styles.container} 
+            style={{scale: scaleSpring}} 
+            ref={groupRef}
+            >
+                {children}          
         </motion.g>
 
     )

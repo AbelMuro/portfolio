@@ -21,6 +21,8 @@ html, body{
 
 :root{
     --font: 'AbelFont';
+    --seventh-layer: 150;
+    --sixth-layer: 125;
     --fifth-layer: 100;
     --fourth-layer: 75;
     --third-layer: 50;
