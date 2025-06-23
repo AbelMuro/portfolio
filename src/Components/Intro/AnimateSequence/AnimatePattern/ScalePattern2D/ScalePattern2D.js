@@ -3,12 +3,15 @@ import {motion, useMotionValueEvent, useScroll, useTransform, useSpring} from 'f
 import {ContainerContext} from '!/Intro';
 import * as styles from './styles.module.css';
 
-function ScalePattern({children, scrollThresholds, scaleThresholds}) {
+function ScalePattern2D({children, scrollThresholds, scaleThresholds}) {
     const {MainContainerRef} = useContext(ContainerContext)
     const groupRef = useRef();
     const {scrollYProgress} = useScroll(MainContainerRef);
     const scale = useTransform(scrollYProgress, scrollThresholds, scaleThresholds);
     const scaleSpring = useSpring(scale, {stiffness: 150, damping: 40});
+    const transform = useTransform(scaleSpring, (scale) => {
+        return `scale(${scale}) translate(-74.1383963,-25.048764)'`
+    })
     
     useMotionValueEvent(scrollYProgress, 'change', (value) => {
         if(value >= scrollThresholds[1] + 0.10)
@@ -18,10 +21,10 @@ function ScalePattern({children, scrollThresholds, scaleThresholds}) {
     })
 
     return(
-        <motion.g style={{scale: scaleSpring}} ref={groupRef}>
+        <motion.g style={{transform}} ref={groupRef}>
             {children}    
         </motion.g>  
     )
 }
 
-export default ScalePattern;
+export default ScalePattern2D;
