@@ -104,8 +104,8 @@ function AnimatePattern() {
 
                         <ScaleAndRotateGroup2D 
                             id='outer circle' 
-                            scale={{scrollThresholds: [0.05, 0.11], scaleThresholds: [1, 4]}}
-                            rotate={{from: 0, to: 360, duration: 4.5, stopRotate: 0.10}}
+                            scaleAnimate={{scrollThresholds: [0.05, 0.11], scaleThresholds: [1, 4]}}
+                            rotateAnimate={{from: 0, to: 360, duration: 4.5, stopRotate: 0.10}}
                             >
                                 <Circle
                                     cx="-11.187783"
@@ -123,8 +123,8 @@ function AnimatePattern() {
 
                         <ScaleAndRotateGroup2D
                             id='inner circle with circles'
-                            scale={{scrollThresholds: [0.07, 0.13], scaleThresholds: [1, 4.5]}}
-                            rotate={{from: 360, to: 0, duration: 12.7, stopRotate: 0.12}}
+                            scaleAnimate={{scrollThresholds: [0.07, 0.13], scaleThresholds: [1, 4.5]}}
+                            rotateAnimate={{from: 360, to: 0, duration: 12.7, stopRotate: 0.12}}
                         >
                              <Circle
                                     cx="150.64648"
@@ -184,8 +184,8 @@ function AnimatePattern() {
 
                         <ScaleAndRotateGroup2D 
                             id='inner most circle'
-                            scale={{scrollThresholds: [0.09, 0.15], scaleThresholds: [1, 5]}}
-                            rotate={{from: 0, to: 360, duration: 3.4, stopRotate: 0.14}}
+                            scaleAnimate={{scrollThresholds: [0.09, 0.15], scaleThresholds: [1, 5]}}
+                            rotateAnimate={{from: 0, to: 360, duration: 3.4, stopRotate: 0.14}}
                             >
                                 <Circle
                                     cx="173.54935"
