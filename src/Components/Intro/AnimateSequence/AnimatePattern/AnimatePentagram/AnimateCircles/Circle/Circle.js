@@ -36,6 +36,7 @@ function Circle({scrollThresholds, scaleTo, rotateX, rotateY}) {
             strokeMiterlimit='0'
             strokeDasharray='none'
             strokeDashoffset='0'
+            filter={'url(#glowEffect)'}
             style={{scale: scaleWithSpring, rotateX: rotate3DSpringX, rotateY: rotate3DSpringY }}
             />
     )

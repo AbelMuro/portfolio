@@ -41,7 +41,13 @@ function AnimatePattern() {
                 <svg className={styles.svg} viewBox={'0 0 150 150'}>
                     <defs>
                         <filter id='glowEffect'>
-                            <feGaussianBlur stdDeviation={0.14}/>
+                            <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur"/>
+                            <feFlood flood-color="#0400ff" floodOpacity='1' result="color"/>
+                            <feComposite in="color" in2="blur" operator="in" result="glow"/>
+                            <feMerge>
+                                <feMergeNode in="glow"/>
+                                <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
                         </filter>
                         <clipPath
                             clipPathUnits="userSpaceOnUse"

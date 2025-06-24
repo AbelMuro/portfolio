@@ -11,7 +11,7 @@ function Rect(props) {
 
     return(
         <>
-            <motion.rect {...props} className={styles.squares} fill='none' stroke='#0400ff' strokeDasharray={'50'} style={{strokeDashoffset}} />
+            <motion.rect {...props} className={styles.squares} fill='none' stroke='#0400ff' strokeDasharray={'50'} style={{strokeDashoffset}} filter={'url(#glowEffect)'}/>
         </>
         
     )

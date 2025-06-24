@@ -49,6 +49,7 @@ function AnimatePentagram({scrollThresholds, scaleThresholds}) {
                     strokeMiterlimit='0'
                     strokeDasharray='none'
                     strokeDashoffset='0'
+                    filter={'url(#glowEffect)'}
                     />
                 <TechIcon name={'react'} x={157.80078 - 0.6} y={105.85111 - 0.6} size={'1.3'} scrollThresholds={[0.56, 0.57]}>
                     <circle
@@ -62,6 +63,7 @@ function AnimatePentagram({scrollThresholds, scaleThresholds}) {
                         strokeMiterlimit='0'
                         strokeDasharray='none'
                         strokeDashoffset='0'
+                        filter={'url(#glowEffect)'}
                         />
                 </TechIcon>
                 <TechIcon name={'node'} x={151.1973 - 0.65} y={99.719322 - 0.6} size={'1.5'} scrollThresholds={[0.50, 0.51]}>
@@ -76,6 +78,7 @@ function AnimatePentagram({scrollThresholds, scaleThresholds}) {
                         strokeMiterlimit='0'
                         strokeDasharray='none'
                         strokeDashoffset='0'
+                        filter={'url(#glowEffect)'}
                         />
                 </TechIcon>
                 <TechIcon name={'vue'} x={146.61064 - 0.6} y={101.58975 - 0.6} size={'1.3'} scrollThresholds={[0.70, 0.71]}>
@@ -90,6 +93,7 @@ function AnimatePentagram({scrollThresholds, scaleThresholds}) {
                         strokeMiterlimit='0'
                         strokeDasharray='none'
                         strokeDashoffset='0'
+                        filter={'url(#glowEffect)'}
                         />
 
                 </TechIcon>
@@ -105,6 +109,7 @@ function AnimatePentagram({scrollThresholds, scaleThresholds}) {
                         strokeMiterlimit='0'
                         strokeDasharray='none'
                         strokeDashoffset='0'
+                        filter={'url(#glowEffect)'}
                         />
                 </TechIcon>
                 <TechIcon name={'mySQL'} x={146.43172 - 0.9} y={110.32393 - 0.9} size={'2'} scrollThresholds={[0.64, 0.65]}>
@@ -119,6 +124,7 @@ function AnimatePentagram({scrollThresholds, scaleThresholds}) {
                         strokeMiterlimit='0'
                         strokeDasharray='none'
                         strokeDashoffset='0'
+                        filter={'url(#glowEffect)'}
                         />
                 </TechIcon>
                 <TechIcon name={'mongoDB'} x={151.60391 - 1.3} y={112.58473 - 1.2} size={'2.3'} scrollThresholds={[0.61, 0.62]}>
@@ -133,6 +139,7 @@ function AnimatePentagram({scrollThresholds, scaleThresholds}) {
                         strokeMiterlimit='0'
                         strokeDasharray='none'
                         strokeDashoffset='0'
+                        filter={'url(#glowEffect)'}
                         />
                 </TechIcon>
                 <TechIcon name={'next'} x={155.91408 - 1.1} y={101.54097 - 1.2} size={'2.3'} scrollThresholds={[0.53, 0.54]}>
@@ -147,6 +154,7 @@ function AnimatePentagram({scrollThresholds, scaleThresholds}) {
                         strokeMiterlimit='0'
                         strokeDasharray='none'
                         strokeDashoffset='0'
+                        filter={'url(#glowEffect)'}
                         />                            
                 </TechIcon>
                 <TechIcon name={'framermotion'} x={156.15253 - 1.1} y={110.3102 - 1.2} size={'2.3'} scrollThresholds={[0.58, 0.59]}>
@@ -161,6 +169,7 @@ function AnimatePentagram({scrollThresholds, scaleThresholds}) {
                         strokeMiterlimit='0'
                         strokeDasharray='none'
                         strokeDashoffset='0'
+                        filter={'url(#glowEffect)'}
                         />                    
                 </TechIcon>
                 <AnimateTechTitles x={147.41908 + 4.50} y={102.33794 + 3.3}>
