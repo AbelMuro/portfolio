@@ -13,7 +13,6 @@ function DisplayScrollDownMessage() {
         setMount(false);
 
         timeoutRef.current = setTimeout(() => {
-            console.log('mount')
             setMount(true);
         }, 2000)
     })

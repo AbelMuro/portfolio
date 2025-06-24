@@ -31,7 +31,7 @@ function AnimateTechTitles({children, x, y}) {
     }) 
 
     return(
-        <g>
+        <>
             <text x={x} y={y}    
                 fill="white"
                 textAnchor='middle'
@@ -41,7 +41,7 @@ function AnimateTechTitles({children, x, y}) {
                     {title}
             </text>
             {children}
-        </g>
+        </>
     )
 }
 

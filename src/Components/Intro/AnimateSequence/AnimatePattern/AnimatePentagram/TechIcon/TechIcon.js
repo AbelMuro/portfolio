@@ -8,10 +8,10 @@ function TechIcon({children, name, x, y, size, scrollThresholds}) {
     const opacity = useTransform(scrollYProgress, scrollThresholds, [0, 1] )
     
     return(
-        <g>
+        <>
             <motion.image width={size} className={styles.icon} href={icons[name]} x={x} y={y} style={{opacity}}/>
             {children}
-        </g>
+        </>
     )
 }
 

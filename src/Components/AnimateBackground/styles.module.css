@@ -1,0 +1,26 @@
+.container{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: var(--first-layer);
+    background-image: url('./icons/background-dots.svg');
+    background-size: 300px 300px;
+    background-repeat: repeat;
+    background-position: top left;
+    background-color: transparent;
+    z-index: var(--first-layer);
+    color: #00186880;
+}
+
+.smoke{
+    width: 0px;
+    height: 0px;
+    border-radius: 70px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 155);
+    opacity: 0.5
+}
