@@ -4,7 +4,7 @@ import {motion, useMotionValueEvent, useSpring, useTransform, useScroll, useAnim
 import * as styles from './styles.module.css';
 
 
-function ScaleAndRotateGroup2D({children, scaleAnimate, rotateAnimate, unmountAt}) {
+function ScaleAndRotateGroup2D({id, children, scaleAnimate, rotateAnimate, unmountAt}) {
     const x = useMotionValue(-74.1383963);
     const y = useMotionValue(-25.048764);
     const [animate, setAnimate] = useState(true);
@@ -16,18 +16,6 @@ function ScaleAndRotateGroup2D({children, scaleAnimate, rotateAnimate, unmountAt
     const scaleSpring = useSpring(scale, {stiffness: 150, damping: 40});
     const controls = useAnimationControls();
 
-    useMotionValueEvent(scrollYProgress, 'change', (value) => {
-        if(value >= unmountAt){
-            setMount(false);
-            setAnimate(false)
-        }
-            
-        else {
-            setMount(true);
-            setAnimate(true);
-        }
-            
-    })
 
     useEffect(() => {
         if(animate)
@@ -36,23 +24,20 @@ function ScaleAndRotateGroup2D({children, scaleAnimate, rotateAnimate, unmountAt
             controls.stop();
     }, [animate])    
 
+
     return(
-        <AnimatePresence>
-            {
-            mount && 
-                <motion.g initial={{opacity: 1}} exit={{opacity: 0, transition: {duration: 0.4}}}>
-                    <motion.g 
+        <>
+            {mount && <motion.g 
+                        id={id}
                         initial={{rotate: rotateAnimate.from}} 
                         animate={controls} 
                         ref={groupRef}
                         className={styles.group}
                         style={{scale: scaleSpring, x, y}}>
                             {children}
-                    </motion.g>                    
-                </motion.g>
-}            
-        </AnimatePresence>
-
+                    </motion.g> 
+            }         
+        </>         
     )
 }
 

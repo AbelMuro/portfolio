@@ -14,19 +14,14 @@ function useControlScrolling() {
     })
 
     useEffect(() => {
-        let scrollFrame;
-
+        return;
         const handleWheel = (e) => {
-            e.preventDefault();
             const deltaY = e.deltaY;
 
-            if(scrollFrame) cancelAnimationFrame(scrollFrame);
-            scrollFrame = requestAnimationFrame(() => {
-                window.scrollBy({
-                    top: deltaY * scrollSpeed,
-                    behavior: 'auto'
-                })
-            })
+            window.scrollBy({
+                top: deltaY * scrollSpeed,
+                behavior: 'auto'
+            })                
         };
 
         window.addEventListener('wheel', handleWheel, { passive: false })
