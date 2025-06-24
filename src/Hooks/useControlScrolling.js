@@ -14,13 +14,27 @@ function useControlScrolling() {
     })
 
     useEffect(() => {
-        window.addEventListener('wheel', (e) => {
+        let scrollFrame;
+
+        const handleWheel = (e) => {
             e.preventDefault();
-            window.scrollBy({
-                top: e.deltaY * scrollSpeed,
-                behavior: 'auto'
-            });
-        }, { passive: false });
+            const deltaY = e.deltaY;
+
+            if(scrollFrame) cancelAnimationFrame(scrollFrame);
+            scrollFrame = requestAnimationFrame(() => {
+                window.scrollBy({
+                    top: deltaY * scrollSpeed,
+                    behavior: 'auto'
+                })
+            })
+        };
+
+        window.addEventListener('wheel', handleWheel, { passive: false })
+
+        return () => {
+            window.removeEventListener('wheel', handleWheel);
+        }
+
     }, [scrollSpeed])
 
 
