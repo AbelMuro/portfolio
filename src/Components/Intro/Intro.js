@@ -10,7 +10,7 @@ function Intro() {
     const MainContainerRef = useRef();
 
     useMotionValueEvent(scrollYProgress, 'change', (value) => {
-        console.log(value);
+        //console.log(value);
     })
 
     return(

@@ -4,6 +4,7 @@ import {useScroll, useMotionValueEvent} from 'framer-motion';
 function useControlScrolling() {
     const {scrollYProgress} = useScroll();
     const [scrollSpeed, setScrollSpeed] = useState(283); // lower = slower
+    const [reset, setReset] = useState(false);
 
 
     useMotionValueEvent(scrollYProgress, 'change', (value) => {
@@ -15,21 +16,19 @@ function useControlScrolling() {
 
     useEffect(() => {
         const handleWheel = (e) => {
+            e.preventDefault();
             const deltaY = e.deltaY;
             const direction = deltaY > 0 ? 1 : -1;
             window.scrollBy({
                 top: direction * scrollSpeed,
-                behavior: 'auto'
-            })                
+                behavior: 'smooth'
+            });          
+            setReset((prevState) => !prevState)
         };
 
-        window.addEventListener('wheel', handleWheel, { passive: false })
+        window.addEventListener('wheel', handleWheel, {passive: false, once: true})
 
-        return () => {
-            window.removeEventListener('wheel', handleWheel);
-        }
-
-    }, [scrollSpeed])
+    }, [scrollSpeed, reset])
 
 
     return null
