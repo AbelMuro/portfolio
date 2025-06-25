@@ -41,8 +41,10 @@ function AnimatePattern() {
             <svg className={styles.svg} viewBox={'0 0 150 150'}>
                 <defs>
                     <filter id='glowEffect'>
-                        <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur"/>
-                        <feFlood floodColor="#0400ff" floodOpacity='1' result="color"/>
+                        <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur">
+                            <animate attributeName="stdDeviation" values="2;0;2" dur="3s" repeatCount="indefinite" calcMode="linear"/>
+                        </feGaussianBlur>
+                        <feFlood floodColor="#0400ff" floodOpacity='0.5' result="color"/>
                         <feComposite in="color" in2="blur" operator="in" result="glow"/>
                         <feMerge>
                             <feMergeNode in="glow"/>
@@ -110,7 +112,7 @@ function AnimatePattern() {
                     <ScaleAndRotateGroup2D 
                         id='outer circle' 
                         scaleAnimate={{scrollThresholds: [0.05, 0.17], scaleThresholds: [1, 6]}}
-                        rotateAnimate={{from: 0, to: 360, duration: 7.5, stopRotate: 0.15}}
+                        rotateAnimate={{from: 0, to: 360, duration: 7.5, stopRotate: 0.10}}
                         unmountAt={0.10}
                         >
                             <Circle
@@ -130,7 +132,7 @@ function AnimatePattern() {
                     <ScaleAndRotateGroup2D
                         id='inner circle with circles'
                         scaleAnimate={{scrollThresholds: [0.07, 0.19], scaleThresholds: [1, 6]}}
-                        rotateAnimate={{from: 360, to: 0, duration: 12.7, stopRotate: 0.17}}
+                        rotateAnimate={{from: 360, to: 0, duration: 12.7, stopRotate: 0.14}}
                         unmountAt={0.14}
                     >
                             <Circle

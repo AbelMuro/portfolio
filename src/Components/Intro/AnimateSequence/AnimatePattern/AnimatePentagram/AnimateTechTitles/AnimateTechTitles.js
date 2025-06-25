@@ -10,23 +10,23 @@ function AnimateTechTitles({children, x, y}) {
     const {scrollYProgress} = useScroll(MainContainer);
 
     useMotionValueEvent(scrollYProgress, 'change', (value) => {
-        if(value < 0.50)
+        if(value < 0.30)
             setTitle('');
-        else if(value >= 0.50 && value <= 0.51)
+        else if(value >= 0.30 && value <= 0.31)
             setTitle(titles.current[0])
-        else if(value >= 0.53 && value <= 0.54)
+        else if(value >= 0.33 && value <= 0.34)
             setTitle(titles.current[1])
-        else if(value >= 0.56 && value <= 0.57)
+        else if(value >= 0.36 && value <= 0.37)
             setTitle(titles.current[2]);
-        else if(value >= 0.58 && value <= 0.59)
+        else if(value >= 0.38 && value <= 0.39)
             setTitle(titles.current[3]);
-        else if(value >= 0.61 && value <= 0.62)
+        else if(value >= 0.41 && value <= 0.42)
             setTitle(titles.current[4]);
-        else if(value >= 0.64 && value <= 0.65)
+        else if(value >= 0.44 && value <= 0.45)
             setTitle(titles.current[5])
-        else if(value >= 0.67 && value <= 0.68)
+        else if(value >= 0.47 && value <= 0.48)
             setTitle(titles.current[6]);
-        else if(value >= 0.70)
+        else if(value >= 0.50)
             setTitle(titles.current[7]);
     }) 
 

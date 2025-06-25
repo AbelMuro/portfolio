@@ -15,12 +15,8 @@
 }
 
 .smoke{
-    width: 0px;
-    height: 0px;
+    height: 200px;
     border-radius: 70px;
     position: absolute;
-    top: 0px;
-    left: 0px;
-    background-color: rgba(0, 0, 155);
-    opacity: 0.5
+    background-color: rgb(0, 0, 155);
 }

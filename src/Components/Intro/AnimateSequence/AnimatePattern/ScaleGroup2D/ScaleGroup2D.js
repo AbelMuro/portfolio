@@ -13,6 +13,12 @@ function ScaleGroup2D({children, scrollThresholds, scaleThresholds, unmountAt, i
     const scale = useTransform(scrollYProgress, scrollThresholds, scaleThresholds);
     const scaleSpring = useSpring(scale, {stiffness: 150, damping: 40});
     
+    useMotionValueEvent(scrollYProgress, 'change', (value) => {
+        if(value >= unmountAt)
+            setMount(false);
+        else
+            setMount(true); 
+    })
 
     return (
         <AnimatePresence>
