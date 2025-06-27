@@ -29,9 +29,9 @@ function Circle({scrollThresholds, scaleTo, rotateX, rotateY}) {
     return(
         <motion.circle
             className={styles.circle}
-            cx="151.34041"
-            cy="106.16869"
-            r="8.5677881" 
+            cx={150.95853}
+            cy={115.17852}
+            r={14.348076}
             fill='none' 
             stroke='#0400ff'
             strokeWidth='0.2'

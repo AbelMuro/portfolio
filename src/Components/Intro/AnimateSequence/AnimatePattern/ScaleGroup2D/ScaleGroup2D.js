@@ -5,8 +5,8 @@ import * as styles from './styles.module.css';
 
 function ScaleGroup2D({children, scrollThresholds, scaleThresholds, unmountAt, id}) {
     const [mount, setMount] = useState(true)
-    const x = useMotionValue(-74.1383963);
-    const y = useMotionValue(-25.048764);
+    const x = useMotionValue(-46.129077);
+    const y = useMotionValue(-11.484006);
     const {MainContainerRef} = useContext(ContainerContext)
     const groupRef = useRef();
     const {scrollYProgress} = useScroll(MainContainerRef);

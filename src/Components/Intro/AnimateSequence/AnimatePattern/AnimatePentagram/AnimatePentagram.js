@@ -9,18 +9,9 @@ import AnimateCircles from './AnimateCircles';
 import * as styles from './styles.module.css';
 
 
-/* 
-    this is where i left off, i need to create another circle for each rotating circle in the svg,
-    the circle will be an invisible circle that  extends the original circle, this may prevent the cliping that happens with the circles
-
-    i also want to change the stroke color of all svg elements based on the scroll position
-
-    dont forget to add icons to the MobileNavBar component
-*/
-
 function AnimatePentagram({scrollThresholds, scaleThresholds}) {
-    const x = useMotionValue(-74.1383963);
-    const y = useMotionValue(-25.048764);
+    const x = useMotionValue(-47.929077);
+    const y = useMotionValue(-13.484006);
     const {MainContainer} = useContext(ContainerContext);
     const {scrollYProgress} = useScroll(MainContainer);
     const scale = useTransform(scrollYProgress, scrollThresholds, scaleThresholds)
@@ -38,154 +29,186 @@ function AnimatePentagram({scrollThresholds, scaleThresholds}) {
 
     return(      
         <motion.g className={styles.pentagram} style={{rotateY: rotate3DSpringY, rotateX: rotate3DSpringX, scale: scaleSpring, x, y}}>   
+
+
                 <AnimateCircles/>                        
                 <Circle
-                    cx="151.34041"
-                    cy="106.16869"
-                    r="8.5677881" 
-                    fill='none' 
-                    stroke='#0400ff'
-                    strokeWidth='0.335'
-                    strokeLinejoin='bevel'
-                    strokeMiterlimit='0'
-                    dasharray='300'
-                    filter={'url(#glowEffect)'}
+                id="path695"
+                cx={150.95853}
+                cy={115.17852}
+                r={14.348076}
+                fill="none"
+                stroke="#000000"
+                strokeWidth={0.56101}
+                strokeLinejoin="bevel"
+                strokeMiterlimit={0}
+                strokeDasharray="none"
+                strokeDashoffset={0}
+                strokeOpacity={1}
+                filter={'url(#glowEffect)'}
+                />
+                <TechIcon name={'react'} x={157.80078 - 0.6} y={104.37801 - 0.6} size={'1.3'} scrollThresholds={[0.36, 0.37]}>
+                    <Circle
+                    id="path697"
+                        cx={150.71886}
+                        cy={104.37801}
+                        r={1.6746536}
+                        fill="none"
+                        stroke="#000000"
+                        strokeWidth={0.334931}
+                        strokeLinejoin="bevel"
+                        strokeMiterlimit={0}
+                        strokeDasharray="none"
+                        strokeDashoffset={0}
+                        strokeOpacity={1}
+                        />
+                </TechIcon>
+                <TechIcon name={'node'} x={143.03781 - 0.65} y={107.51036 - 0.6} size={'1.5'} scrollThresholds={[0.30, 0.31]}>
+                    <Circle
+                    id="path698"
+                    cx={143.03781}
+                    cy={107.51036}
+                    r={1.6746536}
+                    fill="none"
+                    stroke="#000000"
+                    strokeWidth={0.334931}
+                    strokeLinejoin="bevel"
+                    strokeMiterlimit={0}
+                    strokeDasharray="none"
+                    strokeDashoffset={0}
+                    strokeOpacity={1}
                     />
-                <TechIcon name={'react'} x={157.80078 - 0.6} y={105.85111 - 0.6} size={'1.3'} scrollThresholds={[0.36, 0.37]}>
-                    <Circle
-                        cx="157.80078"
-                        cy="105.85111"
-                        r="1" 
-                        fill='none' 
-                        stroke='#0400ff'
-                        strokeWidth='0.2'
-                        strokeLinejoin='bevel'
-                        strokeMiterlimit='0'
-                        dasharray='100'
-                        filter={'url(#glowEffect)'}
-                        />
                 </TechIcon>
-                <TechIcon name={'node'} x={151.1973 - 0.65} y={99.719322 - 0.6} size={'1.5'} scrollThresholds={[0.30, 0.31]}>
-                    <Circle
-                        cx="151.1973"
-                        cy="99.719322"
-                        r="1" 
-                        fill='none' 
-                        stroke='#0400ff'
-                        strokeWidth='0.2'
-                        strokeLinejoin='bevel'
-                        strokeMiterlimit='0'
-                        dasharray='100'
-                        filter={'url(#glowEffect)'}
-                        />
-                </TechIcon>
-                <TechIcon name={'vue'} x={146.61064 - 0.6} y={101.58975 - 0.6} size={'1.3'} scrollThresholds={[0.50, 0.51]}>
-                    <Circle
-                        cx="146.61064"
-                        cy="101.58975"
-                        r="1" 
-                        fill='none' 
-                        stroke='#0400ff'
-                        strokeWidth='0.2'
-                        strokeLinejoin='bevel'
-                        strokeMiterlimit='0'
-                        strokeDasharray='none'
-                        strokeDashoffset='0'
-                        filter={'url(#glowEffect)'}
+                <TechIcon name={'vue'} x={140.04163 - 0.6} y={114.70116 - 0.6} size={'1.3'} scrollThresholds={[0.50, 0.51]}>
+                        <Circle
+                        id="path699"
+                        cx={140.04163}
+                        cy={114.70116}
+                        r={1.6746536}
+                        fill="none"
+                        stroke="#000000"
+                        strokeWidth={0.334931}
+                        strokeLinejoin="bevel"
+                        strokeMiterlimit={0}
+                        strokeDasharray="none"
+                        strokeDashoffset={0}
+                        strokeOpacity={1}
                         />
 
                 </TechIcon>
-                <TechIcon name={'express'} x={144.82152 - 0.9} y={105.88365 - 0.9} size={'2'} scrollThresholds={[0.47, 0.48]}>
+                <TechIcon name={'express'} x={142.73816 - 0.9} y={122.13708 - 0.9} size={'2'} scrollThresholds={[0.47, 0.48]}>
                     <Circle
-                        cx="144.82152"
-                        cy="105.88365"
-                        r="1" 
-                        fill='none' 
-                        stroke='#0400ff'
-                        strokeWidth='0.2'
-                        strokeLinejoin='bevel'
-                        strokeMiterlimit='0'
-                        dasharray='100'
-                        filter={'url(#glowEffect)'}
+                    id="path700"
+                    cx={142.73816}
+                    cy={122.13708}
+                    r={1.6746536}
+                    fill="none"
+                    stroke="#000000"
+                    strokeWidth={0.334931}
+                    strokeLinejoin="bevel"
+                    strokeMiterlimit={0}
+                    strokeDasharray="none"
+                    strokeDashoffset={0}
+                    strokeOpacity={1}
+                    />
+                </TechIcon>
+                <TechIcon name={'mySQL'} x={151.39981 - 0.9} y={125.92314 - 0.9} size={'2'} scrollThresholds={[0.44, 0.45]}>
+                    <Circle
+                        id="path701"
+                        cx={151.39981}
+                        cy={125.92314}
+                        r={1.6746536}
+                        fill="none"
+                        stroke="#000000"
+                        strokeWidth={0.334931}
+                        strokeLinejoin="bevel"
+                        strokeMiterlimit={0}
+                        strokeDasharray="none"
+                        strokeDashoffset={0}
+                        strokeOpacity={1}
                         />
                 </TechIcon>
-                <TechIcon name={'mySQL'} x={146.43172 - 0.9} y={110.32393 - 0.9} size={'2'} scrollThresholds={[0.44, 0.45]}>
+                <TechIcon name={'mongoDB'} x={158.61783 - 1.3} y={107.42867 - 1.2} size={'2.3'} scrollThresholds={[0.41, 0.42]}>
                     <Circle
-                        cx="146.43172"
-                        cy="110.32393"
-                        r="1" 
-                        fill='none' 
-                        stroke='#0400ff'
-                        strokeWidth='0.2'
-                        strokeLinejoin='bevel'
-                        strokeMiterlimit='0'
-                        dasharray='100'
-                        filter={'url(#glowEffect)'}
-                        />
+                    id="path702"
+                    cx={158.61783}
+                    cy={107.42867}
+                    r={1.6746536}
+                    fill="none"
+                    stroke="#000000"
+                    strokeWidth={0.334931}
+                    strokeLinejoin="bevel"
+                    strokeMiterlimit={0}
+                    strokeDasharray="none"
+                    strokeDashoffset={0}
+                    strokeOpacity={1}
+                    />
                 </TechIcon>
-                <TechIcon name={'mongoDB'} x={151.60391 - 1.3} y={112.58473 - 1.2} size={'2.3'} scrollThresholds={[0.41, 0.42]}>
+                <TechIcon name={'next'} x={159.01715 - 1.1} y={122.11411 - 1.2} size={'2.3'} scrollThresholds={[0.33, 0.34]}>
                     <Circle
-                        cx="151.60391"
-                        cy="112.58473"
-                        r="1" 
-                        fill='none' 
-                        stroke='#0400ff'
-                        strokeWidth='0.2'
-                        strokeLinejoin='bevel'
-                        strokeMiterlimit='0'
-                        dasharray='100'
-                        filter={'url(#glowEffect)'}
-                        />
+                    id="path700-2"
+                    cx={159.01715}
+                    cy={122.11411}
+                    r={1.6746536}
+                    fill="none"
+                    stroke="#000000"
+                    strokeWidth={0.334931}
+                    strokeLinejoin="bevel"
+                    strokeMiterlimit={0}
+                    strokeDasharray="none"
+                    strokeDashoffset={0}
+                    strokeOpacity={1}
+                    />                         
                 </TechIcon>
-                <TechIcon name={'next'} x={155.91408 - 1.1} y={101.54097 - 1.2} size={'2.3'} scrollThresholds={[0.33, 0.34]}>
+                <TechIcon name={'framermotion'} x={161.7774 - 1.1} y={114.64666 - 1.2} size={'2.3'} scrollThresholds={[0.38, 0.39]}>
                     <Circle
-                        cx="155.91408"
-                        cy="101.54097"
-                        r="1" 
-                        fill='none' 
-                        stroke='#0400ff'
-                        strokeWidth='0.2'
-                        strokeLinejoin='bevel'
-                        strokeMiterlimit='0'
-                        dasharray='100'
-                        filter={'url(#glowEffect)'}
-                        />                            
-                </TechIcon>
-                <TechIcon name={'framermotion'} x={156.15253 - 1.1} y={110.3102 - 1.2} size={'2.3'} scrollThresholds={[0.38, 0.39]}>
-                    <Circle
-                        cx="156.15253"
-                        cy="110.3102"
-                        r="1" 
-                        fill='none' 
-                        stroke='#0400ff'
-                        strokeWidth='0.2'
-                        strokeLinejoin='bevel'
-                        strokeMiterlimit='0'
-                        dasharray='100'
-                        filter={'url(#glowEffect)'}
-                        />                    
+                        id="path696"
+                        cx={161.7774}
+                        cy={114.64666}
+                        r={1.6746536}
+                        fill="none"
+                        stroke="#000000"
+                        strokeWidth={0.334931}
+                        strokeLinejoin="bevel"
+                        strokeMiterlimit={0}
+                        strokeDasharray="none"
+                        strokeDashoffset={0}
+                        strokeOpacity={1}
+                        />                  
                 </TechIcon>
                 <AnimateTechTitles x={147.41908 + 4.50} y={102.33794 + 3.3}>
                     <Rect
-                        width="8.0070515"
-                        height="7.4167333"
-                        x="147.41908"
-                        y="102.33794" 
-                        strokeWidth='0.100002'
-                        strokeLinejoin='bevel'
-                        strokeMiterlimit='0'
-                        />                            
+                    id="rect704"
+                    x={144.39165}
+                    y={108.76334}
+                    width={13.409038}
+                    height={12.420458}
+                    fill="none"
+                    stroke="#000000"
+                    strokeWidth={0.167469}
+                    strokeLinejoin="bevel"
+                    strokeMiterlimit={0}
+                    strokeDasharray="none"
+                    strokeDashoffset={0}
+                    strokeOpacity={1}
+                    />                          
                 </AnimateTechTitles>
-                <Rect
-                    width="7.853334"
-                    height="7.4065046"
-                    x="178.38718"
-                    y="-32.802994"
-                    transform="matrix(0.71813035,0.69590861,-0.70235073,0.71183106,0,0)" 
-                    strokeWidth='0.0989684'
-                    strokeLinejoin='bevel'
-                    strokeMiterlimit='0'
-                    />                
+                    <Rect
+                    id="rect704-3"
+                    x={181.80121}
+                    y={-28.580276}
+                    width={13.151613}
+                    height={12.403329}
+                    transform="matrix(0.71813035,0.69590861,-0.70235073,0.71183106,0,0)"
+                    fill="none"
+                    stroke="#000000"
+                    strokeWidth={0.165738}
+                    strokeLinejoin="bevel"
+                    strokeMiterlimit={0}
+                    strokeDasharray="none"
+                    strokeDashoffset={0}
+                    strokeOpacity={1}
+                    />               
         </motion.g>       
     )
 }

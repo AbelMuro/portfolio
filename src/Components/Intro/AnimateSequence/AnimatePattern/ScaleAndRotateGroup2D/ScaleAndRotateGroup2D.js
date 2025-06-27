@@ -3,10 +3,11 @@ import { ContainerContext } from '!/Intro';
 import {motion, useMotionValueEvent, useSpring, useTransform, useScroll, useMotionValue, AnimatePresence} from 'framer-motion';
 import * as styles from './styles.module.css';
 
+//translate(-46.129077, -11.484006)
 
 function ScaleAndRotateGroup2D({id, children, scaleAnimate, rotateAnimate, unmountAt}) {
-    const x = useMotionValue(-74.1383963);
-    const y = useMotionValue(-25.048764);
+    const x = useMotionValue(-46.129077);
+    const y = useMotionValue(-11.484006);
     const [mount, setMount] = useState(true);
     const groupRef = useRef();
     const {MainContainer} = useContext(ContainerContext);
@@ -32,7 +33,7 @@ function ScaleAndRotateGroup2D({id, children, scaleAnimate, rotateAnimate, unmou
                         ref={groupRef}
                         exit={{opacity: 0, transition: {duration: 0.4}}}
                         className={styles.group}
-                        style={{scale: scaleSpring, x, y}}>
+                        style={{scale: scaleSpring}}>
                             {children}
                     </motion.g> 
             }         

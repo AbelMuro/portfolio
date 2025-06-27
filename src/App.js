@@ -22,7 +22,7 @@ function App() {
 
     return(
         <>
-            <AnimateBackground/>
+            <AnimateBackground/> 
             <NavigationBar/>
             <Intro/>
         </>
