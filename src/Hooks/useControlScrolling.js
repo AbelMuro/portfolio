@@ -23,12 +23,11 @@ function useControlScrolling() {
                 top: direction * scrollSpeed,
                 behavior: 'smooth'
             });          
-            setReset((prevState) => !prevState)
         };
 
-        window.addEventListener('wheel', handleWheel, {passive: false, once: true})
+        window.addEventListener('wheel', handleWheel, {passive: false})
 
-    }, [scrollSpeed, reset])
+    }, [scrollSpeed])
 
 
     return null

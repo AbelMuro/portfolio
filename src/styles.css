@@ -19,8 +19,13 @@ html, body{
     box-sizing: border-box;
 }
 
+circle, rect, path, g, text, textPath, image {
+    will-change: transform;
+}
+
 :root{
     --font: 'AbelFont';
+    --eight-layer: 175;
     --seventh-layer: 150;
     --sixth-layer: 125;
     --fifth-layer: 100;

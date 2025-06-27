@@ -12,6 +12,7 @@
     bottom: 100px;
     left: 0;
     right: 0;
+    z-index: var(--eight-layer);
     margin: auto;
 
 }

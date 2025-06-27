@@ -37,7 +37,7 @@ function AnimateLetter({letter}) {
                     fontSize={mobile ? '2.7rem' : '6rem'}
                     fontFamily="'AbelFont'"
                     dy=".3em"
-                    stroke="white"
+                    stroke="#0400ff"
                     strokeWidth="3"
                     strokeDasharray={'450'}
                     variants={text_variant}

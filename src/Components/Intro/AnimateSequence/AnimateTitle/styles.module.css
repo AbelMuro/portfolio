@@ -5,7 +5,7 @@
     position: absolute;
     inset: 0;
     margin: auto;
-    z-index: var(--fourth-layer);
+    z-index: var(--seventh-layer);
     transition: none;
     color: white;
     font-family: 'AbelFont';
@@ -21,7 +21,7 @@
     position: absolute;
     inset: 0;
     margin: auto;
-    z-index: var(--fourth-layer);
+    z-index: var(--seventh-layer);
     transition: none;
     color: white;
     font-family: 'AbelFont';
