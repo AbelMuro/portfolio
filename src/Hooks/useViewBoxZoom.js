@@ -5,7 +5,7 @@ function useViewBoxZoom(scrollThresholds, zoomFrom, zoomTo, MainContainerRef) {
   const { scrollYProgress } = useScroll(MainContainerRef);
 
   const zoomLevel = useTransform(scrollYProgress, scrollThresholds, [zoomFrom, zoomTo]);
-  const smoothZoom = useSpring(zoomLevel, { stiffness: 150, damping: 40 });
+  const smoothZoom = useSpring(zoomLevel, { stiffness: 150, damping: 80 });
 
   const ORIGINAL_WIDTH = 206.40488;
   const ORIGINAL_HEIGHT = 205.26718;

@@ -7,6 +7,16 @@
     z-index: var(--second-layer);
     transition: all 0s;
     will-change: viewBox, contents;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.outerRing{
+    width: 200px;
+    height: 200px;
+    transition: all 0s;
 }
 
 .container > g{

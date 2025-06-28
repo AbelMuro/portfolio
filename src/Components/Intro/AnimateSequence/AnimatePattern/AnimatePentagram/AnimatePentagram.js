@@ -42,9 +42,21 @@ function AnimatePentagram({scrollThresholds = [0.09, 0.21]}) {
                         </feMerge>
                     </filter>
                 </defs>
+
+                {
+                    /*       
+                      
+                   
+                    [0.50, 0.51]
+
+                    
+                   
+                   
+                    */
+                }
                 <motion.g style={{rotateY: rotate3DSpringY, rotateX: rotate3DSpringX, x, y}}>   
                         <AnimateCircles/>                        
-                        <circle filter={'url(#glowEffect)'}
+                        <Circle filter={'url(#glowEffect)'}
                             id="path695"
                             cx={150.95853}
                             cy={115.17852}
@@ -58,8 +70,8 @@ function AnimatePentagram({scrollThresholds = [0.09, 0.21]}) {
                             strokeDashoffset={0}
                             strokeOpacity={1}
                             />
-                        <TechIcon name={'react'} x={157.80078 - 0.6} y={104.37801 - 0.6} size={'1.3'} scrollThresholds={[0.36, 0.37]}>
-                            <circle filter={'url(#glowEffect)'}
+                        <TechIcon name={'react'} x={150.71886 - 0.6} y={104.37801 - 0.6} size={'1.4'} scrollThresholds={[0.30, 0.31]}>
+                            <Circle filter={'url(#glowEffect)'}
                             id="path697"
                                 cx={150.71886}
                                 cy={104.37801}
@@ -74,11 +86,11 @@ function AnimatePentagram({scrollThresholds = [0.09, 0.21]}) {
                                 strokeOpacity={1}
                                 />
                         </TechIcon>
-                        <TechIcon name={'node'} x={143.03781 - 0.65} y={107.51036 - 0.6} size={'1.5'} scrollThresholds={[0.30, 0.31]}>
-                            <circle filter={'url(#glowEffect)'}
-                            id="path698"
-                            cx={143.03781}
-                            cy={107.51036}
+                        <TechIcon name={'node'} x={158.61783 - 1.1} y={107.42867 - 1} size={'2.3'} scrollThresholds={[0.33, 0.34]}>
+                            <Circle filter={'url(#glowEffect)'}
+                            id="path702"
+                            cx={158.61783}
+                            cy={107.42867}
                             r={1.6746536}
                             fill="none"
                             stroke="#0400ff"
@@ -90,8 +102,72 @@ function AnimatePentagram({scrollThresholds = [0.09, 0.21]}) {
                             strokeOpacity={1}
                             />
                         </TechIcon>
-                        <TechIcon name={'vue'} x={140.04163 - 0.6} y={114.70116 - 0.6} size={'1.3'} scrollThresholds={[0.50, 0.51]}>
-                                <circle filter={'url(#glowEffect)'}
+                        <TechIcon name={'express'} x={161.7774 - 1.4} y={114.64666 - 1.5} size={'3.1'} scrollThresholds={[0.36, 0.37]}>
+                            <Circle filter={'url(#glowEffect)'}
+                                id="path696"
+                                cx={161.7774}
+                                cy={114.64666}
+                                r={1.6746536}
+                                fill="none"
+                                stroke="#0400ff"
+                                strokeWidth={0.334931}
+                                strokeLinejoin="bevel"
+                                strokeMiterlimit={0}
+                                strokeDasharray="none"
+                                strokeDashoffset={0}
+                                strokeOpacity={1}
+                                />                  
+                        </TechIcon>
+                        <TechIcon name={'vue'} x={159.01715 - 1.1} y={122.11411 - 1.2} size={'2.3'} scrollThresholds={[0.38, 0.39]}>
+                            <Circle filter={'url(#glowEffect)'}
+                            id="path700-2"
+                            cx={159.01715}
+                            cy={122.11411}
+                            r={1.6746536}
+                            fill="none"
+                            stroke="#0400ff"
+                            strokeWidth={0.334931}
+                            strokeLinejoin="bevel"
+                            strokeMiterlimit={0}
+                            strokeDasharray="none"
+                            strokeDashoffset={0}
+                            strokeOpacity={1}
+                            />                         
+                        </TechIcon>
+                        <TechIcon name={'mySQL'} x={151.39981 - 1.4} y={125.92314 - 1.4} size={'3.1'} scrollThresholds={[0.41, 0.42]}>
+                            <Circle filter={'url(#glowEffect)'}
+                                id="path701"
+                                cx={151.39981}
+                                cy={125.92314}
+                                r={1.6746536}
+                                fill="none"
+                                stroke="#0400ff"
+                                strokeWidth={0.334931}
+                                strokeLinejoin="bevel"
+                                strokeMiterlimit={0}
+                                strokeDasharray="none"
+                                strokeDashoffset={0}
+                                strokeOpacity={1}
+                                />
+                        </TechIcon>
+                        <TechIcon name={'next'} x={142.73816 - 1.5} y={122.13708 - 1.7} size={'3.3'} scrollThresholds={ [0.44, 0.45]  }>
+                            <Circle filter={'url(#glowEffect)'}
+                            id="path700"
+                            cx={142.73816}
+                            cy={122.13708}
+                            r={1.6746536}
+                            fill="none"
+                            stroke="#0400ff"
+                            strokeWidth={0.334931}
+                            strokeLinejoin="bevel"
+                            strokeMiterlimit={0}
+                            strokeDasharray="none"
+                            strokeDashoffset={0}
+                            strokeOpacity={1}
+                            />
+                        </TechIcon>   
+                        <TechIcon name={'mongoDB'} x={140.04163 - 2.3} y={114.70116 - 2} size={'4'} scrollThresholds={ [0.47, 0.48] }>
+                                <Circle filter={'url(#glowEffect)'}
                                 id="path699"
                                 cx={140.04163}
                                 cy={114.70116}
@@ -107,11 +183,11 @@ function AnimatePentagram({scrollThresholds = [0.09, 0.21]}) {
                                 />
 
                         </TechIcon>
-                        <TechIcon name={'express'} x={142.73816 - 0.9} y={122.13708 - 0.9} size={'2'} scrollThresholds={[0.47, 0.48]}>
-                            <circle filter={'url(#glowEffect)'}
-                            id="path700"
-                            cx={142.73816}
-                            cy={122.13708}
+                        <TechIcon name={'framermotion'} x={143.03781 - 1.65} y={107.51036 - 1.6} size={'3.5'} scrollThresholds={ [0.50, 0.51]}>
+                            <Circle filter={'url(#glowEffect)'}
+                            id="path698"
+                            cx={143.03781}
+                            cy={107.51036}
                             r={1.6746536}
                             fill="none"
                             stroke="#0400ff"
@@ -123,72 +199,9 @@ function AnimatePentagram({scrollThresholds = [0.09, 0.21]}) {
                             strokeOpacity={1}
                             />
                         </TechIcon>
-                        <TechIcon name={'mySQL'} x={151.39981 - 0.9} y={125.92314 - 0.9} size={'2'} scrollThresholds={[0.44, 0.45]}>
-                            <circle filter={'url(#glowEffect)'}
-                                id="path701"
-                                cx={151.39981}
-                                cy={125.92314}
-                                r={1.6746536}
-                                fill="none"
-                                stroke="#0400ff"
-                                strokeWidth={0.334931}
-                                strokeLinejoin="bevel"
-                                strokeMiterlimit={0}
-                                strokeDasharray="none"
-                                strokeDashoffset={0}
-                                strokeOpacity={1}
-                                />
-                        </TechIcon>
-                        <TechIcon name={'mongoDB'} x={158.61783 - 1.3} y={107.42867 - 1.2} size={'2.3'} scrollThresholds={[0.41, 0.42]}>
-                            <circle filter={'url(#glowEffect)'}
-                            id="path702"
-                            cx={158.61783}
-                            cy={107.42867}
-                            r={1.6746536}
-                            fill="none"
-                            stroke="#0400ff"
-                            strokeWidth={0.334931}
-                            strokeLinejoin="bevel"
-                            strokeMiterlimit={0}
-                            strokeDasharray="none"
-                            strokeDashoffset={0}
-                            strokeOpacity={1}
-                            />
-                        </TechIcon>
-                        <TechIcon name={'next'} x={159.01715 - 1.1} y={122.11411 - 1.2} size={'2.3'} scrollThresholds={[0.33, 0.34]}>
-                            <circle filter={'url(#glowEffect)'}
-                            id="path700-2"
-                            cx={159.01715}
-                            cy={122.11411}
-                            r={1.6746536}
-                            fill="none"
-                            stroke="#0400ff"
-                            strokeWidth={0.334931}
-                            strokeLinejoin="bevel"
-                            strokeMiterlimit={0}
-                            strokeDasharray="none"
-                            strokeDashoffset={0}
-                            strokeOpacity={1}
-                            />                         
-                        </TechIcon>
-                        <TechIcon name={'framermotion'} x={161.7774 - 1.1} y={114.64666 - 1.2} size={'2.3'} scrollThresholds={[0.38, 0.39]}>
-                            <circle filter={'url(#glowEffect)'}
-                                id="path696"
-                                cx={161.7774}
-                                cy={114.64666}
-                                r={1.6746536}
-                                fill="none"
-                                stroke="#0400ff"
-                                strokeWidth={0.334931}
-                                strokeLinejoin="bevel"
-                                strokeMiterlimit={0}
-                                strokeDasharray="none"
-                                strokeDashoffset={0}
-                                strokeOpacity={1}
-                                />                  
-                        </TechIcon>
-                        <AnimateTechTitles x={147.41908 + 4.50} y={102.33794 + 3.3}>
-                            <rect filter={'url(#glowEffect)'}
+                     
+                        <AnimateTechTitles x={144.39165 + 6.50} y={108.76334 + 5.3}>
+                            <Rect filter={'url(#glowEffect)'}
                             id="rect704"
                             x={144.39165}
                             y={108.76334}
@@ -204,7 +217,7 @@ function AnimatePentagram({scrollThresholds = [0.09, 0.21]}) {
                             strokeOpacity={1}
                             />                          
                         </AnimateTechTitles>
-                            <rect filter={'url(#glowEffect)'}
+                            <Rect filter={'url(#glowEffect)'}
                             id="rect704-3"
                             x={181.80121}
                             y={-28.580276}

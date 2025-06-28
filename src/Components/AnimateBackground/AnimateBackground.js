@@ -15,19 +15,19 @@ function AnimateBackground() {
     const fourthCloudControls = useAnimationControls();
 
     const animateFirstCloud = async () => {
-        await firstCloudControls.start({top: '100px', width: '250px', height: '100px', transition: {duration: 6}});
+        await firstCloudControls.start({top: '100px', width: '250px', height: '100px', transition: {duration: 4}});
         await firstCloudControls.start({left: '100px', height: '200px', transition: {duration: 4}});
-        await firstCloudControls.start({height: '300px', width: '100px', transition: {duration: 4.5}});
-        await firstCloudControls.start({height: '100px', width: '200px', top: '300px', transition: {duration: 3.5}});
+        await firstCloudControls.start({height: '300px', width: '100px', transition: {duration: 6.5}});
+        await firstCloudControls.start({height: '400px', width: '600px', top: '300px', borderRadius: '100px', transition: {duration: 3.5}});
         await firstCloudControls.start({width: '300px', left: '0px', transition: {duration: 4.5}});
-        await firstCloudControls.start({height: '0px', width: '0px', transition: {duration: 4.5}});
+        await firstCloudControls.start({height: '0px', width: '0px', top: '0px', left: '0px', transition: {duration: 4.5}});
         animateFirstCloud();
     }
     const animateSecondCloud = async () => {
         await secondCloudControls.start({width: '100px', height: '250px', bottom: '50px', transition: {duration: 6}});
         await secondCloudControls.start({width: '100px', right: '150px', right: '100px' , transition: {duration: 4.5}});
         await secondCloudControls.start({width: '150px', right: '150px', bottom: '150px', transition: {duration: 4.5}});
-        await secondCloudControls.start({width: '50px', right: '250px', right: '50px', transition: {duration: 3.5}});
+        await secondCloudControls.start({width: '450px', height: '500px', right: '250px', right: '50px', borderRadius: '100px', transition: {duration: 2.5}});
         await secondCloudControls.start({width: '100px', right: '150px', right: '0px', bottom: '0px', transition: {duration: 2.5}});
         await secondCloudControls.start({width: '0px', right: '0px', transition: {duration: 5}});
         animateSecondCloud();

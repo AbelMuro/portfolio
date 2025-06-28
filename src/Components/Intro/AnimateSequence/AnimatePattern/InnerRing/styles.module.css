@@ -11,5 +11,5 @@
 
 .container > g{
     will-change: transform, contents;
-    transition: all 0s;
+    transition: all 0s transform 0.1s;
 }

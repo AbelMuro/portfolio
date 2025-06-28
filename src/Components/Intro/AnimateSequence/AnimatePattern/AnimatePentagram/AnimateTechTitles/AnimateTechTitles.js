@@ -6,27 +6,27 @@ import * as styles from './styles.module.css';
 function AnimateTechTitles({children, x, y}) {
     const [title, setTitle] = useState('');
     const {MainContainer} = useContext(ContainerContext)
-    const titles = useRef(['Node.js', 'Next.js', 'React', 'Framer-Motion', 'MongoDB', 'mySQL', 'Express.js', 'Vue'])
+    const titles = useRef(['React', 'Node.js', 'Express', 'Vue', 'mySQL', 'Next.js', 'MongoDB', 'Framer-Motion'])
     const {scrollYProgress} = useScroll(MainContainer);
 
     useMotionValueEvent(scrollYProgress, 'change', (value) => {
         if(value < 0.30)
             setTitle('');
-        else if(value >= 0.30 && value <= 0.31)
+        else if(value >= 0.30 && value <= 0.32)
             setTitle(titles.current[0])
-        else if(value >= 0.33 && value <= 0.34)
+        else if(value >= 0.34 && value <= 0.35)
             setTitle(titles.current[1])
-        else if(value >= 0.36 && value <= 0.37)
+        else if(value >= 0.37 && value <= 0.38)
             setTitle(titles.current[2]);
-        else if(value >= 0.38 && value <= 0.39)
+        else if(value >= 0.39 && value <= 0.40)
             setTitle(titles.current[3]);
-        else if(value >= 0.41 && value <= 0.42)
+        else if(value >= 0.42 && value <= 0.43)
             setTitle(titles.current[4]);
-        else if(value >= 0.44 && value <= 0.45)
+        else if(value >= 0.45 && value <= 0.46)
             setTitle(titles.current[5])
-        else if(value >= 0.47 && value <= 0.48)
+        else if(value >= 0.48 && value <= 0.49)
             setTitle(titles.current[6]);
-        else if(value >= 0.50)
+        else if(value >= 0.51)
             setTitle(titles.current[7]);
     }) 
 
@@ -35,7 +35,7 @@ function AnimateTechTitles({children, x, y}) {
             <text x={x} y={y}    
                 fill="white"
                 textAnchor='middle'
-                fontSize={'0.07rem'}
+                fontSize={'0.12rem'}
                 fontFamily="'AbelFont'"
                 dy=".3em">
                     {title}

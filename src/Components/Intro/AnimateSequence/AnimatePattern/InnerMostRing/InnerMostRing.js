@@ -3,15 +3,15 @@ import {ContainerContext} from '!/Intro';
 import {useViewBoxZoom} from '~/Hooks';
 import {motion, useMotionValue, useScroll, AnimatePresence, useMotionValueEvent} from 'framer-motion';
 import * as styles from './styles.module.css';
+import FadeOutPath from "./FadeOutPaths";
 
 function InnerMostRing() {
     const [mount, setMount] = useState(true);
     const x = useMotionValue(-47.929077);
     const y = useMotionValue(-13.484006);
     const {MainContainerRef} = useContext(ContainerContext);
-    const [viewBox] = useViewBoxZoom([0.12, 0.18], 1, 3, MainContainerRef);
+    const [viewBox] = useViewBoxZoom([0.12, 0.18], 1, 6.5, MainContainerRef);
     const {scrollYProgress} = useScroll(MainContainerRef);
-
 
     useMotionValueEvent(scrollYProgress, 'change', (value) => {
         if(value > 0.18)
@@ -123,7 +123,7 @@ function InnerMostRing() {
                         <motion.g         
                             initial={{rotate: 0}} 
                             animate={{rotate: [0, 360]}} 
-                            transition={{repeat: Infinity, duration: 8.9, ease: 'linear'}}
+                            transition={{repeat: Infinity, duration: 8.9, ease: 'linear', delay: 3}}
                             style={{x, y}}
                             >
                                 <circle filter={'url(#glowEffect)'}
@@ -255,7 +255,7 @@ function InnerMostRing() {
                                 transform="matrix(-0.04320334,0.9990663,-0.99907186,-0.04307447,0,0)"
                                 d="m 120.31569,-198.76849 a 10.559102,6.6924191 0 0 1 -4.80193,6.19738 10.559102,6.6924191 0 0 1 -10.8885,0.20941 10.559102,6.6924191 0 0 1 -5.385968,-6.00144"
                                 />
-                                    <text
+                                <text
                                 xmlSpace="preserve"
                                 fontSize="3.53486px"
                                 fontFamily="PMingLiU-ExtB"    
@@ -462,63 +462,61 @@ function InnerMostRing() {
                                 />
                                             {/* something is wrong with the following path element*/}
 
-                                <path 
+                                <FadeOutPath 
                                 id="path1429"
-                                d="M 151.37641,85.731637 L 151.37641,100.49932"
+                                d="M 151.37641,85.731637 151.37641,100.49932"
                                 fill="none"
                                 stroke="#0400ff"
-                                strokeWidth={0.529116}
+                                strokeWidth={1}
                                 strokeLinecap="round"
                                 strokeLinejoin="bevel"
                                 strokeMiterlimit={0}
                                 strokeDasharray="none"
+                                strokeOpacity={1}
                                 />
-                                <path filter={'url(#glowEffect)'}
+                                <FadeOutPath  
                                 id="path1429-7"
                                 d="m 180.27788,115.36062 -14.7377,0.17367"
                                 fill="none"
                                 fillOpacity={1}
                                 stroke="#0400ff"
-                                strokeWidth={0.542943}
+                                strokeWidth={1}
                                 strokeLinecap="round"
                                 strokeLinejoin="bevel"
                                 strokeMiterlimit={0}
                                 strokeDasharray="none"
                                 strokeOpacity={1}
                                 />
-                                <path filter={'url(#glowEffect)'}
+                                <FadeOutPath
                                 id="path1429-7-8"
                                 d="m 151.09034,144.59407 -0.12063,-14.70336"
                                 fill="none"
                                 fillOpacity={1}
                                 stroke="#0400ff"
-                                strokeWidth={0.544704}
-                                strokeLinecap="round"
+                                strokeWidth={1}
                                 strokeLinejoin="bevel"
                                 strokeMiterlimit={0}
                                 strokeDasharray="none"
                                 strokeOpacity={1}
                                 />
-                                <path filter={'url(#glowEffect)'}
+                                <FadeOutPath 
                                 id="path1429-5"
                                 d="m 121.44725,115.57187 14.83024,-0.16251"
                                 fill="none"
                                 fillOpacity={1}
                                 stroke="#0400ff"
-                                strokeWidth={0.543928}
-                                strokeLinecap="round"
+                                strokeWidth={1}
                                 strokeLinejoin="bevel"
                                 strokeMiterlimit={0}
                                 strokeDasharray="none"
                                 strokeOpacity={1}
                                 />
 
-                                    <circle filter={'url(#glowEffect)'}
+                            <circle filter={'url(#glowEffect)'}
                                 fill="none"
                                 fillOpacity={1}
                                 stroke="#0400ff"
                                 strokeWidth={0.149}
-                                strokeLinecap="round"
                                 strokeLinejoin="bevel"
                                 strokeMiterlimit={0}
                                 strokeDasharray="none"
@@ -533,7 +531,6 @@ function InnerMostRing() {
                                 fillOpacity={1}
                                 stroke="#0400ff"
                                 strokeWidth={0.358738}
-                                strokeLinecap="round"
                                 strokeLinejoin="bevel"
                                 strokeMiterlimit={0}
                                 strokeDasharray="2.8699, 0.717476, 0.358738, 0.717476"

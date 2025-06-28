@@ -9,7 +9,7 @@ function InnerRing() {
     const x = useMotionValue(-47.929077);
     const y = useMotionValue(-13.484006);
     const {MainContainerRef} = useContext(ContainerContext);
-    const [viewBox] = useViewBoxZoom([0.08, 0.14], 1, 4, MainContainerRef)
+    const [viewBox] = useViewBoxZoom([0.08, 0.14], 1, 4.5, MainContainerRef)
     const {scrollYProgress} = useScroll(MainContainerRef);
 
     useMotionValueEvent(scrollYProgress, 'change', (value) => {
@@ -45,7 +45,7 @@ function InnerRing() {
                     <motion.g                     
                         initial={{rotate: 0}} 
                         animate={{rotate: [360, 0]}} 
-                        transition={{repeat: Infinity, duration: 21.9, ease: 'linear'}}
+                        transition={{repeat: Infinity, duration: 21.9, ease: 'linear', delay: 2}}
                         style={{x, y}}>
                             <circle filter={'url(#glowEffect)'}
                                 fill="none"

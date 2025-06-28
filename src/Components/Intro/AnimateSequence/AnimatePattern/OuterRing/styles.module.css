@@ -5,11 +5,17 @@
     top: 0px;
     left: 0px;
     z-index: var(--third-layer);
-    will-change: viewBox, contents;
     transition: all 0s;
+}
+
+.outerRing{
+    width: 211px;
+    object-fit: contain
 }
 
 .container > g{
     will-change: transform, contents;
     transition: all 0s;
+    transform-box: fill-box;
+    transform-origin: center center;
 }
