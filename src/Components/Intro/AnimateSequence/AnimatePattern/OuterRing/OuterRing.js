@@ -6,10 +6,6 @@ import { motion, useScroll, useMotionValueEvent, AnimatePresence, useTransform, 
 import images from './images';
 
 
-/* 
-    this is where i left off, i need to figure out how to stop the wobble effect when i rotate the image
-*/
-
 
 function OuterRing() {
     const [mount, setMount] = useState(true);
@@ -32,42 +28,44 @@ function OuterRing() {
         <AnimatePresence>
             {
                 mount &&
-                <motion.svg 
-                    xmlns="http://www.w3.org/2000/svg"
-                    id='outer ring' 
-                    className={styles.container} 
-                    viewBox={"0 0 206.40488 206.40488"} 
-                    initial={{opacity: 1}}
-                    exit={{opacity: 0, transition: {duration: 0.7}}}
-                    >
-                    <defs>
-                        <filter id='glowEffect'>
-                            <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur">
-                                <animate attributeName="stdDeviation" values="2;0;2" dur="3s" repeatCount="indefinite" calcMode="linear"/>
-                            </feGaussianBlur>
-                            <feFlood floodColor="#0400ff" floodOpacity='0.5' result="color"/>
-                            <feComposite in="color" in2="blur" operator="in" result="glow"/>
-                            <feMerge>
-                                <feMergeNode in="glow"/>
-                                <feMergeNode in="SourceGraphic"/>
-                            </feMerge>
-                        </filter>
-                    </defs>
-                    <motion.g style={{scale: smoothScale}}>
-                            <motion.image
-                                initial={{rotate: 0}} 
-                                animate={{rotate: [0, 360]}} 
-                                transition={{repeat: Infinity, duration: 18.9, ease: 'linear', delay: 1}}
-                                key='outer ring'
-                                x={103.20244 - 106.4}
-                                y={103.20244 - 105.5}
+                <motion.div         
+                        className={styles.container}                
+                        initial={{rotate: 0, opacity: 1}} 
+                        animate={{rotate: [0, 360], transition: {repeat: Infinity, duration: 18.9, ease: 'linear', delay: 1}}} 
+                        exit={{opacity: 0, transition: {duration: 0.7}}}
+                        style={{scale: smoothScale}}
+                        >
+                    <svg 
+                        xmlns="http://www.w3.org/2000/svg"
+                        id='outer ring' 
+                        className={styles.svg} 
+                        viewBox={"0 0 206.40488 206.40488"} 
+                        >
+                        <defs>
+                            <filter id='glowEffect'>
+                                <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur">
+                                    <animate attributeName="stdDeviation" values="2;0;2" dur="3s" repeatCount="indefinite" calcMode="linear"/>
+                                </feGaussianBlur>
+                                <feFlood floodColor="#0400ff" floodOpacity='0.5' result="color"/>
+                                <feComposite in="color" in2="blur" operator="in" result="glow"/>
+                                <feMerge>
+                                    <feMergeNode in="glow"/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                        </defs>
+                            <image
+                                x={103.20244 - 146.2}
+                                y={103.20244 - 144.5}
                                 filter={'url(#glowEffect)'}
                                 href={images['outerRing']}
                                 className={styles.outerRing}
                             />
-                    </motion.g>
-                </motion.svg>
-            }
+                    </svg>
+
+               </motion.div>     
+            }                    
+        
         </AnimatePresence>
     )
 }

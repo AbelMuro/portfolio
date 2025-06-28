@@ -4,6 +4,10 @@ import { useViewBoxZoom } from '~/Hooks';
 import { motion, useScroll, useMotionValueEvent, AnimatePresence, useMotionValue} from 'framer-motion';
 import * as styles from './styles.module.css';
 
+
+/* this is where i left off, i need to further optimize this component*/
+
+
 function InnerRing() {
     const [mount, setMount] = useState(true);
     const x = useMotionValue(-47.929077);
@@ -44,8 +48,7 @@ function InnerRing() {
                     </defs>
                     <motion.g                     
                         initial={{rotate: 0}} 
-                        animate={{rotate: [360, 0]}} 
-                        transition={{repeat: Infinity, duration: 21.9, ease: 'linear', delay: 2}}
+                        animate={{rotate: [360, 0], transition: {repeat: Infinity, duration: 21.9, ease: 'linear', delay: 2}}}
                         style={{x, y}}>
                             <circle filter={'url(#glowEffect)'}
                                 fill="none"

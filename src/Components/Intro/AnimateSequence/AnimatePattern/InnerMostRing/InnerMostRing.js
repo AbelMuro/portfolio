@@ -122,8 +122,7 @@ function InnerMostRing() {
 
                         <motion.g         
                             initial={{rotate: 0}} 
-                            animate={{rotate: [0, 360]}} 
-                            transition={{repeat: Infinity, duration: 8.9, ease: 'linear', delay: 3}}
+                            animate={{rotate: [0, 360], transition: {repeat: Infinity, duration: 8.9, ease: 'linear', delay: 3}}} 
                             style={{x, y}}
                             >
                                 <circle filter={'url(#glowEffect)'}
