@@ -1,4 +1,5 @@
 .circle{
     position: relative;
     transform-style: preserve-3d;
+    transition: all 0s;
 }

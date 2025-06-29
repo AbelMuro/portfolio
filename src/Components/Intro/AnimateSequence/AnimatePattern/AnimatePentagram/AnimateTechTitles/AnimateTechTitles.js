@@ -1,13 +1,16 @@
 import React, {useRef, useState, useContext} from 'react';
 import { ContainerContext } from '!/Intro';
-import {useScroll, useMotionValueEvent} from 'framer-motion';
+import {useScroll, useMotionValueEvent, useTransform, useSpring, motion, AnimatePresence} from 'framer-motion';
 import * as styles from './styles.module.css';
 
-function AnimateTechTitles({children, x, y}) {
+function AnimateTechTitles({x, y}) {
+    const [mount, setMount] = useState(true);
     const [title, setTitle] = useState('');
     const {MainContainer} = useContext(ContainerContext)
     const titles = useRef(['React', 'Node.js', 'Express', 'Vue', 'mySQL', 'Next.js', 'MongoDB', 'Framer-Motion'])
     const {scrollYProgress} = useScroll(MainContainer);
+    const opacity = useTransform(scrollYProgress, [0.58, 0.63], [1, 0]);
+    const smoothOpacity = useSpring(opacity, {stiffness: 150, damping: 80});
 
     useMotionValueEvent(scrollYProgress, 'change', (value) => {
         if(value < 0.30)
@@ -30,18 +33,30 @@ function AnimateTechTitles({children, x, y}) {
             setTitle(titles.current[7]);
     }) 
 
-    return(
-        <>
-            <text x={x} y={y}    
-                fill="white"
-                textAnchor='middle'
-                fontSize={'0.12rem'}
-                fontFamily="'AbelFont'"
-                dy=".3em">
-                    {title}
-            </text>
-            {children}
-        </>
+    useMotionValueEvent(scrollYProgress, 'change', (value) => {
+        if(value > 0.70)
+            setMount(false)
+        else
+            setMount(true);
+    })
+
+    return (
+        <AnimatePresence>
+            {mount && 
+                <motion.text x={x} y={y}    
+                    className={styles.title}
+                    fill="white"
+                    textAnchor='middle'
+                    fontSize={'0.12rem'}
+                    fontFamily="'AbelFont'"
+                    style={{opacity: smoothOpacity}}
+                    dy=".3em"
+                    exit={{opacity: 0}}
+                    >
+                        {title}
+                </motion.text>
+            }
+        </AnimatePresence>
     )
 }
 

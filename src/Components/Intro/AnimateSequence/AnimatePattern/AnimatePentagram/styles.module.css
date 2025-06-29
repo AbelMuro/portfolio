@@ -6,8 +6,6 @@
     left: 0px;
     z-index: var(--sixth-layer);
     transform-style: preserve-3d;
-    backface-visibility: 'hidden';
     perspective: 800;
-    perspective-origin: center;
     transition: all 0s;
 }

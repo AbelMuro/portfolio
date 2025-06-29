@@ -1,10 +1,10 @@
-import React, {useContext} from 'react';
-import {CreateMapping} from '~/Common/Functions';
+import React, {useContext, useState} from 'react';
 import { ContainerContext } from '!/Intro';
-import {motion, useTransform, useSpring, useScroll} from 'framer-motion';
+import {motion, useTransform, useSpring, useScroll, useMotionValueEvent, AnimatePresence} from 'framer-motion';
 import * as styles from './styles.module.css';
 
 function Circle({scrollThresholds, scaleTo, rotateX, rotateY}) {
+    const [mount, setMount] = useState(true);
     const {MainContainer} = useContext(ContainerContext);
     const {scrollYProgress} = useScroll(MainContainer);
     const strokeDashoffset = useTransform(scrollYProgress, [0.58, 0.62], [0, 300]);
@@ -25,23 +25,36 @@ function Circle({scrollThresholds, scaleTo, rotateX, rotateY}) {
             scaleWithSpring.set(scaleBack);
     })
 
+    useMotionValueEvent(scrollYProgress, 'change', (value) => {
+        if(value > 0.70)
+            setMount(false)
+        else
+            setMount(true);
+    })
 
-    return(
-        <motion.circle
-            className={styles.circle}
-            cx={150.95853}
-            cy={115.17852}
-            r={14.348076}
-            fill='none' 
-            stroke='#0400ff'
-            strokeWidth='0.2'
-            strokeLinejoin='bevel'
-            strokeMiterlimit='0'
-            strokeDasharray='300'
-            filter={'url(#glowEffect)'}
-            style={{scale: scaleWithSpring, rotateX: rotate3DSpringX, rotateY: rotate3DSpringY, strokeDashoffset: dashoffsetSpring }}
-            />
-    )
+
+    return (
+        <AnimatePresence>
+            {mount && 
+                <motion.circle
+                    className={styles.circle}
+                    cx={150.95853}
+                    cy={115.17852}
+                    r={14.348076}
+                    fill='none' 
+                    stroke='#0400ff'
+                    strokeWidth='0.2'
+                    strokeLinejoin='bevel'
+                    strokeMiterlimit='0'
+                    strokeDasharray='300'
+                    initial={{opacity: 1}}
+                    filter={'url(#glowEffect)'}
+                    style={{scale: scaleWithSpring, rotateX: rotate3DSpringX, rotateY: rotate3DSpringY, strokeDashoffset: dashoffsetSpring }}
+                    exit={{opacity: 0}}
+                    />
+            }
+        </AnimatePresence>
+)
 }
 
 export default Circle;

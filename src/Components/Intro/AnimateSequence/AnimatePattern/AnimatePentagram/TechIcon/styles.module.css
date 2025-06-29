@@ -1,4 +1,3 @@
 .icon{
-    object-fit: contain;
-    position: absolute;
+    transition: all 0s;
 }

@@ -10,9 +10,8 @@ import images from './images';
 function OuterRing() {
     const [mount, setMount] = useState(true);
     const {MainContainerRef} = useContext(ContainerContext);
-    //const [viewBox] = useViewBoxZoom([0.04, 0.10], 1, 4, MainContainerRef)
     const {scrollYProgress} = useScroll(MainContainerRef);
-    const scale = useTransform(scrollYProgress, [0.04, 0.10], [1, 3])
+    const scale = useTransform(scrollYProgress, [0.02, 0.14], [1, 5])
     const smoothScale = useSpring(scale, {stiffness: 150, damping: 80});
 
     useMotionValueEvent(scrollYProgress, 'change', (value) => {
@@ -28,7 +27,8 @@ function OuterRing() {
         <AnimatePresence>
             {
                 mount &&
-                <motion.div         
+                <motion.div      
+                        id='outer ring'   
                         className={styles.container}                
                         initial={{rotate: 0, opacity: 1}} 
                         animate={{rotate: [0, 360], transition: {repeat: Infinity, duration: 18.9, ease: 'linear', delay: 1}}} 
@@ -36,8 +36,7 @@ function OuterRing() {
                         style={{scale: smoothScale}}
                         >
                     <svg 
-                        xmlns="http://www.w3.org/2000/svg"
-                        id='outer ring' 
+                        xmlns="http://www.w3.org/2000/svg" 
                         className={styles.svg} 
                         viewBox={"0 0 206.40488 206.40488"} 
                         >
@@ -55,8 +54,8 @@ function OuterRing() {
                             </filter>
                         </defs>
                             <image
-                                x={103.20244 - 146.2}
-                                y={103.20244 - 144.5}
+                                x={103.20244 - 100.2}
+                                y={103.20244 - 100.5}
                                 filter={'url(#glowEffect)'}
                                 href={images['outerRing']}
                                 className={styles.outerRing}

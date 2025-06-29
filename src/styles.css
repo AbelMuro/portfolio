@@ -19,7 +19,8 @@ html, body{
     box-sizing: border-box;
 }
 
-circle, rect, path, g, text, textPath, image {
+
+g, rect, circle, path, image {
     will-change: transform;
 }
 
@@ -37,12 +38,12 @@ circle, rect, path, g, text, textPath, image {
 
 /* ::-webkit-scrollbar will change the styling of the scroll bar's background*/
 ::-webkit-scrollbar{
-    background-color: black;                               
+    background-color: rgba(0, 0, 0);                               
     width: 12px;                                             /* affects the vertical scrollbar*/
 }
 
 /* ::-webkit-scrollbar-thumb will change the styling of the thumb for the scroll bar*/
 ::-webkit-scrollbar-thumb{
-    background-color: #30006a;
+    background-color: #0400ffff;
     border-radius: 14px;
 }
