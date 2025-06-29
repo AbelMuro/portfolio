@@ -5,7 +5,8 @@ import DisplayScrollDownMessage from './DisplayScrollDownMessage';
 import * as styles from './styles.module.css';
 
 /* 
-    this is where i left off, i can finally start on my next design for the portfolio
+    this is where i left off, i can finally start on my next design for the portfolio,
+    also, make sure to space out the animation for the pentagram component, more specifically, the AnimateTechTitles component
 */
 
 
