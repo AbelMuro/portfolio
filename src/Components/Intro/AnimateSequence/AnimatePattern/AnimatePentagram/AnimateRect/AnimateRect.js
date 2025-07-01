@@ -3,6 +3,12 @@ import { ContainerContext } from '!/Intro';
 import {motion, useScroll, useTransform, useSpring} from 'framer-motion';
 import * as styles from './styles.module.css';
 
+/* 
+    this is where i left off, i need to integrate the square design with the roman clock that i made
+    in inkscape into this component
+*/
+
+
 function AnimateRect() {
     const {MainContainer} = useContext(ContainerContext);
     const {scrollYProgress} = useScroll(MainContainer);
