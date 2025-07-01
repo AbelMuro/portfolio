@@ -1,0 +1,23 @@
+.containerOne, .containerTwo{
+    width: 800px;
+    height: 600px;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    font-family: 'AbelFont';
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 50px;
+    z-index: var(--sixth-layer);
+    color: transparent;
+}
+
+.containerTwo{
+    background: linear-gradient(57deg, rgba(7, 0, 99, 1) 0%, rgba(4, 0, 255, 1) 22%, rgba(0, 157, 189, 1) 50%, rgba(4, 0, 255, 1) 80%, rgba(7, 0, 99, 1) 100%);    
+    background-clip: text;
+    mask-image: linear-gradient(to bottom, black 50%, transparent 100%); 
+    mask-repeat: no-repeat;
+    mask-position: 0% 0%;
+    mask-size: 100% 23%;
+}
+

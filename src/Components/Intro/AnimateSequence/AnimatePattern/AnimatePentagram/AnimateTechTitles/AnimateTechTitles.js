@@ -17,17 +17,17 @@ function AnimateTechTitles({x, y}) {
             setTitle('');
         else if(value >= 0.30 && value <= 0.32)
             setTitle(titles.current[0])
-        else if(value >= 0.34 && value <= 0.35)
+        else if(value >= 0.33 && value <= 0.35)
             setTitle(titles.current[1])
-        else if(value >= 0.37 && value <= 0.38)
+        else if(value >= 0.36 && value <= 0.38)
             setTitle(titles.current[2]);
-        else if(value >= 0.39 && value <= 0.40)
+        else if(value >= 0.39 && value <= 0.41)
             setTitle(titles.current[3]);
-        else if(value >= 0.42 && value <= 0.43)
+        else if(value >= 0.42 && value <= 0.44)
             setTitle(titles.current[4]);
-        else if(value >= 0.45 && value <= 0.46)
+        else if(value >= 0.45 && value <= 0.48)
             setTitle(titles.current[5])
-        else if(value >= 0.48 && value <= 0.49)
+        else if(value >= 0.49 && value <= 0.50)
             setTitle(titles.current[6]);
         else if(value >= 0.51)
             setTitle(titles.current[7]);

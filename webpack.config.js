@@ -52,7 +52,18 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: [{loader: 'style-loader'}, {loader: 'css-loader'}]
+                use: [{loader: 'style-loader'}, {loader: 'css-loader'}, 
+                        {
+                            loader: 'postcss-loader',
+                            options: {
+                                postcssOptions: {
+                                    plugins: [
+                                        require('autoprefixer')
+                                    ]
+                                }
+                            }
+                        }
+                ]
             },
             {
                 test: /\.(png|jpg|webp|wav|mp4|svg)$/,

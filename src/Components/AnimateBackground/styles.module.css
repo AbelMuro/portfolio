@@ -16,7 +16,7 @@
 
 .smoke{
     height: 200px;
-    border-radius: 70px;
+    border-radius: 100%;
     position: absolute;
     background-color: rgb(0, 0, 155);
     will-change: transform;
