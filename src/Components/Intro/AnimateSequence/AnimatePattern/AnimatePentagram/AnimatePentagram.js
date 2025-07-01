@@ -2,9 +2,10 @@ import React, {useContext} from 'react';
 import {ContainerContext} from '!/Intro';
 import AnimateTechTitles from './AnimateTechTitles';
 import Rect from './Rect';
+import AnimateRect from './AnimateRect';
 import TechIcon from './TechIcon';
 import Circle from './Circle';
-import {motion, useScroll, useTransform, useSpring, useMotionValue, AnimatePresence} from 'framer-motion';
+import {motion, useScroll, useTransform, useSpring, useMotionValue} from 'framer-motion';
 import AnimateCircles from './AnimateCircles';
 import * as styles from './styles.module.css';
 
@@ -197,22 +198,7 @@ function AnimatePentagram({scrollThresholds = [0.09, 0.21]}) {
                                 strokeDashoffset={0}
                                 strokeOpacity={1}
                                 />    
-                            <Rect filter={'url(#glowEffect)'}
-                                id="rect704-3"
-                                x={181.80121}
-                                y={-28.580276}
-                                width={13.151613}
-                                height={12.403329}
-                                transform="matrix(0.71813035,0.69590861,-0.70235073,0.71183106,0,0)"
-                                fill="none"
-                                stroke="#0400ff"
-                                strokeWidth={0.165738}
-                                strokeLinejoin="bevel"
-                                strokeMiterlimit={0}
-                                strokeDasharray="none"
-                                strokeDashoffset={0}
-                                strokeOpacity={1}
-                                />               
+                            <AnimateRect/>                       
                     </motion.g>   
             </svg> 
     )

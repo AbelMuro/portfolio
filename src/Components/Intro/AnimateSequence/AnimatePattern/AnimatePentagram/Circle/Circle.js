@@ -8,7 +8,7 @@ function Circle(props) {
     const {MainContainer} = useContext(ContainerContext);
     const {scrollYProgress} = useScroll(MainContainer);
     const strokeDashoffset = useTransform(scrollYProgress, [0.58, 0.62], [0, 300]);
-    const dashoffsetSpring = useSpring(strokeDashoffset, {stiffness: 150, damping: 80});
+    const dashoffsetSpring = useSpring(strokeDashoffset, {stiffness: 150, damping: 30});
 
     useMotionValueEvent(scrollYProgress, 'change', (value) => {
         if(value > 0.70)

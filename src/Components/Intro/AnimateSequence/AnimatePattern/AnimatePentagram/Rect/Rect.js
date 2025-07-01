@@ -7,11 +7,15 @@ function Rect(props) {
     const [mount, setMount] = useState(true);
     const {MainContainer} = useContext(ContainerContext);
     const {scrollYProgress} = useScroll(MainContainer);
-    const strokeDashoffset = useTransform(scrollYProgress, [0.25, 0.42], [55, 0]);
-    const smoothDashOffset = useSpring(strokeDashoffset, {stiffness: 150, damping: 80})
-    const strokeWidth = useTransform(scrollYProgress, [0.58, 0.63], [props.strokeWidth, 0]);
-    const smoothWidth = useSpring(strokeWidth, {stiffness: 150, damping: 80})
+    const strokeDashOffset = useTransform(scrollYProgress, [0.25, 0.42], [55, 0]);
+    const smoothDashOffset = useSpring(strokeDashOffset, {stiffness: 150, damping: 80})
+    const strokeDashBack = useTransform(scrollYProgress, [0.58, 0.60], [0, 55])
+    const strokeDashBackSmooth = useSpring(strokeDashBack, {stiffness: 150, damping: 40});
     
+    useMotionValueEvent(strokeDashBackSmooth, 'change', (value) => {
+        smoothDashOffset.set(value);
+    })  
+
     useMotionValueEvent(scrollYProgress, 'change', (value) => {
         if(value > 0.70)
             setMount(false)
@@ -28,7 +32,7 @@ function Rect(props) {
                     fill='none' 
                     stroke='#0400ff' 
                     strokeDasharray={55} 
-                    style={{strokeDashoffset: smoothDashOffset, strokeWidth: smoothWidth}} 
+                    style={{strokeDashoffset: smoothDashOffset}} 
                     filter={'url(#glowEffect)'}
                     initial={{opacity: 1}}
                     exit={{opacity: 0}}

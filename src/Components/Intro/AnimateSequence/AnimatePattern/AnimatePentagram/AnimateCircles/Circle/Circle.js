@@ -8,7 +8,7 @@ function Circle({scrollThresholds, scaleTo, rotateX, rotateY}) {
     const {MainContainer} = useContext(ContainerContext);
     const {scrollYProgress} = useScroll(MainContainer);
     const strokeDashoffset = useTransform(scrollYProgress, [0.58, 0.62], [0, 300]);
-    const dashoffsetSpring = useSpring(strokeDashoffset, {stiffness: 150, damping: 70});
+    const dashoffsetSpring = useSpring(strokeDashoffset, {stiffness: 150, damping: 60});
 
     const scale = useTransform(scrollYProgress, scrollThresholds, [1, scaleTo]);
     const scaleWithSpring = useSpring(scale, {stiffness: 150, damping: 10});
@@ -17,12 +17,10 @@ function Circle({scrollThresholds, scaleTo, rotateX, rotateY}) {
     const rotate3DForY = useTransform(scrollYProgress, [scrollThresholds[1], scrollThresholds[1] + 0.10, scrollThresholds[1] + 0.20], rotateY)
     const rotate3DSpringX = useSpring(rotate3DForX, {stiffness: 100, damping: 50})
     const rotate3DSpringY = useSpring(rotate3DForY, {stiffness: 100, damping: 50});
-
     const scaleBack = useTransform(scrollYProgress, [0.55, 0.57], [scaleTo, 1]);    
-    useTransform(scaleBack, (scaleBack) => {
-        const scroll = scrollYProgress.get();
-        if (scroll >= 0.55 && scroll <= 0.57)
-            scaleWithSpring.set(scaleBack);
+
+    useMotionValueEvent(scaleBack, 'change', (scaleBack) => {
+        scaleWithSpring.set(scaleBack);
     })
 
     useMotionValueEvent(scrollYProgress, 'change', (value) => {

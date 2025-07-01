@@ -1,39 +1,44 @@
-import React, {memo, useRef, useContext, useState, useMemo} from 'react';
+import React, {memo, useRef, useContext, useState, useMemo, useEffect} from 'react';
 import {ContainerContext} from '!/intro';
-import {useSpring, useScroll, useTransform, useMotionValueEvent, AnimatePresence} from 'framer-motion';
-import DisplayLetter from './DisplayLetter';
+import {useSpring, useScroll, useTransform, useMotionValueEvent, AnimatePresence, motion} from 'framer-motion';
+import * as styles from './styles.module.css';
 
-function AnimateLetters() {
-    const text = useRef(`Passion, elegance, dedication and talent.
-                        These are the words that I retain when I
-                        dedicate myself in creating software. It is a
-                        type of art that generates beauty in a stagnant
-                        environment. I ensure that every piece of my art
-                        will enhance the success of any corporation. Every line
-                        of code that I write is made with technical precision. Every
-                        inefficiency within a software will be corrected. My talent
-                        and dedication is unwavering, as I am no stranger to committing
-                        endless hours of writing quality code.`)
+function AnimateLetters({line, scrollThresholds}) {
     const [displayedText, setDisplayedText] = useState('');
     const {MainContainerRef} = useContext(ContainerContext);
     const {scrollYProgress} = useScroll(MainContainerRef);
-    const display = useTransform(scrollYProgress, [0.65, 1], [0, text.current.length - 1]);
+    const display = useTransform(scrollYProgress, scrollThresholds, [0, line.length - 1])
 
     useMotionValueEvent(display, 'change', (value) => {
         const index = Math.floor(value);
-        setDisplayedText(text.current.slice(0, index + 1))
+        setDisplayedText(line.slice(0, index > 0 ? index + 1 : 0))
     })
 
-    const currentText = useMemo(() => Array.from(displayedText), [displayedText])
+    const currentText = useMemo(() => Array.from(displayedText), [displayedText]);
 
     return(
         <AnimatePresence>
                 {currentText.map((letter, i) => {
-                    if(letter !== ' ')
-                        return <DisplayLetter letter={letter} key={`${letter} ${i}`} index={i}/>
-                    else
-                        return <span key={`${letter} ${i}`}>{letter}</span>
-                    
+                        return (
+                            <motion.span
+                                key={`${letter} ${i}`}
+                                className={styles.letter}
+                                initial={{color: '#ffffff'}}
+                                animate={{color: '#ffffff00', transition: {duration: 2.7, delay: `0.${i < 10 ? `0${i}` : i}`, }}}
+                                exit={{
+                                    color: '#ffffff', 
+                                    opacity: 0,
+                                    transition: {
+                                        opacity: {
+                                            duration: 1.5
+                                        },
+                                        color: {
+                                            duration: 1
+                                        }
+                                    }}}>
+                                    {letter}
+                            </motion.span>
+                            )
                 })}                    
         </AnimatePresence>
     )
