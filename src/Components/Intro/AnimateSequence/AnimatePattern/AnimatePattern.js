@@ -5,6 +5,7 @@ import InnerRing from './InnerRing';
 import InnerMostRing from './InnerMostRing';
 import InnerMostLines from './InnerMostLines';
 import AnimatePentagram from './AnimatePentagram';
+import AnimateSquarePattern from './AnimateSquarePattern';
 import * as styles from './styles.module.css';
 
 
@@ -17,7 +18,8 @@ function AnimatePattern() {
                 <InnerRing/>
                 <InnerMostRing/>
                 <InnerMostLines/>
-                <AnimatePentagram/>                 
+                <AnimatePentagram scrollThresholds={[0.09, 0.21]}/>
+                <AnimateSquarePattern scrollThresholds={[0.09, 0.21]}/>                 
             </section>                
     )
 }

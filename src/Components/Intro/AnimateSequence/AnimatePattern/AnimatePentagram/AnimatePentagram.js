@@ -2,7 +2,6 @@ import React, {useContext} from 'react';
 import {ContainerContext} from '!/Intro';
 import AnimateTechTitles from './AnimateTechTitles';
 import Rect from './Rect';
-import AnimateRect from './AnimateRect';
 import TechIcon from './TechIcon';
 import Circle from './Circle';
 import {motion, useScroll, useTransform, useSpring, useMotionValue} from 'framer-motion';
@@ -10,7 +9,7 @@ import AnimateCircles from './AnimateCircles';
 import * as styles from './styles.module.css';
 
 
-function AnimatePentagram({scrollThresholds = [0.09, 0.21]}) {
+function AnimatePentagram({scrollThresholds}) {
     const x = useMotionValue(-47.929077);
     const y = useMotionValue(-13.484006);
     const {MainContainerRef} = useContext(ContainerContext);
@@ -197,8 +196,7 @@ function AnimatePentagram({scrollThresholds = [0.09, 0.21]}) {
                                 strokeDasharray="none"
                                 strokeDashoffset={0}
                                 strokeOpacity={1}
-                                />    
-                            <AnimateRect/>                       
+                                />                          
                     </motion.g>   
             </svg> 
     )

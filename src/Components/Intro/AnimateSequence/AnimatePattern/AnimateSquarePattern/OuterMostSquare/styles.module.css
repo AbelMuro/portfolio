@@ -1,0 +1,10 @@
+.container{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    z-index: var(--second-layer);
+    transform-style: preserve-3d;
+    perspective: 800;
+    transition: all 0s;
+}
