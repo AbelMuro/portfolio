@@ -1,0 +1,24 @@
+.message{
+    color: white;
+    font-family: 'AbelFont';
+    font-size: 2rem;
+    font-weight: 800;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: fixed;
+    bottom: 100px;
+    left: 0;
+    right: 0;
+    z-index: var(--eight-layer);
+    margin: auto;
+
+}
+
+.message > img{
+    width: 30px;
+    object-fit: contain;
+    transition: none;
+}

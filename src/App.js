@@ -1,9 +1,12 @@
 import React, {useEffect} from 'react';
 import {useControlScrolling} from '~/Hooks';
 import NavigationBar from './Components/NavigationBar';
-import Intro from './Components/Intro';
-import AnimateBackground from './Components/AnimateBackground';
+import AnimateIntroTitle from './Components/AnimateIntroTitle';
+import AnimateAboutMeText from './Components/AnimateAboutMeText';
+import AnimateBackgroundPattern from './Components/AnimateBackgroundPattern';
+import AnimateBackgroundClouds from './Components/AnimateBackgroundClouds';
 import TrailingMouseAnimation from './Components/TrailingMouseAnimation';
+import DisplayScrollDownMessage from './Components/DisplayScrollDownMessage';
 import './styles.css';
 
 
@@ -22,9 +25,12 @@ function App() {
 
     return(
         <>
-            <AnimateBackground/> 
             <NavigationBar/>
-            <Intro/>
+            <AnimateIntroTitle/>
+            <AnimateAboutMeText/>
+            <AnimateBackgroundPattern/>
+            <AnimateBackgroundClouds/> 
+            <DisplayScrollDownMessage/>
         </>
     )
 }
