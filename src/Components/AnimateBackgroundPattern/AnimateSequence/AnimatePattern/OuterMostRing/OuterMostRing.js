@@ -23,13 +23,14 @@ function OuterMostRing(){
             {
                 mount &&
                 <motion.div 
+                    id='outer most ring'
                     className={styles.container}
                     initial={{opacity: 1, rotate: 0}} 
                     animate={{rotate: [360, 0], transition: {repeat: Infinity, duration: 31.9, ease: 'linear'}}} 
                     exit={{opacity: 0}}
                     style={{scale: smoothScale}}
                     >
-                    <svg id='outer most ring' className={styles.container} viewBox="0 0 206.40488 205.26718">
+                    <svg className={styles.container} viewBox="0 0 206.40488 205.26718">
                         <filter id='glowEffect'>
                             <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur">
                                 <animate attributeName="stdDeviation" values="2;0;2" dur="3s" repeatCount="indefinite" calcMode="linear"/>

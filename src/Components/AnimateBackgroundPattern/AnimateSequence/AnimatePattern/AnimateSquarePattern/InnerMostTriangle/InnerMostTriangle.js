@@ -28,7 +28,7 @@ function InnerMostTriangle() {
         <AnimatePresence>
             {
                 mount &&  
-                <motion.div className={styles.container} style={{transform}} exit={{opacity: 0}}>
+                <motion.div id='inner most triangle' className={styles.container} style={{transform}} exit={{opacity: 0}}>
                     <motion.svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"}>
                         <defs>
                             <filter id='glowEffect'>
@@ -65,7 +65,7 @@ function InnerMostTriangle() {
                                 />
                             </clipPath>
                         </defs>
-                        <motion.g transform='translate(-47.8, -12.5)' style={{opacity: opacitySmooth}}>
+                        <motion.g transform='translate(-47.8, -12.5)' style={{opacity: opacitySmooth}} filter={'url(#glowEffect)'}>
                             <motion.path
                                     id="path215"
                                     d="m 163.28463,116.90532 -4.9576,-1.3751 3.66968,-3.60585 z"

@@ -41,7 +41,7 @@ function AnimateSquarePattern({scrollThresholds}) {
     })
 
     return(
-        <motion.section className={styles.container} style={{rotateX: rotateSmoothX, rotateY: rotateSmoothY, scale: scaleSmooth}}>
+        <motion.section id='square pattern' className={styles.container} style={{rotateX: rotateSmoothX, rotateY: rotateSmoothY, scale: scaleSmooth}}>
             <OuterMostSquare/>
             <OuterSquare/>
             <InnerSquare/>

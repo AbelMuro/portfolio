@@ -6,10 +6,10 @@ import * as styles from './styles.module.css';
 export const ContainerContext = createContext();
 
 function AnimateBackgroundPattern() {
-    const {scrollYProgress} = useScroll();
+    const {scrollYProgress, scrollY} = useScroll();
     const MainContainerRef = useRef();
 
-    useMotionValueEvent(scrollYProgress, 'change', (value) => {
+    useMotionValueEvent(scrollY, 'change', (value) => {
         console.log(value);
     })
 

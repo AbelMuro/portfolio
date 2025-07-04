@@ -24,7 +24,7 @@ function OuterMostSquare() {
     })
 
     return(
-            <svg className={styles.container} viewBox={"0 0 206.40488 206.40488"}>
+            <svg id='outer most square/pentagram square' className={styles.container} viewBox={"0 0 206.40488 206.40488"}>
                 <defs>
                     <filter id='glowEffect'>
                         <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur">
@@ -41,6 +41,7 @@ function OuterMostSquare() {
                 <g transform="translate(-47.8, -12.5)">        
                     {/* outer border*/}
                         <motion.path
+                            filter={'url(#glowEffect)'}
                             fill="none"
                             stroke="#0400ff"
                             strokeWidth={0.164006}
@@ -55,6 +56,7 @@ function OuterMostSquare() {
                     <AnimatePresence>
                         {/* inner border */}
                         {mount && <motion.path
+                            filter={'url(#glowEffect)'}
                             fill="none"
                             stroke="#0400ff"
                             strokeWidth={0.138539}
@@ -70,6 +72,7 @@ function OuterMostSquare() {
                             exit={{opacity: 0}}
                             />}
                         {mount && <motion.text
+                            filter={'url(#glowEffect)'}
                             xmlSpace="preserve"
                             fontSize={0.485107}
                             fontFamily="PMingLiU-ExtB"

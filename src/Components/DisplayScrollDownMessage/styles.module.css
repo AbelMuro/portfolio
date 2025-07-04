@@ -9,7 +9,7 @@
     align-items: center;
     gap: 10px;
     position: fixed;
-    bottom: 100px;
+    bottom: 50px;
     left: 0;
     right: 0;
     z-index: var(--eight-layer);

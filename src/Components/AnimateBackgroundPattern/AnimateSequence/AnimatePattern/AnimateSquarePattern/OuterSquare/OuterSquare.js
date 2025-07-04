@@ -35,7 +35,7 @@ function OuterSquare() {
         <AnimatePresence>
             {
                 mount &&
-                <motion.div className={styles.container} style={{transform}} exit={{opacity: 0}}>
+                <motion.div id='outer square' className={styles.container} style={{transform}} exit={{opacity: 0}}>
                     <motion.svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"}>
                     <defs>
                         <filter id='glowEffect'>
@@ -56,6 +56,7 @@ function OuterSquare() {
                                 <motion.path
                                     fill="none"
                                     stroke="#0400ff"
+                                    filter={'url(#glowEffect)'}
                                     strokeLinecap="round"
                                     strokeLinejoin="round"
                                     strokeMiterlimit={0}
@@ -66,6 +67,7 @@ function OuterSquare() {
                                 />
 
                                 <motion.text
+                                    filter={'url(#glowEffect)'}
                                     xmlSpace="preserve"
                                     fontSize={0.478557}
                                     fontFamily="PMingLiU-ExtB"
