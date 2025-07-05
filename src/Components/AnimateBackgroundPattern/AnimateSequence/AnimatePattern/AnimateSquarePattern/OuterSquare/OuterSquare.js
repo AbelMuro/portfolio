@@ -21,10 +21,16 @@ function OuterSquare() {
     const smoothZ = useSpring(z, {stiffness: 150, damping: 80});
     const transform = useTransform(smoothZ, (value) => {
         return `translateZ(${value}px)`;
+    });
+
+    const translateZBack = useTransform(scrollY, [12000, 12400], [5, 0]);
+
+    useMotionValueEvent(translateZBack, 'change', (value) => {
+        smoothZ.set(value)
     })
 
     useMotionValueEvent(scrollY, 'change', (value) => {
-        if(value < 6500)
+        if(value < 6500 || value > 12500)
             setMount(false);
         else
             setMount(true);
@@ -35,7 +41,7 @@ function OuterSquare() {
         <AnimatePresence>
             {
                 mount &&
-                <motion.div id='outer square' className={styles.container} style={{transform}} exit={{opacity: 0}}>
+                <motion.div id='outer square' className={styles.container} style={{transform}} initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>
                     <motion.svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"}>
                     <defs>
                         <filter id='glowEffect'>

@@ -11,11 +11,20 @@ function InnerMostTriangle() {
     const opacity = useTransform(scrollY, [9000, 9500], [0, 1])
     const opacitySmooth = useSpring(opacity, {stiffness: 150, damping: 80});
 
+    const strokeDashoffset = useTransform(scrollY, [9000, 9500], [100, 0]);
+    const smoothStrokeDashoffset = useSpring(strokeDashoffset, {stiffness: 150, damping: 80});
+
     const z = useTransform(scrollY, [8500, 9000], [0, 15]);
     const smoothZ = useSpring(z, {stiffness: 150, damping: 80});
     const transform = useTransform(smoothZ, (value) => {
         return `translateZ(${value}px)`;
-    })
+    });
+
+    const translateZBack = useTransform(scrollY, [12800, 13000], [1, 0]);
+
+    useMotionValueEvent(translateZBack, 'change', (value) => {
+        smoothZ.set(value);
+    });
 
     useMotionValueEvent(scrollY, 'change', (value) => {
         if(value < 8000)
@@ -42,52 +51,44 @@ function InnerMostTriangle() {
                                     <feMergeNode in="SourceGraphic"/>
                                 </feMerge>
                             </filter>
-                            <clipPath id="clipPath224" clipPathUnits="userSpaceOnUse">
-                                <path
-                                    id="path224"
-                                    display="none"
+                            <clipPath id="clipPath30" clipPathUnits="userSpaceOnUse">
+                                    <path
+                                    id="path30"
+                                    d="m134.05969,108.63792 16.43165,-4.53017 4.42741,16.84449 -16.43165,4.53017 z
+                                        m10.72644,3.64752 0.26186,0.46265 -0.97164,1.63752 -0.53446,-0.004
+                                        0.26214,0.46313 -0.83568,1.40826 -0.52154,0.00039 0.26964,0.46681
+                                        0.25437,-0.44261 1.88053,0.0242 0.26456,0.46736 0.27027,-0.46056
+                                        1.65948,0.0215 0.2581,0.45657 0.27293,-0.46455 -0.52607,-0.004
+                                        -0.81377,-1.45427 0.26356,-0.44916 -0.51721,-0.004 -0.92878,-1.6598
+                                        0.26977,-0.45977 z"
                                     fill="none"
                                     strokeWidth={0.187482}
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeMiterlimit={0}
-                                    d="m 161.61773,112.40155 0.11905,0.44353 -1.19004,1.1358 -0.45271,-0.12563 0.11918,0.444 -1.02349,0.97677 -0.44274,-0.11897 0.12472,0.44876 0.31464,-0.30889 1.59086,0.44971 0.12029,0.44805 0.33215,-0.32014 1.40384,0.39689 0.11721,0.43763 0.3353,-0.32284 -0.44554,-0.12392 -0.36628,-1.39204 0.32392,-0.31223 -0.4381,-0.12161 -0.41805,-1.58877 0.33156,-0.31961 z"
-                                />
-                                <path
-                                    id="lpe_path-effect224"
-                                    className="powerclip"
-                                    fill="none"
-                                    strokeWidth={0.187482}
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeMiterlimit={0}
-                                    d="m 153.32703,106.92437 h 14.9576 v 14.98095 h -14.9576 z m 8.2907,5.47718 0.11905,0.44353 -1.19004,1.1358 -0.45271,-0.12563 0.11918,0.444 -1.02349,0.97677 -0.44274,-0.11897 0.12472,0.44876 0.31464,-0.30889 1.59086,0.44971 0.12029,0.44805 0.33215,-0.32014 1.40384,0.39689 0.11721,0.43763 0.3353,-0.32284 -0.44554,-0.12392 -0.36628,-1.39204 0.32392,-0.31223 -0.4381,-0.12161 -0.41805,-1.58877 0.33156,-0.31961 z"
-                                />
+                                    strokeLinejoin="miter"
+                                    strokeMiterlimit={2}
+                                    />                                   
                             </clipPath>
                         </defs>
-                        <motion.g transform='translate(-47.8, -12.5)' style={{opacity: opacitySmooth}} filter={'url(#glowEffect)'}>
-                            <motion.path
-                                    id="path215"
-                                    d="m 163.28463,116.90532 -4.9576,-1.3751 3.66968,-3.60585 z"
-                                    clipPath="url(#clipPath224)"
-                                    fill="#0400ff"
-                                    strokeWidth={0.764144}
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeMiterlimit={0}
-                                    transform="matrix(0.84205793,-0.23782132,0.23273429,0.86046333,-11.647047,54.796514)"
+                        {/* outer border for triangle*/}
+                        <g transform='translate(-47.8, -12.5)'>
+                                <motion.path
+                                    filter={'url(#glowEffect)'}
+                                    id="path26"
+                                    d="m147.11259,116.31978 -4.20203,-0.0286 2.1258,-3.62476 z"
+                                    transform="matrix(0.76546385,-0.0051032,0.00512554,0.7623147,39.172944,28.242944)"
+                                    clipPath="url(#clipPath30)"
+                                    fill="none"
+                                    stroke="#0400ff"
+                                    strokeWidth={0.967128}
+                                    strokeLinejoin="miter"
+                                    strokeMiterlimit={2}
+                                    strokeDasharray={100}
+                                    style={{strokeDashoffset: smoothStrokeDashoffset}}
+                                    strokeOpacity={1}
+                                    fillOpacity={1}
                                 />
+                        </g>
 
-                            <path
-                                id="path4"
-                                fill="#0400ff"
-                                stroke="#0400ff"
-                                strokeWidth={0}
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeMiterlimit={0}
-                                d="m 151.13963,114.14487 c 0,0.17396 -0.14103,0.31499 -0.31501,0.31499 -0.17396,0 -0.31499,-0.14103 -0.31499,-0.31499 0,-0.17398 0.14103,-0.31501 0.31499,-0.31501 0.0425,0 -0.12204,0.0416 -0.17326,0.15087 -0.0428,0.0912 -0.0416,0.18995 0.0457,0.27235 0.10267,0.0968 0.23663,0.0903 0.32283,0.0372 0.0968,-0.0597 0.11973,-0.19615 0.11973,-0.14539 z"
-                            />
+                        <motion.g transform='translate(-47.8, -12.5)' style={{opacity: opacitySmooth}} filter={'url(#glowEffect)'}>
                             <path
                                 id="path1-64"
                                 d="m 151.4269,115.63826 0.0112,0.0195 c 0.01,0.0173 0.026,0.03 0.0453,0.0356 l 0.069,0.0197 c 0.0205,0.006 0.0345,0.0246 0.0345,0.0458 v 0.0475 c 0,0.0131 0.007,0.025 0.0191,0.0309 0.0117,0.006 0.0191,0.0176 0.0191,0.0309 v 0.0464 c 0,0.0185 0.0177,0.032 0.0356,0.0269 0.0192,-0.005 0.0341,-0.0209 0.0389,-0.0403 l 0.004,-0.0133 c 0.005,-0.0201 0.0181,-0.0374 0.0361,-0.0476 l 0.01,-0.005 c 0.0179,-0.0101 0.0288,-0.0292 0.0288,-0.0498 v -0.01 c 0,-0.0152 -0.006,-0.0296 -0.0168,-0.0404 l -0.005,-0.005 c -0.0108,-0.0107 -0.0252,-0.0168 -0.0404,-0.0168 h -0.0513 c -0.0132,0 -0.0263,-0.004 -0.0379,-0.01 l -0.0411,-0.0234 c -0.005,-0.004 -0.009,-0.008 -0.011,-0.0133 -0.004,-0.0115 0.002,-0.0238 0.0122,-0.0292 l 0.007,-0.005 c 0.008,-0.004 0.017,-0.005 0.0254,-0.002 l 0.0276,0.009 c 0.01,0.004 0.0205,-3.7e-4 0.026,-0.009 0.005,-0.008 0.005,-0.0194 -0.002,-0.0271 l -0.0162,-0.0194 c -0.0119,-0.0143 -0.0117,-0.0352 3.6e-4,-0.0492 l 0.0187,-0.0218 c 0.0105,-0.0123 0.0122,-0.0298 0.004,-0.0437 l -0.004,-0.005 c -0.004,-2.4e-4 -0.008,-3.6e-4 -0.0124,-3.6e-4 -0.11055,0 -0.20429,0.0725 -0.23611,0.17272 z m 0.48398,0.075 c 0,-0.0438 -0.0115,-0.085 -0.0315,-0.12091 l -0.0304,0.0123 c -0.0187,0.007 -0.0284,0.0284 -0.0221,0.0475 l 0.0202,0.0604 c 0.004,0.0124 0.0143,0.0218 0.0268,0.0249 l 0.0347,0.009 c 0.002,-0.0107 0.003,-0.0217 0.003,-0.0328 z m -0.55272,0 a 0.30494679,0.30494679 0 1 1 0.60989,0 0.30494679,0.30494679 0 1 1 -0.60989,0 z" // abbreviated for readability

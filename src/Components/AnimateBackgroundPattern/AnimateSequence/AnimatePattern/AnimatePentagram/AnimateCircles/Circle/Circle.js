@@ -8,7 +8,7 @@ function Circle({scrollThresholds, scaleTo, rotateX, rotateY}) {
     const {MainContainerRef} = useContext(ContainerContext);
     const {scrollY} = useScroll(MainContainerRef);
     const strokeDashoffset = useTransform(scrollY, [5800, 6200], [0, 300]);
-    const dashoffsetSpring = useSpring(strokeDashoffset, {stiffness: 150, damping: 60});
+    const dashoffsetSpring = useSpring(strokeDashoffset, {stiffness: 150, damping: 40});
 
     const scale = useTransform(scrollY, scrollThresholds, [1, scaleTo]);
     const scaleWithSpring = useSpring(scale, {stiffness: 150, damping: 10});

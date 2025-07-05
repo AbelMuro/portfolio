@@ -21,8 +21,8 @@ function AnimatePentagram({scrollThresholds}) {
     ];
     const rotate3DForY = useTransform(scrollY, scrollRange, [0, -35, 0, -35, 0]);
     const rotate3DForX = useTransform(scrollY, scrollRange, [0, 35, 0, -25, 0]);
-    const rotate3DSpringY = useSpring(rotate3DForY, {stiffness: 150, damping: 40});
-    const rotate3DSpringX = useSpring(rotate3DForX, {stiffness: 150, damping: 40});
+    const rotate3DSpringY = useSpring(rotate3DForY, {stiffness: 150, damping: 80});
+    const rotate3DSpringX = useSpring(rotate3DForX, {stiffness: 150, damping: 80});
     const scale = useTransform(scrollY, [600, 1800], [1, 5])
     const smoothScale = useSpring(scale, {stiffness: 150, damping: 80});
     

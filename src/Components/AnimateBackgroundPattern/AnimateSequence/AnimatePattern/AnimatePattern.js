@@ -6,7 +6,7 @@ import InnerMostRing from './InnerMostRing';
 import InnerMostLines from './InnerMostLines';
 import AnimatePentagram from './AnimatePentagram';
 import AnimateSquarePattern from './AnimateSquarePattern';
-import AnimateLunar from './AnimateLunar'
+import AnimateLunarPattern from './AnimateLunarPattern'
 import * as styles from './styles.module.css';
 
 
@@ -21,7 +21,7 @@ function AnimatePattern() {
                 <InnerMostLines/>
                 <AnimatePentagram scrollThresholds={[900, 2100]}/>
                 <AnimateSquarePattern scrollThresholds={[900, 2100]}/>     
-                <AnimateLunar/>            
+                <AnimateLunarPattern/>            
             </section>                
     )
 }

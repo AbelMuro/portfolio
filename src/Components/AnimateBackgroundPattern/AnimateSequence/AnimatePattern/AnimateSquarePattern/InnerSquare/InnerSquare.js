@@ -21,8 +21,14 @@ function InnerSquare(){
         return `translateZ(${value}px)`;
     })
 
+    const translateZBack = useTransform(scrollY, [11600, 12000], [10, 0]);
+
+    useMotionValueEvent(translateZBack, 'change', (value) => {
+        smoothZ.set(value);
+    })
+
     useMotionValueEvent(scrollY, 'change', (value) => {
-        if(value < 7000)
+        if(value < 7000 || value > 12200)
             setMount(false);
         else
             setMount(true);
@@ -32,7 +38,7 @@ function InnerSquare(){
         <AnimatePresence>
             {
             mount &&   
-                <motion.div id='inner square' className={styles.container} style={{transform}} exit={{opacity: 0}}>
+                <motion.div id='inner square' className={styles.container} style={{transform}} initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>
                     <motion.svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"}>
                         <defs>
                             <filter id='glowEffect'>
