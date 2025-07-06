@@ -36,7 +36,7 @@ function AnimateAboutMeText() {
     })
 
     useMotionValueEvent(scrollY, 'change', (value) => {
-        if(value >= 6500)
+        if(value >= 6500 && value <= 11700)
             setMount(true);
         else
             setMount(false);
