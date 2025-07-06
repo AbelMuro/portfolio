@@ -21,10 +21,10 @@ function AnimateMoon() {
     const smoothZ = useSpring(z, {stiffness: 150, damping: 80});
     const translateZBack = useTransform(scrollY, [12800, 13000], [15, 0]);
 
-    const scale = useTransform(scrollY, [14000, 14500], [1, 3]);
+    const scale = useTransform(scrollY, [14000, 14500], [1, 5]);
     const smoothScale = useSpring(scale, {stiffness: 150, damping: 80});
 
-    const transform = useMotionTemplate`translateZ(${smoothZ}px) scale(${smoothScale}`;
+    const transform = useMotionTemplate`translateZ(${smoothZ}px) scale(${smoothScale})`;
 
     useMotionValueEvent(translateZBack, 'change', (value) => {
         smoothZ.set(value);
