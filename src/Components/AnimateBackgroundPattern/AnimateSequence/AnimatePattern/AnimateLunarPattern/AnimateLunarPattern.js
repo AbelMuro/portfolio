@@ -4,6 +4,12 @@ import AnimateMoon from './AnimateMoon';
 import {motion, useTransform, useSpring, useMotionValueEvent, useScroll} from 'framer-motion';
 import * as styles from './styles.module.css'
 
+/* 
+    this is where i left off, i need to start creating the components and animations for the
+    rest of the lunar design that i made in inkscape
+*/
+
+
 function AnimateLunarPattern() {
     const {MainContainerRef} = useContext(ContainerContext);
     const {scrollY} = useScroll(MainContainerRef);
@@ -20,7 +26,6 @@ function AnimateLunarPattern() {
     useMotionValueEvent(rotateXBack, 'change', (value) => {
         rotateSmoothX.set(value);
     });
-
 
     useMotionValueEvent(scaleMore, 'change', (value) => {
         scaleSmooth.set(value);

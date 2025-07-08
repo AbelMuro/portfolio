@@ -8,6 +8,10 @@
     transition: all 0s;
 }
 
+.lunarPattern{
+    transform-origin: calc(50% + 0.02px) 50% !important;
+}
+
 .svg{
     width: 100%;
     height: 100%;

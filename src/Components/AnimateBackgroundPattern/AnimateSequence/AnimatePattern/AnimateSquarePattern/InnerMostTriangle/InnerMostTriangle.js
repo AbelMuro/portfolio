@@ -42,7 +42,7 @@ function InnerMostTriangle() {
             setMount(false);
         else
             setMount(true);
-    })
+    });
 
     return(
         <AnimatePresence>
@@ -89,6 +89,7 @@ function InnerMostTriangle() {
                                 style={{strokeDashoffset: smoothStrokeDashoffset}}
                                 />
                         </g>
+                        <motion.g initial={{opacity: 0}} animate={{opacity: 1}}>
                             <motion.image 
                                 filter={'url(#glowEffect)'}
                                 className={styles.image}
@@ -97,6 +98,8 @@ function InnerMostTriangle() {
                                 x={101.79}
                                 y={102.2}
                             />
+                        </motion.g>
+
                     </svg>
                 </motion.div>  
             }            
