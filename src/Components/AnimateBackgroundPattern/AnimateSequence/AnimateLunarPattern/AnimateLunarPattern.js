@@ -1,6 +1,11 @@
 import React, {useContext} from 'react';
 import { ContainerContext } from '!/AnimateBackgroundPattern';
 import AnimateMoon from './AnimateMoon';
+import ChainOne from './ChainOne';
+import ChainTwo from './ChainTwo';
+import ChainThree from './ChainThree';
+import ChainFour from './ChainFour';
+import ChainFive from './ChainFive';
 import {motion, useTransform, useSpring, useMotionValueEvent, useScroll} from 'framer-motion';
 import * as styles from './styles.module.css'
 
@@ -34,6 +39,11 @@ function AnimateLunarPattern() {
     return(
         <motion.section id='lunar pattern' className={styles.container} style={{scale: scaleSmooth, rotateX: rotateSmoothX}}>
             <AnimateMoon/>
+            <ChainOne/>
+            <ChainTwo/>
+            <ChainThree/>
+            <ChainFour/>
+            <ChainFive/>
         </motion.section>
     )
 }

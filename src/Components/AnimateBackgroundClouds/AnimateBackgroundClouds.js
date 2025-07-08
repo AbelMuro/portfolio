@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import icons from './icons';
-import {motion, useAnimationControls, } from 'framer-motion';
+import {motion, useAnimationControls, useScroll, useTransform, useMotionTemplate, useSpring, useMotionValueEvent} from 'framer-motion';
 import * as styles from './styles.module.css';
 
 /* 
@@ -9,10 +9,32 @@ import * as styles from './styles.module.css';
 */
 
 function AnimateBackgroundClouds() {
+    const {scrollY} = useScroll();
+    const scrollRange = [
+        2100, 3100, 
+        4100, 5100,
+        6100
+    ];
+    const backgroundPositionX = useTransform(scrollY, scrollRange, [0, -105, 0, 95, 0] );
+    const smoothBackgroundPositionX = useSpring(backgroundPositionX, {stiffness: 150, damping: 80});
+    const backgroundPositionY = useTransform(scrollY, scrollRange, [0, -105, 0, -105, 0]);
+    const smoothBackgroundPositionY = useSpring(backgroundPositionY, {stiffness: 150, damping: 80});
+    const moveBackgroundPositionYMore = useTransform(scrollY, [7000, 8000], [0, -105]);
+    const backgroundPositionYBack = useTransform(scrollY, [13000, 13200], [-105, 0]);
     const firstCloudControls = useAnimationControls();
     const secondCloudControls = useAnimationControls();
     const thirdCloudControls = useAnimationControls();
     const fourthCloudControls = useAnimationControls();
+
+    const backgroundPosition = useMotionTemplate`${smoothBackgroundPositionX}px ${smoothBackgroundPositionY}px`;
+
+    useMotionValueEvent(moveBackgroundPositionYMore, 'change', (value) => {
+        smoothBackgroundPositionY.set(value);
+    })
+
+    useMotionValueEvent(backgroundPositionYBack, 'change', (value) => {
+        smoothBackgroundPositionY.set(value);
+    })
 
     const animateFirstCloud = async () => {
         await firstCloudControls.start({top: '200px', width: '350px', height: '100px', transition: {duration: 4}});
@@ -65,7 +87,7 @@ function AnimateBackgroundClouds() {
     }, [])
 
     return(
-        <section className={styles.container}>
+        <motion.section className={styles.container} style={{backgroundPosition}}>
             <motion.div 
                 className={styles.smoke} 
                 initial={{filter: 'blur(70px)', width: '0px', top: '0px', left: '0px', height: '0px'}}
@@ -82,7 +104,7 @@ function AnimateBackgroundClouds() {
                 className={styles.smoke} 
                 initial={{filter: 'blur(140px)', width: '0px', top: '0px', right: '0px', height: '0px'}}
                 animate={fourthCloudControls}/>
-        </section>
+        </motion.section>
     )   
 }
 
