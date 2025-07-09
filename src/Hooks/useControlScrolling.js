@@ -26,6 +26,7 @@ function useControlScrolling() {
                 lastScrollEvent.current = true;
             else{
                 lastScrollEvent.current = null;
+                console.log('cancel event')
                 return;
             }
 
