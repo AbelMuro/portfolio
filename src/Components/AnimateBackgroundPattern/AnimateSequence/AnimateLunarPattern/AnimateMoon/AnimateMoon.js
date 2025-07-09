@@ -3,6 +3,12 @@ import { ContainerContext } from '!/AnimateBackgroundPattern';
 import { motion, useScroll, useTransform, useSpring, useMotionValueEvent, AnimatePresence, useMotionTemplate} from 'framer-motion';
 import * as styles from './styles.module.css';
 
+/* 
+    this is where i left off, im still deliberating if i should fade out the black pattern on the moon or keep it
+    i also want to 'zoom' into the moon design and i can finally start displaying my projects
+*/
+
+
 function AnimateMoon() {
     const [mount, setMount] = useState(false);
     const {MainContainerRef} = useContext(ContainerContext);

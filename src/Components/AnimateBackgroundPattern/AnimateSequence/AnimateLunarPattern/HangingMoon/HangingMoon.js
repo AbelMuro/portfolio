@@ -15,10 +15,18 @@ function HangingMoon(){
 
     const strokeDashoffset = useTransform(scrollY, [16500, 17000], [0.8, 0]);
     const smoothStrokeDashoffset = useSpring(strokeDashoffset, {stiffness: 150, damping: 80});
+    const strokeDashoffsetBack = useTransform(scrollY, [18700, 19200], [0, 0.8])
 
     const fill = useTransform(scrollY, [17000, 17500], ['#0400ff00', '#0400ff']);
 
+    const opacity = useTransform(scrollY, [18000, 18500], [1, 0]);
+    const smoothOpacity = useSpring(opacity, {stiffness: 150, damping: 80})
+    
     const transform = useMotionTemplate`translate(-35px, 0.6px) scale(${smoothScale})`;
+
+    useMotionValueEvent(strokeDashoffsetBack, 'change', (value) => {
+        smoothStrokeDashoffset.set(value);
+    })
 
     useMotionValueEvent(scrollY, 'change', (value) => {
         if(value < 13500)
@@ -72,10 +80,8 @@ function HangingMoon(){
                             <motion.path
                                 className={styles.moon}
                                 strokeDasharray={0.8}
-                                style={{strokeDashoffset: smoothStrokeDashoffset, fill}}
+                                style={{strokeDashoffset: smoothStrokeDashoffset, fill, opacity: smoothOpacity}}
                                 id="path4-4"
-                                fill="#0400ff"
-                                fillOpacity={1}
                                 stroke="#0400ff"
                                 strokeWidth={0.00239823}
                                 strokeLinecap="round"

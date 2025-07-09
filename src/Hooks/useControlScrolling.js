@@ -5,10 +5,10 @@ function useControlScrolling() {
     const [scrollSpeed, setScrollSpeed] = useState(200); 
     const [directionOfScrolling, setDirectionOfScrolling] = useState(1);
     const timeoutRef = useRef();
-    const {scrollYProgress} = useScroll();
+    const {scrollY} = useScroll();
 
-    useMotionValueEvent(scrollYProgress, 'change', (value) => {
-        if(value >= 0 && value <= 0.10)
+    useMotionValueEvent(scrollY, 'change', (value) => {
+        if(value >= 0 && value <= 2000)
             setScrollSpeed(200);
         else
             setScrollSpeed(450);
@@ -19,7 +19,6 @@ function useControlScrolling() {
         let stopScrolling = false;
 
         const smoothScrolling = () => {
-            console.log('scroll')
             window.scrollBy(0, directionOfScrolling * scrollSpeed);
         }
 

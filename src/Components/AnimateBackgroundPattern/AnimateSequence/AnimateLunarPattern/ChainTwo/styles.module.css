@@ -11,6 +11,6 @@
     height: 100%;
 }
 
-.chain{
-    transform-origin: top center !important;
+.group{
+    transform-origin: center -2px !important;
 }
