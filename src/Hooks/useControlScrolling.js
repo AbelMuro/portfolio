@@ -26,7 +26,7 @@ function useControlScrolling() {
             else
                 wheelTimeout.current = setTimeout(() => {
                     wheelTimeout.current = null;
-                }, 100)
+                }, 500)
 
             setDirectionOfScrolling(e.deltaY > 0 ? 1 : -1);
             requestAnimationFrame(smoothScrolling);
