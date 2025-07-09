@@ -21,12 +21,13 @@ function useControlScrolling() {
         }
 
         const handleWheel = (e) => {
-            e.preventDefault();
             if(wheelTimeout.current) return;
-            else
-                wheelTimeout.current = setTimeout(() => {
-                    wheelTimeout.current = null;
-                }, 500)
+            
+            e.preventDefault();
+            
+            wheelTimeout.current = setTimeout(() => {
+                wheelTimeout.current = null;
+            }, 500)
 
             setDirectionOfScrolling(e.deltaY > 0 ? 1 : -1);
             requestAnimationFrame(smoothScrolling);
