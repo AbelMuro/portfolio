@@ -4,7 +4,7 @@ import {useScroll, useMotionValueEvent} from 'framer-motion';
 function useControlScrolling() {
     const [scrollSpeed, setScrollSpeed] = useState(200); 
     const [directionOfScrolling, setDirectionOfScrolling] = useState(1);
-    const wheelTimeout = useRef();
+    const deltaY = useRef([]);
     const {scrollYProgress} = useScroll();
 
     useMotionValueEvent(scrollYProgress, 'change', (value) => {
@@ -22,7 +22,7 @@ function useControlScrolling() {
 
         const handleWheel = (e) => {
             console.log('deltaY', e.deltaY);
-            const momentumMouse = e.deltaY < 1 || !Number.isInteger(e.deltaY);
+            const momentumMouse =  Number.isInteger(e.deltaY);
             if(momentumMouse) return;
 
             e.preventDefault();    
