@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
 import { ContainerContext } from '!/AnimateBackgroundPattern';
 import AnimateMoon from './AnimateMoon';
 import ChainOne from './ChainOne';
@@ -6,7 +6,8 @@ import ChainTwo from './ChainTwo';
 import ChainThree from './ChainThree';
 import ChainFour from './ChainFour';
 import ChainFive from './ChainFive';
-import {motion, useTransform, useSpring, useMotionValueEvent, useScroll} from 'framer-motion';
+import HangingMoon from './HangingMoon';
+import {motion, useTransform, useSpring, useMotionValueEvent, useScroll, AnimatePresence} from 'framer-motion';
 import * as styles from './styles.module.css'
 
 /* 
@@ -16,6 +17,7 @@ import * as styles from './styles.module.css'
 
 
 function AnimateLunarPattern() {
+    const [mount, setMount] = useState(false);
     const {MainContainerRef} = useContext(ContainerContext);
     const {scrollY} = useScroll(MainContainerRef);
 
@@ -36,15 +38,29 @@ function AnimateLunarPattern() {
         scaleSmooth.set(value);
     });
 
+    useMotionValueEvent(scrollY, 'change', (value) => {
+        if(value < 8000)
+            setMount(false);
+        else
+            setMount(true);
+    });
+
     return(
-        <motion.section id='lunar pattern' className={styles.container} style={{scale: scaleSmooth, rotateX: rotateSmoothX}}>
-            <AnimateMoon/>
-            <ChainOne/>
-            <ChainTwo/>
-            <ChainThree/>
-            <ChainFour/>
-            <ChainFive/>
-        </motion.section>
+        <AnimatePresence>
+            {
+                mount &&
+                <motion.section id='lunar pattern' className={styles.container} style={{scale: scaleSmooth, rotateX: rotateSmoothX}} exit={{opacity: 0}}>
+                    <AnimateMoon/>
+                    <ChainOne/>
+                    <ChainTwo/>
+                    <ChainThree/>
+                    <ChainFour/>
+                    <ChainFive/>
+                    <HangingMoon/>
+                </motion.section>
+            }
+        </AnimatePresence>
+
     )
 }
 

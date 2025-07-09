@@ -1,10 +1,198 @@
-import React from 'react';
+import React, {useContext, useState} from 'react';
+import { ContainerContext } from '!/AnimateBackgroundPattern';
+import {motion, useTransform, useSpring, useScroll, useMotionTemplate, useMotionValueEvent, AnimatePresence} from 'framer-motion';
 import * as styles from './styles.module.css';
 
 /* this is where i left off, i need to finish the last bottom chain for the lunar design*/
 
 function ChainFive(){
-    return(<></>)
+    const [mount, setMount] = useState(false);
+    const {MainContainerRef} = useContext(ContainerContext);
+    const {scrollY} = useScroll(MainContainerRef);
+
+    const scale = useTransform(scrollY, [14000, 14500], [1, 15]);
+    const smoothScale = useSpring(scale, {stiffness: 150, damping: 80});
+
+    const scaleChain = useTransform(scrollY, [16900, 17200], [0, 1]);
+    const smoothScaleChain = useSpring(scaleChain, {stiffness: 150, damping: 80});
+
+    const scaleCircle = useTransform(scrollY, [17900, 18100], [0, 1]);
+    const smoothScaleCircle = useSpring(scaleCircle, {stiffness: 150, damping: 80});
+
+    const transform = useMotionTemplate`translate(-32px, 7px) scale(${smoothScale})`;
+
+    useMotionValueEvent(scrollY, 'change', (value) => {
+        if(value < 13500)
+            setMount(false);
+        else
+            setMount(true);
+    });
+
+    return(
+        <AnimatePresence>
+            {
+            mount && 
+            <motion.div id='chain five' className={styles.container}>
+                <svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"}>
+                    <defs>
+                        <filter id='glowEffect'>
+                            <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur">
+                                <animate attributeName="stdDeviation" values="2;0;2" dur="3s" repeatCount="indefinite" calcMode="linear"/>
+                            </feGaussianBlur>
+                            <feFlood floodColor="#0400ff" floodOpacity='0.5' result="color"/>
+                            <feComposite in="color" in2="blur" operator="in" result="glow"/>
+                            <feMerge>
+                                <feMergeNode in="glow"/>
+                                <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                        </filter>
+                    </defs>
+
+                    <motion.g style={{transform}} filter={'url(#glowEffect)'}>
+                        <motion.path
+                            id="path10"
+                            className={styles.chain}
+                            fill="none"
+                            fillOpacity={1}
+                            stroke="#0400ff"
+                            strokeWidth={0.00434584}
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeMiterlimit={0}
+                            strokeDasharray="0.00434584, 0.00869168"
+                            strokeDashoffset={0}
+                            strokeOpacity={1}
+                            style={{scale: smoothScaleChain}}
+                            d="m 137.60705,99.076401 c 0,0 9.9e-4,0.174116 0.0653,0.173673 0.11584,-7.94e-4 0.11085,-0.273685 0.11085,-0.273685"
+                            />
+
+                            <motion.ellipse
+                                style={{scale: smoothScaleCircle}}
+                                id="path8-8"
+                                cx={137.7814}
+                                cy={99.033615}
+                                rx={0.011394637}
+                                ry={0.011380743}
+                                fill="#0400ff"
+                                fillOpacity={1}
+                                stroke="none"
+                                strokeWidth={0.00474776}
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeMiterlimit={0}
+                                strokeOpacity={1}
+                                />
+
+                            <motion.ellipse
+                                style={{scale: smoothScaleCircle}}
+                                id="path8-7"
+                                cx={137.77379}
+                                cy={99.092903}
+                                rx={0.011394637}
+                                ry={0.011380743}
+                                fill="#0400ff"
+                                fillOpacity={1}
+                                stroke="none"
+                                strokeWidth={0.00474776}
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeMiterlimit={0}
+                                strokeOpacity={1}
+                                />
+
+                            <motion.ellipse
+                                style={{scale: smoothScaleCircle}}
+                                id="path8-86"
+                                cx={137.76108}
+                                cy={99.152191}
+                                rx={0.011394637}
+                                ry={0.011380743}
+                                fill="#0400ff"
+                                fillOpacity={1}
+                                stroke="none"
+                                strokeWidth={0.00474776}
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeMiterlimit={0}
+                                strokeOpacity={1}
+                                />
+
+                            <motion.ellipse
+                                style={{scale: smoothScaleCircle}}
+                                id="path8-6"
+                                cx={137.73737}
+                                cy={99.208931}
+                                rx={0.011394637}
+                                ry={0.011380743}
+                                fill="#0400ff"
+                                fillOpacity={1}
+                                stroke="none"
+                                strokeWidth={0.00474776}
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeMiterlimit={0}
+                                strokeOpacity={1}
+                                />
+
+                            <motion.circle
+                                style={{scale: smoothScaleCircle}}
+                                id="path11"
+                                cx={137.68129}
+                                cy={99.249031}
+                                r={0.013795333}
+                                fill="none"
+                                fillOpacity={1}
+                                stroke="#0400ff"
+                                strokeWidth={0.00421353}
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeMiterlimit={0}
+                                strokeDasharray="none"
+                                strokeOpacity={1}
+                                />
+
+                            <motion.ellipse
+                                style={{scale: smoothScaleCircle}}
+                                id="path8-65"
+                                cx={137.62134}
+                                cy={99.185219}
+                                rx={0.011394637}
+                                ry={0.011380743}
+                                fill="#0400ff"
+                                fillOpacity={1}
+                                stroke="none"
+                                strokeWidth={0.00474776}
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeMiterlimit={0}
+                                strokeOpacity={1}
+                                />
+
+                            <motion.ellipse
+                                style={{scale: smoothScaleCircle}}
+                                id="path8-61"
+                                cx={137.6105}
+                                cy={99.128502}
+                                rx={0.011394637}
+                                ry={0.011380743}
+                                fill="#0400ff"
+                                fillOpacity={1}
+                                stroke="none"
+                                strokeWidth={0.00474776}
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeMiterlimit={0}
+                                strokeOpacity={1}
+                                />
+                    </motion.g>
+
+                </svg>
+            </motion.div>
+            }         
+        </AnimatePresence>
+
+
+    )
 }
 
 export default ChainFive;

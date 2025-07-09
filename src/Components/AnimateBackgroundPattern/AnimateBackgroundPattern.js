@@ -9,7 +9,7 @@ function AnimateBackgroundPattern() {
     const {scrollYProgress, scrollY} = useScroll();
     const MainContainerRef = useRef();
 
-    useMotionValueEvent(scrollY, 'change', (value) => {
+    useMotionValueEvent(scrollYProgress, 'change', (value) => {
         console.log(value);
     })
 

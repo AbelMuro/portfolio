@@ -11,6 +11,11 @@
     height: 100%;
 }
 
-.chain{
+.group, .chain{
     transform-origin: top center !important;
+}
+
+.moon{
+    transition: all 0.9s linear;
+    color: #0400ff00
 }

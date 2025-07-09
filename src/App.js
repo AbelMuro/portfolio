@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import {useControlScrolling} from '~/Hooks';
 import NavigationBar from './Components/NavigationBar';
-import AnimateIntroTitle from './Components/AnimateIntroTitle';
+import DisplayHeadings from './Components/DisplayHeadings';
 import AnimateAboutMeText from './Components/AnimateAboutMeText';
 import AnimateBackgroundPattern from './Components/AnimateBackgroundPattern';
 import AnimateBackgroundClouds from './Components/AnimateBackgroundClouds';
@@ -26,7 +26,7 @@ function App() {
     return(
         <>
             <NavigationBar/>
-            <AnimateIntroTitle/>
+            <DisplayHeadings/>
             <AnimateAboutMeText/>
             <AnimateBackgroundPattern/>
             <AnimateBackgroundClouds/> 

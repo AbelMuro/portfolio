@@ -1,33 +1,37 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import {useScroll, useMotionValueEvent} from 'framer-motion';
  
 function useControlScrolling() {
+    const [scrollSpeed, setScrollSpeed] = useState(200); 
+    const [directionOfScrolling, setDirectionOfScrolling] = useState(1);
     const {scrollYProgress} = useScroll();
-    const [scrollSpeed, setScrollSpeed] = useState(283); // lower = slower
-    const [reset, setReset] = useState(false);
-
 
     useMotionValueEvent(scrollYProgress, 'change', (value) => {
-        if(value >= 0 && value <= 0.21)
-            setScrollSpeed(283);
+        if(value >= 0 && value <= 0.10)
+            setScrollSpeed(200);
         else
-            setScrollSpeed(383);
+            setScrollSpeed(450);
     })
+    
 
     useEffect(() => {
+        const smoothScrolling = () => {
+            window.scrollBy(0, directionOfScrolling * scrollSpeed);
+        }
+
         const handleWheel = (e) => {
             e.preventDefault();
-            const deltaY = e.deltaY;
-            const direction = deltaY > 0 ? 1 : -1;
-            window.scrollBy({
-                top: direction * scrollSpeed,
-                behavior: 'smooth'
-            });          
+            setDirectionOfScrolling(e.deltaY > 0 ? 1 : -1);
+            requestAnimationFrame(smoothScrolling);
         };
 
-        window.addEventListener('wheel', handleWheel, {passive: false})
+        window.addEventListener('wheel', handleWheel, {passive: false});
 
-    }, [scrollSpeed])
+        return () => {
+            window.removeEventListener('wheel', handleWheel)
+        }
+
+    }, [scrollSpeed, directionOfScrolling])
 
 
     return null

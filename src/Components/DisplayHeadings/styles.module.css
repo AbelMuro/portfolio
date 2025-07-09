@@ -1,4 +1,4 @@
-.title{
+.largeTitle{
     width: 100%;
     height: 150px;
     text-align: center;
@@ -14,7 +14,7 @@
 }
 
 
-.smallerTitle{
+.smallTitle{
     width: 100%;
     height: 100px;
     text-align: center;
@@ -30,11 +30,11 @@
 }
 
 @media(max-width: 800px){
-    .title{
+    .largeTitle{
         font-size: 3.5rem;
     }
 
-    .smallerTitle{
+    .smallTitle{
         font-size: 2.5rem;
     }
 }
