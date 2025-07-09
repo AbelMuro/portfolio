@@ -4,7 +4,7 @@ import {useScroll, useMotionValueEvent} from 'framer-motion';
 function useControlScrolling() {
     const [scrollSpeed, setScrollSpeed] = useState(200); 
     const [directionOfScrolling, setDirectionOfScrolling] = useState(1);
-    const lastScrollEvent = useRef(null);
+    const wheelTimeout = useRef();
     const {scrollYProgress} = useScroll();
 
     useMotionValueEvent(scrollYProgress, 'change', (value) => {
@@ -22,13 +22,11 @@ function useControlScrolling() {
 
         const handleWheel = (e) => {
             e.preventDefault();
-            if(!lastScrollEvent.current)
-                lastScrollEvent.current = true;
-            else{
-                lastScrollEvent.current = null;
-                console.log('cancel event')
-                return;
-            }
+            if(wheelTimeout.current) return;
+            else
+                wheelTimeout.current = setTimeout(() => {
+                    wheelTimeout.current = null;
+                }, 100)
 
             setDirectionOfScrolling(e.deltaY > 0 ? 1 : -1);
             requestAnimationFrame(smoothScrolling);
