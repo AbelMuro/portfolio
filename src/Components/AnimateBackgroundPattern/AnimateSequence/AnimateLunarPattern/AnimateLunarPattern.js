@@ -10,11 +10,6 @@ import HangingMoon from './HangingMoon';
 import {motion, useTransform, useSpring, useMotionValueEvent, useScroll, AnimatePresence} from 'framer-motion';
 import * as styles from './styles.module.css'
 
-/* 
-    this is where i left off, i need to start creating the components and animations for the
-    rest of the lunar design that i made in inkscape
-*/
-
 
 function AnimateLunarPattern() {
     const [mount, setMount] = useState(false);
