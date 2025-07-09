@@ -21,14 +21,11 @@ function useControlScrolling() {
         }
 
         const handleWheel = (e) => {
-            if(wheelTimeout.current) return;
-            
-            e.preventDefault();
-            
-            wheelTimeout.current = setTimeout(() => {
-                wheelTimeout.current = null;
-            }, 500)
+            console.log('deltaY', e.deltaY);
+            const momentumMouse = e.deltaY < 1 || !Number.isInteger(e.deltaY);
+            if(momentumMouse) return;
 
+            e.preventDefault();    
             setDirectionOfScrolling(e.deltaY > 0 ? 1 : -1);
             requestAnimationFrame(smoothScrolling);
         };
