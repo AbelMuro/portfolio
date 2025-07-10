@@ -8,21 +8,16 @@ function ChainOne() {
     const {MainContainerRef} = useContext(ContainerContext);
     const {scrollY} = useScroll(MainContainerRef);
 
-    const scale = useTransform(scrollY, [14000, 14500], [1, 15]);
+    const scale = useTransform(scrollY, [14000, 14500], [1, 20]);
     const smoothScale = useSpring(scale, {stiffness: 150, damping: 80});
 
     const scaleGroup = useTransform(scrollY, [15500, 16000], [0, 1]);
     const smoothScaleGroup = useSpring(scaleGroup, {stiffness: 150, damping: 80});
-    const scaleGroupBack = useTransform(scrollY, [18500, 19000], [1, 0])
 
     const strokeDashoffset = useTransform(scrollY, [16600, 17200], [0.19261932373046875, 0]);
     const smoothStrokeDashoffset = useSpring(strokeDashoffset, {stiffness: 150, damping: 80});
 
-    const transform = useMotionTemplate`translate(-38.5px, 7px) scale(${smoothScale})`;
-
-    useMotionValueEvent(scaleGroupBack, 'change', (value) => {
-        smoothScaleGroup.set(value);    
-    });
+    const transform = useMotionTemplate`translate(-39.5px, 9px) scale(${smoothScale})`;
 
     useMotionValueEvent(scrollY, 'change', (value) => {
         if(value < 13500)

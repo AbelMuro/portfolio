@@ -38,7 +38,7 @@ function InnerMostTriangle() {
     });
 
     useMotionValueEvent(scrollY, 'change', (value) => {
-        if(value < 8000 || value > 14500)
+        if(value < 8000 || value > 14000)
             setMount(false);
         else
             setMount(true);

@@ -5,7 +5,7 @@ import DisplayHeadings from './Components/DisplayHeadings';
 import AnimateAboutMeText from './Components/AnimateAboutMeText';
 import AnimateBackgroundPattern from './Components/AnimateBackgroundPattern';
 import AnimateBackgroundClouds from './Components/AnimateBackgroundClouds';
-import TrailingMouseAnimation from './Components/TrailingMouseAnimation';
+import ProjectSection from './Components/ProjectSection'
 import DisplayScrollDownMessage from './Components/DisplayScrollDownMessage';
 import './styles.css';
 
@@ -30,6 +30,7 @@ function App() {
             <AnimateAboutMeText/>
             <AnimateBackgroundPattern/>
             <AnimateBackgroundClouds/> 
+            <ProjectSection/>
             <DisplayScrollDownMessage/>
         </>
     )

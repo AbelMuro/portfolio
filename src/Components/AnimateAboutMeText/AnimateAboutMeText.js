@@ -55,16 +55,18 @@ function AnimateAboutMeText() {
                             exit={{opacity: 0}}
                             style={{maskSize: maskSizeBlue, maskPosition: maskPositionBlue }}
                             >
-                                Passion, elegance, dedication and talent.
-                                These are the words that I retain when I
-                                dedicate myself in creating software. It is a
-                                type of art that generates beauty in a stagnant
-                                environment. I ensure that every piece of my art
-                                will enhance the success of any corporation. Every line
-                                of code that I write is made with technical precision. Every
-                                inefficiency within a software will be corrected. My talent
-                                and dedication is unwavering, as I am no stranger to committing
-                                endless hours of writing quality code.
+                                I am a full-stack web developer and UX/UI designer that 
+                                lives in the Bay Area, California. It is here that
+                                I've been creating web apps for the past 7 years.
+                                I have a strong obsession with perfecting software 
+                                to the point that it will satisfy any client and bring them 
+                                fortune. I am no stranger to committing endless hours
+                                into writing quality code that creates technical precision. 
+                                My collaboration skills will help me refine any development team 
+                                to the point that creating software becomes a simplistic but beautifull art.
+                                I will never tolerate any inefficiencies within my art and 
+                                any bugs will be corrected. Creating software is a passionate art 
+                                of mine that can generate beauty in a stagnant world.
                         </motion.p>      
                         <motion.p 
                             className={styles.containerTwo} 
@@ -73,16 +75,18 @@ function AnimateAboutMeText() {
                             exit={{opacity: 0}}
                             style={{maskSize: maskSizeWhite, maskPosition: maskPositionWhite}}
                             >
-                                Passion, elegance, dedication and talent.
-                                These are the words that I retain when I
-                                dedicate myself in creating software. It is a
-                                type of art that generates beauty in a stagnant
-                                environment. I ensure that every piece of my art
-                                will enhance the success of any corporation. Every line
-                                of code that I write is made with technical precision. Every
-                                inefficiency within a software will be corrected. My talent
-                                and dedication is unwavering, as I am no stranger to committing
-                                endless hours of writing quality code.
+                                I am a full-stack web developer and UX/UI designer that 
+                                lives in the Bay Area, California. It is here that
+                                I've been creating web apps for the past 7 years.
+                                I have a strong obsession with perfecting software 
+                                to the point that it will satisfy any client and bring them 
+                                fortune. I am no stranger to committing endless hours
+                                into writing quality code that creates technical precision. 
+                                My collaboration skills will help me refine any development team 
+                                to the point that creating software becomes a simplistic but beautifull art.
+                                I will never tolerate any inefficiencies within my art and 
+                                any bugs will be corrected. Creating software is a passionate art 
+                                of mine that can generate beauty in a stagnant world.
                         </motion.p>                
                     </>
                   

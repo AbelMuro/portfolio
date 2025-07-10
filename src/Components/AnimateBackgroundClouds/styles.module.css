@@ -8,9 +8,8 @@
     background-image: url('./icons/background-dots.svg');
     background-size: 300px 300px;
     background-repeat: repeat;
-    background-color: transparent;
     z-index: var(--first-layer);
-    color: #00186880;
+    background-color: #010001;
 }
 
 .smoke{

@@ -8,18 +8,14 @@ function ChainFour() {
     const {MainContainerRef} = useContext(ContainerContext);
     const {scrollY} = useScroll(MainContainerRef);
 
-    const scale = useTransform(scrollY, [14000, 14500], [1, 15]);
+    const scale = useTransform(scrollY, [14000, 14500], [1, 20]);
     const smoothScale = useSpring(scale, {stiffness: 150, damping: 80});
 
     const scaleGroup = useTransform(scrollY, [16600, 16900], [0, 1]);
     const smoothScaleGroup = useSpring(scaleGroup, {stiffness: 150, damping: 80});
-    const scaleGroupBack = useTransform(scrollY, [18500, 19000], [1, 0])
 
-    const transform = useMotionTemplate`translate(-34px, 7.7px) scale(${smoothScale})`;
+    const transform = useMotionTemplate`translate(-34px, 9.5px) scale(${smoothScale})`;
 
-    useMotionValueEvent(scaleGroupBack, 'change', (value) => {
-        smoothScaleGroup.set(value);    
-    });
 
 
     useMotionValueEvent(scrollY, 'change', (value) => {

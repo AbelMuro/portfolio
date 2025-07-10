@@ -5,9 +5,9 @@
     inset: 0;
     margin: auto;
     font-family: 'AbelFont';
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight: 700;
-    line-height: 50px;
+    line-height: 40px;
     text-align: center;
     z-index: var(--sixth-layer);
     color: transparent;  
@@ -41,13 +41,26 @@
     .containerOne, .containerTwo{
         width: 90%;
         font-size: 1.4rem;
-        line-height: 40px;
+        line-height: 35px;
     }
 }
 
-@media(max-width: 560px){
+@media(max-width: 650px){
     .containerOne, .containerTwo{
         font-size: 1.2rem;
         line-height: 30px;
+        height: 600px;
+    }
+}
+
+@media(max-width: 440px){
+    .containerOne, .containerTwo{
+        height: 700px;
+    }
+}
+
+@media(max-width: 380px){
+        .containerOne, .containerTwo{
+        height: 740px;
     }
 }

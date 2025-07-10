@@ -8,18 +8,13 @@ function ChainTwo() {
     const {MainContainerRef} = useContext(ContainerContext);
     const {scrollY} = useScroll(MainContainerRef);
 
-    const scale = useTransform(scrollY, [14000, 14500], [1, 15]);
+    const scale = useTransform(scrollY, [14000, 14500], [1, 20]);
     const smoothScale = useSpring(scale, {stiffness: 150, damping: 80});
 
     const scaleGroup = useTransform(scrollY, [15900, 16400], [0, 1]);
     const smoothScaleGroup = useSpring(scaleGroup, {stiffness: 150, damping: 80});
-    const scaleGroupBack = useTransform(scrollY, [18500, 19000], [1, 0])
 
-    const transform = useMotionTemplate`translate(-37px, 8px) scale(${smoothScale})`;
-
-    useMotionValueEvent(scaleGroupBack, 'change', (value) => {
-        smoothScaleGroup.set(value);    
-    });
+    const transform = useMotionTemplate`translate(-38px, 10px) scale(${smoothScale})`;
 
     useMotionValueEvent(scrollY, 'change', (value) => {
         if(value < 13500)

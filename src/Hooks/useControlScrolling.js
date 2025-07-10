@@ -2,42 +2,41 @@ import React, {useState, useEffect, useRef} from 'react';
 import {useScroll, useMotionValueEvent} from 'framer-motion';
  
 function useControlScrolling() {
-    const [scrollSpeed, setScrollSpeed] = useState(200); 
-    const [directionOfScrolling, setDirectionOfScrolling] = useState(1);
+    const [scrollSpeed, setScrollSpeed] = useState(200);        //smaller values = slower scroll
     const timeoutRef = useRef();
+    const stopScrolling = useRef(false);
     const {scrollY} = useScroll();
 
     useMotionValueEvent(scrollY, 'change', (value) => {
         if(value >= 0 && value <= 2000)
             setScrollSpeed(200);
-        else
+        else if(value > 2000 && value <= 17500)
             setScrollSpeed(450);
+        else
+            setScrollSpeed(200)
     })
     
 
     useEffect(() => {
-        let stopScrolling = false;
-
-        const smoothScrolling = () => {
-            window.scrollBy(0, directionOfScrolling * scrollSpeed);
-        }
-
         const handleWheel = (e) => {
             e.preventDefault(); 
 
-            if(stopScrolling) return;
-            stopScrolling = true;
-               
-            setDirectionOfScrolling(e.deltaY > 0 ? 1 : -1);
-            requestAnimationFrame(smoothScrolling);
+            if(stopScrolling.current) return;
+            stopScrolling.current = true;
+                
+            const direction = e.deltaY > 0 ? 1 : -1;
+            requestAnimationFrame(() => {
+                window.scrollBy({top: direction * scrollSpeed, behavior: 'smooth'});
+            });
 
             if(timeoutRef.current) 
                 clearTimeout(timeoutRef.current);
 
             timeoutRef.current = setTimeout(() => {
-                stopScrolling = false;
+                stopScrolling.current= false;
             }, 300)
         }
+
 
         window.addEventListener('wheel', handleWheel, {passive: false});
 
@@ -45,21 +44,10 @@ function useControlScrolling() {
             window.removeEventListener('wheel', handleWheel)
         }
 
-    }, [scrollSpeed, directionOfScrolling])
+    }, [scrollSpeed])
 
 
     return null
 }
 
 export default useControlScrolling;
-
-/* 
-        const handleWheel = (e) => {
-            const momentumMouse =  Number.isInteger(e.deltaY);
-            if(momentumMouse) return;
-
-            e.preventDefault();    
-            setDirectionOfScrolling(e.deltaY > 0 ? 1 : -1);
-            requestAnimationFrame(smoothScrolling);
-        };
-*/

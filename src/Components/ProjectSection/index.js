@@ -1,3 +1,3 @@
-import ProjectSection from './ProjectSection.js';
+import ProjectSection from "./ProjectSection.js";
 
 export default ProjectSection;

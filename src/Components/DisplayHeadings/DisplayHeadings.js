@@ -17,8 +17,10 @@ function DisplayHeadings() {
             setHeading(['Behold my Tech Stack.', 'small'])
         else if(value > 2800 && value < 17000)
             setHeading('')
-        else if(value > 17000 && value < 18000)
+        else if(value >= 17000 && value < 18000)
             setHeading(['Projects', 'large'])
+        else
+            setHeading('');
     });
 
 
