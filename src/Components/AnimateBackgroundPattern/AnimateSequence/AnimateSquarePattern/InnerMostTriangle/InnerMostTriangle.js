@@ -4,11 +4,6 @@ import { ContainerContext } from '!/AnimateBackgroundPattern';
 import {motion, useTransform, useSpring, useScroll, AnimatePresence, useMotionValueEvent} from 'framer-motion';
 import * as styles from './styles.module.css';
 
-/*
-    this is where i left off, i need to find a way to stop the stroke-width from being clipped by the viewable container
-    of the path element.
-*/
-
 function InnerMostTriangle() {
     const [mount, setMount] = useState(false);
     const {MainContainerRef} = useContext(ContainerContext);

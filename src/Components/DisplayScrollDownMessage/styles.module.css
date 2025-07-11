@@ -14,6 +14,7 @@
     right: 0;
     z-index: var(--eight-layer);
     margin: auto;
+    pointer-events: none;
 
 }
 

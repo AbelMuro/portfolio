@@ -33,7 +33,7 @@ g, rect, circle, path, image {
     --fourth-layer: 75;
     --third-layer: 50;
     --second-layer: 25;
-    --first-layer: 1;
+    --first-layer: -1;
 }
 
 /* ::-webkit-scrollbar will change the styling of the scroll bar's background*/
