@@ -1,16 +1,23 @@
 import React, {useRef, useState, useContext} from 'react';
 import { ContainerContext } from '!/AnimateBackgroundPattern';
-import {useScroll, useMotionValueEvent, useTransform, useSpring, motion, AnimatePresence} from 'framer-motion';
+import {useScroll, useMotionValueEvent, useTransform, useSpring, motion} from 'framer-motion';
 import * as styles from './styles.module.css';
 
 function AnimateTechTitles({x, y}) {
-    const [mount, setMount] = useState(true);
     const [title, setTitle] = useState('');
     const {MainContainerRef} = useContext(ContainerContext)
     const titles = useRef(['React', 'Node.js', 'Express', 'Vue', 'mySQL', 'Next.js', 'MongoDB', 'Framer-Motion'])
     const {scrollY} = useScroll(MainContainerRef);
-    const opacity = useTransform(scrollY, [5800, 6300], [1, 0]);
+
+    const opacity = useTransform(scrollY, [5800, 6000], [1, 0]);
     const smoothOpacity = useSpring(opacity, {stiffness: 150, damping: 80});
+
+    useMotionValueEvent(scrollY, 'change', (y) => {
+        if(y < 5800)
+            smoothOpacity.set(1);
+        else if(y > 6700)
+            smoothOpacity.jump(0);
+    })
 
     useMotionValueEvent(scrollY, 'change', (value) => {
         if(value < 3000)
@@ -33,30 +40,19 @@ function AnimateTechTitles({x, y}) {
             setTitle(titles.current[7]);
     }) 
 
-    useMotionValueEvent(scrollY, 'change', (value) => {
-        if(value > 7000)
-            setMount(false)
-        else
-            setMount(true);
-    })
-
     return (
-        <AnimatePresence>
-            {mount && 
-                <motion.text x={x} y={y}    
-                    className={styles.title}
-                    fill="white"
-                    textAnchor='middle'
-                    fontSize={'0.12rem'}
-                    fontFamily="'AbelFont'"
-                    style={{opacity: smoothOpacity}}
-                    dy=".3em"
-                    exit={{opacity: 0}}
-                    >
-                        {title}
-                </motion.text>
-            }
-        </AnimatePresence>
+        <motion.text x={x} y={y}    
+            className={styles.title}
+            fill="white"
+            textAnchor='middle'
+            fontSize={'0.12rem'}
+            fontFamily="'AbelFont'"
+            style={{opacity: smoothOpacity}}
+            dy=".3em"
+            exit={{opacity: 0}}
+            >
+                {title}
+        </motion.text>
     )
 }
 

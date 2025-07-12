@@ -1,31 +1,33 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
+import {ContainerContext} from '!/AnimateBackgroundPattern';
 import {motion, useScroll, useTransform, useSpring, useMotionValueEvent, AnimatePresence, useMotionValue} from 'framer-motion';
 import icons from '~/assets/icons';
 import * as styles from './styles.module.css';
 
 
 function TechIcon({name, x, y, size, scrollThresholds}) {
-    const [mount, setMount] = useState(true);
-    const {scrollY} = useScroll();
-    const opacity = useTransform(scrollY, scrollThresholds, [0, 1])
-    const scale = useTransform(scrollY, [5800, 6300], [1, 0]);
+    const {MainContainerRef} = useContext(ContainerContext);
+    const {scrollY} = useScroll(MainContainerRef);
+
+    const scale = useTransform(scrollY, [5800, 6000], [1, 0]);
     const smoothScale = useSpring(scale, {stiffness: 150, damping: 80});
 
-    useMotionValueEvent(scrollY, 'change', (value) => {
-        if(value > 7000)
-            setMount(false)
-        else
-            setMount(true);
-    })
+    const opacity = useTransform(scrollY, scrollThresholds, [0, 1])
 
+    useMotionValueEvent(scrollY, 'change', (y) => {
+        if(y < 5800)
+            smoothScale.set(1)
+
+        else if(y > 6700)
+            smoothScale.jump(0);
+    })
     
-    return mount && (
+    return(
         <g transform={`translate(${x}, ${y})`}>
             <motion.image 
                 width={size} 
                 className={styles.icon} 
                 href={icons[name]}
-                initial={{opacity: 0}}
                 style={{opacity, scale: smoothScale}}
                 />  
         </g>
