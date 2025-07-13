@@ -7,13 +7,14 @@ import DisplayProject from './DisplayProject';
 import * as styles from './styles.module.css';
 
 /* 
-            <AnimateDiagonalLine row={'2/3'} column={'1/3'} direction='west' scrollThresholds={[18900, 19400]}/>
-            <AnimateDiagonalLine row={'2/3'} column={'2/4'} direction='east' scrollThresholds={[18900, 19400]}/>
+    this is where i left off, im still debating if i want to keep the diagonal lines being drawn in this component
+    I may need to think of a better design
+
 */
 
 function ProjectSection() {
     const [tablet] = useMediaQuery('(max-width: 940px)');
-    const [removeLine] = useMediaQuery('(max-width: 705px)');
+    const [mobile] = useMediaQuery('(max-width: 500px)');
 
     return(
         <section className={styles.container}>
@@ -56,6 +57,9 @@ function ProjectSection() {
             <div className={styles.designLineTwo}>
                 <AnimateLine rotate={tablet ? 0 : -25} scrollThresholds={[18500, 18900]}/>
             </div>
+            {!mobile && <div className={styles.designCircle}>
+                <AnimateCircle/>
+            </div>}
         </section>
     )
 }

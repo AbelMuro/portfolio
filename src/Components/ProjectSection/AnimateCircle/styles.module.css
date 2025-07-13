@@ -14,3 +14,12 @@
         height: 206px;
     }
 }
+
+@media(max-width: 705px){
+    .container{
+        width: 306px;
+        height: 306px;
+    }
+
+
+}
