@@ -43,20 +43,8 @@ function AnimateVerticalLine({row, column}) {
                         style={{strokeDashoffset: smoothStrokeDashoffset}}
                     />
                 </g>
-                <g transform='translate(-75.8, -5)'>
-                    <motion.image 
-                        initial={{scale: 0}}
-                        animate={{scale: [0.7, 1, 0.7], transition: {duration: 5, repeat: Infinity, repeatType: 'loop'}}}
-                        filter={'url(#glowEffect)'}
-                        href={icons['starCross']} 
-                        width='50' 
-                        height='70'
-                        />
-                </g>
             </motion.svg>
-
         </AnimatePresence>
-
     )
 }
 

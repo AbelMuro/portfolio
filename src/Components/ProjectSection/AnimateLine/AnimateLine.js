@@ -1,15 +1,24 @@
-import React from 'react';
-import {motion, AnimatePresence, useTransform, useSpring, useScroll} from 'framer-motion';
+import React, {useEffect} from 'react';
+import {motion, AnimatePresence, useTransform, useSpring, useScroll, useMotionValue} from 'framer-motion';
 import * as styles from './styles.module.css';
 
-function AnimateDiagonalLine({row, column, direction, scrollThresholds}) {
+function AnimateLine({rotate, scrollThresholds}) {
     const {scrollY} = useScroll();
+
     const strokeDashoffset = useTransform(scrollY, scrollThresholds, [295.9041442871094, 0])
     const smoothStrokeDashoffset = useSpring(strokeDashoffset, {stiffness: 150, damping: 80});
 
+    const rotateValue = useMotionValue(rotate);
+    const smoothRotate = useSpring(rotateValue, {stiffness: 150, damping: 80})
+
+
+    useEffect(() => {
+        rotateValue.set(rotate)
+    }, [rotate])
+
     return(
        <AnimatePresence>
-            <motion.svg className={styles.svg} viewBox={"0 0 30.055271 297.90417"} style={{gridRow: row, gridColumn: column, transform: `rotate(${direction === 'west' ? 25 : -25}deg)` }}>
+            <motion.svg className={styles.svg} viewBox={"0 0 30.055271 297.90417"} style={{rotate: smoothRotate }}>
                 <defs>
                     <filter id='glowEffect'>
                         <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur">
@@ -42,4 +51,4 @@ function AnimateDiagonalLine({row, column, direction, scrollThresholds}) {
     )
 }
 
-export default AnimateDiagonalLine;
+export default AnimateLine;

@@ -39,39 +39,39 @@ function AnimateBackgroundClouds() {
     const animateFirstCloud = async () => {
         await firstCloudControls.start({top: '200px', skewX: '15deg', skewY: '-25deg', transition: {duration: 4}});
         await firstCloudControls.start({left: '200px', skewX: '-15deg', skewY: '3deg', transition: {duration: 4}});
-        await firstCloudControls.start({left: '500px', skewX: '0deg', skewY: '-25deg' ,transition: {duration: 6.5}});
+        await firstCloudControls.start({left: '500px', skewX: '0deg', skewY: '-25deg' ,transition: {duration: 3.5}});
         await firstCloudControls.start({top: '400px', skewX: '-25deg', skewY: '30deg', transition: {duration: 3.5}});
-        await firstCloudControls.start({left: '0px', skewX: '15deg', skewY: '-25deg', transition: {duration: 4.5}});
-        await firstCloudControls.start({top: '0px', left: '0px',  skewX: '-30deg', skewY: '25deg', transition: {duration: 4.5}});
+        await firstCloudControls.start({left: '0px', skewX: '15deg', skewY: '-25deg', transition: {duration: 2.5}});
+        await firstCloudControls.start({top: '0px', left: '0px',  skewX: '-30deg', skewY: '25deg', transition: {duration: 1.5}});
         animateFirstCloud();
     }
     const animateSecondCloud = async () => {
-        await secondCloudControls.start({skewX: '-25deg', skewY: '30deg', bottom: '50px', transition: {duration: 6}});
-        await secondCloudControls.start({skewX: '15deg', skewY: '-25deg', right: '150px', transition: {duration: 4.5}});
-        await secondCloudControls.start({skewX: '-15deg', skewY: '15deg', right: '250px', bottom: '150px', transition: {duration: 4.5}});
+        await secondCloudControls.start({skewX: '-25deg', skewY: '30deg', bottom: '50px', transition: {duration: 2}});
+        await secondCloudControls.start({skewX: '15deg', skewY: '-25deg', right: '150px', transition: {duration: 3.5}});
+        await secondCloudControls.start({skewX: '-15deg', skewY: '15deg', right: '250px', bottom: '150px', transition: {duration: 4}});
         await secondCloudControls.start({skewX: '25deg', skewY: '-5deg', right: '100px', transition: {duration: 2.5}});
         await secondCloudControls.start({skewX: '-30deg', skewY: '25deg', bottom: '0px', transition: {duration: 2.5}});
         await secondCloudControls.start({right: '0px', transition: {duration: 5}});
         animateSecondCloud();
     }
     const animateThirdCloud = async () => {
-        await thirdCloudControls.start({skewX: '25deg', skewY: '-25deg', left: '400px', transition: {duration: 6}})
-        await thirdCloudControls.start({skewX: '-15deg', skewY: '25deg', bottom: '100px', transition: {duration: 4.5}});
-        await thirdCloudControls.start({skewX: '25deg', skewY: '-15deg', left: '200px', transition: {duration: 5.5}});
-        await thirdCloudControls.start({skewX: '-15deg', skewY: '25deg', left: '50px', transition: {duration: 2.5}});
+        await thirdCloudControls.start({skewX: '25deg', skewY: '-25deg', left: '400px', transition: {duration: 4}})
+        await thirdCloudControls.start({skewX: '-15deg', skewY: '25deg', bottom: '100px', transition: {duration: 3.5}});
+        await thirdCloudControls.start({skewX: '25deg', skewY: '-15deg', left: '200px', transition: {duration: 1.5}});
+        await thirdCloudControls.start({skewX: '-15deg', skewY: '25deg', left: '50px', transition: {duration: 3.5}});
         await thirdCloudControls.start({skewX: '25deg', skewY: '-25deg', bottom: '200px', transition: {duration: 3.5}});
-        await thirdCloudControls.start({skewX: '-25deg', skewY: '15deg', bottom: '0px', transition: {duration: 4.5}});
-        await thirdCloudControls.start({bottom: '0px', left: '0px', transition: {duration: 4.2}});
+        await thirdCloudControls.start({skewX: '-25deg', skewY: '15deg', bottom: '0px', transition: {duration: 1.5}});
+        await thirdCloudControls.start({bottom: '0px', left: '0px', transition: {duration: 3.2}});
         animateThirdCloud();
     }
     const animateFourthCloud = async () => {
-        await fourthCloudControls.start({skewX: '15deg', skewY: '25deg', right: '400px', transition: {duration: 6}});
-        await fourthCloudControls.start({skewX: '-15deg', skewY: '-25deg', top: '100px', transition: {duration: 4.2}});
-        await fourthCloudControls.start({skewX: '30deg', skewY: '25deg', right: '100px', transition: {duration: 3.2}});
+        await fourthCloudControls.start({skewX: '15deg', skewY: '25deg', right: '400px', transition: {duration: 4}});
+        await fourthCloudControls.start({skewX: '-15deg', skewY: '-25deg', top: '100px', transition: {duration: 3.2}});
+        await fourthCloudControls.start({skewX: '30deg', skewY: '25deg', right: '100px', transition: {duration: 2.2}});
         await fourthCloudControls.start({skewX: '15deg', skewY: '-25deg', right: '50px', transition: {duration: 2.5}});
         await fourthCloudControls.start({skewX: '15deg', skewY: '25deg', top: '200px', transition: {duration: 3.5}});
-        await fourthCloudControls.start({skewX: '-30deg', skewY: '25deg', top: '0px', transition: {duration: 4.5}});
-        await fourthCloudControls.start({top: '0px', right: '0px', transition: {duration: 4.2}});
+        await fourthCloudControls.start({skewX: '-30deg', skewY: '25deg', top: '0px', transition: {duration: 1.5}});
+        await fourthCloudControls.start({top: '0px', right: '0px', transition: {duration: 4}});
         animateFourthCloud();
     }
 

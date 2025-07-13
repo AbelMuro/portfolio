@@ -1,0 +1,16 @@
+.container{
+    width: 306px;
+    height: 306px;
+}
+
+.image{
+    width: 200px;
+    height: 200px;
+}
+
+@media(max-width: 940px){
+    .container{
+        width: 206px;
+        height: 206px;
+    }
+}

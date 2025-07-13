@@ -1,17 +1,15 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
 import { ContainerContext } from '!/AnimateBackgroundPattern';
 import OuterMostSquare from './OuterMostSquare';
 import OuterSquare from './OuterSquare';
 import InnerSquare from './InnerSquare';
 import InnerMostTriangle from './InnerMostTriangle'
-import {motion, useTransform, useSpring, useScroll, useMotionValueEvent} from 'framer-motion';
+import {motion, useTransform, useSpring, useScroll, useMotionValueEvent, AnimatePresence} from 'framer-motion';
 import * as styles from './styles.module.css';
 
-/*
-    this is where i left off, i need to finish this design, i was on the third square design
-*/
 
 function AnimateSquarePattern({scrollThresholds}) {
+    const [mount, setMount] = useState(true); 
     const {MainContainerRef} = useContext(ContainerContext);
     const {scrollY} = useScroll(MainContainerRef);
     const scrollRange = [
@@ -34,18 +32,27 @@ function AnimateSquarePattern({scrollThresholds}) {
 
     useMotionValueEvent(rotateXBack, 'change', (value) => {
         rotateSmoothX.set(value);
-    })
-
+    });
 
     useMotionValueEvent(scaleMore, 'change', (value) => {
         scaleSmooth.set(value);
-    })
+    });
     
     useMotionValueEvent(rotateXMore, 'change', (value) => {
         rotateSmoothX.set(value);
+    });
+
+    useMotionValueEvent(scrollY, 'change', (y) => {
+        if(y < 1800)
+            setMount(false);
+        else if(y > 14300)
+            setMount(false);
+        else
+            setMount(true);
     })
 
     return(
+        mount &&
         <motion.section id='square pattern' className={styles.container} style={{rotateX: rotateSmoothX, rotateY: rotateSmoothY, scale: scaleSmooth}}>
             <OuterMostSquare/>
             <OuterSquare/>
