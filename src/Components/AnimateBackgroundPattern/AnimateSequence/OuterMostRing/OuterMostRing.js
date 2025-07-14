@@ -31,17 +31,20 @@ function OuterMostRing(){
                     style={{scale: smoothScale}}
                     >
                     <svg className={styles.container} viewBox="0 0 206.40488 205.26718">
-                        <filter id='glowEffect'>
-                            <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur">
-                                <animate attributeName="stdDeviation" values="2;0;2" dur="3s" repeatCount="indefinite" calcMode="linear"/>
-                            </feGaussianBlur>
-                            <feFlood floodColor="#0400ff" floodOpacity='0.5' result="color"/>
-                            <feComposite in="color" in2="blur" operator="in" result="glow"/>
-                            <feMerge>
-                                <feMergeNode in="glow"/>
-                                <feMergeNode in="SourceGraphic"/>
-                            </feMerge>
-                        </filter>
+                        <defs>
+                            <filter id='glowEffect'>
+                                <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur">
+                                    <animate attributeName="stdDeviation" values="2;0;2" dur="3s" repeatCount="indefinite" calcMode="linear"/>
+                                </feGaussianBlur>
+                                <feFlood floodColor="#0400ff" floodOpacity='0.5' result="color"/>
+                                <feComposite in="color" in2="blur" operator="in" result="glow"/>
+                                <feMerge>
+                                    <feMergeNode in="glow"/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                        </defs>
+
                         <image
                             key='ring' 
                             x={103.20244 - 101} // half of image width

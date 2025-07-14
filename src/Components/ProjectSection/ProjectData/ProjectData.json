@@ -48,10 +48,7 @@
       "href": "https://pay-api-front-end-mentor.netlify.app/",
       "src": "payApiWebsite",
       "projectTitle": "Pay API Website"
-    },
-
-
-    
+    }, 
     {
       "href": "https://space-tourism-front-end.netlify.app/",
       "src": "spaceTourism",
@@ -117,6 +114,8 @@
       "src": "bmiCalculatorApp",
       "projectTitle": "BMI Calculator App"
     },
+
+    
     {
       "href": "https://age-calculator-app-ashy.vercel.app/",
       "src": "ageCalculatorApp",

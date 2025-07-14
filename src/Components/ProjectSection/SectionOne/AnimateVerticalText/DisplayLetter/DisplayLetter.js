@@ -4,7 +4,7 @@ import * as styles from './styles.module.css';
 
 function DisplayLetter({letter}) {
     const randomText = useMemo(() => {
-        if(letter === '•') return letter;
+        if(letter === '·') return letter;
 
         let random = `QWERTYUIOPASDFGHJKLZXCVBNM`.split('');
         let newRandom = '';
@@ -25,7 +25,7 @@ function DisplayLetter({letter}) {
     })
 
     useEffect(() => {
-        if(letter === '•') {
+        if(letter === '·') {
             index.jump(0);
             return;
         }

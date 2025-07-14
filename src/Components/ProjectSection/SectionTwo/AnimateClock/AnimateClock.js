@@ -1,0 +1,51 @@
+import React from 'react';
+import images from './images';
+import {motion} from 'framer-motion';
+import * as styles from './styles.module.css'
+
+/* 
+    this is where i left off, i need to add more detail to the clock animation
+*/
+
+function AnimateClock() {
+    return(
+        <svg className={styles.container} viewBox={'0 0 306 306'}>
+            <defs>
+                <filter id='glowEffect'>
+                    <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur">
+                        <animate attributeName="stdDeviation" values="2;0;2" dur="3s" repeatCount="indefinite" calcMode="linear"/>
+                    </feGaussianBlur>
+                    <feFlood floodColor="#0400ff" floodOpacity='0.5' result="color"/>
+                    <feComposite in="color" in2="blur" operator="in" result="glow"/>
+                    <feMerge>
+                        <feMergeNode in="glow"/>
+                        <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                </filter>
+            </defs>
+            <image 
+                filter={'url(#glowEffect)'}
+                className={styles.clock}
+                href={images['romanClock']}
+                />
+            <g transform='translate(32, 7)' id='minute hand'>
+                <motion.image 
+                    initial={{rotate: 0}}
+                    animate={{rotate: [0, 360], transition: {duration: 0.9, repeat: Infinity, repeatType: 'loop', ease: 'linear'}}}
+                    className={styles.clockHands}
+                    href={images['minuteHand']}   
+                    />
+            </g>
+            <g transform='translate(32, 9)' id='hour hand'>
+                <motion.image 
+                    initial={{rotate: 0}}
+                    animate={{rotate: [0, 360], transition: {duration: 2.3, repeat: Infinity, repeatType: 'loop', ease: 'linear'}}}
+                    className={styles.clockHands}
+                    href={images['hourHand']}   
+                    />
+            </g>
+        </svg>
+    )
+}
+
+export default AnimateClock;

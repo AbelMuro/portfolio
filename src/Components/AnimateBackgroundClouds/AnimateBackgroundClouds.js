@@ -76,10 +76,10 @@ function AnimateBackgroundClouds() {
     }
 
     useEffect(() => {
-        firstCloudControls.start({filter: ['blur(100px)', 'blur(70px)'], transition: {repeat: Infinity, duration: 2.5, repeatType: 'mirror'}});
-        secondCloudControls.start({filter: ['blur(100px)', 'blur(70px)'], transition: {repeat: Infinity, duration: 2.5, repeatType: 'mirror'}});
-        thirdCloudControls.start({filter: ['blur(100px)', 'blur(70px)'], transition: {repeat: Infinity, duration: 2.5, repeatType: 'mirror'}});
-        fourthCloudControls.start({filter: ['blur(100px)', 'blur(70px)'], transition: {repeat: Infinity, duration: 2.5, repeatType: 'mirror'}});
+        firstCloudControls.start({filter: ['blur(150px)', 'blur(110px)'], transition: {repeat: Infinity, duration: 2.5, repeatType: 'mirror'}});
+        secondCloudControls.start({filter: ['blur(150px)', 'blur(110px)'], transition: {repeat: Infinity, duration: 2.5, repeatType: 'mirror'}});
+        thirdCloudControls.start({filter: ['blur(150px)', 'blur(110px)'], transition: {repeat: Infinity, duration: 2.5, repeatType: 'mirror'}});
+        fourthCloudControls.start({filter: ['blur(150px)', 'blur(110px)'], transition: {repeat: Infinity, duration: 2.5, repeatType: 'mirror'}});
         animateFirstCloud();
         animateSecondCloud();
         animateThirdCloud();

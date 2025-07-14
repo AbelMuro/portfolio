@@ -1,5 +1,5 @@
 .container{
-    width: 100%;
+    width: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,6 +9,7 @@
     z-index: var(--second-layer);
     transform-style: preserve-3d;
     perspective: 800;
+    backface-visibility: hidden;
 }
 
 .title{

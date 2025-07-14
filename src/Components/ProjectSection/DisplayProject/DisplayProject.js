@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useRef} from 'react';
 import images from '../ProjectData/images';
-import {motion, useScroll, useTransform, useMotionValue, useSpring, useMotionValueEvent} from 'framer-motion'
+import {motion, useScroll, useTransform, useMotionValue, useSpring} from 'framer-motion'
 import * as styles from './styles.module.css';
 
 function DisplayProject({projectTitle, src, href}) {

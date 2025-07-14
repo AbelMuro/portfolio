@@ -31,6 +31,11 @@
     background-clip: text;
 }
 
+.containerOne > span, .containerTwo > span{
+    font-weight: 1000;
+    font-style: italic;
+}
+
 .containerOne::first-letter, .containerTwo::first-letter{
     font-weight: 900;
     font-size: 2.3rem;

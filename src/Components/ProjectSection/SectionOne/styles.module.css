@@ -1,6 +1,5 @@
 .container{
     width: 1200px;
-    height: 10000px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 10px;
@@ -8,7 +7,7 @@
     justify-content: start;
     align-content: start;
     justify-items: center;
-    margin: auto;
+    margin: 0px auto 35px auto;
     overflow: hidden;
 }
 
@@ -76,10 +75,23 @@
 }
 
 .project:nth-of-type(10){
+    grid-row: 6/7;
+    grid-column: 1/2;
+    justify-self: end;
+}
+
+.project:nth-of-type(11){
     grid-row: 6/7;    
     grid-column: 2/3;
     justify-self: center;
 }
+
+.project:nth-of-type(12){
+    grid-row: 6/7;    
+    grid-column: 3/4;
+    justify-self: start;
+}
+
 
 .designText{
     grid-row: 1/4;
@@ -175,10 +187,23 @@
     grid-column: 1;
   }
 
-  .project:nth-of-type(10) {
+  .project:nth-of-type(10){
     grid-row: 6;
     grid-column: 2;
   }
+
+  .project:nth-of-type(11){
+    grid-row: 7;    
+    grid-column: 1;
+    justify-self: center;
+  }
+
+  .project:nth-of-type(12){
+    grid-row: 7;    
+    grid-column: 2;
+    justify-self: center;
+   }
+
 
   .designCircle{
       grid-row: 7;
@@ -256,8 +281,21 @@
         grid-column: 1;
     }
 
-    .project:nth-of-type(10) {
-        grid-row: 11;
+    .project:nth-of-type(10){
+        grid-row: 10;
         grid-column: 1;
     }
+
+    .project:nth-of-type(11){
+        grid-row: 11;    
+        grid-column: 1;
+        justify-self: center;
+    }
+
+    .project:nth-of-type(12){
+        grid-row: 12;    
+        grid-column: 1;
+        justify-self: center;
+    }
+
 }

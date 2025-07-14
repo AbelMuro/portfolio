@@ -4,7 +4,7 @@ import {useTransform, useMotionValueEvent, useScroll, useSpring} from 'framer-mo
 import * as styles from './styles.module.css';
 
 function AnimateVerticalText({scrollThresholds}) {
-    const text = useRef('MEVM•OPVS•VITAE'.split(''));
+    const text = useRef('MEVM·OPVS·VITAE'.split(''));
     const {scrollY} = useScroll();
     const [displayText, setDisplayText] = useState([]);
     const currentLetter = useTransform(scrollY, scrollThresholds, [0, text.current.length - 1]);

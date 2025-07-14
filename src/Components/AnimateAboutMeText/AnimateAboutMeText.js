@@ -55,18 +55,17 @@ function AnimateAboutMeText() {
                             exit={{opacity: 0}}
                             style={{maskSize: maskSizeBlue, maskPosition: maskPositionBlue }}
                             >
-                                I am a full-stack web developer and UX/UI designer that 
-                                lives in the Bay Area, California. It is here that
-                                I've been creating web apps for the past 7 years.
-                                I have a strong obsession with perfecting software 
-                                to the point that it will satisfy any client and bring them 
-                                fortune. I am no stranger to committing endless hours
-                                into writing quality code that creates technical precision. 
-                                My collaboration skills will help me refine any development team 
-                                to the point that creating software becomes a simplistic but beautifull art.
-                                I will never tolerate any inefficiencies within my art and 
-                                any bugs will be corrected. Creating software is a passionate art 
-                                of mine that can generate beauty in a stagnant world.
+                            I’m a full-stack web developer and UX/UI designer based 
+                            in the Bay Area, California. For the past seven years, 
+                            I’ve been crafting web applications that fuse technical 
+                            precision with elegant design. Perfection isn’t just a goal—it’s my standard. 
+                            I invest the countless hours required to produce clean, performant code 
+                            that satisfies clients and positions them for success. My obsession 
+                            with quality drives me to eliminate inefficiencies and resolve every 
+                            bug until the result becomes <span>art</span>. With strong collaboration skills, 
+                            I elevate development teams, transforming the process of building software 
+                            into a fluid and beautiful craft. To me, software is a passionate 
+                            expression capable of generating beauty in a stagnant world.
                         </motion.p>      
                         <motion.p 
                             className={styles.containerTwo} 
@@ -75,18 +74,17 @@ function AnimateAboutMeText() {
                             exit={{opacity: 0}}
                             style={{maskSize: maskSizeWhite, maskPosition: maskPositionWhite}}
                             >
-                                I am a full-stack web developer and UX/UI designer that 
-                                lives in the Bay Area, California. It is here that
-                                I've been creating web apps for the past 7 years.
-                                I have a strong obsession with perfecting software 
-                                to the point that it will satisfy any client and bring them 
-                                fortune. I am no stranger to committing endless hours
-                                into writing quality code that creates technical precision. 
-                                My collaboration skills will help me refine any development team 
-                                to the point that creating software becomes a simplistic but beautifull art.
-                                I will never tolerate any inefficiencies within my art and 
-                                any bugs will be corrected. Creating software is a passionate art 
-                                of mine that can generate beauty in a stagnant world.
+                            I’m a full-stack web developer and UX/UI designer based 
+                            in the Bay Area, California. For the past seven years, 
+                            I’ve been crafting web applications that fuse technical 
+                            precision with elegant design. Perfection isn’t just a goal—it’s my standard. 
+                            I invest the countless hours required to produce clean, performant code 
+                            that satisfies clients and positions them for success. My obsession 
+                            with quality drives me to eliminate inefficiencies and resolve every 
+                            bug until the result becomes <span>art</span>. With strong collaboration skills, 
+                            I elevate development teams, transforming the process of building software 
+                            into a fluid and beautiful craft. To me, software is a passionate 
+                            expression capable of generating beauty in a stagnant world.
                         </motion.p>                
                     </>
                   
