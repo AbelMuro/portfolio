@@ -3,9 +3,6 @@ import images from './images';
 import {motion} from 'framer-motion';
 import * as styles from './styles.module.css'
 
-/* 
-    this is where i left off, i need to add more detail to the clock animation
-*/
 
 function AnimateClock() {
     return(
@@ -26,8 +23,15 @@ function AnimateClock() {
             <image 
                 filter={'url(#glowEffect)'}
                 className={styles.clock}
-                href={images['romanClock']}
+                href={images['innerClock']}
                 />
+            <motion.image 
+                filter={'url(#glowEffect)'}
+                className={styles.clock}
+                initial={{rotate: 0}}
+                animate={{rotate: [0, 360], transition: {duration: 4.9, repeat: Infinity, repeatType: 'loop', ease: 'linear'}}}
+                href={images['clockBorder']}
+            />
             <g transform='translate(32, 7)' id='minute hand'>
                 <motion.image 
                     initial={{rotate: 0}}

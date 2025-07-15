@@ -9,7 +9,7 @@ import * as styles from './styles.module.css';
 
 function SectionOne(){
     const [tablet] = useMediaQuery('(max-width: 940px)');
-    const [mobile] = useMediaQuery('(max-width: 500px)');
+
 
     return(
         <section className={styles.container}>
@@ -34,9 +34,9 @@ function SectionOne(){
             <div className={styles.designLineTwo}>
                 <AnimateLine rotate={tablet ? 0 : -25} scrollThresholds={[18500, 18900]}/>
             </div>
-            {!mobile && <div className={styles.designCircle}>
+            <div className={styles.designCircle}>
                 <AnimateCircle/>
-            </div>}
+            </div>
         </section>
     )
 }

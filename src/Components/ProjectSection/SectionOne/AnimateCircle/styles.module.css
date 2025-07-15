@@ -20,6 +20,12 @@
         width: 306px;
         height: 306px;
     }
+}
 
 
+@media(max-width: 500px){
+    .container{
+        width: 206px;
+        height: 206px;
+    }
 }
