@@ -32,9 +32,9 @@ function AnimateTechTitles({x, y}) {
             setTitle(titles.current[3]);
         else if(value >= 4200 && value <= 4400)
             setTitle(titles.current[4]);
-        else if(value >= 4500 && value <= 4800)
+        else if(value >= 4500 && value <= 4700)
             setTitle(titles.current[5])
-        else if(value >= 4900 && value <= 5000)
+        else if(value >= 4800 && value <= 5000)
             setTitle(titles.current[6]);
         else if(value >= 5100)
             setTitle(titles.current[7]);

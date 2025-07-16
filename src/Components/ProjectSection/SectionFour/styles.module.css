@@ -9,7 +9,7 @@
 
 .clock_container{
     grid-row: 1/8;
-    grid-column: 1/2;
+    grid-column: 2/3;
     width: 500px;
     height: 1676px;
     position: relative;
@@ -18,15 +18,10 @@
 
 .clock_container > div{
     position: sticky;
-    top: calc(50vh - 250px);
+    top: calc(50% - 250px);
 }
 
-
-.project:nth-of-type(even){
-    justify-self: end;
-}
-
-.project:nth-of-type(odd){
+.project{
     justify-self: center;
 }
 
@@ -36,7 +31,7 @@
 }
 
 .project:nth-of-type(2){
-    grid-column: 2;
+    grid-column: 1;
     grid-row: 2;
 }
 
@@ -46,7 +41,7 @@
 }
 
 .project:nth-of-type(4){
-    grid-column: 2;
+    grid-column: 1;
     grid-row: 3;
 }
 
@@ -56,7 +51,7 @@
 }
 
 .project:nth-of-type(6){
-    grid-column: 2;
+    grid-column: 1;
     grid-row: 4;
 }
 
@@ -66,7 +61,7 @@
 }
 
 .project:nth-of-type(8){
-    grid-column: 2;
+    grid-column: 1;
     grid-row: 5;
 }
 
@@ -76,7 +71,7 @@
 }
 
 .project:nth-of-type(10){
-    grid-column: 2;
+    grid-column: 1;
     grid-row: 6;
 }
 
@@ -86,12 +81,14 @@
 }
 
 .project:nth-of-type(12){
-    grid-column: 3;
+    grid-column: 1;
     grid-row: 7;
-    justify-self: center;
 }
 
-
+.project:nth-of-type(13){
+    grid-column: 3;
+    grid-row: 7;
+}
 
 @media(max-width: 1400px){
     .container{
@@ -106,14 +103,6 @@
 @media(max-width: 705px){
     .container{
         grid-template-columns: repeat(2, 1fr);
-    }
-
-    .clock_container{
-        display: none;
-    }
-
-    .project.project.project{
-        justify-self: center;
     }
 
     .project:nth-of-type(1){
@@ -175,7 +164,13 @@
         grid-column: 1;
         grid-row: 7;
     }
+
+    .project:nth-of-type(13){
+        grid-column: 2;
+        grid-row: 7;
+    }
 }
+
 
 @media(max-width: 500px){
     .container{
@@ -242,4 +237,8 @@
         grid-row: 12;
     }
 
+    .project:nth-of-type(13){
+        grid-column: 1;
+        grid-row: 13;
+    }
 }

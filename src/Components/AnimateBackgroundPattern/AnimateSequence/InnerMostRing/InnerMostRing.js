@@ -26,7 +26,7 @@ function InnerMostRing() {
                 <motion.div
                     id='inner most ring'
                     className={styles.container}
-                    initial={{rotate: 0, opacity: 1}} 
+                    initial={{rotate: 0}} 
                     animate={{rotate: [0, 360], transition: {repeat: Infinity, duration: 8.9, ease: 'linear', delay: 3}}} 
                     exit={{opacity: 0, transition: {duration: 0.7}}}
                     style={{scale: smoothScale}}

@@ -1,24 +1,16 @@
 import React, {useEffect} from 'react';
-import {motion, AnimatePresence, useTransform, useSpring, useScroll, useMotionValue} from 'framer-motion';
+import {motion, AnimatePresence, useTransform, useSpring, useScroll} from 'framer-motion';
 import * as styles from './styles.module.css';
 
-function AnimateLine({rotate, scrollThresholds}) {
+function AnimateLine({scrollThresholds}) {
     const {scrollY} = useScroll();
 
     const strokeDashoffset = useTransform(scrollY, scrollThresholds, [295.9041442871094, 0])
     const smoothStrokeDashoffset = useSpring(strokeDashoffset, {stiffness: 150, damping: 80});
 
-    const rotateValue = useMotionValue(rotate);
-    const smoothRotate = useSpring(rotateValue, {stiffness: 150, damping: 80})
-
-
-    useEffect(() => {
-        rotateValue.set(rotate)
-    }, [rotate])
-
     return(
        <AnimatePresence>
-            <motion.svg className={styles.svg} viewBox={"0 0 30.055271 297.90417"} style={{rotate: smoothRotate }}>
+            <motion.svg className={styles.svg} viewBox={"0 0 30.055271 297.90417"}>
                 <defs>
                     <filter id='glowEffect'>
                         <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur">
@@ -32,7 +24,7 @@ function AnimateLine({rotate, scrollThresholds}) {
                         </feMerge>
                     </filter>
                 </defs>
-                <g className={styles.group} transform={`translate(-120, -30)`}>
+                <g transform={`translate(-120, -30)`}>
                     <motion.path
                         id="path3"
                         d="m 135.46034,32.382499 -0.0508,295.904151"

@@ -159,7 +159,7 @@ function AnimatePentagram({scrollThresholds}) {
                                         strokeDashoffset={0}
                                         strokeOpacity={1}
                                         />
-                                <TechIcon name={'next'} x={142.73816 - 1.5} y={122.13708 - 1.7} size={'3.3'} scrollThresholds={[4500, 4700]}/>
+                                <TechIcon name={'next'} x={142.73816 - 1.5} y={122.13708 - 1.7} size={'3.3'} scrollThresholds={[4500, 4600]}/>
                                 <Circle filter={'url(#glowEffect)'}
                                     id="path700"
                                     cx={142.73816}
@@ -174,7 +174,7 @@ function AnimatePentagram({scrollThresholds}) {
                                     strokeDashoffset={0}
                                     strokeOpacity={1}
                                     />
-                                <TechIcon name={'mongoDB'} x={140.04163 - 2.3} y={114.70116 - 2} size={'4'} scrollThresholds={[4900, 5000]}/>
+                                <TechIcon name={'mongoDB'} x={140.04163 - 2.3} y={114.70116 - 2} size={'4'} scrollThresholds={[4800, 4900]}/>
                                 <Circle filter={'url(#glowEffect)'}
                                     id="path699"
                                     cx={140.04163}
@@ -189,7 +189,7 @@ function AnimatePentagram({scrollThresholds}) {
                                     strokeDashoffset={0}
                                     strokeOpacity={1}
                                     />
-                                <TechIcon name={'framermotion'} x={143.03781 - 1.65} y={107.51036 - 1.6} size={'3.5'} scrollThresholds={ [5200, 5300]}/>
+                                <TechIcon name={'framermotion'} x={143.03781 - 1.65} y={107.51036 - 1.6} size={'3.5'} scrollThresholds={ [5100, 5300]}/>
                                 <Circle filter={'url(#glowEffect)'}
                                     id="path698"
                                     cx={143.03781}

@@ -101,11 +101,15 @@
 }
 
 .designLineOne{
+    width: 100%;
+    height: 600px;
     grid-row: 1/2;
     grid-column: 3/4;
 }
 
 .designLineTwo{
+    width: 100%;
+    height: 600px;
     grid-row: 1/2;
     grid-column: 1/2;
 }
@@ -129,13 +133,17 @@
   }
 
   .designLineOne {
+    width: 50%;
     grid-row: 1;
     grid-column: 1;
+    justify-self: start;
   }
 
   .designLineTwo {
+    width: 50%;
     grid-row: 1;
     grid-column: 2;
+    justify-self: end;
   }
 
   .project.project {
@@ -225,12 +233,14 @@
     }
 
     .designLineOne {
+        width: 30%;
         grid-row: 1;
         grid-column: 1;
         justify-self: start;
     }
 
     .designLineTwo {
+        width: 30%;
         grid-row: 1;
         grid-column: 1;
         justify-self: end;

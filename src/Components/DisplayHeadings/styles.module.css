@@ -11,6 +11,9 @@
     font-family: 'AbelFont';
     font-size: 7rem;
     font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -27,6 +30,9 @@
     font-family: 'AbelFont';
     font-size: 4rem;
     font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media(max-width: 800px){
