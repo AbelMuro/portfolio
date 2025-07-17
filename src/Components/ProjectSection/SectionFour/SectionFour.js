@@ -11,7 +11,7 @@ function SectionFour({clock}) {
 
     return(
         <motion.section className={styles.container}>
-            {AllProjects.slice(37, 50).map((project) => {
+            {AllProjects.slice(44, 57).map((project) => {
                 const title = project.projectTitle;
                 const src = project.src;
                 const href = project.href;

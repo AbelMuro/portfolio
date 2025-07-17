@@ -3,7 +3,7 @@ import AllProjects from '../ProjectData';
 import AnimateLine from '../AnimateLine';
 import DisplayProject from '../DisplayProject';
 import {useMediaQuery} from '~/Hooks';
-import {motion, useMotionValue, useSpring, useMotionTemplate} from 'framer-motion';
+import {motion, useMotionValue, useMotionTemplate} from 'framer-motion';
 import * as styles from './styles.module.css';
 
 function SectionFive() {
@@ -12,11 +12,12 @@ function SectionFive() {
     const transformLeftLine = useMotionTemplate`scale(2) rotate(${rotateLeftLine}deg)`;
     const transformRightLine = useMotionTemplate`scale(2) rotate(${rotateRightLine}deg)`;
     const [tablet] = useMediaQuery('(max-width: 705px)');
+    console.log(AllProjects.length);
 
     return(
         <section className={styles.container}>
             {
-                AllProjects.slice(50, 63).map((project) => {
+                AllProjects.slice(57, 73).map((project) => {
                     const title = project.projectTitle;
                     const src = project.src;
                     const href = project.href;
@@ -34,7 +35,6 @@ function SectionFive() {
             {!tablet && <motion.div className={styles.designLineTwo} style={{transform: transformRightLine}}>
                 <AnimateLine scrollThresholds={[26400, 26500]}/>
             </motion.div>}
-            
         </section>
     )
 }

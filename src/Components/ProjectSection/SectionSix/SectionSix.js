@@ -1,4 +1,5 @@
 import React from 'react';
+import AllProjects from '../ProjectData';
 import * as styles from './styles.module.css';
 
 /* 
@@ -7,7 +8,14 @@ import * as styles from './styles.module.css';
 */
 
 function SectionSix() {
-    return(<></>)
+
+
+
+    return( 
+        <section className={styles.container}>
+
+        </section>
+    )
 }
 
 export default SectionSix;

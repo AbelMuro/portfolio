@@ -1,6 +1,7 @@
 import React, {useContext, useState} from 'react';
 import { ContainerContext } from '!/AnimateBackgroundPattern';
 import {motion, useTransform, useSpring, useScroll, useMotionValueEvent, AnimatePresence} from 'framer-motion';
+import images from './images';
 import * as styles from './styles.module.css';
 
 function OuterMostSquare() {
@@ -27,8 +28,8 @@ function OuterMostSquare() {
         <AnimatePresence>
             {
                 mount && 
-                <motion.div className={styles.container} initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>
-                    <svg id='outer most square/pentagram square' className={styles.svg} viewBox={"0 0 206.40488 206.40488"}>
+                <motion.div id='outer most square/pentagram square' className={styles.container} initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>
+                    <svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"}>
                         <defs>
                             <filter id='glowEffect'>
                                 <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur">
@@ -74,34 +75,14 @@ function OuterMostSquare() {
                                     initial={{opacity: 1}}
                                     exit={{opacity: 0}}
                                     />
-                                <motion.text
-                                    filter={'url(#glowEffect)'}
-                                    xmlSpace="preserve"
-                                    fontSize={0.485107}
-                                    fontFamily="PMingLiU-ExtB"
-                                    textAnchor="start"
-                                    fill="none"
-                                    fillOpacity={1}
-                                    stroke="#0400ff"
-                                    strokeWidth={0.0290147}
-                                    strokeLinecap="round"
-                                    strokeLinejoin="bevel"
-                                    strokeMiterlimit={0}
-                                    direction="ltr"
-                                    transform="matrix(1.0509263,0,0,1.0559941,-7.6488517,-6.5054218)"
-                                    id="text12"
-                                    style={{opacity: opacitySmooth}}
-                                    >
-                                        <textPath
-                                            xlinkHref="#rect704-3-9"
-                                            id="textPath12"
-                                            fontSize={0.485107}
-                                            strokeWidth={0.0290147}
-                                        >
-                                            IN·ORBE·MEO·PULCHRITUDINEM·EX·NIHILO·CREABO.·TUA·SOCIETAS·CUM·INGENIIS·MEIS·FLOREBIT.·FORTUNA·APUD·ME·CRESCET·CUM·OMNI·CODICE·QUEM·EGO·SCRIBAM·HOC·POLLICEOR.
-                                        </textPath>
-                                    </motion.text>
                             </g>
+                            <motion.g transform='translate(94, 93.5)' style={{opacity: opacitySmooth}}>
+                                <motion.image 
+                                    filter={'url(#glowEffect)'}
+                                    href={images['text']}
+                                    width={18.3}
+                                />
+                            </motion.g>
                         </svg>
                 </motion.div>  
             } 

@@ -1,6 +1,7 @@
 import React, {useContext, useState} from 'react';
 import { ContainerContext } from '!/AnimateBackgroundPattern';
 import {motion, useTransform, useSpring, useScroll, useMotionValueEvent, AnimatePresence} from 'framer-motion';
+import images from './images';
 import * as styles from './styles.module.css';
 
 function OuterSquare() {
@@ -71,43 +72,14 @@ function OuterSquare() {
                                     d="m 149.75952,109.57877 7.01691,4.75075 -4.53987,6.57703 -7.01692,-4.75076 z"
                                     id="rect704-3-9-2"
                                 />
-
-                                <motion.text
-                                    filter={'url(#glowEffect)'}
-                                    xmlSpace="preserve"
-                                    fontSize={0.478557}
-                                    fontFamily="PMingLiU-ExtB"
-                                    textAnchor="start"
-                                    direction="ltr"
-                                    fill="#000000"
-                                    fillOpacity={1}
-                                    stroke="#000000"
-                                    strokeWidth={0}
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeMiterlimit={0}
-                                    strokeDasharray="none"
-                                    strokeOpacity={1}
-                                    transform="matrix(0.96108775,0,0,0.96108775,5.866061,4.534666)"
-                                    id="text13"
-                                    style={{opacity: opacitySmooth}}
-                                    >
-                                        <textPath
-                                        xlinkHref="#rect704-3-9-2"
-                                        id="textPath133"
-                                        fontSize={0.478557}
-                                        fill="#000000"
-                                        fillOpacity={1}
-                                        strokeWidth={0}
-                                        strokeDasharray="none"
-                                        >
-                                        FORTUNA·ET·PROSPERITAS·PROPE·SUNT.·ARS·MEA·IN·PROGRESSIONEM·RETIS·TANTUM·AUGEBITUR.·POSSIBILITATES·INFINITAE·SUNT·CUM·MENTE·CRESCENDI.
-                                        </textPath>
-                                </motion.text>   
                             </motion.g>
                         </g>
-
-
+                        <motion.g transform='translate(96.9, 96.4)' style={{opacity: opacitySmooth}}>
+                            <motion.image
+                                href={images['text']}
+                                width={12.6}
+                            />
+                        </motion.g>
                     </motion.svg>
                 </motion.div>
             }

@@ -189,7 +189,7 @@ function AnimatePentagram({scrollThresholds}) {
                                     strokeDashoffset={0}
                                     strokeOpacity={1}
                                     />
-                                <TechIcon name={'framermotion'} x={143.03781 - 1.65} y={107.51036 - 1.6} size={'3.5'} scrollThresholds={ [5100, 5300]}/>
+                                <TechIcon name={'framermotion'} x={143.03781 - 1.65} y={107.51036 - 1.6} size={'3.5'} scrollThresholds={ [5100, 5200]}/>
                                 <Circle filter={'url(#glowEffect)'}
                                     id="path698"
                                     cx={143.03781}

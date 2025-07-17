@@ -17,7 +17,7 @@ function SectionTwo({clock, setClock}) {
 
     return (
         <motion.section className={styles.container} initial={{opacity: 0}} animate={{opacity: 1}}>
-            {AllProjects.slice(12, 25).map((project) => {
+            {AllProjects.slice(19, 32).map((project) => {
                 const title = project.projectTitle;
                 const src = project.src;
                 const href = project.href;
