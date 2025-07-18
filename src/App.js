@@ -6,6 +6,7 @@ import AnimateAboutMeText from './Components/AnimateAboutMeText';
 import AnimateBackgroundPattern from './Components/AnimateBackgroundPattern';
 import AnimateBackgroundClouds from './Components/AnimateBackgroundClouds';
 import ProjectSection from './Components/ProjectSection'
+import ContactMeSection from './Components/ContactMeSection';
 import DisplayScrollDownMessage from './Components/DisplayScrollDownMessage';
 import './styles.css';
 
@@ -31,6 +32,7 @@ function App() {
             <AnimateBackgroundPattern/>
             <AnimateBackgroundClouds/> 
             <ProjectSection/>
+            <ContactMeSection/>
             <DisplayScrollDownMessage/>
         </>
     )
