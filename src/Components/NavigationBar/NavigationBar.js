@@ -19,7 +19,7 @@ function NavigationBar() {
             window.scrollTo({top: 0, behavior: 'smooth'});
 
         else if(link === 'about me')
-            window.scrollTo({top: 9300, behavior: 'smooth'});
+            window.scrollTo({top: 10200, behavior: 'smooth'});
         else if(link === 'projects')
             window.scrollTo({top: 17800, behavior: 'smooth'});
     }
