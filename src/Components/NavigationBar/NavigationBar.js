@@ -14,7 +14,15 @@ function NavigationBar() {
     const [mobile] = useMediaQuery("(max-width: 600px)");
     const audioRef = useRef();
 
-    const handleLink = () => {}
+    const handleLink = (link) => {
+        if(link === 'intro')
+            window.scrollTo({top: 0, behavior: 'smooth'});
+
+        else if(link === 'about me')
+            window.scrollTo({top: 9300, behavior: 'smooth'});
+        else if(link === 'projects')
+            window.scrollTo({top: 17800, behavior: 'smooth'});
+    }
 
     useMotionValueEvent(scrollYProgress, 'change', () => {
         if(timeoutRef.current)
@@ -62,7 +70,7 @@ function NavigationBar() {
     return (
         <AnimatePresence>
             {mount && <>
-                        {mobile ? <MobileNavBar play={play} handlePlay={handlePlay} handlePause={handlePause}/>  : 
+                        {mobile ? <MobileNavBar play={play} handlePlay={handlePlay} handlePause={handlePause} handleLink={handleLink}/>  : 
                             <motion.nav 
                                 className={styles.navBar}
                                 initial={{opacity: 0}}
@@ -71,22 +79,22 @@ function NavigationBar() {
                                 >
                                     <ul className={styles.navItems}>
                                         <li className={styles.navItem}>
-                                            <a href="#home"> 
+                                            <a onClick={() => handleLink('intro')}> 
                                                 Intro
                                             </a>
                                         </li>
                                         <li className={styles.navItem}>
-                                            <a href="#aboutMe"> 
+                                            <a onClick={() => handleLink('about me')}> 
                                                 About Me
                                             </a>
                                         </li>
                                         <li className={styles.navItem}>
-                                            <a href="#projects">
+                                            <a onClick={() => handleLink('projects')}>
                                                 Projects
                                             </a>
                                         </li>
                                         <li className={styles.navItem}>
-                                            <a href="#contactMe" onClick={handleLink}>        
+                                            <a onClick={() => handleLink('contact me')}>        
                                                 Contact Me
                                             </a>
                                         </li>                  

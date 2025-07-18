@@ -1,5 +1,6 @@
 .container{
     width: 1200px;
+    height: 1491px;
     margin: 0px auto 35px auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -148,6 +149,7 @@
 @media(max-width: 705px){
     .container{
         grid-template-columns: repeat(2, 1fr);
+        height: 2017px;
     }
 
     .project.project.project{
@@ -241,6 +243,7 @@
 @media(max-width: 500px){
     .container{
         grid-template-columns: 1fr;
+        height: 3965px;
     }
 
     .project:nth-of-type(1){

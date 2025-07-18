@@ -34,10 +34,10 @@ function AnimateLunarPattern() {
     });
 
     useMotionValueEvent(scrollY, 'change', (value) => {
-        if(value < 8000)
-            setMount(false);
-        else
+        if(value >= 8000 && value <= 19000)
             setMount(true);
+        else
+            setMount(false);
     });
 
     return(

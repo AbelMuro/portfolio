@@ -12,7 +12,7 @@
     bottom: 50px;
     left: 0;
     right: 0;
-    z-index: var(--eight-layer);
+    z-index: var(--seventh-layer);
     margin: auto;
     pointer-events: none;
 

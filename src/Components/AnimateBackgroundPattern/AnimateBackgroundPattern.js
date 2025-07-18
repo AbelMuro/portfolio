@@ -6,7 +6,7 @@ import * as styles from './styles.module.css';
 export const ContainerContext = createContext();
 
 function AnimateBackgroundPattern() {
-    const {scrollYProgress, scrollY} = useScroll();
+    const {scrollY} = useScroll();
     const MainContainerRef = useRef();
 
     useMotionValueEvent(scrollY, 'change', (value) => {
@@ -15,7 +15,7 @@ function AnimateBackgroundPattern() {
 
     return(
         <ContainerContext.Provider value={{MainContainerRef}}>
-            <header className={styles.container} id={"home"} ref={MainContainerRef}>
+            <header className={styles.container} ref={MainContainerRef} id='intro'>
                 <AnimateSequence/>
             </header>            
         </ContainerContext.Provider>

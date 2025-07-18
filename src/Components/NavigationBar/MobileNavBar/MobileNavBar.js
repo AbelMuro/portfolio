@@ -3,10 +3,11 @@ import * as styles from './styles.module.css';
 import {motion, AnimatePresence} from 'framer-motion';
 import {menuVariant, menuItemVariant} from './Variants';
 
-function MobileNavBar({play, handlePlay, handlePause}) {
+function MobileNavBar({play, handlePlay, handlePause, handleLink}) {
     const [open, setOpen] = useState(false);
 
-    const handleOpen = () => {
+    const handleOpen = (link) => {
+        handleLink(link)
         setOpen(!open);
     }
 
@@ -25,23 +26,23 @@ function MobileNavBar({play, handlePlay, handlePause}) {
                         <motion.li className={styles.navClose} onClick={handleOpen} variants={menuItemVariant}>
                             <button className={styles.close}/>
                         </motion.li>
-                        <motion.li className={styles.navItem} variants={menuItemVariant} onClick={handleOpen}>
-                            <a href="#home"> 
+                        <motion.li className={styles.navItem} variants={menuItemVariant}>
+                            <a onClick={() => handleOpen('intro')}> 
                                 Intro
                             </a>
                         </motion.li>
-                        <motion.li className={styles.navItem} variants={menuItemVariant} onClick={handleOpen}>
-                            <a href="#aboutMe"> 
+                        <motion.li className={styles.navItem} variants={menuItemVariant}>
+                            <a onClick={() => handleOpen('about me')}> 
                                 About Me
                             </a>
                         </motion.li>
-                        <motion.li className={styles.navItem} variants={menuItemVariant} onClick={handleOpen}>
-                            <a href="#projects">
+                        <motion.li className={styles.navItem} variants={menuItemVariant}>
+                            <a onClick={() => handleOpen('projects')}>
                                 Projects
                             </a>
                         </motion.li>
-                        <motion.li className={styles.navItem} variants={menuItemVariant} onClick={handleOpen}>
-                            <a href="#contactMe">
+                        <motion.li className={styles.navItem} variants={menuItemVariant}>
+                            <a onClick={() => handleOpen('contact me')}>
                                 Contact Me
                             </a>
                         </motion.li>  

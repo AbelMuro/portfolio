@@ -1,11 +1,10 @@
-import React, {useRef,  useState} from 'react';
+import React, {useRef,  useState, forwardRef} from 'react';
 import {useScroll, useMotionValueEvent} from 'framer-motion';
 import * as styles from './styles.module.css';
 
-function MountInViewport({children, ParentComponent}) {
-    const container = useRef();
+const MountInViewport = forwardRef(({children}, ref) => {
     const [mount, setMount] = useState(false);
-    const {scrollYProgress} = useScroll({target: container, offset: ['start 110vh', 'start 110vh']});
+    const {scrollYProgress} = useScroll({target: ref, offset: ['start 150vh', 'end 150vh']});
 
     useMotionValueEvent(scrollYProgress, 'change', (y) => {
         if(y === 1)
@@ -14,11 +13,8 @@ function MountInViewport({children, ParentComponent}) {
             setMount(false);
     });
 
-    return (
-        <ParentComponent ref={container}> 
-            {mount && children }                 
-        </ParentComponent>
-    )
-}
+    return mount && children;              
+    
+})
 
 export default MountInViewport;

@@ -1,16 +1,12 @@
-import React, {useContext, useState} from 'react'
-import {ContainerContext} from '!/AnimateBackgroundPattern'
-import {useViewBoxZoom} from '~/Hooks'
+import React, {useState} from 'react'
 import * as styles from './styles.module.css';
 import { motion, useScroll, useMotionValueEvent, AnimatePresence, useTransform, useSpring} from 'framer-motion';
 import images from './images';
 
 
-
 function OuterRing() {
     const [mount, setMount] = useState(true);
-    const {MainContainerRef} = useContext(ContainerContext);
-    const {scrollY} = useScroll(MainContainerRef);
+    const {scrollY} = useScroll();
     const scale = useTransform(scrollY, [200, 1400], [1, 5])
     const smoothScale = useSpring(scale, {stiffness: 150, damping: 80});
 
@@ -20,7 +16,7 @@ function OuterRing() {
         else
             setMount(true)
     })
-    
+
 
     return(
 

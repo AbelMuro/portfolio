@@ -1,5 +1,6 @@
 .container{
     width: 1200px;
+    height: 1728px;
     margin: 0px auto 35px auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -175,6 +176,7 @@
 @media(max-width: 500px){
     .container{
         grid-template-columns: 1fr;
+        height: 3176px;
     }
 
     .project:nth-of-type(1){

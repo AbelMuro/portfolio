@@ -1,40 +1,39 @@
-import React, {useRef, forwardRef} from 'react';
+import React, {useRef, useState} from 'react';
 import AllProjects from '../ProjectData';
 import AnimateVerticalText from './AnimateVerticalText';
 import AnimateCircle from './AnimateCircle';
 import DisplayProject from '../DisplayProject';
-import MountInViewport from '../MountInViewport';
+import {useMount} from '~/Hooks';
+import {useScroll, useMotionValueEvent} from 'framer-motion';
 import * as styles from './styles.module.css';
 
-/* this is where i left off, i need to find a way to prevent the grid from shifting upwards immediately when a new item is added*/
-
-function SectionOne(){
+function SectionOne() {
+    const [mount, target] = useMount()
     const projects = useRef(AllProjects.slice(0, 19));   
 
     return(
-        <section className={styles.container}>
-            {projects.current.map((project) => {
-                    const title = project.projectTitle;
-                    const src = project.src;
-                    const href = project.href;
-                    return (
-                        <MountInViewport key={title} ParentComponent={forwardRef(({children}, ref) => {
+        <section className={styles.container} ref={target}>       
+            {
+                mount &&
+                <>
+                    {projects.current.map((project) => {
+                            const title = project.projectTitle;
+                            const src = project.src;
+                            const href = project.href;
                             return (
-                                <div className={styles.project} ref={ref}>
-                                    {children}
-                                </div>
+                                    <div className={styles.project} key={title}>
+                                        <DisplayProject projectTitle={title} src={src} href={href}/>
+                                    </div>
                             )
-                        })}>
-                            <DisplayProject projectTitle={title} src={src} href={href}/>
-                        </MountInViewport>
-                    )
-                })}
-            <div className={styles.designText}>
-                <AnimateVerticalText scrollThresholds={[18500, 19200]}/>
-            </div>   
-            <div className={styles.designCircle}>
-                <AnimateCircle/>
-            </div>
+                        })}
+                    <div className={styles.designText}>
+                        <AnimateVerticalText scrollThresholds={[18500, 19200]}/>
+                    </div>   
+                    <div className={styles.designCircle}>
+                        <AnimateCircle/>
+                    </div>            
+                </>
+            } 
         </section>
     )
 }

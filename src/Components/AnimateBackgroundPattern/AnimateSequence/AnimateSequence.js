@@ -14,7 +14,6 @@ function AnimateSequence() {
 
     return(
         <article className={styles.container}>
-            <section className={styles.pattern}>
                 <OuterMostRing/>
                 <OuterRing/>
                 <InnerRing/>
@@ -23,7 +22,6 @@ function AnimateSequence() {
                 <AnimatePentagram scrollThresholds={[900, 2100]}/>
                 <AnimateSquarePattern scrollThresholds={[900, 2100]}/>     
                 <AnimateLunarPattern/>            
-            </section> 
         </article>
     )
 }

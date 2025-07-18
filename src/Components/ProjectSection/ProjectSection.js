@@ -1,10 +1,9 @@
-import React, {useState, useRef} from 'react';
+import React, {useState} from 'react';
 import SectionOne from './SectionOne';
 import SectionTwo from './SectionTwo';
 import SectionThree from './SectionThree';
 import SectionFour from './SectionFour';
 import SectionFive from './SectionFive';
-import SectionSix from './SectionSix';
 import {motion, useScroll, useMotionValueEvent, AnimatePresence} from 'framer-motion';
 import * as styles from './styles.module.css';
 
@@ -41,7 +40,6 @@ function ProjectSection() {
                         <SectionThree clock={clock} setClock={setClock}/>
                         <SectionFour clock={clock} setClock={setClock}/>
                         <SectionFive/>
-                        <SectionSix/>
                     </article>         
             }                   
         </AnimatePresence>
