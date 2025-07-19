@@ -1,5 +1,4 @@
-import React, {useContext, useState} from 'react';
-import { ContainerContext } from '!/AnimateBackgroundPattern';
+import React, {useState} from 'react';
 import AnimateMoon from './AnimateMoon';
 import ChainOne from './ChainOne';
 import ChainTwo from './ChainTwo';
@@ -11,26 +10,25 @@ import {motion, useTransform, useSpring, useMotionValueEvent, useScroll, Animate
 import * as styles from './styles.module.css'
 
 
+/* 
+    this is where i left off, i need to finish fixing the bugs in this component,
+    most likely the issue is how scale is being animated with useSpring()
+
+    i also need to find a way to prevent the stuttering that happens with the animation when i scroll 
+    down in firefox
+*/
+
+
 function AnimateLunarPattern() {
     const [mount, setMount] = useState(false);
-    const {MainContainerRef} = useContext(ContainerContext);
-    const {scrollY} = useScroll(MainContainerRef);
+    const {scrollY} = useScroll();
 
-    const scale = useTransform(scrollY, [600, 1800], [1, 5])
-    const scaleSmooth = useSpring(scale, {stiffness: 150, damping: 80});
-    const scaleMore = useTransform(scrollY, [6500, 7000], [5, 10]);
-
-    const rotateX = useTransform(scrollY, [8000, 8500], [0, 35]);
+    const rotateX = useTransform(scrollY, [8000, 8500], [0, 45]);
     const rotateSmoothX = useSpring(rotateX, {stiffness: 150, damping: 80});
-
-    const rotateXBack = useTransform(scrollY, [13000, 13200], [35, 0]);
+    const rotateXBack = useTransform(scrollY, [13000, 13200], [45, 0]);
 
     useMotionValueEvent(rotateXBack, 'change', (value) => {
         rotateSmoothX.set(value);
-    });
-
-    useMotionValueEvent(scaleMore, 'change', (value) => {
-        scaleSmooth.set(value);
     });
 
     useMotionValueEvent(scrollY, 'change', (value) => {
@@ -40,11 +38,12 @@ function AnimateLunarPattern() {
             setMount(false);
     });
 
+
     return(
         <AnimatePresence>
             {
                 mount &&
-                <motion.section id='lunar pattern' className={styles.container} style={{scale: scaleSmooth, rotateX: rotateSmoothX}} exit={{opacity: 0}}>
+                <motion.section id='lunar pattern' className={styles.container} style={{rotateX: rotateSmoothX}} exit={{opacity: 0}}>
                     <AnimateMoon/>
                     <ChainOne/>
                     <ChainTwo/>

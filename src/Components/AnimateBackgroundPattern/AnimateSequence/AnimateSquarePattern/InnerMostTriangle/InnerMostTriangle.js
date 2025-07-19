@@ -1,28 +1,30 @@
-import React, {useContext, useState} from 'react';
+import React, {useState} from 'react';
 import images from './images';
-import { ContainerContext } from '!/AnimateBackgroundPattern';
 import {motion, useTransform, useSpring, useScroll, AnimatePresence, useMotionValueEvent} from 'framer-motion';
 import * as styles from './styles.module.css';
 
 function InnerMostTriangle() {
     const [mount, setMount] = useState(false);
-    const {MainContainerRef} = useContext(ContainerContext);
-    const {scrollY} = useScroll(MainContainerRef);
+    const {scrollY} = useScroll();
 
     const opacity = useTransform(scrollY, [9500, 10000], [0, 1])
     const opacitySmooth = useSpring(opacity, {stiffness: 150, damping: 80});
+
+    const scale = useTransform(scrollY, [600, 1800], [1, 5]);
+    const scaleSmooth = useSpring(scale, {stiffness: 150, damping: 80});
+    const scaleMore = useTransform(scrollY, [6500, 7000], [5, 10]);
 
     const strokeDashoffset = useTransform(scrollY, [9000, 9500], [13, 0]);
     const smoothStrokeDashoffset = useSpring(strokeDashoffset, {stiffness: 150, damping: 80});
     const strokeDashoffsetBack = useTransform(scrollY, [13200, 13500], [0, 13]);
 
-    const translateZBack = useTransform(scrollY, [12800, 13000], [15, 0]);
-
-    const z = useTransform(scrollY, [8500, 9000], [0, 15]);
+    const z = useTransform(scrollY, [8500, 9000], [0, 100]);
     const smoothZ = useSpring(z, {stiffness: 150, damping: 80});
     const transform = useTransform(smoothZ, (value) => {
         return `translateZ(${value}px)`;
     });
+
+    const translateZBack = useTransform(scrollY, [12800, 13000], [100, 0]);    
 
     useMotionValueEvent(strokeDashoffsetBack, 'change', (value) => {
         smoothStrokeDashoffset.set(value);
@@ -39,12 +41,16 @@ function InnerMostTriangle() {
             setMount(true);
     });
 
+    useMotionValueEvent(scaleMore, 'change', (value) => {
+        scaleSmooth.set(value);
+    });
+
     return(
         <AnimatePresence>
             {
                 mount &&  
                 <motion.div id='inner most triangle' className={styles.container} style={{transform}} exit={{opacity: 0}}>
-                    <svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"} >
+                    <motion.svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"} style={{scale: scaleSmooth}}>
                         <defs>
                             <filter id='glowEffect'>
                                 <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur">
@@ -71,7 +77,7 @@ function InnerMostTriangle() {
                             </clipPath>
                         </defs>
                         {/* outer border for triangle*/}
-                        <g transform='translate(-47.8, -12.5)'>
+                        <g transform='translate(-47.8, -12.6)'>
                             <motion.path
                                 id="path26"
                                 d="M147.11259,116.31978 l -4.20203,-0.0286 l 2.1258,-3.62476 L147.11259,116.31978"
@@ -84,18 +90,14 @@ function InnerMostTriangle() {
                                 style={{strokeDashoffset: smoothStrokeDashoffset}}
                                 />
                         </g>
-                        <motion.g initial={{opacity: 0}} animate={{opacity: 1}}>
-                            <motion.image 
-                                filter={'url(#glowEffect)'}
-                                className={styles.image}
-                                href={images['sunEarthText']}
-                                style={{opacity: opacitySmooth}}
-                                x={101.79}
-                                y={102.2}
-                            />
-                        </motion.g>
-
-                    </svg>
+                        <motion.image
+                            className={styles.image}
+                            href={images['sunEarthText']}
+                            style={{opacity: opacitySmooth}}
+                            x={101.79}
+                            y={102.1}
+                        />
+                    </motion.svg>
                 </motion.div>  
             }            
         </AnimatePresence>

@@ -16,9 +16,7 @@ function Moon() {
     const transformMoon = useMotionTemplate`translate(-34.5px, 2.9px) scale(${smoothScaleMoon})`;
 
     return(         
-        <motion.g style={{opacity: opacitySmooth, transform: transformMoon}}>
-            <path
-                filter={'url(#glowEffect)'}
+            <motion.path
                 id="path4"
                 fill="#0400ff"
                 fillOpacity={1}
@@ -29,9 +27,10 @@ function Moon() {
                 strokeMiterlimit={0}
                 strokeDasharray="none"
                 strokeOpacity={1}
+                style={{opacity: opacitySmooth, transform: transformMoon}}
                 d="m 137.86313,98.771578 c 0,0.17396 -0.14103,0.31499 -0.31501,0.31499 -0.17396,0 -0.31499,-0.14103 -0.31499,-0.31499 0,-0.17398 0.14103,-0.31501 0.31499,-0.31501 0.0425,0 -0.12204,0.0416 -0.17326,0.15087 -0.0428,0.0912 -0.0416,0.18995 0.0457,0.27235 0.10267,0.0968 0.23663,0.0903 0.32283,0.0372 0.0968,-0.0597 0.11973,-0.19615 0.11973,-0.14539 z"
                 />
-        </motion.g>
+
     )
 }
 

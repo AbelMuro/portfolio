@@ -8,6 +8,10 @@ function ChainThree() {
     const {MainContainerRef} = useContext(ContainerContext);
     const {scrollY} = useScroll(MainContainerRef);
 
+    const scaleContainer = useTransform(scrollY, [600, 1800], [1, 5])
+    const scaleContainerSmooth = useSpring(scaleContainer, {stiffness: 150, damping: 80});
+    const scaleContainerMore = useTransform(scrollY, [6500, 7000], [5, 10]);   
+
     const scale = useTransform(scrollY, [14000, 14500], [1, 20]);
     const smoothScale = useSpring(scale, {stiffness: 150, damping: 80});
 
@@ -21,14 +25,18 @@ function ChainThree() {
             setMount(false)
         else
             setMount(true);
-    })
+    });
+
+    useMotionValueEvent(scaleContainerMore, 'change', (value) => {
+        scaleContainerSmooth.set(value);
+    });
 
     return(
         <AnimatePresence>
             {
                 mount &&
                 <motion.div id='chain three' className={styles.container} exit={{opacity: 0}}>
-                    <svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"}>
+                    <motion.svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"} style={{scale: scaleContainerSmooth}}>
                         <defs>
                             <filter id='glowEffect'>
                                 <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur">
@@ -148,7 +156,7 @@ function ChainThree() {
 
                             </motion.g>
                         </motion.g>
-                    </svg>            
+                    </motion.svg>            
                 </motion.div> 
             }              
         </AnimatePresence>

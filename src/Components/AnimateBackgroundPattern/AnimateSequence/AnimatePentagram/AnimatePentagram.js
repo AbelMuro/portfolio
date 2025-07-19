@@ -48,6 +48,7 @@ function AnimatePentagram({scrollThresholds}) {
             {mount &&
             <motion.div 
                 className={styles.container}
+                style={{rotateY: rotate3DSpringY, rotateX: rotate3DSpringX, scale: smoothScale}}
                 >
                 <motion.svg 
                     id='pentagram' 
@@ -68,7 +69,7 @@ function AnimatePentagram({scrollThresholds}) {
                                 </feMerge>
                             </filter>
                         </defs>
-                        <motion.g style={{rotateY: rotate3DSpringY, rotateX: rotate3DSpringX, x, y, scale: smoothScale}}>   
+                        <g transform='translate(-47.929077, -13.484006)'>   
                                 <AnimateCircles/>                        
                                 <Circle filter={'url(#glowEffect)'}
                                     id="path695"
@@ -219,7 +220,7 @@ function AnimatePentagram({scrollThresholds}) {
                                     strokeMiterlimit={0}
                                     strokeOpacity={1}
                                     />                          
-                        </motion.g>   
+                        </g>   
                 </motion.svg>
             </motion.div>
             }             

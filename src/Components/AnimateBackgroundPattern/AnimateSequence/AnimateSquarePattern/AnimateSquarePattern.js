@@ -1,5 +1,4 @@
 import React, {useContext, useState} from 'react';
-import { ContainerContext } from '!/AnimateBackgroundPattern';
 import OuterMostSquare from './OuterMostSquare';
 import OuterSquare from './OuterSquare';
 import InnerSquare from './InnerSquare';
@@ -10,8 +9,7 @@ import * as styles from './styles.module.css';
 
 function AnimateSquarePattern({scrollThresholds}) {
     const [mount, setMount] = useState(true); 
-    const {MainContainerRef} = useContext(ContainerContext);
-    const {scrollY} = useScroll(MainContainerRef);
+    const {scrollY} = useScroll();
     const scrollRange = [
         scrollThresholds[1], scrollThresholds[1] + 1000, 
         scrollThresholds[1] + 2000, scrollThresholds[1] + 3000,
@@ -20,23 +18,15 @@ function AnimateSquarePattern({scrollThresholds}) {
 
     const rotateY = useTransform(scrollY, scrollRange, [0, -35, 0, -35, 0]);
     const rotateX = useTransform(scrollY, scrollRange, [0, 35, 0, -25, 0]);
-    const rotateXMore = useTransform(scrollY, [7000, 8000], [0, 35]);
+    const rotateXMore = useTransform(scrollY, [7000, 8000], [0, 45]);
+    const rotateXBack = useTransform(scrollY, [13000, 13200], [45, 0]);    
     const rotateSmoothY = useSpring(rotateY, {stiffness: 150, damping: 80});
     const rotateSmoothX = useSpring(rotateX, {stiffness: 150, damping: 80});
-
-    const scale = useTransform(scrollY, [600, 1800], [1, 5]);
-    const scaleSmooth = useSpring(scale, {stiffness: 150, damping: 80});
-    const scaleMore = useTransform(scrollY, [6500, 7000], [5, 10]);
-
-    const rotateXBack = useTransform(scrollY, [13000, 13200], [35, 0]);
 
     useMotionValueEvent(rotateXBack, 'change', (value) => {
         rotateSmoothX.set(value);
     });
 
-    useMotionValueEvent(scaleMore, 'change', (value) => {
-        scaleSmooth.set(value);
-    });
     
     useMotionValueEvent(rotateXMore, 'change', (value) => {
         rotateSmoothX.set(value);
@@ -53,7 +43,7 @@ function AnimateSquarePattern({scrollThresholds}) {
 
     return(
         mount &&
-        <motion.section id='square pattern' className={styles.container} style={{rotateX: rotateSmoothX, rotateY: rotateSmoothY, scale: scaleSmooth}}>
+        <motion.section id='square pattern' className={styles.container} style={{rotateX: rotateSmoothX, rotateY: rotateSmoothY}}>
             <OuterMostSquare/>
             <OuterSquare/>
             <InnerSquare/>

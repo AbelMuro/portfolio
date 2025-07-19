@@ -1,13 +1,17 @@
 import React, {useContext, useState} from 'react';
-import { ContainerContext } from '!/AnimateBackgroundPattern';
+import {useScaleAndRotate} from '~/Hooks';
 import {motion, useTransform, useSpring, useScroll, useMotionValueEvent, AnimatePresence} from 'framer-motion';
 import images from './images';
 import * as styles from './styles.module.css';
 
 function OuterMostSquare() {
     const [mount, setMount] = useState(false);
-    const {MainContainerRef} = useContext(ContainerContext);
-    const {scrollY} = useScroll(MainContainerRef);
+    const {scrollY} = useScroll();
+
+    const scale = useTransform(scrollY, [600, 1800], [1, 5]);
+    const scaleSmooth = useSpring(scale, {stiffness: 150, damping: 80});
+    const scaleMore = useTransform(scrollY, [6500, 7000], [5, 10]);
+    
     const strokeDashoffsetOuterBorder = useTransform(scrollY, [2500, 4200], [55, 0]);
     const smoothDashoffsetOuterBorder = useSpring(strokeDashoffsetOuterBorder, {stiffness: 150, damping: 80});
 
@@ -24,12 +28,22 @@ function OuterMostSquare() {
             setMount(true);
     })
 
+    useMotionValueEvent(scaleMore, 'change', (value) => {
+        scaleSmooth.set(value);
+    });
+
     return(
         <AnimatePresence>
             {
                 mount && 
-                <motion.div id='outer most square/pentagram square' className={styles.container} initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>
-                    <svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"}>
+                <motion.div 
+                    id='outer most square/pentagram square' 
+                    className={styles.container} 
+                    initial={{opacity: 0}} 
+                    animate={{opacity: 1}} 
+                    exit={{opacity: 0}}
+                    >
+                    <motion.svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"} style={{scale: scaleSmooth}}>
                         <defs>
                             <filter id='glowEffect'>
                                 <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur">
@@ -43,7 +57,7 @@ function OuterMostSquare() {
                                 </feMerge>
                             </filter>
                         </defs>
-                        <g transform="translate(-47.8, -12.5)">        
+                        <g transform="translate(-47.8, -13.5)">        
                             {/* outer border*/}
                                 <motion.path
                                     filter={'url(#glowEffect)'}
@@ -52,7 +66,6 @@ function OuterMostSquare() {
                                     strokeWidth={0.164006}
                                     strokeLinecap="round"
                                     strokeLinejoin="round"
-                                    strokeMiterlimit={0}
                                     strokeDasharray={55}
                                     style={{strokeDashoffset: smoothDashoffsetOuterBorder}}
                                     d="m 150.67604,106.23255 9.34609,9.05688 -8.62065,8.73702 -9.3461,-9.05688 z"
@@ -76,14 +89,14 @@ function OuterMostSquare() {
                                     exit={{opacity: 0}}
                                     />
                             </g>
-                            <motion.g transform='translate(94, 93.5)' style={{opacity: opacitySmooth}}>
+                            <motion.g transform='translate(94, 92.5)' style={{opacity: opacitySmooth}}>
                                 <motion.image 
                                     filter={'url(#glowEffect)'}
                                     href={images['text']}
                                     width={18.3}
                                 />
                             </motion.g>
-                        </svg>
+                        </motion.svg>
                 </motion.div>  
             } 
         </AnimatePresence> 

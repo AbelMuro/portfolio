@@ -5,9 +5,7 @@
     top: 0;
     left: 0;
     z-index: var(--second-layer);
-    transform-style: preserve-3d;
-    perspective: 800;
-    transition: all 0s;
+    transition: none
 }
 
 .svg{

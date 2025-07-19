@@ -1,12 +1,14 @@
 import React, {useContext,useState} from 'react';
-import { ContainerContext } from '!/AnimateBackgroundPattern';
 import {motion, useScroll, useTransform, useSpring, useMotionTemplate, AnimatePresence, useMotionValueEvent} from 'framer-motion';
 import * as styles from './styles.module.css';
 
 function ChainOne() {
     const [mount, setMount] = useState(false);
-    const {MainContainerRef} = useContext(ContainerContext);
-    const {scrollY} = useScroll(MainContainerRef);
+    const {scrollY} = useScroll();
+
+    const scaleContainer = useTransform(scrollY, [600, 1800], [1, 5])
+    const scaleContainerSmooth = useSpring(scaleContainer, {stiffness: 150, damping: 80});
+    const scaleContainerMore = useTransform(scrollY, [6500, 7000], [5, 10]);   
 
     const scale = useTransform(scrollY, [14000, 14500], [1, 20]);
     const smoothScale = useSpring(scale, {stiffness: 150, damping: 80});
@@ -26,11 +28,15 @@ function ChainOne() {
             setMount(true);
     })
 
+    useMotionValueEvent(scaleContainerMore, 'change', (value) => {
+        scaleContainerSmooth.set(value);
+    });
+
     return(
         <AnimatePresence>
             { mount &&
                 <motion.div id='chain one' className={styles.container} exit={{opacity: 0}}>
-                    <svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"}>
+                    <motion.svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"} style={{scale: scaleContainerSmooth}}>
                         <defs>
                             <filter id='glowEffect'>
                                 <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur">
@@ -45,7 +51,7 @@ function ChainOne() {
                             </filter>
                         </defs>
 
-                        <motion.g style={{transform}} filter={'url(#glowEffect)'}>
+                        <motion.g style={{transform}} >
                             <motion.g className={styles.group} style={{scale: smoothScaleGroup}}>
                                 <path
                                         fill="#0400ff"
@@ -114,7 +120,7 @@ function ChainOne() {
                             </motion.g>       
                         </motion.g>
                             
-                    </svg>
+                    </motion.svg>
                 </motion.div>
             }            
         </AnimatePresence>
