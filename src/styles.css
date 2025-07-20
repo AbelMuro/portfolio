@@ -8,9 +8,6 @@
     src: url('/public/fonts/GreatVibes-Regular.ttf')
 }
 
-html, body{
-    scroll-behavior: smooth;
-}
 
 *{
     padding: 0px;
@@ -20,7 +17,7 @@ html, body{
 }
 
 
-g, rect, circle, path, image {
+rect, circle, path, image {
     will-change: transform;
 }
 

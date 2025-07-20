@@ -1,7 +1,5 @@
-.scrollThreshold{
+.container{
     width: 100%;
-    height: 1px;
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
+    position: relative;
+    z-index: var(--third-layer);
 }

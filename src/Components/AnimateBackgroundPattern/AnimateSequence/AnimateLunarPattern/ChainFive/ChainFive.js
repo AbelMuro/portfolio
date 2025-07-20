@@ -9,14 +9,14 @@ function ChainFive(){
     const {scrollY} = useScroll();
 
     const scaleContainer = useTransform(scrollY, [600, 1800], [1, 5])
-    const scaleContainerSmooth = useSpring(scaleContainer, {stiffness: 150, damping: 80});
+    const scaleContainerSmooth = useSpring(scaleContainer, {stiffness: 150, damping: 40});
     const scaleContainerMore = useTransform(scrollY, [6500, 7000], [5, 10]);   
 
     const scale = useTransform(scrollY, [14000, 14500], [1, 20]);
-    const smoothScale = useSpring(scale, {stiffness: 150, damping: 80});
+    const smoothScale = useSpring(scale, {stiffness: 150, damping: 40});
 
     const scaleGroup = useTransform(scrollY, [16900, 17200], [0, 1]);
-    const smoothScaleGroup = useSpring(scaleGroup, {stiffness: 150, damping: 80});
+    const smoothScaleGroup = useSpring(scaleGroup, {stiffness: 150, damping: 40});
 
     const transform = useMotionTemplate`translate(-31.5px, 9.3px) scale(${smoothScale})`;
 
@@ -35,7 +35,7 @@ function ChainFive(){
         <AnimatePresence>
             {
             mount && 
-            <motion.div id='chain five' className={styles.container} exit={{opacity: 0}}>
+            <motion.div id='chain five' className={styles.container} exit={{opacity: 0}} style={{scale: smoothScaleGroup}}>
                 <motion.svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"} style={{scale: scaleContainerSmooth }}>
                     <defs>
                         <filter id='glowEffect'>
@@ -52,7 +52,6 @@ function ChainFive(){
                     </defs>
 
                     <motion.g style={{transform}} filter={'url(#glowEffect)'}>
-                        <motion.g className={styles.group} style={{scale: smoothScaleGroup}}>
                                 <path
                                     id="path10"
                                     fill="none"
@@ -180,9 +179,6 @@ function ChainFive(){
                                         strokeOpacity={1}
                                         />
                             </motion.g>
-
-                        </motion.g>
-
                 </motion.svg>
             </motion.div>
             }         

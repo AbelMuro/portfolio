@@ -1,4 +1,4 @@
-import React, {useContext,useState} from 'react';
+import React, {useState} from 'react';
 import {motion, useScroll, useTransform, useSpring, useMotionTemplate, AnimatePresence, useMotionValueEvent} from 'framer-motion';
 import * as styles from './styles.module.css';
 
@@ -7,14 +7,14 @@ function ChainOne() {
     const {scrollY} = useScroll();
 
     const scaleContainer = useTransform(scrollY, [600, 1800], [1, 5])
-    const scaleContainerSmooth = useSpring(scaleContainer, {stiffness: 150, damping: 80});
+    const scaleContainerSmooth = useSpring(scaleContainer, {stiffness: 150, damping: 40});
     const scaleContainerMore = useTransform(scrollY, [6500, 7000], [5, 10]);   
 
     const scale = useTransform(scrollY, [14000, 14500], [1, 20]);
-    const smoothScale = useSpring(scale, {stiffness: 150, damping: 80});
+    const smoothScale = useSpring(scale, {stiffness: 150, damping: 40});
 
     const scaleGroup = useTransform(scrollY, [15500, 16000], [0, 1]);
-    const smoothScaleGroup = useSpring(scaleGroup, {stiffness: 150, damping: 80});
+    const smoothScaleGroup = useSpring(scaleGroup, {stiffness: 150, damping: 40});
 
     const strokeDashoffset = useTransform(scrollY, [16600, 17200], [0.19261932373046875, 0]);
     const smoothStrokeDashoffset = useSpring(strokeDashoffset, {stiffness: 150, damping: 80});
@@ -35,7 +35,7 @@ function ChainOne() {
     return(
         <AnimatePresence>
             { mount &&
-                <motion.div id='chain one' className={styles.container} exit={{opacity: 0}}>
+                <motion.div id='chain one' className={styles.container} exit={{opacity: 0}} style={{scale: smoothScaleGroup}}>
                     <motion.svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"} style={{scale: scaleContainerSmooth}}>
                         <defs>
                             <filter id='glowEffect'>
@@ -51,22 +51,21 @@ function ChainOne() {
                             </filter>
                         </defs>
 
-                        <motion.g style={{transform}} >
-                            <motion.g className={styles.group} style={{scale: smoothScaleGroup}}>
+                        <motion.g style={{transform}} filter={'url(#glowEffect)'}>
                                 <path
-                                        fill="#0400ff"
-                                        fillOpacity={1}
-                                        stroke="#0400ff"
-                                        strokeWidth={0.00304209}
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeMiterlimit={0}
-                                        strokeDasharray="0.00304209, 0.01912627"
-                                        strokeDashoffset={0}
-                                        strokeOpacity={1}
-                                        d="m 137.25784,98.876238 0.001,0.370277"
-                                        id="path5-9"
-                                        />
+                                    fill="#0400ff"
+                                    fillOpacity={1}
+                                    stroke="#0400ff"
+                                    strokeWidth={0.00304209}
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeMiterlimit={0}
+                                    strokeDasharray="0.00304209, 0.01912627"
+                                    strokeDashoffset={0}
+                                    strokeOpacity={1}
+                                    d="m 137.25784,98.876238 0.001,0.370277"
+                                    id="path5-9"
+                                    />
                                     {/* moon*/}
                                     <path
                                         fill="#0400ff"
@@ -116,10 +115,8 @@ function ChainOne() {
                                         cy={98.987175}
                                         rx={0.011394637}
                                         ry={0.011380743}
-                                        />             
-                            </motion.g>       
-                        </motion.g>
-                            
+                                        />                                             
+                            </motion.g>                 
                     </motion.svg>
                 </motion.div>
             }            

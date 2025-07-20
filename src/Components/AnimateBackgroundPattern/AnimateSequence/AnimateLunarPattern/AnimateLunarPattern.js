@@ -11,11 +11,9 @@ import * as styles from './styles.module.css'
 
 
 /* 
-    this is where i left off, i need to finish fixing the bugs in this component,
-    most likely the issue is how scale is being animated with useSpring()
-
-    i also need to find a way to prevent the stuttering that happens with the animation when i scroll 
-    down in firefox
+    this is where i left off, i need to find a more reliable value for stiffness and damping 
+    (for the square design and the lunat design)
+    that creates a smooth animation but doesnt create jittering in the app
 */
 
 

@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import images from './images';
-import {motion, useTransform, useSpring, useScroll, AnimatePresence, useMotionValueEvent} from 'framer-motion';
+import {motion, useTransform, useSpring, useScroll, AnimatePresence, useMotionValueEvent, useMotionTemplate} from 'framer-motion';
 import * as styles from './styles.module.css';
 
 function InnerMostTriangle() {
@@ -11,20 +11,17 @@ function InnerMostTriangle() {
     const opacitySmooth = useSpring(opacity, {stiffness: 150, damping: 80});
 
     const scale = useTransform(scrollY, [600, 1800], [1, 5]);
-    const scaleSmooth = useSpring(scale, {stiffness: 150, damping: 80});
+    const scaleSmooth = useSpring(scale, {stiffness: 150, damping: 40});
     const scaleMore = useTransform(scrollY, [6500, 7000], [5, 10]);
 
     const strokeDashoffset = useTransform(scrollY, [9000, 9500], [13, 0]);
     const smoothStrokeDashoffset = useSpring(strokeDashoffset, {stiffness: 150, damping: 80});
     const strokeDashoffsetBack = useTransform(scrollY, [13200, 13500], [0, 13]);
 
-    const z = useTransform(scrollY, [8500, 9000], [0, 100]);
+    const z = useTransform(scrollY, [8500, 9000], [0, 150]);
     const smoothZ = useSpring(z, {stiffness: 150, damping: 80});
-    const transform = useTransform(smoothZ, (value) => {
-        return `translateZ(${value}px)`;
-    });
-
-    const translateZBack = useTransform(scrollY, [12800, 13000], [100, 0]);    
+    const translateZBack = useTransform(scrollY, [12800, 13000], [150, 0]);        
+    const transform = useMotionTemplate`translate3d(0px, 0px, ${smoothZ}px)`;
 
     useMotionValueEvent(strokeDashoffsetBack, 'change', (value) => {
         smoothStrokeDashoffset.set(value);
@@ -79,6 +76,7 @@ function InnerMostTriangle() {
                         {/* outer border for triangle*/}
                         <g transform='translate(-47.8, -12.6)'>
                             <motion.path
+                                filter={'url(#glowEffect)'}
                                 id="path26"
                                 d="M147.11259,116.31978 l -4.20203,-0.0286 l 2.1258,-3.62476 L147.11259,116.31978"
                                 transform="matrix(0.76546385,-0.0051032,0.00512554,0.7623147,39.203144,28.293281)"
@@ -91,6 +89,7 @@ function InnerMostTriangle() {
                                 />
                         </g>
                         <motion.image
+                            filter={'url(#glowEffect)'}
                             className={styles.image}
                             href={images['sunEarthText']}
                             style={{opacity: opacitySmooth}}

@@ -9,7 +9,7 @@ function OuterMostSquare() {
     const {scrollY} = useScroll();
 
     const scale = useTransform(scrollY, [600, 1800], [1, 5]);
-    const scaleSmooth = useSpring(scale, {stiffness: 150, damping: 80});
+    const scaleSmooth = useSpring(scale, {stiffness: 150, damping: 40});
     const scaleMore = useTransform(scrollY, [6500, 7000], [5, 10]);
     
     const strokeDashoffsetOuterBorder = useTransform(scrollY, [2500, 4200], [55, 0]);
@@ -39,8 +39,6 @@ function OuterMostSquare() {
                 <motion.div 
                     id='outer most square/pentagram square' 
                     className={styles.container} 
-                    initial={{opacity: 0}} 
-                    animate={{opacity: 1}} 
                     exit={{opacity: 0}}
                     >
                     <motion.svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"} style={{scale: scaleSmooth}}>

@@ -9,14 +9,14 @@ function ChainThree() {
     const {scrollY} = useScroll(MainContainerRef);
 
     const scaleContainer = useTransform(scrollY, [600, 1800], [1, 5])
-    const scaleContainerSmooth = useSpring(scaleContainer, {stiffness: 150, damping: 80});
+    const scaleContainerSmooth = useSpring(scaleContainer, {stiffness: 150, damping: 30});
     const scaleContainerMore = useTransform(scrollY, [6500, 7000], [5, 10]);   
 
     const scale = useTransform(scrollY, [14000, 14500], [1, 20]);
-    const smoothScale = useSpring(scale, {stiffness: 150, damping: 80});
+    const smoothScale = useSpring(scale, {stiffness: 150, damping: 30});
 
     const scaleGroup = useTransform(scrollY, [16200, 16500], [0, 1]);
-    const smoothScaleGroup = useSpring(scaleGroup, {stiffness: 150, damping: 80});
+    const smoothScaleGroup = useSpring(scaleGroup, {stiffness: 150, damping: 40});
 
     const transform = useMotionTemplate`translate(-35.5px, 10px) scale(${smoothScale})`;
 
@@ -35,7 +35,7 @@ function ChainThree() {
         <AnimatePresence>
             {
                 mount &&
-                <motion.div id='chain three' className={styles.container} exit={{opacity: 0}}>
+                <motion.div id='chain three' className={styles.container} exit={{opacity: 0}} style={{scale: smoothScaleGroup}}>
                     <motion.svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"} style={{scale: scaleContainerSmooth}}>
                         <defs>
                             <filter id='glowEffect'>
@@ -50,9 +50,7 @@ function ChainThree() {
                                 </feMerge>
                             </filter>
                         </defs>
-
                         <motion.g style={{transform}} filter={'url(#glowEffect)'}>
-                            <motion.g style={{scale: smoothScaleGroup}} className={styles.group}>
                                     <path
                                         fill="none"
                                         fillOpacity={1}
@@ -152,9 +150,6 @@ function ChainThree() {
                                         rx={0.011394637}
                                         ry={0.011380743}
                                         />
-
-
-                            </motion.g>
                         </motion.g>
                     </motion.svg>            
                 </motion.div> 

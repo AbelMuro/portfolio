@@ -8,7 +8,7 @@ function InnerSquare(){
     const {scrollY} = useScroll();
 
     const scale = useTransform(scrollY, [600, 1800], [1, 5]);
-    const scaleSmooth = useSpring(scale, {stiffness: 150, damping: 80});
+    const scaleSmooth = useSpring(scale, {stiffness: 150, damping: 40});
     const scaleMore = useTransform(scrollY, [6500, 7000], [5, 10]);
 
     const strokeDashoffset = useTransform(scrollY, [8300, 8800], [55, 0]);
@@ -17,11 +17,10 @@ function InnerSquare(){
     const opacity = useTransform(scrollY, [8500, 9000], [0, 1])
     const opacitySmooth = useSpring(opacity, {stiffness: 150, damping: 80});
 
-    const z = useTransform(scrollY, [8500, 9000], [0, 60]);
+    const z = useTransform(scrollY, [8500, 9000], [0, 100]);
     const smoothZ = useSpring(z, {stiffness: 150, damping: 80});
-    const transform = useMotionTemplate`translateZ(${smoothZ}px)`;
-
-    const translateZBack = useTransform(scrollY, [11600, 12000], [60, 0]);
+    const translateZBack = useTransform(scrollY, [11600, 12000], [100, 0]);
+    const transform = useMotionTemplate`translate3d(0px, 0px, ${smoothZ}px)`;
 
     useMotionValueEvent(translateZBack, 'change', (value) => {
         smoothZ.set(value);
@@ -59,6 +58,7 @@ function InnerSquare(){
                         </defs>
                         <g transform='translate(-47.8, -12.8)'>
                                 <motion.path
+                                    filter={'url(#glowEffect)'}
                                     stroke="#0400ff"
                                     strokeWidth={0.180642}
                                     fill='none'
@@ -72,6 +72,7 @@ function InnerSquare(){
                                     />
                                 
                                 <motion.path
+                                    filter={'url(#glowEffect)'}
                                     stroke="#0400ff"
                                     strokeWidth={0.180642}
                                     fill='none'
@@ -84,6 +85,7 @@ function InnerSquare(){
                                     id="rect704-3-9-2-1-2"
                                 />
                                 <motion.image 
+                                        filter={'url(#glowEffect)'}
                                         style={{opacity: opacitySmooth}}
                                         className={styles.innerSquareDesign}
                                         x={147.1} // half of image width

@@ -4,15 +4,12 @@
     position: absolute;
     top: 0px;
     left: 0px;
+    transform-origin: calc(50% - 35px) calc(50% - 360px) !important;
 }
 
 .svg{
     width: 100%;
     height: 100%;
-}
-
-.group, .chain{
-    transform-origin: 50% 50% !important;
 }
 
 .moon{

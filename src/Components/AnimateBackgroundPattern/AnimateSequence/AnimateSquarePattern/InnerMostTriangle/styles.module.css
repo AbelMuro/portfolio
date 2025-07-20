@@ -6,6 +6,7 @@
     left: 0;
     z-index: var(--fifth-layer);
     transition: all 0s;
+    
 }
 
 .clipPath{

@@ -8,7 +8,7 @@ function OuterSquare() {
     const {scrollY} = useScroll();
 
     const scale = useTransform(scrollY, [600, 1800], [1, 5]);
-    const scaleSmooth = useSpring(scale, {stiffness: 150, damping: 80});
+    const scaleSmooth = useSpring(scale, {stiffness: 150, damping: 40});
     const scaleMore = useTransform(scrollY, [6500, 7000], [5, 10]);
 
     const strokeDashoffset = useTransform(scrollY, [7300, 7800], [55, 0]);
@@ -20,11 +20,11 @@ function OuterSquare() {
     const opacity = useTransform(scrollY, [8000, 8300], [0, 1])
     const opacitySmooth = useSpring(opacity, {stiffness: 150, damping: 80});
 
-    const z = useTransform(scrollY, [8300, 8600], [0, 30]);
+    const z = useTransform(scrollY, [8300, 8600], [0, 60]);
     const smoothZ = useSpring(z, {stiffness: 150, damping: 80});
-    const transform = useMotionTemplate`translateZ(${smoothZ}px)`;
+    const translateZBack = useTransform(scrollY, [12000, 12400], [60, 0]);
+    const transform = useMotionTemplate`translate3d(0px, 0px, ${smoothZ}px)`;  
 
-    const translateZBack = useTransform(scrollY, [12000, 12400], [30, 0]);
 
     useMotionValueEvent(translateZBack, 'change', (value) => {
         smoothZ.set(value)
@@ -63,6 +63,7 @@ function OuterSquare() {
                                 </defs>
                                 <g transform={'translate(-47.8, -13)'}>
                                     <motion.path
+                                        filter={'url(#glowEffect)'}
                                         fill="none"
                                         stroke="#0400ff"
                                         strokeLinecap="round"
@@ -76,6 +77,7 @@ function OuterSquare() {
                                 </g>
                                 <g transform='translate(96.9, 96)'>
                                     <motion.image
+                                        filter={'url(#glowEffect)'}
                                         style={{opacity: opacitySmooth}}
                                         href={images['text']}
                                         width={12.6}/>

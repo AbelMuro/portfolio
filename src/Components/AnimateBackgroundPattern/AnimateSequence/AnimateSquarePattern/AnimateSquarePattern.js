@@ -1,9 +1,9 @@
-import React, {useContext, useState} from 'react';
+import React, {useState} from 'react';
 import OuterMostSquare from './OuterMostSquare';
 import OuterSquare from './OuterSquare';
 import InnerSquare from './InnerSquare';
 import InnerMostTriangle from './InnerMostTriangle'
-import {motion, useTransform, useSpring, useScroll, useMotionValueEvent, AnimatePresence} from 'framer-motion';
+import {motion, useTransform, useSpring, useScroll, useMotionValueEvent} from 'framer-motion';
 import * as styles from './styles.module.css';
 
 

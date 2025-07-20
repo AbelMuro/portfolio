@@ -5,7 +5,8 @@
     top: 0;
     left: 0;
     z-index: var(--second-layer);
-    transition: none
+    transition: none;
+    transform: translate3d(0, 0, 0px);
 }
 
 .svg{

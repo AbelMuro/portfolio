@@ -8,7 +8,7 @@ import * as styles from './styles.module.css';
 
 
 function SectionTwo({clock}) {
-    const [mount, target] = useMount();
+    const [mount, target] = useMount('section two');
     const projects = useRef(AllProjects.slice(19, 32));
     const [tablet] = useMediaQuery('(max-width: 705px)'); 
 

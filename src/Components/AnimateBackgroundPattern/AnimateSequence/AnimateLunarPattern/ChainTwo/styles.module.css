@@ -2,8 +2,10 @@
     width: 100%;
     height: 100%;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 0px;
+    left: 0px;
+    transition: none;
+    transform-origin: calc(50% - 160px) 50% !important;
 }
 
 .svg{
@@ -11,6 +13,3 @@
     height: 100%;
 }
 
-.group{
-    transform-origin: center -2px !important;
-}

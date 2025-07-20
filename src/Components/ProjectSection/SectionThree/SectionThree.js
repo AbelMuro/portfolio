@@ -7,7 +7,7 @@ import {motion, useScroll, useMotionValueEvent} from 'framer-motion'
 import * as styles from './styles.module.css';
 
 function SectionThree({clock}) {
-    const [mount, target] = useMount();
+    const [mount, target] = useMount('section three');
     const projects = useRef(AllProjects.slice(32, 44));
     const [tablet] = useMediaQuery('(max-width: 705px)'); 
 

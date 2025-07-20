@@ -8,8 +8,10 @@
     position: relative;
     z-index: var(--third-layer);
     transform-style: preserve-3d;
-    perspective: 800;
-    backface-visibility: hidden;
+}
+
+.wrapper{
+    cursor: pointer;
 }
 
 .title{
@@ -19,6 +21,7 @@
     margin: 0px;
     color: white;
     text-align: center;
+    pointer-events: none;
 }
 
 
@@ -29,6 +32,7 @@
     mask-size: contain;
     mask-repeat: no-repeat;
     mask-position: center center;
+    cursor: pointer;
 }
 
 .image{

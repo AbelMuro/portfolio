@@ -13,7 +13,7 @@ function SectionFive() {
     const transformRightLine = useMotionTemplate`scale(2) rotate(${rotateRightLine}deg)`;
     const [tablet] = useMediaQuery('(max-width: 705px)');
 
-    const [mount, target] = useMount();
+    const [mount, target] = useMount('section five');
     const projects = useRef(AllProjects.slice(57, 73));
 
     return(

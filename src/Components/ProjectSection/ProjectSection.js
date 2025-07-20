@@ -34,7 +34,7 @@ function ProjectSection() {
         <AnimatePresence>
             {
                 mount &&                
-                    <article>
+                    <article className={styles.container}>
                         <SectionOne/>
                         <SectionTwo clock={clock} setClock={setClock}/>
                         <SectionThree clock={clock} setClock={setClock}/>
