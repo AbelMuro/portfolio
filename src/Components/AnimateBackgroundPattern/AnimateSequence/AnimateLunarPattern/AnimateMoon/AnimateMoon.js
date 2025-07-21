@@ -58,7 +58,6 @@ function AnimateMoon() {
                         <Moon/>
                         <motion.path
                             fill={fill}
-                            filter={'url(#glowEffect)'}
                             strokeDasharray={6.841858386993408}
                             stroke='#000000'
                             strokeWidth={0.00051898}
