@@ -1,14 +1,13 @@
-import React, {useContext} from 'react';
-import { ContainerContext } from '!/AnimateBackgroundPattern';
+import React from 'react';
+import {LinearPentagram} from '~/Transitions';
 import {motion, useScroll, useTransform, useSpring, useMotionValueEvent} from 'framer-motion';
 import * as styles from './styles.module.css';
 
 function Circle({strokeDasharray, strokeDashoffset, ...props}) {
-    const {MainContainerRef} = useContext(ContainerContext);
-    const {scrollY} = useScroll(MainContainerRef);
+    const {scrollY} = useScroll();
 
     const dashoffset = useTransform(scrollY, [5800, 6000], [0, strokeDasharray]);
-    const finalOffsetSmooth = useSpring(dashoffset, {stiffness: 150, damping: 40});
+    const finalOffsetSmooth = useSpring(dashoffset, LinearPentagram);
 
     useMotionValueEvent(scrollY, 'change', (y) => {
          if (y < 5800) 

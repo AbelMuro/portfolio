@@ -1,22 +1,21 @@
-import React, {useContext, useState} from 'react';
-import { ContainerContext } from '!/AnimateBackgroundPattern';
+import React, {useState} from 'react';
+import {LinearMoon} from '~/Transitions';
 import {motion, useTransform, useSpring, useScroll, useMotionTemplate, useMotionValueEvent, AnimatePresence} from 'framer-motion';
 import * as styles from './styles.module.css';
 
 function ChainThree() {
     const [mount, setMount] = useState(false);
-    const {MainContainerRef} = useContext(ContainerContext);
-    const {scrollY} = useScroll(MainContainerRef);
+    const {scrollY} = useScroll();
 
     const scaleContainer = useTransform(scrollY, [600, 1800], [1, 5])
-    const scaleContainerSmooth = useSpring(scaleContainer, {stiffness: 150, damping: 30});
+    const scaleContainerSmooth = useSpring(scaleContainer, LinearMoon);
     const scaleContainerMore = useTransform(scrollY, [6500, 7000], [5, 10]);   
 
     const scale = useTransform(scrollY, [14000, 14500], [1, 20]);
-    const smoothScale = useSpring(scale, {stiffness: 150, damping: 30});
+    const smoothScale = useSpring(scale, LinearMoon);
 
     const scaleGroup = useTransform(scrollY, [16200, 16500], [0, 1]);
-    const smoothScaleGroup = useSpring(scaleGroup, {stiffness: 150, damping: 40});
+    const smoothScaleGroup = useSpring(scaleGroup, LinearMoon);
 
     const transform = useMotionTemplate`translate(-35.5px, 10px) scale(${smoothScale})`;
 

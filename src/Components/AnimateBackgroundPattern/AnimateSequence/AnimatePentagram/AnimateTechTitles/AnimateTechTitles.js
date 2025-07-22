@@ -1,16 +1,15 @@
 import React, {useRef, useState, useContext} from 'react';
-import { ContainerContext } from '!/AnimateBackgroundPattern';
+import {LinearPentagram} from '~/Transitions';
 import {useScroll, useMotionValueEvent, useTransform, useSpring, motion} from 'framer-motion';
 import * as styles from './styles.module.css';
 
 function AnimateTechTitles({x, y}) {
     const [title, setTitle] = useState('');
-    const {MainContainerRef} = useContext(ContainerContext)
     const titles = useRef(['React', 'Node.js', 'Express', 'Vue', 'mySQL', 'Next.js', 'MongoDB', 'Framer-Motion'])
-    const {scrollY} = useScroll(MainContainerRef);
+    const {scrollY} = useScroll();
 
     const opacity = useTransform(scrollY, [5800, 6000], [1, 0]);
-    const smoothOpacity = useSpring(opacity, {stiffness: 150, damping: 80});
+    const smoothOpacity = useSpring(opacity, LinearPentagram);
 
     useMotionValueEvent(scrollY, 'change', (y) => {
         if(y < 5800)

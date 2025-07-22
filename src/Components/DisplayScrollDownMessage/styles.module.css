@@ -21,5 +21,5 @@
 .message > img{
     width: 30px;
     object-fit: contain;
-    transition: none;
+    ;
 }

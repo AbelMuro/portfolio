@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {LinearSquare} from '~/Transitions';
 import {motion, useTransform, useSpring, useScroll, useMotionValueEvent, AnimatePresence, useMotionTemplate} from 'framer-motion';
 import images from './images';
 import * as styles from './styles.module.css';
@@ -8,20 +9,20 @@ function OuterSquare() {
     const {scrollY} = useScroll();
 
     const scale = useTransform(scrollY, [600, 1800], [1, 5]);
-    const scaleSmooth = useSpring(scale, {stiffness: 150, damping: 40});
+    const scaleSmooth = useSpring(scale, LinearSquare);
     const scaleMore = useTransform(scrollY, [6500, 7000], [5, 10]);
 
     const strokeDashoffset = useTransform(scrollY, [7300, 7800], [55, 0]);
-    const smoothStrokeDashoffset = useSpring(strokeDashoffset, {stiffness: 150, damping: 80});
+    const smoothStrokeDashoffset = useSpring(strokeDashoffset, LinearSquare);
     
     const strokeWidth = useTransform(scrollY, [7800, 8300], [0.2, 0.926389]);
-    const smoothStrokeWidth = useSpring(strokeWidth, {stiffness: 150, damping: 80})
+    const smoothStrokeWidth = useSpring(strokeWidth, LinearSquare)
 
     const opacity = useTransform(scrollY, [8000, 8300], [0, 1])
-    const opacitySmooth = useSpring(opacity, {stiffness: 150, damping: 80});
+    const opacitySmooth = useSpring(opacity, LinearSquare);
 
     const z = useTransform(scrollY, [8300, 8600], [0, 60]);
-    const smoothZ = useSpring(z, {stiffness: 150, damping: 80});
+    const smoothZ = useSpring(z, LinearSquare);
     const translateZBack = useTransform(scrollY, [12000, 12400], [60, 0]);
     const transform = useMotionTemplate`translate3d(0px, 0px, ${smoothZ}px)`;  
 

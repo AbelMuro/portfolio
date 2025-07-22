@@ -1,15 +1,15 @@
 import React, {useContext, useState} from 'react';
 import {ContainerContext} from '!/AnimateBackgroundPattern';
+import {LinearRing} from '~/Transitions';
 import { motion, useScroll, useMotionValueEvent, AnimatePresence, useTransform, useSpring} from 'framer-motion';
 import * as styles from './styles.module.css';
 import images from './images';
 
 function InnerRing() {
     const [mount, setMount] = useState(true);
-    const {MainContainerRef} = useContext(ContainerContext);
-    const {scrollY} = useScroll(MainContainerRef);
+    const {scrollY} = useScroll();
     const scale = useTransform(scrollY, [400, 1600], [1, 5])
-    const smoothScale = useSpring(scale, {stiffness: 150, damping: 80});
+    const smoothScale = useSpring(scale, LinearRing);
 
     useMotionValueEvent(scrollY, 'change', (value) => {
         if(value > 1400)

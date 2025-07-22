@@ -1,11 +1,10 @@
-import React, {useContext} from 'react';
-import { ContainerContext } from '!/AnimateBackgroundPattern';
+import React from 'react';
+import {LinearPentagram} from '~/Transitions';
 import {motion, useScroll, useTransform, useSpring} from 'framer-motion';
 import * as styles from './styles.module.css';
 
 function Rect(props) {
-    const {MainContainerRef} = useContext(ContainerContext);
-    const {scrollY} = useScroll(MainContainerRef);
+    const {scrollY} = useScroll();
     
     const strokeDashOffset = useTransform(scrollY, [2500, 4200], [52.0433, 0]);
     const strokeDashBack = useTransform(scrollY, [5800, 6000], [0, 52.0433]);
@@ -17,7 +16,7 @@ function Rect(props) {
          else 
             return 52.0433; 
     })
-    const finalOffsetSmooth = useSpring(finalOffset, {stiffness: 150, damping: 40});
+    const finalOffsetSmooth = useSpring(finalOffset, LinearPentagram);
     
 
     return (

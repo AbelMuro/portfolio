@@ -1,5 +1,5 @@
-import React, {useContext, useState} from 'react';
-import {useScaleAndRotate} from '~/Hooks';
+import React, {useState} from 'react';
+import {LinearSquare, LinearPentagram, LinearRing} from '~/Transitions';
 import {motion, useTransform, useSpring, useScroll, useMotionValueEvent, AnimatePresence} from 'framer-motion';
 import images from './images';
 import * as styles from './styles.module.css';
@@ -8,18 +8,17 @@ function OuterMostSquare() {
     const [mount, setMount] = useState(false);
     const {scrollY} = useScroll();
 
-    const scale = useTransform(scrollY, [600, 1800], [1, 5]);
-    const scaleSmooth = useSpring(scale, {stiffness: 150, damping: 40});
-    const scaleMore = useTransform(scrollY, [6500, 7000], [5, 10]);
+    const scale = useTransform(scrollY, [6500, 7000], [5, 10]);
+    const scaleSmooth = useSpring(scale, LinearSquare);
     
     const strokeDashoffsetOuterBorder = useTransform(scrollY, [2500, 4200], [55, 0]);
-    const smoothDashoffsetOuterBorder = useSpring(strokeDashoffsetOuterBorder, {stiffness: 150, damping: 80});
+    const smoothDashoffsetOuterBorder = useSpring(strokeDashoffsetOuterBorder, LinearPentagram);
 
     const strokeDashoffsetInnerBorder = useTransform(scrollY, [7000, 7500], [55, 0]);
-    const smoothStrokeDashoffsetInnerBorder = useSpring(strokeDashoffsetInnerBorder, {stiffness: 150, damping: 80});
+    const smoothStrokeDashoffsetInnerBorder = useSpring(strokeDashoffsetInnerBorder, LinearSquare);
 
     const opacity = useTransform(scrollY, [6700, 7200], [0, 1]);
-    const opacitySmooth = useSpring(opacity, {stiffness: 150, damping: 80});
+    const opacitySmooth = useSpring(opacity, LinearPentagram);
 
     useMotionValueEvent(scrollY, 'change', (value) => {
         if(value < 2000 || value > 12800)
@@ -27,10 +26,6 @@ function OuterMostSquare() {
         else
             setMount(true);
     })
-
-    useMotionValueEvent(scaleMore, 'change', (value) => {
-        scaleSmooth.set(value);
-    });
 
     return(
         <AnimatePresence>
@@ -41,7 +36,7 @@ function OuterMostSquare() {
                     className={styles.container} 
                     exit={{opacity: 0}}
                     >
-                    <motion.svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"} style={{scale: scaleSmooth}}>
+                    <motion.svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"} initial={{scale: 5}} style={{scale: scaleSmooth}}>
                         <defs>
                             <filter id='glowEffect'>
                                 <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur">

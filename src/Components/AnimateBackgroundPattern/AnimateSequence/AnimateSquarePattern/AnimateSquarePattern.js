@@ -3,6 +3,7 @@ import OuterMostSquare from './OuterMostSquare';
 import OuterSquare from './OuterSquare';
 import InnerSquare from './InnerSquare';
 import InnerMostTriangle from './InnerMostTriangle'
+import {LinearPentagram} from '~/Transitions';
 import {motion, useTransform, useSpring, useScroll, useMotionValueEvent} from 'framer-motion';
 import * as styles from './styles.module.css';
 
@@ -20,14 +21,13 @@ function AnimateSquarePattern({scrollThresholds}) {
     const rotateX = useTransform(scrollY, scrollRange, [0, 35, 0, -25, 0]);
     const rotateXMore = useTransform(scrollY, [7000, 8000], [0, 45]);
     const rotateXBack = useTransform(scrollY, [13000, 13200], [45, 0]);    
-    const rotateSmoothY = useSpring(rotateY, {stiffness: 150, damping: 80});
-    const rotateSmoothX = useSpring(rotateX, {stiffness: 150, damping: 80});
+    const rotateSmoothY = useSpring(rotateY, LinearPentagram);
+    const rotateSmoothX = useSpring(rotateX, LinearPentagram);
 
     useMotionValueEvent(rotateXBack, 'change', (value) => {
         rotateSmoothX.set(value);
     });
 
-    
     useMotionValueEvent(rotateXMore, 'change', (value) => {
         rotateSmoothX.set(value);
     });

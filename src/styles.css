@@ -12,7 +12,7 @@
 *{
     padding: 0px;
     margin: 0px;
-    transition: all 0.2s linear, opacity 0s, transform 0s;
+    transition: all 0.3s linear, opacity 0s, transform 0s;
     box-sizing: border-box;
 }
 

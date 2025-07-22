@@ -1,23 +1,22 @@
-import React, {useContext, useState} from 'react';
-import { ContainerContext } from '!/AnimateBackgroundPattern';
+import React from 'react';
+import {LinearPentagram} from '~/Transitions';
 import {motion, useTransform, useSpring, useScroll, useMotionValueEvent} from 'framer-motion';
 import * as styles from './styles.module.css';
 
 function Circle({scrollThresholds, scaleTo, rotateX, rotateY}) {
-    const {MainContainerRef} = useContext(ContainerContext);
-    const {scrollY} = useScroll(MainContainerRef);
+    const {scrollY} = useScroll();
 
     const strokeDashoffset = useTransform(scrollY, [5800, 6000], [0, 300]);
-    const dashoffsetSpring = useSpring(strokeDashoffset, {stiffness: 150, damping: 40});
+    const dashoffsetSpring = useSpring(strokeDashoffset, LinearPentagram);
 
     const scale = useTransform(scrollY, scrollThresholds, [1, scaleTo]);
-    const scaleWithSpring = useSpring(scale, {stiffness: 150, damping: 10});
+    const scaleWithSpring = useSpring(scale, LinearPentagram);
     const scaleBack = useTransform(scrollY, [5500, 5700], [scaleTo, 1]);    
 
     const rotate3DForX = useTransform(scrollY, [scrollThresholds[1], scrollThresholds[1] + 1000, scrollThresholds[1] + 2000], rotateX);
     const rotate3DForY = useTransform(scrollY, [scrollThresholds[1], scrollThresholds[1] + 1000, scrollThresholds[1] + 2000], rotateY)
-    const rotate3DSpringX = useSpring(rotate3DForX, {stiffness: 100, damping: 50})
-    const rotate3DSpringY = useSpring(rotate3DForY, {stiffness: 100, damping: 50});
+    const rotate3DSpringX = useSpring(rotate3DForX, LinearPentagram)
+    const rotate3DSpringY = useSpring(rotate3DForY, LinearPentagram);
 
 
     useMotionValueEvent(scaleBack, 'change', (value) => {

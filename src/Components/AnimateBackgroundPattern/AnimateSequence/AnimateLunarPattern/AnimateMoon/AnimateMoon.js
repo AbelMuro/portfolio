@@ -1,5 +1,6 @@
 import React from 'react';
 import Moon from './Moon';
+import {LinearMoon} from '~/Transitions';
 import { motion, useScroll, useTransform, useSpring, useMotionValueEvent, useMotionTemplate} from 'framer-motion';
 import * as styles from './styles.module.css';
 
@@ -9,22 +10,22 @@ function AnimateMoon() {
 
     //animation for container
     const z = useTransform(scrollY, [8500, 9000], [0, 150]);
-    const smoothZ = useSpring(z, {stiffness: 150, damping: 80});
+    const smoothZ = useSpring(z, LinearMoon);
     const translateZBack = useTransform(scrollY, [12800, 13000], [150, 0]);
 
     //animation for container
     const scale = useTransform(scrollY, [600, 1800], [1, 5])
-    const scaleSmooth = useSpring(scale, {stiffness: 150, damping: 40});
+    const scaleSmooth = useSpring(scale, LinearMoon);
     const scaleMore = useTransform(scrollY, [6500, 7000], [5, 10]);   
 
     //animation for moon and black pattern
     const scaleGroup = useTransform(scrollY, [14000, 14500], [1, 20]);
-    const smoothScaleGroup = useSpring(scaleGroup, {stiffness: 150, damping: 40});
+    const smoothScaleGroup = useSpring(scaleGroup, LinearMoon);
     const transformGroup = useMotionTemplate`translate(-34.5px, 2.9px) scale(${smoothScaleGroup})`
 
     //animation for path element in black pattern
     const strokeDashoffset = useTransform(scrollY, [15000, 15500], [6.841858386993408, 0])
-    const smoothDashoffset = useSpring(strokeDashoffset, {stiffness: 150, damping: 40});
+    const smoothDashoffset = useSpring(strokeDashoffset, LinearMoon);
 
     //animation for path element in black pattern
     const fill = useTransform(scrollY, [15500, 16000], ['#00000000', '#000000']);

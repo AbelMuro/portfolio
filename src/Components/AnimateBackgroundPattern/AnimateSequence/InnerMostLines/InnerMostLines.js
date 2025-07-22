@@ -1,17 +1,16 @@
 import React, {useContext, useState} from 'react';
-import {ContainerContext} from '!/AnimateBackgroundPattern'
+import {LinearRing} from '~/Transitions';
 import {motion, useTransform, useSpring, useScroll, useMotionValueEvent, AnimatePresence} from 'framer-motion';
 import * as styles from './styles.module.css';
 
 function InnerMostLines() {
     const [mount, setMount] = useState(true);
-    const {MainContainerRef} = useContext(ContainerContext)
-    const {scrollY} = useScroll(MainContainerRef);
+    const {scrollY} = useScroll();
     const scale = useTransform(scrollY, [600, 1800], [1, 5])
-    const smoothScale = useSpring(scale, {stiffness: 150, damping: 80});
+    const smoothScale = useSpring(scale, LinearRing);
 
     const strokeDashoffset = useTransform(scrollY, [2000, 3000], [0, 60]);
-    const smoothDashoffset = useSpring(strokeDashoffset, {stiffness: 150, damping: 80});
+    const smoothDashoffset = useSpring(strokeDashoffset, LinearRing);
 
     useMotionValueEvent(scrollY, 'change', (value) => {
         if(value > 3700)
@@ -57,7 +56,6 @@ function InnerMostLines() {
                             strokeOpacity={1}
                             style={{strokeDashoffset: smoothDashoffset}} 
                             strokeDasharray='60' 
-                            className={styles.path}
                             />
                         {/* east line*/}
                         <motion.path 
@@ -73,7 +71,6 @@ function InnerMostLines() {
                             strokeOpacity={1} 
                             style={{strokeDashoffset: smoothDashoffset}} 
                             strokeDasharray='60' 
-                            className={styles.path}
                         />
                         {/* south line*/}
                         <motion.path 
@@ -89,7 +86,6 @@ function InnerMostLines() {
                             strokeOpacity={1}
                             style={{strokeDashoffset: smoothDashoffset}} 
                             strokeDasharray='60' 
-                            className={styles.path}
                             />
                         {/* west line*/}
                         <motion.path 
@@ -104,8 +100,7 @@ function InnerMostLines() {
                             strokeMiterlimit={0}
                             strokeOpacity={1}
                             style={{strokeDashoffset: smoothDashoffset}} 
-                            strokeDasharray='60' 
-                            className={styles.path}/>
+                            strokeDasharray='60' />
                     </svg>
             </motion.div>
             }

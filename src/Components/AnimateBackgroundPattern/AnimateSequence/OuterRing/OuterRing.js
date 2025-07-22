@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import * as styles from './styles.module.css';
+import {LinearRing} from '~/Transitions';
 import { motion, useScroll, useMotionValueEvent, AnimatePresence, useTransform, useSpring} from 'framer-motion';
 import images from './images';
 
@@ -8,7 +9,7 @@ function OuterRing() {
     const [mount, setMount] = useState(true);
     const {scrollY} = useScroll();
     const scale = useTransform(scrollY, [200, 1400], [1, 5])
-    const smoothScale = useSpring(scale, {stiffness: 150, damping: 80});
+    const smoothScale = useSpring(scale, LinearRing);
 
     useMotionValueEvent(scrollY, 'change', (value) => {
         if(value > 1000)

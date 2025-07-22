@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import images from './images';
+import {LinearSquare} from '~/Transitions';
 import {motion, useTransform, useSpring, AnimatePresence, useScroll, useMotionValueEvent, useMotionTemplate} from 'framer-motion';
 import * as styles from './styles.module.css';
 
@@ -8,17 +9,17 @@ function InnerSquare(){
     const {scrollY} = useScroll();
 
     const scale = useTransform(scrollY, [600, 1800], [1, 5]);
-    const scaleSmooth = useSpring(scale, {stiffness: 150, damping: 40});
+    const scaleSmooth = useSpring(scale, LinearSquare);
     const scaleMore = useTransform(scrollY, [6500, 7000], [5, 10]);
 
     const strokeDashoffset = useTransform(scrollY, [8300, 8800], [55, 0]);
-    const smoothStrokeDashoffset = useSpring(strokeDashoffset, {stiffness: 150, damping: 80});
+    const smoothStrokeDashoffset = useSpring(strokeDashoffset, LinearSquare);
 
     const opacity = useTransform(scrollY, [8500, 9000], [0, 1])
-    const opacitySmooth = useSpring(opacity, {stiffness: 150, damping: 80});
+    const opacitySmooth = useSpring(opacity, LinearSquare);
 
     const z = useTransform(scrollY, [8500, 9000], [0, 100]);
-    const smoothZ = useSpring(z, {stiffness: 150, damping: 80});
+    const smoothZ = useSpring(z, LinearSquare);
     const translateZBack = useTransform(scrollY, [11600, 12000], [100, 0]);
     const transform = useMotionTemplate`translate3d(0px, 0px, ${smoothZ}px)`;
 

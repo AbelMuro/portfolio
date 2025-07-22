@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import images from './images';
+import {LinearSquare} from '~/Transitions';
 import {motion, useTransform, useSpring, useScroll, AnimatePresence, useMotionValueEvent, useMotionTemplate} from 'framer-motion';
 import * as styles from './styles.module.css';
 
@@ -8,18 +9,18 @@ function InnerMostTriangle() {
     const {scrollY} = useScroll();
 
     const opacity = useTransform(scrollY, [9500, 10000], [0, 1])
-    const opacitySmooth = useSpring(opacity, {stiffness: 150, damping: 80});
+    const opacitySmooth = useSpring(opacity, LinearSquare);
 
     const scale = useTransform(scrollY, [600, 1800], [1, 5]);
-    const scaleSmooth = useSpring(scale, {stiffness: 150, damping: 40});
+    const scaleSmooth = useSpring(scale, LinearSquare);
     const scaleMore = useTransform(scrollY, [6500, 7000], [5, 10]);
 
     const strokeDashoffset = useTransform(scrollY, [9000, 9500], [13, 0]);
-    const smoothStrokeDashoffset = useSpring(strokeDashoffset, {stiffness: 150, damping: 80});
+    const smoothStrokeDashoffset = useSpring(strokeDashoffset, LinearSquare);
     const strokeDashoffsetBack = useTransform(scrollY, [13200, 13500], [0, 13]);
 
     const z = useTransform(scrollY, [8500, 9000], [0, 150]);
-    const smoothZ = useSpring(z, {stiffness: 150, damping: 80});
+    const smoothZ = useSpring(z, LinearSquare);
     const translateZBack = useTransform(scrollY, [12800, 13000], [150, 0]);        
     const transform = useMotionTemplate`translate3d(0px, 0px, ${smoothZ}px)`;
 

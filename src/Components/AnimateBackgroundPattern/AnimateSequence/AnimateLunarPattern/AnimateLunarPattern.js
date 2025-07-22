@@ -6,6 +6,7 @@ import ChainThree from './ChainThree';
 import ChainFour from './ChainFour';
 import ChainFive from './ChainFive';
 import HangingMoon from './HangingMoon';
+import {LinearMoon} from '~/Transitions';
 import {motion, useTransform, useSpring, useMotionValueEvent, useScroll, AnimatePresence} from 'framer-motion';
 import * as styles from './styles.module.css'
 
@@ -22,7 +23,7 @@ function AnimateLunarPattern() {
     const {scrollY} = useScroll();
 
     const rotateX = useTransform(scrollY, [8000, 8500], [0, 45]);
-    const rotateSmoothX = useSpring(rotateX, {stiffness: 150, damping: 80});
+    const rotateSmoothX = useSpring(rotateX, LinearMoon);
     const rotateXBack = useTransform(scrollY, [13000, 13200], [45, 0]);
 
     useMotionValueEvent(rotateXBack, 'change', (value) => {

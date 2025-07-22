@@ -1,27 +1,16 @@
-import React, {useContext, useState, useEffect} from 'react';
-import {ContainerContext} from '!/AnimateBackgroundPattern';
+import React, {useState} from 'react';
 import AnimateTechTitles from './AnimateTechTitles';
 import Rect from './Rect';
 import TechIcon from './TechIcon';
 import Circle from './Circle';
-import {motion, useScroll, useTransform, useSpring, useMotionValue, useMotionValueEvent, AnimatePresence} from 'framer-motion';
+import {LinearPentagram, LinearRing} from '~/Transitions';
+import {motion, useScroll, useTransform, useSpring, useMotionValueEvent} from 'framer-motion';
 import AnimateCircles from './AnimateCircles';
 import * as styles from './styles.module.css';
 
-/* 
-    this is where i left off, i need to fix the bug with AnimatePresence in this component, 
-
-    then i can continue to optimize the app by removing the elements that have finished
-    their animation, more specifically, the square design components
-*/
-
-
 function AnimatePentagram({scrollThresholds}) {
     const [mount, setMount] = useState(true);
-    const x = useMotionValue(-47.929077);
-    const y = useMotionValue(-13.484006);
-    const {MainContainerRef} = useContext(ContainerContext);
-    const {scrollY} = useScroll(MainContainerRef);
+    const {scrollY} = useScroll();
     const scrollRange = [
         scrollThresholds[1], scrollThresholds[1] + 1000, 
         scrollThresholds[1] + 2000, scrollThresholds[1] + 3000,
@@ -29,11 +18,11 @@ function AnimatePentagram({scrollThresholds}) {
     ];
     const rotate3DForY = useTransform(scrollY, scrollRange, [0, -35, 0, -35, 0]);
     const rotate3DForX = useTransform(scrollY, scrollRange, [0, 35, 0, -25, 0]);
-    const rotate3DSpringY = useSpring(rotate3DForY, {stiffness: 150, damping: 80});
-    const rotate3DSpringX = useSpring(rotate3DForX, {stiffness: 150, damping: 80});
+    const rotate3DSpringY = useSpring(rotate3DForY, LinearPentagram);
+    const rotate3DSpringX = useSpring(rotate3DForX, LinearPentagram);
 
     const scale = useTransform(scrollY, [800, 2000], [0.8, 5])
-    const smoothScale = useSpring(scale, {stiffness: 150, damping: 80});
+    const smoothScale = useSpring(scale, LinearRing);
 
     useMotionValueEvent(scrollY, 'change', (value) => {
         if(value > 7000)

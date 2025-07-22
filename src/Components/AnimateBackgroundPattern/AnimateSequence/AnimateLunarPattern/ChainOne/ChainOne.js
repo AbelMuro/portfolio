@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {LinearMoon} from '~/Transitions';
 import {motion, useScroll, useTransform, useSpring, useMotionTemplate, AnimatePresence, useMotionValueEvent} from 'framer-motion';
 import * as styles from './styles.module.css';
 
@@ -7,17 +8,17 @@ function ChainOne() {
     const {scrollY} = useScroll();
 
     const scaleContainer = useTransform(scrollY, [600, 1800], [1, 5])
-    const scaleContainerSmooth = useSpring(scaleContainer, {stiffness: 150, damping: 40});
+    const scaleContainerSmooth = useSpring(scaleContainer, LinearMoon);
     const scaleContainerMore = useTransform(scrollY, [6500, 7000], [5, 10]);   
 
     const scale = useTransform(scrollY, [14000, 14500], [1, 20]);
-    const smoothScale = useSpring(scale, {stiffness: 150, damping: 40});
+    const smoothScale = useSpring(scale, LinearMoon);
 
     const scaleGroup = useTransform(scrollY, [15500, 16000], [0, 1]);
-    const smoothScaleGroup = useSpring(scaleGroup, {stiffness: 150, damping: 40});
+    const smoothScaleGroup = useSpring(scaleGroup, LinearMoon);
 
     const strokeDashoffset = useTransform(scrollY, [16600, 17200], [0.19261932373046875, 0]);
-    const smoothStrokeDashoffset = useSpring(strokeDashoffset, {stiffness: 150, damping: 80});
+    const smoothStrokeDashoffset = useSpring(strokeDashoffset, LinearMoon);
 
     const transform = useMotionTemplate`translate(-39.5px, 9px) scale(${smoothScale})`;
 

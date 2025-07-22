@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import {LinearMoon} from '~/Transitions';
 import {motion, useTransform, useSpring, useScroll, useMotionTemplate, useMotionValueEvent, useAnimationControls, AnimatePresence} from 'framer-motion';
 import * as styles from './styles.module.css';
 
@@ -10,14 +11,14 @@ function HangingMoon(){
     const controlSwing = useAnimationControls();
 
     const scaleContainer = useTransform(scrollY, [600, 1800], [1, 5])
-    const scaleContainerSmooth = useSpring(scaleContainer, {stiffness: 150, damping: 40});
+    const scaleContainerSmooth = useSpring(scaleContainer, LinearMoon);
     const scaleContainerMore = useTransform(scrollY, [6500, 7000], [5, 10]);  
 
     const scale = useTransform(scrollY, [14000, 14500], [1, 20]);
-    const smoothScale = useSpring(scale, {stiffness: 150, damping: 40});
+    const smoothScale = useSpring(scale, LinearMoon);
 
     const strokeDashoffset = useTransform(scrollY, [16500, 17000], [0.8, 0]);
-    const smoothStrokeDashoffset = useSpring(strokeDashoffset, {stiffness: 150, damping: 80});
+    const smoothStrokeDashoffset = useSpring(strokeDashoffset, LinearMoon);
 
     const fill = useTransform(scrollY, [17000, 17500], ['#0400ff00', '#0400ff']);
 

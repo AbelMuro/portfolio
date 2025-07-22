@@ -1,4 +1,5 @@
-import React, {useContext} from 'react';
+import React from 'react';
+import {LinearMoon} from '~/Transitions';
 import {motion, useTransform, useSpring, useScroll} from 'framer-motion';
 import * as styles from './styles.module.css';
 
@@ -6,7 +7,7 @@ function Moon() {
     const {scrollY} = useScroll();
 
     const opacity = useTransform(scrollY, [9500, 10000], [0, 1])
-    const opacitySmooth = useSpring(opacity, {stiffness: 150, damping: 80}); 
+    const opacitySmooth = useSpring(opacity, LinearMoon); 
 
     return(         
         <motion.path
