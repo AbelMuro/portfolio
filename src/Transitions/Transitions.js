@@ -3,6 +3,10 @@
 
   also, check out the documentation for useVelocity and useTime
 
+  AnimatePentagram initial scale starts from 800 and ends at 2000,   [0.8, 5]
+
+  OuterMostSquare mounts at 2000 with scale already set to 5
+
 */
 
 
