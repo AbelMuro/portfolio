@@ -1,6 +1,8 @@
 /* 
   this is where i left off, i need a more reliable way of creating linear animations with useSpring()
 
+  also, check out the documentation for useVelocity and useTime
+
 */
 
 
