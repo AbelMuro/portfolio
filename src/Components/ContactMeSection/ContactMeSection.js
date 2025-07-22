@@ -1,11 +1,12 @@
 import React from 'react';
+import Form from './Form';
 import * as styles from './styles.module.css';
 
 function ContactMeSection() {
     return(
-        <section>
-
-        </section>
+            <section className={styles.container}>
+                <Form/>
+            </section>
         )
 }
 

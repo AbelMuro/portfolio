@@ -20,6 +20,7 @@ function Circle({strokeDasharray, strokeDashoffset, ...props}) {
     return (
         <motion.circle 
             {...props} 
+            filter={'url(#glowEffect)'}
             className={styles.circle} 
             strokeDasharray={strokeDasharray}
             style={{strokeDashoffset: finalOffsetSmooth}} 

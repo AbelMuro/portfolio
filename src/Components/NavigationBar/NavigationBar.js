@@ -22,6 +22,10 @@ function NavigationBar() {
             window.scrollTo({top: 10200, behavior: 'smooth'});
         else if(link === 'projects')
             window.scrollTo({top: 17800, behavior: 'smooth'});
+        else{
+            window.scrollTo({top: 28071, behavior: 'instant'});
+        }
+            
     }
 
     useMotionValueEvent(scrollYProgress, 'change', () => {

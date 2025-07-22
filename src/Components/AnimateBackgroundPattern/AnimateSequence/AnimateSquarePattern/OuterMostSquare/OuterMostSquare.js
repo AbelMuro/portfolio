@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {LinearSquare, LinearPentagram, LinearRing} from '~/Transitions';
+import {LinearSquare, LinearPentagram} from '~/Transitions';
 import {motion, useTransform, useSpring, useScroll, useMotionValueEvent, AnimatePresence} from 'framer-motion';
 import images from './images';
 import * as styles from './styles.module.css';

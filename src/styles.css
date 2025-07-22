@@ -17,10 +17,6 @@
 }
 
 
-rect, circle, path, image {
-    will-change: transform;
-}
-
 :root{
     --font: 'AbelFont';
     --eight-layer: 175;
