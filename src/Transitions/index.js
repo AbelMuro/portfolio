@@ -1,3 +1,3 @@
-import {LinearRing, LinearMoon, LinearPentagram, LinearSquare} from './Transitions.js';
+import {LinearRing, LinearText, LinearMoon, LinearPentagram, LinearSquare} from './Transitions.js';
 
-export {LinearRing, LinearMoon, LinearPentagram, LinearSquare};
+export {LinearRing, LinearText, LinearMoon, LinearPentagram, LinearSquare};

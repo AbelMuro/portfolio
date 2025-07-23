@@ -1,23 +1,29 @@
 export const LinearRing = {
-  bounce: 0,
-  duration: 3000,
-  ease: 'linear'
+  type: 'tween',
+  duration: 1500,
+  ease: [0, 0, 0.5, 1],
 };
 
+export const LinearText = {
+    type: 'tween',
+    duration: 1000,
+    ease: [0, 0, 0.5, 1],
+}
+
 export const LinearPentagram = {
-  bounce: 0,
-  duration: 1500,
-  ease: 'linear'
+  type: 'tween',
+  duration: 1000,
+  ease: [0, 0, 0.5, 1],
 };
 
 export const LinearSquare = {
-  bounce: 0,
-  duration: 1500,
-  ease: 'linear'
+  type: 'tween',
+  duration: 1000,
+  ease: [0, 0, 0.5, 1],
 };
 
 export const LinearMoon = {
-  bounce: 0,
-  duration: 1500,
-  ease: 'linear'
+  type: 'tween',
+  duration: 1000,
+  ease: [0, 0, 0.5, 1],
 };

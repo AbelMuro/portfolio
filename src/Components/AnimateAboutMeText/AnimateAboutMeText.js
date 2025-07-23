@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {LinearText} from '~/Transitions';
 import {motion, useScroll, useTransform, useSpring, useMotionValueEvent, AnimatePresence} from 'framer-motion';
 import * as styles from './styles.module.css';
 
@@ -15,8 +16,8 @@ function AnimateAboutMeText() {
     
     const maskHeightForBlueText = useTransform(scrollY, [7000, 10000], [0, 400]);
     const maskPositionForBlueText = useTransform(scrollY, [10550, 11500], [-600, 600])
-    const maskHeightForBlueTextSmooth = useSpring(maskHeightForBlueText, {stiffness: 150, damping: 60});
-    const maskPositionForBlueTextSmooth = useSpring(maskPositionForBlueText, {stiffness: 150, damping: 80});
+    const maskHeightForBlueTextSmooth = useSpring(maskHeightForBlueText, LinearText);
+    const maskPositionForBlueTextSmooth = useSpring(maskPositionForBlueText, LinearText);
     const maskSizeBlue = useTransform(maskHeightForBlueTextSmooth, (height) => {
         return `100% ${height}%`
     });
@@ -26,8 +27,8 @@ function AnimateAboutMeText() {
 
     const maskHeightForWhiteText = useTransform(scrollY, [7500, 10500], [0, 400])
     const maskPositionForWhiteText = useTransform(scrollY, [10550, 11500], [-600, 600]);
-    const maskPositionForWhiteTextSmooth = useSpring(maskPositionForWhiteText, {stiffness: 150, damping: 80});
-    const maskHeightForWhiteTextSmooth = useSpring(maskHeightForWhiteText, {stiffness: 150, damping: 80})
+    const maskPositionForWhiteTextSmooth = useSpring(maskPositionForWhiteText, LinearText);
+    const maskHeightForWhiteTextSmooth = useSpring(maskHeightForWhiteText, LinearText)
     const maskSizeWhite = useTransform(maskHeightForWhiteTextSmooth, (height) => {
         return `100% ${height}%`
     });

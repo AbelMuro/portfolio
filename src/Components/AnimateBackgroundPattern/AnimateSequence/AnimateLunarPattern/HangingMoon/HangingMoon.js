@@ -47,10 +47,13 @@ function HangingMoon(){
                 <motion.div id='hanging moon' className={styles.container} initial={{rotate: 0}} animate={controlSwing} exit={{opacity: 0}}>
                     <motion.svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"} style={{scale: scaleContainerSmooth}}>
                         <defs>
-                            <filter id='glowEffect'>
-                                <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur">
-                                    <animate attributeName="stdDeviation" values="2;0;2" dur="3s" repeatCount="indefinite" calcMode="linear"/>
-                                </feGaussianBlur>
+                            <filter id='glowEffectHangingMoon'>
+                                <motion.feGaussianBlur 
+                                    in="SourceAlpha" 
+                                    result="blur"
+                                    initial={{stdDeviation: 0.004}}
+                                    animate={{stdDeviation: [0.007, 0.004, 0.007], transition: {duration: 3, repeat: Infinity, ease: 'linear'}}}
+                                    />
                                 <feFlood floodColor="#0400ff" floodOpacity='0.5' result="color"/>
                                 <feComposite in="color" in2="blur" operator="in" result="glow"/>
                                 <feMerge>
@@ -59,7 +62,7 @@ function HangingMoon(){
                                 </feMerge>
                             </filter>
                         </defs>
-                            <motion.g style={{transform}} filter={'url(#glowEffect)'}>
+                            <motion.g style={{transform}} filter={'url(#glowEffectHangingMoon)'}>
                                     <motion.path
                                         strokeDasharray={0.8}
                                         style={{strokeDashoffset: smoothStrokeDashoffset}}
@@ -76,7 +79,7 @@ function HangingMoon(){
                                         />
 
                                     <motion.path
-                                        filter={'url(#glowEffect)'}
+                                        filter={'url(#glowEffectHangingMoon)'}
                                         className={styles.moon}
                                         strokeDasharray={0.8}
                                         style={{strokeDashoffset: smoothStrokeDashoffset, fill}}

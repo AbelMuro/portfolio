@@ -8,8 +8,9 @@ function OuterMostSquare() {
     const [mount, setMount] = useState(false);
     const {scrollY} = useScroll();
 
-    const scale = useTransform(scrollY, [6500, 7000], [5, 10]);
+    const scale = useTransform(scrollY, [1800, 2000], [0.8, 5]);
     const scaleSmooth = useSpring(scale, LinearSquare);
+    const scaleMore = useTransform(scrollY, [6500, 7000], [5, 10])
     
     const strokeDashoffsetOuterBorder = useTransform(scrollY, [2500, 4200], [55, 0]);
     const smoothDashoffsetOuterBorder = useSpring(strokeDashoffsetOuterBorder, LinearPentagram);
@@ -27,6 +28,10 @@ function OuterMostSquare() {
             setMount(true);
     })
 
+    useMotionValueEvent(scaleMore, 'change', (value) => {
+        scaleSmooth.set(value);
+    })
+
     return(
         <AnimatePresence>
             {
@@ -36,13 +41,16 @@ function OuterMostSquare() {
                     className={styles.container} 
                     exit={{opacity: 0}}
                     >
-                    <motion.svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"} initial={{scale: 5}} style={{scale: scaleSmooth}}>
+                    <motion.svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"} style={{scale: scaleSmooth}}>
                         <defs>
-                            <filter id='glowEffect'>
-                                <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur">
-                                    <animate attributeName="stdDeviation" values="2;0;2" dur="3s" repeatCount="indefinite" calcMode="linear"/>
-                                </feGaussianBlur>
-                                <feFlood floodColor="#0400ff" floodOpacity='0.5' result="color"/>
+                            <filter id='glowEffectOuterMostSquare'>
+                                <motion.feGaussianBlur 
+                                    in="SourceAlpha" 
+                                    result="blur"
+                                    initial={{stdDeviation: 0.2}}
+                                    animate={{stdDeviation: [0.7, 0.2, 0.7], transition: {duration: 3, repeat: Infinity, ease: 'linear'}}}
+                                    /> 
+                                <feFlood floodColor="#0400ff" floodOpacity='0.9' result="color"/>
                                 <feComposite in="color" in2="blur" operator="in" result="glow"/>
                                 <feMerge>
                                     <feMergeNode in="glow"/>
@@ -53,7 +61,7 @@ function OuterMostSquare() {
                         <g transform="translate(-47.8, -13.5)">        
                             {/* outer border*/}
                                 <motion.path
-                                    filter={'url(#glowEffect)'}
+                                    filter={'url(#glowEffectOuterMostSquare)'}
                                     fill="none"
                                     stroke="#0400ff"
                                     strokeWidth={0.164006}
@@ -66,7 +74,7 @@ function OuterMostSquare() {
                                     />
                                 {/* inner border */}
                                 <motion.path
-                                    filter={'url(#glowEffect)'}
+                                    filter={'url(#glowEffectOuterMostSquare)'}
                                     fill="none"
                                     stroke="#0400ff"
                                     strokeWidth={0.138539}
@@ -84,7 +92,7 @@ function OuterMostSquare() {
                             </g>
                             <motion.g transform='translate(94, 92.5)' style={{opacity: opacitySmooth}}>
                                 <motion.image 
-                                    filter={'url(#glowEffect)'}
+                                    filter={'url(#glowEffectOuterMostSquare)'}
                                     href={images['text']}
                                     width={18.3}
                                 />

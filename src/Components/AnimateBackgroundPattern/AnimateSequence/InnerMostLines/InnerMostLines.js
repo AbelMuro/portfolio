@@ -29,19 +29,6 @@ function InnerMostLines() {
                 exit={{opacity: 0}}
                 >
                 <svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"}>
-                    <defs>
-                        <filter id='glowEffect'>
-                            <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur">
-                                <animate attributeName="stdDeviation" values="2;0;2" dur="3s" repeatCount="indefinite" calcMode="linear"/>
-                            </feGaussianBlur>
-                            <feFlood floodColor="#0400ff" floodOpacity='0.5' result="color"/>
-                            <feComposite in="color" in2="blur" operator="in" result="glow"/>
-                            <feMerge>
-                                <feMergeNode in="glow"/>
-                                <feMergeNode in="SourceGraphic"/>
-                            </feMerge>
-                        </filter>
-                    </defs>
                     { /* north line */ }
                         <motion.path 
                             id="path1429"

@@ -8,6 +8,10 @@
     
 }
 
+.outer_border{
+    overflow: visible;
+}
+
 .clipPath{
     transform-origin: center
 }

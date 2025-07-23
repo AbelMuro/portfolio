@@ -27,7 +27,6 @@ function Rect(props) {
             stroke='#0400ff' 
             strokeDasharray={52.0433} 
             style={{strokeDashoffset: finalOffsetSmooth}} 
-            filter={'url(#glowEffect)'}
         />  
     )
 }

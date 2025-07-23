@@ -45,11 +45,28 @@ function InnerSquare(){
                 <motion.div id='inner square' className={styles.container} style={{transform}} initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>
                     <motion.svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"} style={{scale: scaleSmooth}}>
                         <defs>
-                            <filter id='glowEffect'>
-                                <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur">
-                                    <animate attributeName="stdDeviation" values="2;0;2" dur="3s" repeatCount="indefinite" calcMode="linear"/>
-                                </feGaussianBlur>
-                                <feFlood floodColor="#0400ff" floodOpacity='0.5' result="color"/>
+                            <filter id='glowEffectInnerSquare'>
+                                <motion.feGaussianBlur 
+                                    in="SourceAlpha" 
+                                    result="blur"
+                                    initial={{stdDeviation: 0.2}}
+                                    animate={{stdDeviation: [0.7, 0.2, 0.7], transition: {duration: 3, repeat: Infinity, ease: 'linear'}}}
+                                    /> 
+                                <feFlood floodColor="#0400ff" floodOpacity='0.7' result="color"/>
+                                <feComposite in="color" in2="blur" operator="in" result="glow"/>
+                                <feMerge>
+                                    <feMergeNode in="glow"/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                            <filter id='glowEffectSunEarth'>
+                                <motion.feGaussianBlur 
+                                    in="SourceAlpha" 
+                                    result="blur"
+                                    initial={{stdDeviation: 1}}
+                                    animate={{stdDeviation: [2, 1, 2], transition: {duration: 3, repeat: Infinity, ease: 'linear'}}}
+                                    /> 
+                                <feFlood floodColor="#0400ff" floodOpacity='0.8' result="color"/>
                                 <feComposite in="color" in2="blur" operator="in" result="glow"/>
                                 <feMerge>
                                     <feMergeNode in="glow"/>
@@ -59,7 +76,7 @@ function InnerSquare(){
                         </defs>
                         <g transform='translate(-47.8, -12.8)'>
                                 <motion.path
-                                    filter={'url(#glowEffect)'}
+                                    filter={'url(#glowEffectInnerSquare)'}
                                     stroke="#0400ff"
                                     strokeWidth={0.180642}
                                     fill='none'
@@ -73,7 +90,7 @@ function InnerSquare(){
                                     />
                                 
                                 <motion.path
-                                    filter={'url(#glowEffect)'}
+                                    filter={'url(#glowEffectInnerSquare)'}
                                     stroke="#0400ff"
                                     strokeWidth={0.180642}
                                     fill='none'
@@ -86,7 +103,7 @@ function InnerSquare(){
                                     id="rect704-3-9-2-1-2"
                                 />
                                 <motion.image 
-                                        filter={'url(#glowEffect)'}
+                                        filter={'url(#glowEffectSunEarth)'}
                                         style={{opacity: opacitySmooth}}
                                         className={styles.innerSquareDesign}
                                         x={147.1} // half of image width

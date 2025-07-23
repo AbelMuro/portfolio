@@ -37,11 +37,14 @@ function ChainThree() {
                 <motion.div id='chain three' className={styles.container} exit={{opacity: 0}} style={{scale: smoothScaleGroup}}>
                     <motion.svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"} style={{scale: scaleContainerSmooth}}>
                         <defs>
-                            <filter id='glowEffect'>
-                                <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur">
-                                    <animate attributeName="stdDeviation" values="2;0;2" dur="3s" repeatCount="indefinite" calcMode="linear"/>
-                                </feGaussianBlur>
-                                <feFlood floodColor="#0400ff" floodOpacity='0.5' result="color"/>
+                            <filter id='glowEffectChainThree'>
+                                <motion.feGaussianBlur 
+                                    in="SourceAlpha" 
+                                    result="blur"
+                                    initial={{stdDeviation: 0.004}}
+                                    animate={{stdDeviation: [0.007, 0.004, 0.007], transition: {duration: 3, repeat: Infinity, ease: 'linear'}}}
+                                    />
+                                <feFlood floodColor="#0400ff" floodOpacity='0.7' result="color"/>
                                 <feComposite in="color" in2="blur" operator="in" result="glow"/>
                                 <feMerge>
                                     <feMergeNode in="glow"/>
@@ -49,7 +52,7 @@ function ChainThree() {
                                 </feMerge>
                             </filter>
                         </defs>
-                        <motion.g style={{transform}} filter={'url(#glowEffect)'}>
+                        <motion.g style={{transform}} filter={'url(#glowEffectChainThree)'}>
                                     <path
                                         fill="none"
                                         fillOpacity={1}

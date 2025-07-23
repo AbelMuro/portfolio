@@ -36,11 +36,14 @@ function InnerMostRing() {
                         viewBox={"0 0 206.40488 206.40488"}
                         >
                             <defs>
-                                <filter id='glowEffect'>
-                                    <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur">
-                                        <animate attributeName="stdDeviation" values="2;0;2" dur="3s" repeatCount="indefinite" calcMode="linear"/>
-                                    </feGaussianBlur>
-                                    <feFlood floodColor="#0400ff" floodOpacity='0.5' result="color"/>
+                                <filter id='glowEffectInnerMostRing'>
+                                    <motion.feGaussianBlur 
+                                        in="SourceAlpha" 
+                                        result="blur"
+                                        initial={{stdDeviation: 5}}
+                                        animate={{stdDeviation: [5, 3, 5], transition: {duration: 3, repeat: Infinity, ease: 'linear'}}}
+                                        />
+                                    <feFlood floodColor="#0400ff" floodOpacity='0.9' result="color"/>
                                     <feComposite in="color" in2="blur" operator="in" result="glow"/>
                                     <feMerge>
                                         <feMergeNode in="glow"/>
@@ -51,7 +54,7 @@ function InnerMostRing() {
                             <image
                                 x={103.20244 - 87.5}
                                 y={103.20244 - 87.5}
-                                filter={'url(#glowEffect)'}
+                                filter={'url(#glowEffectInnerMostRing)'}
                                 className={styles.ring}
                                 href={images['innerMostRing']}/>
                     </svg>                    

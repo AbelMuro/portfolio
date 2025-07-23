@@ -29,7 +29,7 @@ function OuterRing() {
                         className={styles.container}                
                         initial={{rotate: 0, opacity: 1}} 
                         animate={{rotate: [0, 360], transition: {repeat: Infinity, duration: 18.9, ease: 'linear', delay: 1}}} 
-                        exit={{opacity: 0, transition: {duration: 0.7}}}
+                        exit={{opacity: 0}}
                         style={{scale: smoothScale}}
                         >
                     <svg 
@@ -38,11 +38,14 @@ function OuterRing() {
                         viewBox={"0 0 206.40488 206.40488"} 
                         >
                         <defs>
-                            <filter id='glowEffect'>
-                                <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur">
-                                    <animate attributeName="stdDeviation" values="2;0;2" dur="3s" repeatCount="indefinite" calcMode="linear"/>
-                                </feGaussianBlur>
-                                <feFlood floodColor="#0400ff" floodOpacity='0.5' result="color"/>
+                            <filter id='glowEffectOuterRing'>
+                                <motion.feGaussianBlur 
+                                    in="SourceAlpha" 
+                                    result="blur"
+                                    initial={{stdDeviation: 4}}
+                                    animate={{stdDeviation: [4, 2, 4], transition: {duration: 3, repeat: Infinity, ease: 'linear'}}}
+                                    />
+                                <feFlood floodColor="#0400ff" floodOpacity='0.8' result="color"/>
                                 <feComposite in="color" in2="blur" operator="in" result="glow"/>
                                 <feMerge>
                                     <feMergeNode in="glow"/>
@@ -53,7 +56,7 @@ function OuterRing() {
                             <image
                                 x={103.20244 - 100.2}
                                 y={103.20244 - 100.5}
-                                filter={'url(#glowEffect)'}
+                                filter={'url(#glowEffectOuterRing)'}
                                 href={images['outerRing']}
                                 className={styles.outerRing}
                             />

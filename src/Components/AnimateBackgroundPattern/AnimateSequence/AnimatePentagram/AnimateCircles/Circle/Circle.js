@@ -32,6 +32,7 @@ function Circle({scrollThresholds, scaleTo, rotateX, rotateY}) {
 
     return (
         <motion.circle
+            filter={'url(#glowEffectPentagramOuterCircles)'}
             className={styles.circle}
             cx={150.95853}
             cy={115.17852}
@@ -42,7 +43,6 @@ function Circle({scrollThresholds, scaleTo, rotateX, rotateY}) {
             strokeLinejoin='bevel'
             strokeMiterlimit='0'
             strokeDasharray='300'
-            filter={'url(#glowEffect)'}
             style={{scale: scaleWithSpring, rotateX: rotate3DSpringX, rotateY: rotate3DSpringY, strokeDashoffset: dashoffsetSpring }}
             />
             

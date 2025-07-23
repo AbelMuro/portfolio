@@ -50,11 +50,14 @@ function InnerMostTriangle() {
                 <motion.div id='inner most triangle' className={styles.container} style={{transform}} exit={{opacity: 0}}>
                     <motion.svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"} style={{scale: scaleSmooth}}>
                         <defs>
-                            <filter id='glowEffect'>
-                                <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur">
-                                    <animate attributeName="stdDeviation" values="2;0;2" dur="3s" repeatCount="indefinite" calcMode="linear"/>
-                                </feGaussianBlur>
-                                <feFlood floodColor="#0400ff" floodOpacity='0.5' result="color"/>
+                            <filter id='glowEffectInnerTriangle'>
+                                <motion.feGaussianBlur 
+                                    in="SourceAlpha" 
+                                    result="blur"
+                                    initial={{stdDeviation: 0.08}}
+                                    animate={{stdDeviation: [0.3, 0.08, 0.3], transition: {duration: 3, repeat: Infinity, ease: 'linear'}}}
+                                    /> 
+                                <feFlood floodColor="#0400ff" floodOpacity='0.7' result="color"/>
                                 <feComposite in="color" in2="blur" operator="in" result="glow"/>
                                 <feMerge>
                                     <feMergeNode in="glow"/>
@@ -77,7 +80,8 @@ function InnerMostTriangle() {
                         {/* outer border for triangle*/}
                         <g transform='translate(-47.8, -12.6)'>
                             <motion.path
-                                filter={'url(#glowEffect)'}
+                                className={styles.outer_border}
+                                filter={'url(#glowEffectInnerTriangle)'}
                                 id="path26"
                                 d="M147.11259,116.31978 l -4.20203,-0.0286 l 2.1258,-3.62476 L147.11259,116.31978"
                                 transform="matrix(0.76546385,-0.0051032,0.00512554,0.7623147,39.203144,28.293281)"
@@ -90,7 +94,7 @@ function InnerMostTriangle() {
                                 />
                         </g>
                         <motion.image
-                            filter={'url(#glowEffect)'}
+                            filter={'url(#glowEffectInnerTriangle)'}
                             className={styles.image}
                             href={images['sunEarthText']}
                             style={{opacity: opacitySmooth}}

@@ -11,7 +11,7 @@ function Moon() {
 
     return(         
         <motion.path
-            filter={'url(#glowEffect)'}
+            filter={'url(#glowEffectMoon)'}
             id="path4"
             fill='#0400ff'
             stroke='#0400ff'

@@ -43,17 +43,20 @@ function AnimateMoon() {
         <motion.div id='moon' className={styles.container} style={{transform: transformContainer}}>
                 <motion.svg viewBox={"0 0 206.40488 206.40488"} className={styles.svg} style={{scale: scaleSmooth}}>
                     <defs>
-                        <filter id='glowEffect'>
-                            <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur">
-                                <animate attributeName="stdDeviation" values="2;0;2" dur="10s" repeatCount="indefinite" calcMode="linear"/>
-                            </feGaussianBlur>
-                            <feFlood floodColor="#0400ff" floodOpacity='0.5' result="color"/>
-                            <feComposite in="color" in2="blur" operator="in" result="glow"/>
-                            <feMerge>
-                                <feMergeNode in="glow"/>
-                                <feMergeNode in="SourceGraphic"/>
-                            </feMerge>
-                        </filter>
+                            <filter id='glowEffectMoon'>
+                                <motion.feGaussianBlur 
+                                    in="SourceAlpha" 
+                                    result="blur"
+                                    initial={{stdDeviation: 0.02}}
+                                    animate={{stdDeviation: [0.04, 0.02, 0.04], transition: {duration: 3, repeat: Infinity, ease: 'linear'}}}
+                                    />
+                                <feFlood floodColor="#0400ff" floodOpacity='0.7' result="color"/>
+                                <feComposite in="color" in2="blur" operator="in" result="glow"/>
+                                <feMerge>
+                                    <feMergeNode in="glow"/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
                     </defs>
                     <motion.g style={{transform: transformGroup}}>
                         <Moon/>
