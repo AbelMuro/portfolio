@@ -19,11 +19,8 @@ function Form() {
     }
 
     return(
-        <form className={styles.form} onSubmit={handleSubmit}>
-            <LayoutGroup>
-                <motion.h2 layout>
-                    Contact Me
-                </motion.h2>                
+        <motion.form layout className={styles.form} onSubmit={handleSubmit}>
+            <LayoutGroup>              
                 <EnterName />            
                 <EnterEmail />
                 <EnterMessage />
@@ -31,7 +28,7 @@ function Form() {
                     Submit
                 </motion.button>                 
             </LayoutGroup>
-        </form>
+        </motion.form>
     )
 }
 

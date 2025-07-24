@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {memo} from 'react';
 import {LinearPentagram} from '~/Transitions';
 import {motion, useTransform, useSpring, useScroll, useMotionValueEvent} from 'framer-motion';
 import * as styles from './styles.module.css';
@@ -32,7 +32,6 @@ function Circle({scrollThresholds, scaleTo, rotateX, rotateY}) {
 
     return (
         <motion.circle
-            filter={'url(#glowEffectPentagramOuterCircles)'}
             className={styles.circle}
             cx={150.95853}
             cy={115.17852}
@@ -49,4 +48,4 @@ function Circle({scrollThresholds, scaleTo, rotateX, rotateY}) {
         )
 }
 
-export default Circle;
+export default memo(Circle);

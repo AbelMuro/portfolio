@@ -13,7 +13,7 @@ function MobileNavBar({play, handlePlay, handlePause, handleLink}) {
 
     return(
         <nav className={styles.container}>
-            <button className={styles.open} onClick={handleOpen}/>
+            <button className={styles.open} onClick={() => setOpen(!open)}/>
             <AnimatePresence>
                 {open && 
                 <motion.section 
@@ -23,7 +23,7 @@ function MobileNavBar({play, handlePlay, handlePause, handleLink}) {
                     exit='exit'
                     variants={menuVariant}>
                     <ul className={styles.navItems}>
-                        <motion.li className={styles.navClose} onClick={handleOpen} variants={menuItemVariant}>
+                        <motion.li className={styles.navClose} onClick={() => setOpen(false)} variants={menuItemVariant}>
                             <button className={styles.close}/>
                         </motion.li>
                         <motion.li className={styles.navItem} variants={menuItemVariant}>
@@ -46,7 +46,7 @@ function MobileNavBar({play, handlePlay, handlePause, handleLink}) {
                                 Contact Me
                             </a>
                         </motion.li>  
-                        <motion.li className={styles.navPlay}variants={menuItemVariant}>
+                        <motion.li className={styles.navPlay} variants={menuItemVariant}>
                             {
                                 play ? 
                                     <button className={styles.pause} onClick={handlePause}/> :

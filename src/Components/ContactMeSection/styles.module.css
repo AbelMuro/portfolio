@@ -1,7 +1,85 @@
 .container{
-    width: 100%;
+    width: 400px;
     height: 100vh;
     display: flex;
+    flex-direction: column;
+    row-gap: 25px;
     justify-content: center;
     align-items: center;
+    margin: auto;
+}
+
+.container > h2{
+    font-family: 'AbelFont';
+    font-weight: 400;
+    font-size: 3rem;
+    color: white;
+    margin: 0px;
+}
+
+.links{
+    display: flex;
+    width: 100%;
+    justify-content: start;
+    align-items: center;
+    column-gap: 10px;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.links > li > button{
+    padding: 0px;
+    border: none;
+    mask-position: center center;
+    mask-repeat: no-repeat;
+    cursor: pointer;
+    background-color: #0400ff;    
+}
+
+.links > li > button:hover{
+    background-color: rgb(255, 255, 255);
+}
+
+.links > li > button:active{
+    background-color: rgb(150, 150, 150);
+}
+
+.linkedin{
+    mask-image: url('./icons/linkedin.svg');
+    width: 50px;
+    height: 50px;
+    mask-size: 50px 50px;
+}
+
+.github{
+    mask-image: url('./icons/github.svg');
+    width: 50px;
+    height: 50px;
+    mask-size: 50px 50px;
+}
+
+.frontendmentor{
+    mask-image: url('./icons/frontendmentor.svg');
+    width: 40px;
+    height: 40px;
+    mask-size: 40px 40px;
+}
+
+.resume{
+    mask-image: url('./icons/resume.svg');
+    width: 40px;
+    height: 40px;
+    mask-size: 40px 40px;
+}
+
+@media(max-width: 600px){
+    .container{
+        width: 80%;
+    }
+
+    .container > h2{
+        font-size: 2rem;
+    }
+
 }

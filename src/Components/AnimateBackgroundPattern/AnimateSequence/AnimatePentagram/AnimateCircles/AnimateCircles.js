@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {memo} from 'react';
 import Circle from './Circle';
 
 function AnimateCircles() {
@@ -11,4 +11,4 @@ function AnimateCircles() {
     )
 }
 
-export default AnimateCircles;
+export default memo(AnimateCircles);

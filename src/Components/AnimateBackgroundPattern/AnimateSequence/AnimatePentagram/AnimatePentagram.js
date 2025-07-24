@@ -9,12 +9,6 @@ import AnimateCircles from './AnimateCircles';
 import * as styles from './styles.module.css';
 
 
-/* 
-    this is where i left off, i need to test out the mounting and unmounting functiionality for the filter blur effect
-
-*/
-
-
 function AnimatePentagram({scrollThresholds}) {
     const [mount, setMount] = useState(true);
     const timeout = useRef();
@@ -62,52 +56,57 @@ function AnimatePentagram({scrollThresholds}) {
                 >
                 <svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"}>
                         <defs>
-                            {!pauseBlur &&
-                                <>
-                                <filter id='glowEffectPentagramOuterCircles'>
-                                    <motion.feGaussianBlur 
-                                        in="SourceAlpha" 
-                                        result="blur"
-                                        initial={{stdDeviation: 0}}
-                                        animate={{stdDeviation: [0, 0.7, 0.2, 0.7], transition: {duration: 3, repeat: Infinity, ease: 'linear'}}}
-                                        /> 
-                                    <feFlood floodColor="#0400ff" floodOpacity='0.7' result="color"/>
-                                    <feComposite in="color" in2="blur" operator="in" result="glow"/>
-                                    <feMerge>
-                                        <feMergeNode in="glow"/>
-                                        <feMergeNode in="SourceGraphic"/>
-                                    </feMerge>
-                                </filter>
-                                <filter id='glowEffectPentagramInnerCircles'>
-                                    <motion.feGaussianBlur 
-                                        in="SourceAlpha" 
-                                        result="blur"
-                                        initial={{stdDeviation: 0}}
-                                        animate={{stdDeviation: [0, 0.2, 0.08, 0.2], transition: {duration: 3, repeat: Infinity, ease: 'linear'}}}
-                                        /> 
-                                    <feFlood floodColor="#0400ff" floodOpacity='0.8' result="color"/>
-                                    <feComposite in="color" in2="blur" operator="in" result="glow"/>
-                                    <feMerge>
-                                        <feMergeNode in="glow"/>
-                                        <feMergeNode in="SourceGraphic"/>
-                                    </feMerge>
-                                </filter>
-                                <filter id='glowEffectPentagramRect'>
-                                    <motion.feGaussianBlur 
-                                        in="SourceAlpha" 
-                                        result="blur"
-                                        initial={{stdDeviation: 0}}
-                                        animate={{stdDeviation: [0, 0.7, 0.2, 0.7], transition: {duration: 3, repeat: Infinity, ease: 'linear'}}}
-                                        /> 
-                                    <feFlood floodColor="#0400ff" floodOpacity='0.9' result="color"/>
-                                    <feComposite in="color" in2="blur" operator="in" result="glow"/>
-                                    <feMerge>
-                                        <feMergeNode in="glow"/>
-                                        <feMergeNode in="SourceGraphic"/>
-                                    </feMerge>
-                                </filter>                           
-                                </>
-                            }
+                            <AnimatePresence>
+                                {!pauseBlur &&
+                                    <>
+                                    <filter id='glowEffectPentagramOuterCircles'>
+                                        <motion.feGaussianBlur 
+                                            in="SourceAlpha" 
+                                            result="blur"
+                                            initial={{stdDeviation: 0}}
+                                            animate={{stdDeviation: [0, 0.7, 0.2, 0.7, 0], transition: {duration: 3, repeat: Infinity, repeatType: 'loop', ease: 'linear'}}}
+                                            exit={{stdDeviation: 0}}
+                                            /> 
+                                        <feFlood floodColor="#0400ff" floodOpacity='0.7' result="color"/>
+                                        <feComposite in="color" in2="blur" operator="in" result="glow"/>
+                                        <feMerge>
+                                            <feMergeNode in="glow"/>
+                                            <feMergeNode in="SourceGraphic"/>
+                                        </feMerge>
+                                    </filter>
+                                    <filter id='glowEffectPentagramInnerCircles'>
+                                        <motion.feGaussianBlur 
+                                            in="SourceAlpha" 
+                                            result="blur"
+                                            initial={{stdDeviation: 0}}
+                                            animate={{stdDeviation: [0, 0.2, 0.08, 0.2, 0], transition: {duration: 3, repeat: Infinity, repeatType: 'loop', ease: 'linear'}}}
+                                            exit={{stdDeviation: 0}}
+                                            /> 
+                                        <feFlood floodColor="#0400ff" floodOpacity='0.8' result="color"/>
+                                        <feComposite in="color" in2="blur" operator="in" result="glow"/>
+                                        <feMerge>
+                                            <feMergeNode in="glow"/>
+                                            <feMergeNode in="SourceGraphic"/>
+                                        </feMerge>
+                                    </filter>
+                                    <filter id='glowEffectPentagramRect'>
+                                        <motion.feGaussianBlur 
+                                            in="SourceAlpha" 
+                                            result="blur"
+                                            initial={{stdDeviation: 0}}
+                                            animate={{stdDeviation: [0, 0.7, 0.2, 0.7, 0], transition: {duration: 3, repeat: Infinity, repeatType: 'loop', ease: 'linear'}}}
+                                            exit={{stdDeviation: 0}}
+                                            /> 
+                                        <feFlood floodColor="#0400ff" floodOpacity='0.9' result="color"/>
+                                        <feComposite in="color" in2="blur" operator="in" result="glow"/>
+                                        <feMerge>
+                                            <feMergeNode in="glow"/>
+                                            <feMergeNode in="SourceGraphic"/>
+                                        </feMerge>
+                                    </filter>                           
+                                    </>
+                                }
+                            </AnimatePresence>
                         </defs>
                         <g transform='translate(-47.929077, -13.484006)'>   
                                 <AnimateCircles/>                        

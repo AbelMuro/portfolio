@@ -7,10 +7,6 @@ function ChainTwo() {
     const [mount, setMount] = useState(false);
     const {scrollY} = useScroll();
 
-    const scaleContainer = useTransform(scrollY, [600, 1800], [1, 5])
-    const scaleContainerSmooth = useSpring(scaleContainer, LinearMoon);
-    const scaleContainerMore = useTransform(scrollY, [6500, 7000], [5, 10]);   
-
     const scale = useTransform(scrollY, [14000, 14500], [1, 20]);
     const smoothScale = useSpring(scale, LinearMoon);
 
@@ -26,16 +22,13 @@ function ChainTwo() {
             setMount(true);
     });
 
-    useMotionValueEvent(scaleContainerMore, 'change', (value) => {
-        scaleContainerSmooth.set(value);
-    });
 
     return(
         <AnimatePresence>
             {
             mount &&
             <motion.div id='chain two' className={styles.container} exit={{opacity: 0}} style={{scale: smoothScaleGroup}}>
-                <motion.svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"} style={{scale: scaleContainerSmooth}}>
+                <motion.svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"} style={{scale: 10 }}>
                     <defs>
                             <filter id='glowEffectChainTwo'>
                                 <motion.feGaussianBlur 

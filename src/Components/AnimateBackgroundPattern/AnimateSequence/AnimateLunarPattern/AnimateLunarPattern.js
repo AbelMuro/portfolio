@@ -5,17 +5,9 @@ import ChainTwo from './ChainTwo';
 import ChainThree from './ChainThree';
 import ChainFour from './ChainFour';
 import ChainFive from './ChainFive';
-import HangingMoon from './HangingMoon';
 import {LinearMoon} from '~/Transitions';
 import {motion, useTransform, useSpring, useMotionValueEvent, useScroll, AnimatePresence} from 'framer-motion';
 import * as styles from './styles.module.css'
-
-
-/* 
-    this is where i left off, i need to find a more reliable value for stiffness and damping 
-    (for the square design and the lunat design)
-    that creates a smooth animation but doesnt create jittering in the app
-*/
 
 
 function AnimateLunarPattern() {
@@ -49,7 +41,6 @@ function AnimateLunarPattern() {
                     <ChainThree/>
                     <ChainFour/>
                     <ChainFive/>
-                    <HangingMoon/>
                 </motion.section>
             }
         </AnimatePresence>

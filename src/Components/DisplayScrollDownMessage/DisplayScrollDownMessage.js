@@ -1,14 +1,21 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useState, useRef} from 'react';
 import icons from '~/assets/icons';
 import {motion, AnimatePresence, useScroll, useMotionValueEvent} from 'framer-motion';
 import * as styles from './styles.module.css';
 
 function DisplayScrollDownMessage() {
     const [mount, setMount] = useState(true);
-    const {scrollYProgress} = useScroll();
+    const {scrollY} = useScroll();
     const timeoutRef = useRef()
 
-    useMotionValueEvent(scrollYProgress, 'change', () => {
+    useMotionValueEvent(scrollY, 'change', (y) => {
+        if(y > 28000){
+            setMount(false);
+            clearTimeout(timeoutRef.current)
+            return;
+        }
+
+
         clearTimeout(timeoutRef.current);
         setMount(false);
 

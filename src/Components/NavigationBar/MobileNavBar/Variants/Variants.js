@@ -3,7 +3,7 @@ export const menuVariant = {
         clipPath: 'circle(20px at center center)',
     },
     show: {
-        clipPath: 'circle(100%)',
+        clipPath: 'circle(100% at center center)',
         transition: {
             duration: 0.5,
             staggerChildren: 0.1,

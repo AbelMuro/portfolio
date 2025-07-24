@@ -45,3 +45,10 @@
     outline: none;
     border-width: 4px;
 }
+
+
+@media(max-width: 600px){
+    .label{
+        font-size: 1.2rem;
+    }
+}
