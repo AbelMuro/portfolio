@@ -11,13 +11,9 @@ function InnerMostTriangle() {
     const opacity = useTransform(scrollY, [9500, 10000], [0, 1])
     const opacitySmooth = useSpring(opacity, LinearSquare);
 
-    const scale = useTransform(scrollY, [600, 1800], [1, 5]);
-    const scaleSmooth = useSpring(scale, LinearSquare);
-    const scaleMore = useTransform(scrollY, [6500, 7000], [5, 10]);
-
-    const strokeDashoffset = useTransform(scrollY, [9000, 9500], [13, 0]);
+    const strokeDashoffset = useTransform(scrollY, [9000, 9500], [113.64, 0]);
     const smoothStrokeDashoffset = useSpring(strokeDashoffset, LinearSquare);
-    const strokeDashoffsetBack = useTransform(scrollY, [13200, 13500], [0, 13]);
+    const strokeDashoffsetBack = useTransform(scrollY, [13200, 13500], [0, 113.64]);
 
     const z = useTransform(scrollY, [8500, 9000], [0, 150]);
     const smoothZ = useSpring(z, LinearSquare);
@@ -39,16 +35,12 @@ function InnerMostTriangle() {
             setMount(true);
     });
 
-    useMotionValueEvent(scaleMore, 'change', (value) => {
-        scaleSmooth.set(value);
-    });
-
     return(
         <AnimatePresence>
             {
                 mount &&  
                 <motion.div id='inner most triangle' className={styles.container} style={{transform}} exit={{opacity: 0}}>
-                    <motion.svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"} style={{scale: scaleSmooth}}>
+                    <motion.svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"}>
                         <defs>
                             <filter id='glowEffectInnerTriangle'>
                                 <motion.feGaussianBlur 
@@ -67,40 +59,42 @@ function InnerMostTriangle() {
                             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath30">
                                 <path
                                     id="path30"
-                                    d="m 134.05969,108.63792 16.43165,-4.53017 4.42741,16.84449 -16.43165,4.53017 z
-                                    m 10.72644,3.64752 0.26186,0.46265 -0.97164,1.63752 -0.53446,-0.004
-                                    0.26214,0.46313 -0.83568,1.40826 -0.52154,3.9e-4 0.26964,0.46681
-                                    0.25437,-0.44261 1.88053,0.0242 0.26456,0.46736 0.27027,-0.46056
-                                    1.65948,0.0215 0.2581,0.45657 0.27293,-0.46455 -0.52607,-0.004
-                                    -0.81377,-1.45427 0.26356,-0.44916 -0.51721,-0.004 -0.92878,-1.6598
-                                    0.26977,-0.45977 z"
+                                    d="m 1206.53721,977.74128 147.88485,-40.77153 39.84669,151.60041 -147.88485,40.77153 z
+                                    m 96.538,32.82768 2.35674,4.16385 -8.74476,14.73768 -4.81014,-0.036
+                                    2.35926,4.16817 -7.52112,12.67434 -4.69386,0.00351 2.42676,4.20129
+                                    2.28933,-3.98349 16.92477,0.2178 2.38104,4.20624 2.43243,-4.14504
+                                    14.93532,0.1935 2.3229,4.10913 2.45637,-4.18095 -4.73463,-0.036
+                                    -7.32393,-13.08843 2.37204,-4.04244 -4.65489,-0.036 -8.35902,-14.9382
+                                    2.42793,-4.13793 z"
                                 />
                             </clipPath>
                         </defs>
                         {/* outer border for triangle*/}
-                        <g transform='translate(-47.8, -12.6)'>
+                        <g transform='translate(-1204.5, -935)'>
                             <motion.path
                                 className={styles.outer_border}
                                 filter={'url(#glowEffectInnerTriangle)'}
                                 id="path26"
-                                d="M147.11259,116.31978 l -4.20203,-0.0286 l 2.1258,-3.62476 L147.11259,116.31978"
-                                transform="matrix(0.76546385,-0.0051032,0.00512554,0.7623147,39.203144,28.293281)"
+                                d="M1324.01331,1046.87802 l -37.81827,-0.2574 l 19.1322,-32.62284 L1324.01331,1046.87802"
                                 clipPath="url(#clipPath30)"
                                 fill="none"
                                 stroke="#0400ff"
-                                strokeWidth={0.948164}
-                                strokeDasharray={13}
+                                strokeWidth={8}
+                                strokeDasharray={113.64}
                                 style={{strokeDashoffset: smoothStrokeDashoffset}}
                                 />
                         </g>
-                        <motion.image
-                            filter={'url(#glowEffectInnerTriangle)'}
-                            className={styles.image}
-                            href={images['sunEarthText']}
-                            style={{opacity: opacitySmooth}}
-                            x={101.79}
-                            y={102.1}
-                        />
+                        <g transform='translate(-14.6, -8)'>
+                            <motion.image
+                                filter={'url(#glowEffectInnerTriangle)'}
+                                width={25}
+                                href={images['sunEarthText']}
+                                style={{opacity: opacitySmooth}}
+                                x={101.79}
+                                y={102.1}
+                            />                            
+                        </g>
+
                     </motion.svg>
                 </motion.div>  
             }            

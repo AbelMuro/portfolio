@@ -8,14 +8,10 @@ function OuterSquare() {
     const [mount, setMount] = useState(false);
     const {scrollY} = useScroll();
 
-    const scale = useTransform(scrollY, [600, 1800], [1, 5]);
-    const scaleSmooth = useSpring(scale, LinearSquare);
-    const scaleMore = useTransform(scrollY, [6500, 7000], [5, 10]);
-
-    const strokeDashoffset = useTransform(scrollY, [7300, 7800], [55, 0]);
+    const strokeDashoffset = useTransform(scrollY, [7300, 7800], [319.6, 0]);
     const smoothStrokeDashoffset = useSpring(strokeDashoffset, LinearSquare);
     
-    const strokeWidth = useTransform(scrollY, [7800, 8300], [0.2, 0.926389]);
+    const strokeWidth = useTransform(scrollY, [7800, 8300], [2, 8]);
     const smoothStrokeWidth = useSpring(strokeWidth, LinearSquare)
 
     const opacity = useTransform(scrollY, [8000, 8300], [0, 1])
@@ -38,17 +34,13 @@ function OuterSquare() {
             setMount(true);
     })
 
-    useMotionValueEvent(scaleMore, 'change', (value) => {
-        scaleSmooth.set(value);
-    });
-
 
     return (
         <AnimatePresence>
             {
                 mount &&
                 <motion.div id='outer square' className={styles.container} style={{transform}} initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>
-                            <motion.svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"} style={{scale: scaleSmooth}}>
+                            <motion.svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"}>
                                 <defs>
                                     <filter id='glowEffectOuterSquare'>
                                         <motion.feGaussianBlur 
@@ -65,25 +57,26 @@ function OuterSquare() {
                                         </feMerge>
                                     </filter>
                                 </defs>
-                                <g transform={'translate(-47.8, -13)'}>
+                                <g transform={'translate(-1005, -717)'}>
                                     <motion.path
                                         filter={'url(#glowEffectOuterSquare)'}
                                         fill="none"
                                         stroke="#0400ff"
+                                        strokeWidth='5'
                                         strokeLinecap="round"
                                         strokeLinejoin="round"
                                         strokeMiterlimit={0}
-                                        strokeDasharray={55}
+                                        strokeDasharray={319.6}
                                         style={{strokeDashoffset: smoothStrokeDashoffset, strokeWidth: smoothStrokeWidth}}
-                                        d="m 149.75952,109.57877 7.01691,4.75075 -4.53987,6.57703 -7.01692,-4.75076 z"
+                                        d="m 1095.7016,757.73033 67.75454,45.87268 -43.83645,63.50708 -67.75461,-45.87282 z"
                                         id="rect704-3-9-2"
                                     />
                                 </g>
-                                <g transform='translate(96.9, 96)'>
+                                <g transform='translate(46.9, 40)'>
                                     <motion.image
                                         style={{opacity: opacitySmooth}}
                                         href={images['text']}
-                                        width={12.6}/>
+                                        width={113}/>
                                 </g>                            
                         </motion.svg>                                              
                 </motion.div>

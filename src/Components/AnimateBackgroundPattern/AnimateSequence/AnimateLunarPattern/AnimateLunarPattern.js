@@ -10,6 +10,10 @@ import {motion, useTransform, useSpring, useMotionValueEvent, useScroll, Animate
 import * as styles from './styles.module.css'
 
 
+/* 
+    this is where i left off, i need to continue scaling the path elements within the components below by a factor of 10
+*/
+
 function AnimateLunarPattern() {
     const [mount, setMount] = useState(false);
     const {scrollY} = useScroll();
