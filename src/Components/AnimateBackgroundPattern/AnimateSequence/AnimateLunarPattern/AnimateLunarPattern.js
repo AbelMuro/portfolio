@@ -10,10 +10,6 @@ import {motion, useTransform, useSpring, useMotionValueEvent, useScroll, Animate
 import * as styles from './styles.module.css'
 
 
-/* 
-    this is where i left off, i need to edit the following designs in inkscape and scale them accordingly
-*/
-
 function AnimateLunarPattern() {
     const [mount, setMount] = useState(false);
     const {scrollY} = useScroll();

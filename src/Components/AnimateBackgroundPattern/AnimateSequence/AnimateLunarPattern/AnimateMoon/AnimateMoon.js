@@ -5,6 +5,13 @@ import {LinearMoon} from '~/Transitions';
 import { motion, useScroll, useTransform, useSpring, useMotionValueEvent, useMotionTemplate} from 'framer-motion';
 import * as styles from './styles.module.css';
 
+/* 
+    this is where i left off, i need to edit the swinging moon design in inkscape and scale it accordingly
+
+    i am done with the black pattern, althought i may need to implement an exit animation for it
+*/
+
+
 
 function AnimateMoon() {
     const {scrollY} = useScroll();
