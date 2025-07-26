@@ -11,7 +11,7 @@ import * as styles from './styles.module.css'
 
 
 /* 
-    this is where i left off, i need to continue scaling the path elements within the components below by a factor of 10
+    this is where i left off, i need to edit the following designs in inkscape and scale them accordingly
 */
 
 function AnimateLunarPattern() {
