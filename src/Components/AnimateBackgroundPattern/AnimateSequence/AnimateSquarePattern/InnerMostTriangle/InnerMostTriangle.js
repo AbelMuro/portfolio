@@ -11,9 +11,9 @@ function InnerMostTriangle() {
     const opacity = useTransform(scrollY, [9500, 10000], [0, 1])
     const opacitySmooth = useSpring(opacity, LinearSquare);
 
-    const strokeDashoffset = useTransform(scrollY, [9000, 9500], [113.64, 0]);
+    const strokeDashoffset = useTransform(scrollY, [9000, 9500], [130, 0]);
     const smoothStrokeDashoffset = useSpring(strokeDashoffset, LinearSquare);
-    const strokeDashoffsetBack = useTransform(scrollY, [13200, 13500], [0, 113.64]);
+    const strokeDashoffsetBack = useTransform(scrollY, [13200, 13500], [0, 130]);
 
     const z = useTransform(scrollY, [8500, 9000], [0, 150]);
     const smoothZ = useSpring(z, LinearSquare);
@@ -57,31 +57,53 @@ function InnerMostTriangle() {
                                 </feMerge>
                             </filter>
                             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath30">
-                                <path
-                                    id="path30"
-                                    d="m 1206.53721,977.74128 147.88485,-40.77153 39.84669,151.60041 -147.88485,40.77153 z
-                                    m 96.538,32.82768 2.35674,4.16385 -8.74476,14.73768 -4.81014,-0.036
-                                    2.35926,4.16817 -7.52112,12.67434 -4.69386,0.00351 2.42676,4.20129
-                                    2.28933,-3.98349 16.92477,0.2178 2.38104,4.20624 2.43243,-4.14504
-                                    14.93532,0.1935 2.3229,4.10913 2.45637,-4.18095 -4.73463,-0.036
-                                    -7.32393,-13.08843 2.37204,-4.04244 -4.65489,-0.036 -8.35902,-14.9382
-                                    2.42793,-4.13793 z"
+                                <path 
+                                    style={{transform: 'translate(-77.5px, -78px)'}}
+                                    d="m 153.32703,106.92437
+                                    h 134.6184
+                                    v 134.82855
+                                    h -134.6184
+                                    z
+                                    m 74.6163,49.29462
+                                        1.07145,3.99177
+                                        -10.71036,10.2222
+                                        -4.07439,-1.13067
+                                        1.07262,3.996
+                                        -9.21141,8.79093
+                                        -3.98466,-1.07073
+                                        1.12248,4.03884
+                                        2.83176,-2.78001
+                                        14.31774,4.04739
+                                        1.08261,4.03245
+                                        2.98935,-2.88126
+                                        12.63456,3.57201
+                                        1.05489,3.93867
+                                        3.0177,-2.90556
+                                        -4.00986,-1.11528
+                                        -3.29652,-12.52836
+                                        2.91528,-2.81007
+                                        -3.9429,-1.09449
+                                        -3.76245,-14.29893
+                                        2.98304,-2.87649
+                                    z"
                                 />
                             </clipPath>
                         </defs>
                         {/* outer border for triangle*/}
-                        <g transform='translate(-1204.5, -935)'>
+                        <g transform='translate(-67, 42.5)'>
                             <motion.path
                                 className={styles.outer_border}
-                                filter={'url(#glowEffectInnerTriangle)'}
                                 id="path26"
-                                d="M1324.01331,1046.87802 l -37.81827,-0.2574 l 19.1322,-32.62284 L1324.01331,1046.87802"
-                                clipPath="url(#clipPath30)"
+                                d="m 163.28463,116.90532
+                                -39.6608,-11.0008
+                                    29.35744,-28.8468
+                                    z"
                                 fill="none"
+                                clipPath={'url(#clipPath30)'}
                                 stroke="#0400ff"
-                                strokeWidth={8}
-                                strokeDasharray={113.64}
-                                style={{strokeDashoffset: smoothStrokeDashoffset}}
+                                strokeWidth={4}
+                                strokeDasharray={130}
+                                style={{strokeDashoffset: smoothStrokeDashoffset, transform: 'rotate(-15deg)'}}
                                 />
                         </g>
                         <g transform='translate(-14.6, -8)'>

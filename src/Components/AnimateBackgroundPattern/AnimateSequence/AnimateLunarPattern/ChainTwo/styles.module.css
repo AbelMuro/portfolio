@@ -4,13 +4,14 @@
     position: absolute;
     top: 0px;
     left: 0px;
-    transition: all 0.5s linear;
-    transform-origin: calc(50% - 160px) 50% !important;
+}
+
+.group{
+    transform-origin: 5px top !important;
 }
 
 .svg{
     width: 100%;
     height: 100%;
-    transition: all 0.5s linear;
 }
 

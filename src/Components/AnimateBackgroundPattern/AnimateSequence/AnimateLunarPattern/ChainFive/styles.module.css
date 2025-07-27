@@ -4,8 +4,10 @@
     position: absolute;
     top: 0px;
     left: 0px;
-                                              /* i need to apply this to the squares design as well*/
-    transform-origin: calc(50% + 10px) calc(50% + 100px) !important;
+}
+
+.group{
+    transform-origin: 0px top !important;
 }
 
 .svg{

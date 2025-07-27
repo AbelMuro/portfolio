@@ -7,16 +7,13 @@ function ChainOne() {
     const [mount, setMount] = useState(false);
     const {scrollY} = useScroll();
 
-    const scale = useTransform(scrollY, [14000, 14500], [1, 20]);
-    const smoothScale = useSpring(scale, LinearMoon);
+    const strokeDashoffset = useTransform(scrollY, [16600, 17200], [40, 0]);
+    const smoothStrokeDashoffset = useSpring(strokeDashoffset, LinearMoon);
 
     const scaleGroup = useTransform(scrollY, [15500, 16000], [0, 1]);
     const smoothScaleGroup = useSpring(scaleGroup, LinearMoon);
+    const transform = useMotionTemplate`translate(-85.5px, 17px) scale(${smoothScaleGroup})`
 
-    const strokeDashoffset = useTransform(scrollY, [16600, 17200], [0.19261932373046875, 0]);
-    const smoothStrokeDashoffset = useSpring(strokeDashoffset, LinearMoon);
-
-    const transform = useMotionTemplate`translate(-39.5px, 9px) scale(${smoothScale})`;
 
     useMotionValueEvent(scrollY, 'change', (value) => {
         if(value < 13500)
@@ -29,8 +26,8 @@ function ChainOne() {
     return(
         <AnimatePresence>
             { mount &&
-                <motion.div id='chain one' className={styles.container} exit={{opacity: 0}} style={{scale: smoothScaleGroup}}>
-                    <motion.svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"} style={{scale: 10 }}>
+                <motion.div id='chain one' className={styles.container} exit={{opacity: 0}}>
+                    <motion.svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"}>
                         <defs>
                             <filter id='glowEffectChainOne'>
                                 <motion.feGaussianBlur 
@@ -48,33 +45,42 @@ function ChainOne() {
                             </filter>
                         </defs>
 
-                        <motion.g style={{transform}} filter={'url(#glowEffectChainOne)'}>
+                        <motion.g  className={styles.group} style={{transform}}>
                                 <path
                                     fill="#0400ff"
                                     fillOpacity={1}
                                     stroke="#0400ff"
-                                    strokeWidth={0.00304209}
+                                    strokeWidth={1.3}
                                     strokeLinecap="round"
                                     strokeLinejoin="round"
                                     strokeMiterlimit={0}
-                                    strokeDasharray="0.00304209, 0.01912627"
+                                    strokeDasharray="2 2"
                                     strokeDashoffset={0}
                                     strokeOpacity={1}
-                                    d="m 137.25784,98.876238 0.001,0.370277"
+                                    d="m 137.25784,98.876238 l 0.2,74.0554"
                                     id="path5-9"
                                     />
-                                    {/* moon*/}
+                                    {/* moon   translate(4px, 79px)  */}
                                     <path
                                         fill="#0400ff"
                                         fillOpacity={1}
                                         stroke="#0400ff"
-                                        strokeWidth={0}
+                                        strokeWidth={0.2}
                                         strokeLinecap="round"
                                         strokeLinejoin="round"
                                         strokeMiterlimit={0}
                                         strokeDasharray="none"
                                         strokeOpacity={1}
-                                        d="m 137.27739,99.277739 c 9.8e-4,0.0099 -0.006,0.01846 -0.0162,0.01855 -0.01,-3.2e-4 -0.0177,-0.0071 -0.0181,-0.0168 -9.8e-4,-0.0099 0.006,-0.01846 0.0162,-0.01852 0.002,-8.48e-4 -0.006,0.0029 -0.009,0.0093 -0.002,0.0044 -0.003,0.01002 0.003,0.01507 0.006,0.0054 0.0133,0.0043 0.0178,0.0012 0.005,-0.0044 0.006,-0.01166 0.006,-0.0081 z"
+                                        d="m 137.27739,99.277739 
+                                        c 0.1764,1.782 -1.08,3.3228 -2.916,3.339 
+                                            -1.8,-0.0576 -3.186,-1.278 -3.258,-3.024 
+                                            -0.1764,-1.782 1.08,-3.3228 2.916,-3.3336 
+                                            0.36,-0.15264 -1.08,0.522 -1.62,1.674 
+                                            -0.36,0.792 -0.54,1.8036 0.54,2.7126 
+                                            0.972,0.972 2.394,0.774 3.204,0.216 
+                                            0.9,-0.792 1.08,-2.0988 1.08,-1.458 
+                                        z"
+                                        style={{transform: 'translate(4px, 79px)'}}
                                         id="path4-4-3"
                                         />
 
@@ -82,19 +88,20 @@ function ChainOne() {
                                         fill="#0400ff"
                                         fillOpacity={0}
                                         stroke="#0400ff"
-                                        strokeWidth={0.0082571}
+                                        strokeWidth={1.5}
                                         strokeLinecap="round"
                                         strokeLinejoin="round"
                                         strokeMiterlimit={0}
                                         strokeOpacity={1}
                                         id="rect13"
-                                        width={0.048152097}
-                                        height={0.048152097}
+                                        width={9}
+                                        height={9}
                                         x={167.23331}
                                         y={-26.891945}
                                         transform="rotate(45.004389)"
-                                        strokeDasharray={0.19261932373046875}
-                                        style={{strokeDashoffset: smoothStrokeDashoffset}}
+                                        strokeDasharray={40}
+                                        style={{strokeDashoffset: smoothStrokeDashoffset, transform: 'translate(0.5px, 73px) rotate(45.004389deg)'}}
+
                                         />
 
                                     <ellipse
@@ -110,8 +117,9 @@ function ChainOne() {
                                         id="path8-88"
                                         cx={137.25793}
                                         cy={98.987175}
-                                        rx={0.011394637}
-                                        ry={0.011380743}
+                                        rx={2.2789274}
+                                        ry={2.2761486}
+                                        style={{transform: 'translate(0px, 30px)'}}
                                         />                                             
                             </motion.g>                 
                     </motion.svg>

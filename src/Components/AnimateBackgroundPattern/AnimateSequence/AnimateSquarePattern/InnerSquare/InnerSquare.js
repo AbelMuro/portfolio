@@ -69,35 +69,32 @@ function InnerSquare(){
                                 </feMerge>
                             </filter>
                         </defs>
-                        <g transform='translate(-1407, -1055)'>
-                                <motion.path
-                                    filter={'url(#glowEffectInnerSquare)'}
-                                    stroke="#0400ff"
-                                    strokeWidth={1}
-                                    fill='none'
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeMiterlimit={0}
-                                    strokeDasharray={234}
-                                    style={{strokeDashoffset: smoothStrokeDashoffsetOuterBorder}}
-                                    d="m 1493.9848,1113.4959 54.7999,24.513 -23.5828,51.4715 -54.8001,-24.513 z"
-                                    id="rect704-3-9-2-1"
-                                    />
-                                
-                                <motion.path
-                                    filter={'url(#glowEffectInnerSquare)'}
-                                    stroke="#0400ff"
-                                    strokeWidth={1}
-                                    fill='none'
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeMiterlimit={0}
-                                    strokeDasharray={183.06}
-                                    style={{strokeDashoffset: smoothStrokeDashhoffsetInnerBorder}}
-                                    d="m 1497.3914,1122.145 42.9121,19.1952 -18.467,40.3059 -42.9122,-19.1954 z"
-                                    id="rect704-3-9-2-1-2"
-                                />                                
-                        </g>
+                            <motion.path
+                                filter={'url(#glowEffectInnerSquare)'}
+                                stroke="#0400ff"
+                                strokeWidth={1}
+                                fill='none'
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeMiterlimit={0}
+                                strokeDasharray={234}
+                                style={{strokeDashoffset: smoothStrokeDashoffsetOuterBorder, transform: 'translate(-62px, -53px)'}}
+                                d="m 149.39848,111.34959 54.7999,24.513 -23.5828,51.4715 -54.8001,-24.513 z"
+                                id="rect704-3-9-2-1"
+                                />
+                            <motion.path
+                                filter={'url(#glowEffectInnerSquare)'}
+                                stroke="#0400ff"
+                                strokeWidth={1}
+                                fill='none'
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeMiterlimit={0}
+                                strokeDasharray={183.06}
+                                style={{strokeDashoffset: smoothStrokeDashhoffsetInnerBorder, transform: 'translate(-59px, -45.6px)'}}
+                                d="m 149.73914,112.2145 42.9121,19.1952 -18.467,40.3059 -42.9122,-19.1954 z"
+                                id="rect704-3-9-2-1-2"
+                            />   
                         <g transform='translate(-83, -52)'>
                             <motion.image 
                                 filter={'url(#glowEffectSunEarth)'}

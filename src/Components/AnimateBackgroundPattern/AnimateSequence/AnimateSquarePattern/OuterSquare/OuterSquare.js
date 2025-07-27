@@ -57,7 +57,6 @@ function OuterSquare() {
                                         </feMerge>
                                     </filter>
                                 </defs>
-                                <g transform={'translate(-1005, -717)'}>
                                     <motion.path
                                         filter={'url(#glowEffectOuterSquare)'}
                                         fill="none"
@@ -67,17 +66,14 @@ function OuterSquare() {
                                         strokeLinejoin="round"
                                         strokeMiterlimit={0}
                                         strokeDasharray={319.6}
-                                        style={{strokeDashoffset: smoothStrokeDashoffset, strokeWidth: smoothStrokeWidth}}
-                                        d="m 1095.7016,757.73033 67.75454,45.87268 -43.83645,63.50708 -67.75461,-45.87282 z"
+                                        style={{strokeDashoffset: smoothStrokeDashoffset, strokeWidth: smoothStrokeWidth, transform: 'translate(-59px, -69px)'}}
+                                        d="m 149.75952,109.57877 67.75454,45.87268 -43.83645,63.50708 -67.75461,-45.87282 z"
                                         id="rect704-3-9-2"
                                     />
-                                </g>
-                                <g transform='translate(46.9, 40)'>
                                     <motion.image
-                                        style={{opacity: opacitySmooth}}
+                                        style={{opacity: opacitySmooth, transform: 'translate(46.9px, 40px)'}}
                                         href={images['text']}
-                                        width={113}/>
-                                </g>                            
+                                        width={113}/>                          
                         </motion.svg>                                              
                 </motion.div>
 
