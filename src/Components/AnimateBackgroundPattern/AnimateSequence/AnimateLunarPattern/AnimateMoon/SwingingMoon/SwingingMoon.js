@@ -22,22 +22,16 @@ function SwingingMoon() {
 
 
     useEffect(() => {
-        controlSwing.start({rotate: [0, 25, 0, -25, 0], transition: {duration: 5, repeat: Infinity, repeatType: 'loop', ease: 'linear'}});
+        controlSwing.start({rotate: [0, 15, 0, -15, 0], transition: {duration: 5, repeat: Infinity, repeatType: 'loop', ease: 'linear'}});
     }, []);
 
 
     return(
-        <motion.g style={{transform}}>
-            <motion.g 
-                className={styles.group}                 
-                initial={{scale: 0}}
-                animate={{scale: 1}}
-                > 
+        <motion.g className={styles.group} style={{transform}}>
+            <motion.g className={styles.swing} initial={{rotate: 0}} animate={controlSwing}>
                 <motion.path
                     id="path12"
                     d="m 137.53809,98.464359 v 36.68025"
-                    fill="none"
-                    fillOpacity={1}
                     stroke="#0400ff"
                     strokeWidth={1.2}
                     strokeLinecap="round"
@@ -48,6 +42,7 @@ function SwingingMoon() {
                     style={{strokeDashoffset: smoothStrokeDashoffsetLine, transform: 'translate(-9px, -57px)'}}
                 />
                 <motion.path
+                    filter={'url(#glowEffectSwingMoon)'}
                     id="path4-4"
                     d="m 137.57719,98.713273 
                     c -4.6,4.7656 -12.19,4.899 -16.974,0.276 

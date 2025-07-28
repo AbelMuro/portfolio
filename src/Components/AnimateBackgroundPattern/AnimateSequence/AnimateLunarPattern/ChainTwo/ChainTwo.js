@@ -31,10 +31,10 @@ function ChainTwo() {
                                 <motion.feGaussianBlur 
                                     in="SourceAlpha" 
                                     result="blur"
-                                    initial={{stdDeviation: 0.004}}
-                                    animate={{stdDeviation: [0.007, 0.004, 0.007], transition: {duration: 3, repeat: Infinity, ease: 'linear'}}}
+                                    initial={{stdDeviation: 3.5}}
+                                    animate={{stdDeviation: [3.5, 1.5, 3.5], transition: {duration: 3, repeat: Infinity, ease: 'linear'}}}
                                     />
-                                <feFlood floodColor="#0400ff" floodOpacity='0.7' result="color"/>
+                                <feFlood floodColor="#0400ff" floodOpacity='1' result="color"/>
                                 <feComposite in="color" in2="blur" operator="in" result="glow"/>
                                 <feMerge>
                                     <feMergeNode in="glow"/>
@@ -42,7 +42,7 @@ function ChainTwo() {
                                 </feMerge>
                             </filter>
                     </defs>
-                    <motion.g className={styles.group} style={{transform}}>
+                    <motion.g className={styles.group} style={{transform}} filter='url(#glowEffectChainTwo)'>
                             {/* chain */}
                             <path
                                 fill="#0400ff"
@@ -52,7 +52,7 @@ function ChainTwo() {
                                 strokeLinecap="round"
                                 strokeLinejoin="round"
                                 strokeMiterlimit={0}
-                                stroke-dasharray="2.89722, 1.44861, 0.72431, 1.44861"
+                                strokeDasharray="2.89722, 1.44861, 0.72431, 1.44861"
                                 strokeDashoffset={0}
                                 strokeOpacity={1}
                                 d="m 137.35835,99.015007 0.2,51.8008"

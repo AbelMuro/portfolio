@@ -2,35 +2,10 @@
     transition: all 0.6s linear;
 }
 
-.parent_group{
-    transform-origin: calc(137.53329467773437px) calc(98.33193969726562px) !important;
-}
-
 .group{
-    transform-origin: calc(137.53329467773437px + 0.15px) calc(98.33193969726562px - 2.8px) !important;
-    /* 
-        animation-name: Swing;
-        animation-duration: 5s;
-        animation-iteration-count: infinite;
-        animation-timing-function: ease-out;
-        animation-direction: normal;    
-    */
+    transform-origin: calc(20px) calc(50px) !important;
 }
 
-@keyframes Swing {
-    0% {
-        transform: rotate(0deg);
-    }
-    25% {
-        transform: rotate(25deg);
-    }
-    50% {
-        transform: rotate(0deg);
-    }
-    75% {
-        transform: rotate(-25deg)
-    }
-    100% {
-        transform: rotate(0deg)
-    }
+.swing{
+    transform-origin: 50% -10px !important;
 }

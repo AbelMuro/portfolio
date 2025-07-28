@@ -47,56 +47,52 @@ function OuterMostSquare() {
                                 <motion.feGaussianBlur 
                                     in="SourceAlpha" 
                                     result="blur"
-                                    initial={{stdDeviation: 0.2}}
-                                    animate={{stdDeviation: [0.7, 0.2, 0.7], transition: {duration: 3, repeat: Infinity, ease: 'linear'}}}
+                                    initial={{stdDeviation: 0.4}}
+                                    animate={{stdDeviation: [0.4, 0.1, 0.4], transition: {duration: 3, repeat: Infinity, ease: 'linear'}}}
                                     /> 
-                                <feFlood floodColor="#0400ff" floodOpacity='0.9' result="color"/>
+                                <feFlood floodColor="#0400ff" floodOpacity='1' result="color"/>
                                 <feComposite in="color" in2="blur" operator="in" result="glow"/>
                                 <feMerge>
                                     <feMergeNode in="glow"/>
                                     <feMergeNode in="SourceGraphic"/>
                                 </feMerge>
                             </filter>
-                        </defs>
-                        <g transform="translate(-47.8, -13.5)">        
-                            {/* outer border*/}
-                                <motion.path
-                                    filter={'url(#glowEffectOuterMostSquare)'}
-                                    fill="none"
-                                    stroke="#0400ff"
-                                    strokeWidth={0.164006}
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeDasharray={55}
-                                    style={{strokeDashoffset: smoothDashoffsetOuterBorder}}
-                                    d="m 150.67604,106.23255 9.34609,9.05688 -8.62065,8.73702 -9.3461,-9.05688 z"
-                                    id="rect704-3-9-6"
-                                    />
-                                {/* inner border */}
-                                <motion.path
-                                    filter={'url(#glowEffectOuterMostSquare)'}
-                                    fill="none"
-                                    stroke="#0400ff"
-                                    strokeWidth={0.138539}
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeMiterlimit={0}
-                                    strokeDasharray={55}
-                                    style={{strokeDashoffset: smoothStrokeDashoffsetInnerBorder}}
-                                    d="m 182.95529,-27.496716 h 10.99335 v 10.367864 h -10.99335 z"
-                                    id="rect704-3-9"
-                                    transform="matrix(0.71813035,0.69590861,-0.70235073,0.71183106,0,0)"
-                                    initial={{opacity: 1}}
-                                    exit={{opacity: 0}}
-                                    />
-                            </g>
-                            <motion.g transform='translate(94, 92.5)' style={{opacity: opacitySmooth}}>
-                                <motion.image 
-                                    filter={'url(#glowEffectOuterMostSquare)'}
-                                    href={images['text']}
-                                    width={18.3}
+                        </defs>   
+                        {/* outer border*/}
+                            <motion.path
+                                filter={'url(#glowEffectOuterMostSquare)'}
+                                fill="none"
+                                stroke="#0400ff"
+                                strokeWidth={0.164006}
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeDasharray={55}
+                                style={{strokeDashoffset: smoothDashoffsetOuterBorder, transform: 'translate(-47.8px, -13.5px)'}}
+                                d="m 150.67604,106.23255 9.34609,9.05688 -8.62065,8.73702 -9.3461,-9.05688 z"
+                                id="rect704-3-9-6"
                                 />
-                            </motion.g>
+                            {/* inner border */}
+                            <motion.path
+                                filter={'url(#glowEffectOuterMostSquare)'}
+                                fill="none"
+                                stroke="#0400ff"
+                                strokeWidth={0.138539}
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeMiterlimit={0}
+                                strokeDasharray={55}
+                                style={{strokeDashoffset: smoothStrokeDashoffsetInnerBorder, transform: 'translate(-47.8px, -13.5px) matrix(0.71813035,0.69590861,-0.70235073,0.71183106,0,0)'}}
+                                d="m 182.95529,-27.496716 h 10.99335 v 10.367864 h -10.99335 z"
+                                id="rect704-3-9"
+                                initial={{opacity: 1}}
+                                exit={{opacity: 0}}
+                                />
+                            <motion.image 
+                                filter={'url(#glowEffectOuterMostSquare)'}
+                                href={images['text']}
+                                width={16.5}
+                                style={{transform: 'translate(95px, 93.5px)', opacity: opacitySmooth}}
+                                />
                         </motion.svg>
                 </motion.div>  
             } 

@@ -39,17 +39,36 @@ function InnerMostTriangle() {
         <AnimatePresence>
             {
                 mount &&  
-                <motion.div id='inner most triangle' className={styles.container} style={{transform}} exit={{opacity: 0}}>
-                    <motion.svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"}>
+                <motion.div 
+                    id='inner most triangle' 
+                    className={styles.container} 
+                    style={{transform}} 
+                    exit={{opacity: 0}}
+                >
+                    <svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"}>
                         <defs>
                             <filter id='glowEffectInnerTriangle'>
                                 <motion.feGaussianBlur 
                                     in="SourceAlpha" 
                                     result="blur"
-                                    initial={{stdDeviation: 0.08}}
-                                    animate={{stdDeviation: [0.3, 0.08, 0.3], transition: {duration: 3, repeat: Infinity, ease: 'linear'}}}
+                                    initial={{stdDeviation: 3}}
+                                    animate={{stdDeviation: [3, 1, 3], transition: {duration: 3, repeat: Infinity, ease: 'linear'}}}
                                     /> 
-                                <feFlood floodColor="#0400ff" floodOpacity='0.7' result="color"/>
+                                <feFlood floodColor="#0400ff" floodOpacity='1' result="color"/>
+                                <feComposite in="color" in2="blur" operator="in" result="glow"/>
+                                <feMerge>
+                                    <feMergeNode in="glow"/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                            <filter id='glowEffectInnerTriangleDesign'>
+                                <motion.feGaussianBlur 
+                                    in="SourceAlpha" 
+                                    result="blur"
+                                    initial={{stdDeviation: 1}}
+                                    animate={{stdDeviation: [1, 0.5, 1], transition: {duration: 3, repeat: Infinity, ease: 'linear'}}}
+                                    /> 
+                                <feFlood floodColor="#0400ff" floodOpacity='1' result="color"/>
                                 <feComposite in="color" in2="blur" operator="in" result="glow"/>
                                 <feMerge>
                                     <feMergeNode in="glow"/>
@@ -90,34 +109,30 @@ function InnerMostTriangle() {
                             </clipPath>
                         </defs>
                         {/* outer border for triangle*/}
-                        <g transform='translate(-67, 42.5)'>
-                            <motion.path
-                                className={styles.outer_border}
-                                id="path26"
-                                d="m 163.28463,116.90532
-                                -39.6608,-11.0008
-                                    29.35744,-28.8468
-                                    z"
-                                fill="none"
-                                clipPath={'url(#clipPath30)'}
-                                stroke="#0400ff"
-                                strokeWidth={4}
-                                strokeDasharray={130}
-                                style={{strokeDashoffset: smoothStrokeDashoffset, transform: 'rotate(-15deg)'}}
-                                />
-                        </g>
-                        <g transform='translate(-14.6, -8)'>
-                            <motion.image
-                                filter={'url(#glowEffectInnerTriangle)'}
-                                width={25}
-                                href={images['sunEarthText']}
-                                style={{opacity: opacitySmooth}}
-                                x={101.79}
-                                y={102.1}
-                            />                            
-                        </g>
-
-                    </motion.svg>
+                        <motion.path
+                            filter={'url(#glowEffectInnerTriangle)'}
+                            className={styles.outer_border}
+                            id="path26"
+                            d="m 163.28463,116.90532
+                            -39.6608,-11.0008
+                                29.35744,-28.8468
+                                z"
+                            fill="none"
+                            clipPath={'url(#clipPath30)'}
+                            stroke="#0400ff"
+                            strokeWidth={4}
+                            strokeDasharray={130}
+                            style={{strokeDashoffset: smoothStrokeDashoffset, transform: 'rotate(-15deg) translate(-76px, 24.3px)'}}
+                            />
+                        <motion.image
+                            filter={'url(#glowEffectInnerTriangleDesign)'}
+                            width={25}
+                            href={images['sunEarthText']}
+                            style={{opacity: opacitySmooth, transform: 'translate(-14.6px, -8px)'}}
+                            x={101.79}
+                            y={102.1}
+                        />                            
+                    </svg>
                 </motion.div>  
             }            
         </AnimatePresence>

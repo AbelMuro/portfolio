@@ -31,10 +31,10 @@ function ChainThree() {
                                 <motion.feGaussianBlur 
                                     in="SourceAlpha" 
                                     result="blur"
-                                    initial={{stdDeviation: 0.004}}
-                                    animate={{stdDeviation: [0.007, 0.004, 0.007], transition: {duration: 3, repeat: Infinity, ease: 'linear'}}}
+                                    initial={{stdDeviation: 3}}
+                                    animate={{stdDeviation: [3, 1.5, 3], transition: {duration: 3, repeat: Infinity, ease: 'linear'}}}
                                     />
-                                <feFlood floodColor="#0400ff" floodOpacity='0.7' result="color"/>
+                                <feFlood floodColor="#0400ff" floodOpacity='1' result="color"/>
                                 <feComposite in="color" in2="blur" operator="in" result="glow"/>
                                 <feMerge>
                                     <feMergeNode in="glow"/>
@@ -42,7 +42,7 @@ function ChainThree() {
                                 </feMerge>
                             </filter>
                         </defs>
-                        <motion.g className={styles.group} style={{transform}}>
+                        <motion.g className={styles.group} style={{transform}} filter={'url(#glowEffectChainThree)'}>
                                 <path
                                     fill="none"
                                     fillOpacity={1}

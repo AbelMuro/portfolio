@@ -30,10 +30,7 @@ function InnerRing() {
                     exit={{opacity: 0}}
                     style={{scale: smoothScale}}
                     >
-                    <svg 
-                        className={styles.svg} 
-                        viewBox={"0 0 206.40488 206.40488"} 
-                        >
+                    <svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"}>
                         <defs>
                             <filter id='glowEffectInnerRing'>
                                 <motion.feGaussianBlur 
@@ -42,7 +39,7 @@ function InnerRing() {
                                     initial={{stdDeviation: 4}}
                                     animate={{stdDeviation: [4, 2, 4], transition: {duration: 3, repeat: Infinity, ease: 'linear'}}}
                                     />
-                                <feFlood floodColor="#0400ff" floodOpacity='0.9' result="color"/>
+                                <feFlood floodColor="#0400ff" floodOpacity='1' result="color"/>
                                 <feComposite in="color" in2="blur" operator="in" result="glow"/>
                                 <feMerge>
                                     <feMergeNode in="glow"/>

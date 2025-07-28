@@ -45,7 +45,7 @@ function OuterRing() {
                                     initial={{stdDeviation: 4}}
                                     animate={{stdDeviation: [4, 2, 4], transition: {duration: 3, repeat: Infinity, ease: 'linear'}}}
                                     />
-                                <feFlood floodColor="#0400ff" floodOpacity='0.8' result="color"/>
+                                <feFlood floodColor="#0400ff" floodOpacity='1' result="color"/>
                                 <feComposite in="color" in2="blur" operator="in" result="glow"/>
                                 <feMerge>
                                     <feMergeNode in="glow"/>

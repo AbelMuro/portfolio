@@ -39,17 +39,21 @@ function OuterSquare() {
         <AnimatePresence>
             {
                 mount &&
-                <motion.div id='outer square' className={styles.container} style={{transform}} initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>
-                            <motion.svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"}>
+                <motion.div 
+                    id='outer square' 
+                    className={styles.container} 
+                    style={{transform}} 
+                    exit={{opacity: 0}}>
+                            <svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"}>
                                 <defs>
                                     <filter id='glowEffectOuterSquare'>
                                         <motion.feGaussianBlur 
                                             in="SourceAlpha" 
                                             result="blur"
-                                            initial={{stdDeviation: 0.2}}
-                                            animate={{stdDeviation: [0.7, 0.2, 0.7], transition: {duration: 3, repeat: Infinity, ease: 'linear'}}}
+                                            initial={{stdDeviation: 5}}
+                                            animate={{stdDeviation: [5, 2, 5], transition: {duration: 3, repeat: Infinity, ease: 'linear'}}}
                                             /> 
-                                        <feFlood floodColor="#0400ff" floodOpacity='0.7' result="color"/>
+                                        <feFlood floodColor="#0400ff" floodOpacity='1' result="color"/>
                                         <feComposite in="color" in2="blur" operator="in" result="glow"/>
                                         <feMerge>
                                             <feMergeNode in="glow"/>
@@ -57,24 +61,24 @@ function OuterSquare() {
                                         </feMerge>
                                     </filter>
                                 </defs>
-                                    <motion.path
-                                        filter={'url(#glowEffectOuterSquare)'}
-                                        fill="none"
-                                        stroke="#0400ff"
-                                        strokeWidth='5'
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeMiterlimit={0}
-                                        strokeDasharray={319.6}
-                                        style={{strokeDashoffset: smoothStrokeDashoffset, strokeWidth: smoothStrokeWidth, transform: 'translate(-59px, -69px)'}}
-                                        d="m 149.75952,109.57877 67.75454,45.87268 -43.83645,63.50708 -67.75461,-45.87282 z"
-                                        id="rect704-3-9-2"
-                                    />
-                                    <motion.image
-                                        style={{opacity: opacitySmooth, transform: 'translate(46.9px, 40px)'}}
-                                        href={images['text']}
-                                        width={113}/>                          
-                        </motion.svg>                                              
+                                <motion.path
+                                    filter={'url(#glowEffectOuterSquare)'}
+                                    fill="none"
+                                    stroke="#0400ff"
+                                    strokeWidth='5'
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeMiterlimit={0}
+                                    strokeDasharray={319.6}
+                                    style={{strokeDashoffset: smoothStrokeDashoffset, strokeWidth: smoothStrokeWidth, transform: 'translate(-59px, -69px)'}}
+                                    d="m 149.75952,109.57877 67.75454,45.87268 -43.83645,63.50708 -67.75461,-45.87282 z"
+                                    id="rect704-3-9-2"
+                                />
+                                <motion.image
+                                    style={{opacity: opacitySmooth, transform: 'translate(46.9px, 40px)'}}
+                                    href={images['text']}
+                                    width={113}/>                          
+                        </svg>                                              
                 </motion.div>
 
             }

@@ -67,7 +67,7 @@ function AnimatePentagram({scrollThresholds}) {
                                             animate={{stdDeviation: [0, 0.7, 0.2, 0.7, 0], transition: {duration: 3, repeat: Infinity, repeatType: 'loop', ease: 'linear'}}}
                                             exit={{stdDeviation: 0}}
                                             /> 
-                                        <feFlood floodColor="#0400ff" floodOpacity='0.7' result="color"/>
+                                        <feFlood floodColor="#0400ff" floodOpacity='1' result="color"/>
                                         <feComposite in="color" in2="blur" operator="in" result="glow"/>
                                         <feMerge>
                                             <feMergeNode in="glow"/>
@@ -82,7 +82,7 @@ function AnimatePentagram({scrollThresholds}) {
                                             animate={{stdDeviation: [0, 0.2, 0.08, 0.2, 0], transition: {duration: 3, repeat: Infinity, repeatType: 'loop', ease: 'linear'}}}
                                             exit={{stdDeviation: 0}}
                                             /> 
-                                        <feFlood floodColor="#0400ff" floodOpacity='0.8' result="color"/>
+                                        <feFlood floodColor="#0400ff" floodOpacity='1' result="color"/>
                                         <feComposite in="color" in2="blur" operator="in" result="glow"/>
                                         <feMerge>
                                             <feMergeNode in="glow"/>
@@ -97,7 +97,7 @@ function AnimatePentagram({scrollThresholds}) {
                                             animate={{stdDeviation: [0, 0.7, 0.2, 0.7, 0], transition: {duration: 3, repeat: Infinity, repeatType: 'loop', ease: 'linear'}}}
                                             exit={{stdDeviation: 0}}
                                             /> 
-                                        <feFlood floodColor="#0400ff" floodOpacity='0.9' result="color"/>
+                                        <feFlood floodColor="#0400ff" floodOpacity='1' result="color"/>
                                         <feComposite in="color" in2="blur" operator="in" result="glow"/>
                                         <feMerge>
                                             <feMergeNode in="glow"/>

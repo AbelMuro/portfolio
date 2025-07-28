@@ -43,7 +43,7 @@ function InnerMostRing() {
                                         initial={{stdDeviation: 5}}
                                         animate={{stdDeviation: [5, 3, 5], transition: {duration: 3, repeat: Infinity, ease: 'linear'}}}
                                         />
-                                    <feFlood floodColor="#0400ff" floodOpacity='0.9' result="color"/>
+                                    <feFlood floodColor="#0400ff" floodOpacity='1' result="color"/>
                                     <feComposite in="color" in2="blur" operator="in" result="glow"/>
                                     <feMerge>
                                         <feMergeNode in="glow"/>

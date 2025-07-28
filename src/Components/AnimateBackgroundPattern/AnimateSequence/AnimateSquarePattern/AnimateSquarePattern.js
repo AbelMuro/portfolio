@@ -7,12 +7,6 @@ import {LinearPentagram} from '~/Transitions';
 import {motion, useTransform, useSpring, useScroll, useMotionValueEvent} from 'framer-motion';
 import * as styles from './styles.module.css';
 
-
-/* 
-    this is where i left off, i need to implement an exit (scale) animation for the components below
-    and i also need to work on the filter svg elements as well
-*/
-
 function AnimateSquarePattern({scrollThresholds}) {
     const [mount, setMount] = useState(true); 
     const {scrollY} = useScroll();
