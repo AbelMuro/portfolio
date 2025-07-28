@@ -22,7 +22,7 @@ function Circle({strokeDasharray, strokeDashoffset, ...props}) {
             {...props} 
             className={styles.circle} 
             strokeDasharray={strokeDasharray}
-            style={{strokeDashoffset: finalOffsetSmooth}} 
+            strokeDashoffset={finalOffsetSmooth}
         />
     )
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import {LinearPentagram} from '~/Transitions';
-import {motion, useScroll, useTransform, useSpring, useMotionValueEvent} from 'framer-motion';
+import {motion, useScroll, useTransform, useSpring, useMotionValueEvent, useMotionTemplate} from 'framer-motion';
 import icons from '~/assets/icons';
 import * as styles from './styles.module.css';
 
@@ -13,6 +13,8 @@ function TechIcon({name, x, y, size, scrollThresholds}) {
 
     const opacity = useTransform(scrollY, scrollThresholds, [0, 1])
 
+    const transform = useMotionTemplate`translate(${x}px, ${y}px) scale(${smoothScale})`;
+
     useMotionValueEvent(scrollY, 'change', (y) => {
         if(y < 5800)
             smoothScale.set(1)
@@ -22,14 +24,13 @@ function TechIcon({name, x, y, size, scrollThresholds}) {
     })
     
     return(
-        <g transform={`translate(${x}, ${y})`}>
-            <motion.image 
-                width={size} 
-                className={styles.icon} 
-                href={icons[name]}
-                style={{opacity, scale: smoothScale}}
-                />  
-        </g>
+        <motion.image 
+            width={size} 
+            className={styles.icon} 
+            href={icons[name]}
+            style={{opacity}}
+            transform={transform}
+            /> 
     )
 }
 

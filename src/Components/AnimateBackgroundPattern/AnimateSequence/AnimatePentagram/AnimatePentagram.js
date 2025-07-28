@@ -8,6 +8,11 @@ import {motion, useScroll, useTransform, useSpring, useMotionValueEvent, Animate
 import AnimateCircles from './AnimateCircles';
 import * as styles from './styles.module.css';
 
+/* 
+    this is where i left off, i need to continue optimizing the following
+    component for safari, 
+*/
+
 
 function AnimatePentagram({scrollThresholds}) {
     const [mount, setMount] = useState(true);
@@ -63,7 +68,7 @@ function AnimatePentagram({scrollThresholds}) {
                                             in="SourceAlpha" 
                                             result="blur"
                                             initial={{stdDeviation: 0}}
-                                            animate={{stdDeviation: 0.4, transition: {duration: 0.6}}}
+                                            animate={{stdDeviation: 0.4}}
                                             exit={{stdDeviation: 0}}
                                             /> 
                                         <feFlood floodColor="#0400ff" floodOpacity='0.6' result="color"/>
@@ -78,7 +83,7 @@ function AnimatePentagram({scrollThresholds}) {
                                             in="SourceAlpha" 
                                             result="blur"
                                             initial={{stdDeviation: 0}}
-                                            animate={{stdDeviation: 0.3, transition: {duration: 0.6}}}
+                                            animate={{stdDeviation: 0.3}}
                                             exit={{stdDeviation: 0}}
                                             /> 
                                         <feFlood floodColor="#0400ff" floodOpacity='0.4' result="color"/>
@@ -93,7 +98,7 @@ function AnimatePentagram({scrollThresholds}) {
                                             in="SourceAlpha" 
                                             result="blur"
                                             initial={{stdDeviation: 0}}
-                                            animate={{stdDeviation: 0.2, transition: {duration: 0.6}}}
+                                            animate={{stdDeviation: 0.2}}
                                             exit={{stdDeviation: 0}}
                                             /> 
                                         <feFlood floodColor="#0400ff" floodOpacity='0.4' result="color"/>

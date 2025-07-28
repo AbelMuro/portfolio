@@ -26,7 +26,7 @@ function Rect(props) {
             fill='none' 
             stroke='#0400ff' 
             strokeDasharray={52.0433} 
-            style={{strokeDashoffset: finalOffsetSmooth}} 
+            strokeDashoffset={finalOffsetSmooth}
         />  
     )
 }
