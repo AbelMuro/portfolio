@@ -1,6 +1,6 @@
 import React, {memo} from 'react';
 import {LinearPentagram} from '~/Transitions';
-import {motion, useTransform, useSpring, useScroll, useMotionValueEvent} from 'framer-motion';
+import {motion, useTransform, useSpring, useScroll, useMotionValueEvent, useMotionTemplate} from 'framer-motion';
 import * as styles from './styles.module.css';
 
 function Circle({scrollThresholds, scaleTo, rotateX, rotateY}) {
@@ -18,6 +18,7 @@ function Circle({scrollThresholds, scaleTo, rotateX, rotateY}) {
     const rotate3DSpringX = useSpring(rotate3DForX, LinearPentagram)
     const rotate3DSpringY = useSpring(rotate3DForY, LinearPentagram);
 
+    const transform = useMotionTemplate`scale(${scaleWithSpring}) rotateX(${rotate3DSpringX}deg) rotateY(${rotate3DSpringY}deg)`;
 
     useMotionValueEvent(scaleBack, 'change', (value) => {
         scaleWithSpring.set(value);
@@ -42,7 +43,8 @@ function Circle({scrollThresholds, scaleTo, rotateX, rotateY}) {
             strokeLinejoin='bevel'
             strokeMiterlimit='0'
             strokeDasharray='300'
-            style={{scale: scaleWithSpring, rotateX: rotate3DSpringX, rotateY: rotate3DSpringY, strokeDashoffset: dashoffsetSpring }}
+            strokeDashoffset={dashoffsetSpring}
+            transform={transform}
             />
             
         )
