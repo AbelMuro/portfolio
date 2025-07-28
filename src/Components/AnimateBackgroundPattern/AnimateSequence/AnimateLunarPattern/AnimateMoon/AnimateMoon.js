@@ -24,7 +24,7 @@ function AnimateMoon() {
                 <motion.svg viewBox={"0 0 206.40488 206.40488"} className={styles.svg}>
                     <defs>
                         <filter id='glowEffectLargeMoon'>
-                            <motion.feGaussianBlur                                     colorInterpolationFilters="sRGB" 
+                            <motion.feGaussianBlur 
                                 in="SourceAlpha" 
                                 result="blur"
                                 initial={{stdDeviation: 0.4}}
@@ -38,7 +38,7 @@ function AnimateMoon() {
                             </feMerge>
                         </filter>
                         <filter id='glowEffectSwingMoon'>
-                            <motion.feGaussianBlur                                     colorInterpolationFilters="sRGB" 
+                            <motion.feGaussianBlur 
                                 in="SourceAlpha" 
                                 result="blur"
                                 initial={{stdDeviation: 2}}

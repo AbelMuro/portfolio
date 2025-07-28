@@ -28,7 +28,7 @@ function ChainTwo() {
                 <motion.svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"}>
                     <defs>
                             <filter id='glowEffectChainTwo'>
-                                <motion.feGaussianBlur                                     colorInterpolationFilters="sRGB" 
+                                <motion.feGaussianBlur 
                                     in="SourceAlpha" 
                                     result="blur"
                                     initial={{stdDeviation: 3.5}}

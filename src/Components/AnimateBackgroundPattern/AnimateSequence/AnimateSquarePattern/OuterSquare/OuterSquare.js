@@ -47,7 +47,7 @@ function OuterSquare() {
                             <svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"}>
                                 <defs>
                                     <filter id='glowEffectOuterSquare'>
-                                        <motion.feGaussianBlur                                     colorInterpolationFilters="sRGB" 
+                                        <motion.feGaussianBlur 
                                             in="SourceAlpha" 
                                             result="blur"
                                             initial={{stdDeviation: 5}}

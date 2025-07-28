@@ -60,7 +60,7 @@ function AnimatePentagram({scrollThresholds}) {
                                 {!pauseBlur &&
                                     <>
                                     <filter id='glowEffectPentagramOuterCircles'>
-                                        <motion.feGaussianBlur                                     colorInterpolationFilters="sRGB" 
+                                        <motion.feGaussianBlur 
                                             in="SourceAlpha" 
                                             result="blur"
                                             initial={{stdDeviation: 0}}
@@ -75,7 +75,7 @@ function AnimatePentagram({scrollThresholds}) {
                                         </feMerge>
                                     </filter>
                                     <filter id='glowEffectPentagramInnerCircles'>
-                                        <motion.feGaussianBlur                                     colorInterpolationFilters="sRGB" 
+                                        <motion.feGaussianBlur 
                                             in="SourceAlpha" 
                                             result="blur"
                                             initial={{stdDeviation: 0}}
@@ -90,7 +90,7 @@ function AnimatePentagram({scrollThresholds}) {
                                         </feMerge>
                                     </filter>
                                     <filter id='glowEffectPentagramRect'>
-                                        <motion.feGaussianBlur                                     colorInterpolationFilters="sRGB" 
+                                        <motion.feGaussianBlur 
                                             in="SourceAlpha" 
                                             result="blur"
                                             initial={{stdDeviation: 0}}

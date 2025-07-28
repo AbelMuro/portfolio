@@ -32,7 +32,7 @@ function OuterMostRing(){
                     <svg className={styles.container} viewBox="0 0 206.40488 205.26718">
                         <defs>
                             <filter id='glowEffectOuterMostRing'>
-                                <motion.feGaussianBlur                                     colorInterpolationFilters="sRGB" 
+                                <motion.feGaussianBlur 
                                     in="SourceAlpha" 
                                     result="blur"
                                     initial={{stdDeviation: 3}}

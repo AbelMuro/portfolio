@@ -44,7 +44,7 @@ function OuterMostSquare() {
                     <motion.svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"} style={{scale: scaleSmooth}}>
                         <defs>
                             <filter id='glowEffectOuterMostSquare'>
-                                <motion.feGaussianBlur                                     colorInterpolationFilters="sRGB" 
+                                <motion.feGaussianBlur 
                                     in="SourceAlpha" 
                                     result="blur"
                                     initial={{stdDeviation: 0.4}}
