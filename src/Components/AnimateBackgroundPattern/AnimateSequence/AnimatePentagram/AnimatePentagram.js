@@ -67,7 +67,7 @@ function AnimatePentagram({scrollThresholds}) {
                                             animate={{stdDeviation: 0.4, transition: {duration: 0.6}}}
                                             exit={{stdDeviation: 0}}
                                             /> 
-                                        <feFlood floodColor="#0400ff" floodOpacity='1' result="color"/>
+                                        <feFlood floodColor="#0400ff" floodOpacity='0.6' result="color"/>
                                         <feComposite in="color" in2="blur" operator="in" result="glow"/>
                                         <feMerge>
                                             <feMergeNode in="glow"/>
@@ -79,10 +79,10 @@ function AnimatePentagram({scrollThresholds}) {
                                             in="SourceAlpha" 
                                             result="blur"
                                             initial={{stdDeviation: 0}}
-                                            animate={{stdDeviation: 0.08, transition: {duration: 0.6}}}
+                                            animate={{stdDeviation: 0.3, transition: {duration: 0.6}}}
                                             exit={{stdDeviation: 0}}
                                             /> 
-                                        <feFlood floodColor="#0400ff" floodOpacity='1' result="color"/>
+                                        <feFlood floodColor="#0400ff" floodOpacity='0.4' result="color"/>
                                         <feComposite in="color" in2="blur" operator="in" result="glow"/>
                                         <feMerge>
                                             <feMergeNode in="glow"/>
@@ -94,10 +94,10 @@ function AnimatePentagram({scrollThresholds}) {
                                             in="SourceAlpha" 
                                             result="blur"
                                             initial={{stdDeviation: 0}}
-                                            animate={{stdDeviation: 0.7, transition: {duration: 0.6}}}
+                                            animate={{stdDeviation: 0.2, transition: {duration: 0.6}}}
                                             exit={{stdDeviation: 0}}
                                             /> 
-                                        <feFlood floodColor="#0400ff" floodOpacity='1' result="color"/>
+                                        <feFlood floodColor="#0400ff" floodOpacity='0.4' result="color"/>
                                         <feComposite in="color" in2="blur" operator="in" result="glow"/>
                                         <feMerge>
                                             <feMergeNode in="glow"/>
