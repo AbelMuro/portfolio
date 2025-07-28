@@ -28,7 +28,7 @@ function ChainFour() {
                 <motion.svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"}>
                     <defs>
                         <filter id='glowEffectChainFour'>
-                            <motion.feGaussianBlur 
+                            <motion.feGaussianBlur                                     colorInterpolationFilters="sRGB" 
                                 in="SourceAlpha" 
                                 result="blur"
                                 initial={{stdDeviation: 3}}

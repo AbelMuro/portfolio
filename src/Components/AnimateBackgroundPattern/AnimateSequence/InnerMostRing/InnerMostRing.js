@@ -37,7 +37,7 @@ function InnerMostRing() {
                         >
                             <defs>
                                 <filter id='glowEffectInnerMostRing'>
-                                    <motion.feGaussianBlur 
+                                    <motion.feGaussianBlur                                     colorInterpolationFilters="sRGB" 
                                         in="SourceAlpha" 
                                         result="blur"
                                         initial={{stdDeviation: 5}}

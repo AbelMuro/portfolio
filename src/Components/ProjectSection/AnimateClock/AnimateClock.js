@@ -9,7 +9,7 @@ function AnimateClock() {
         <svg className={styles.container} viewBox={'0 0 306 306'}>
             <defs>
                 <filter id='glowEffect'>
-                    <motion.feGaussianBlur 
+                    <motion.feGaussianBlur                                     colorInterpolationFilters="sRGB" 
                         in="SourceAlpha" 
                         
                         result="blur"

@@ -39,7 +39,7 @@ function OuterRing() {
                         >
                         <defs>
                             <filter id='glowEffectOuterRing'>
-                                <motion.feGaussianBlur 
+                                <motion.feGaussianBlur                                     colorInterpolationFilters="sRGB" 
                                     in="SourceAlpha" 
                                     result="blur"
                                     initial={{stdDeviation: 4}}

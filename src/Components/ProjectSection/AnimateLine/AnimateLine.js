@@ -13,7 +13,7 @@ function AnimateLine({scrollThresholds}) {
             <motion.svg className={styles.svg} viewBox={"0 0 30.055271 297.90417"}>
                 <defs>
                     <filter id='glowEffect'>
-                        <motion.feGaussianBlur 
+                        <motion.feGaussianBlur                                     colorInterpolationFilters="sRGB" 
                             in="SourceAlpha" 
                             
                             result="blur"

@@ -45,7 +45,7 @@ function InnerSquare(){
                     <svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"}>
                         <defs>
                             <filter id='glowEffectInnerSquare'>
-                                <motion.feGaussianBlur 
+                                <motion.feGaussianBlur                                     colorInterpolationFilters="sRGB" 
                                     in="SourceAlpha" 
                                     result="blur"
                                     initial={{stdDeviation: 1}}
@@ -59,7 +59,7 @@ function InnerSquare(){
                                 </feMerge>
                             </filter>
                             <filter id='glowEffectInnerDesign'>
-                                <motion.feGaussianBlur 
+                                <motion.feGaussianBlur                                     colorInterpolationFilters="sRGB" 
                                     in="SourceAlpha" 
                                     result="blur"
                                     initial={{stdDeviation: 1}}
