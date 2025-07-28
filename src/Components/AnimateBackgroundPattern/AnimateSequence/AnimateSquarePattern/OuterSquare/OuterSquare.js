@@ -47,11 +47,10 @@ function OuterSquare() {
                             <svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"}>
                                 <defs>
                                     <filter id='glowEffectOuterSquare'>
-                                        <motion.feGaussianBlur 
+                                        <feGaussianBlur 
                                             in="SourceAlpha" 
                                             result="blur"
-                                            initial={{stdDeviation: 5}}
-                                            animate={{stdDeviation: [5, 2, 5], transition: {duration: 3, repeat: Infinity, ease: 'linear'}}}
+                                            stdDeviation={5}
                                             /> 
                                         <feFlood floodColor="#0400ff" floodOpacity='1' result="color"/>
                                         <feComposite in="color" in2="blur" operator="in" result="glow"/>

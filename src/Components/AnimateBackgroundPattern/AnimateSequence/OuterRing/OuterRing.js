@@ -39,11 +39,10 @@ function OuterRing() {
                         >
                         <defs>
                             <filter id='glowEffectOuterRing'>
-                                <motion.feGaussianBlur 
+                                <feGaussianBlur 
                                     in="SourceAlpha" 
                                     result="blur"
-                                    initial={{stdDeviation: 4}}
-                                    animate={{stdDeviation: [4, 2, 4], transition: {duration: 3, repeat: Infinity, ease: 'linear'}}}
+                                    stdDeviation={4}
                                     />
                                 <feFlood floodColor="#0400ff" floodOpacity='1' result="color"/>
                                 <feComposite in="color" in2="blur" operator="in" result="glow"/>

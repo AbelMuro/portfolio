@@ -48,11 +48,10 @@ function InnerMostTriangle() {
                     <svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"}>
                         <defs>
                             <filter id='glowEffectInnerTriangle'>
-                                <motion.feGaussianBlur 
+                                <feGaussianBlur 
                                     in="SourceAlpha" 
                                     result="blur"
-                                    initial={{stdDeviation: 3}}
-                                    animate={{stdDeviation: [3, 1, 3], transition: {duration: 3, repeat: Infinity, ease: 'linear'}}}
+                                    stdDeviation={3}
                                     /> 
                                 <feFlood floodColor="#0400ff" floodOpacity='1' result="color"/>
                                 <feComposite in="color" in2="blur" operator="in" result="glow"/>
@@ -62,11 +61,10 @@ function InnerMostTriangle() {
                                 </feMerge>
                             </filter>
                             <filter id='glowEffectInnerTriangleDesign'>
-                                <motion.feGaussianBlur 
+                                <feGaussianBlur 
                                     in="SourceAlpha" 
                                     result="blur"
-                                    initial={{stdDeviation: 1}}
-                                    animate={{stdDeviation: [1, 0.5, 1], transition: {duration: 3, repeat: Infinity, ease: 'linear'}}}
+                                    stdDeviation={1}
                                     /> 
                                 <feFlood floodColor="#0400ff" floodOpacity='1' result="color"/>
                                 <feComposite in="color" in2="blur" operator="in" result="glow"/>

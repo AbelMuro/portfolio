@@ -30,11 +30,10 @@ function ChainOne() {
                     <motion.svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"}>
                         <defs>
                             <filter id='glowEffectChainOne'>
-                                <motion.feGaussianBlur 
+                                <feGaussianBlur 
                                     in="SourceAlpha" 
                                     result="blur"
-                                    initial={{stdDeviation: 3}}
-                                    animate={{stdDeviation: [3, 1.5, 3], transition: {duration: 3, repeat: Infinity, ease: 'linear'}}}
+                                    stdDeviation={3}
                                     />
                                 <feFlood floodColor="#0400ff" floodOpacity='1' result="color"/>
                                 <feComposite in="color" in2="blur" operator="in" result="glow"/>

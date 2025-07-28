@@ -9,14 +9,12 @@ function AnimateClock() {
         <svg className={styles.container} viewBox={'0 0 306 306'}>
             <defs>
                 <filter id='glowEffect'>
-                    <motion.feGaussianBlur 
+                    <feGaussianBlur 
                         in="SourceAlpha" 
-                        
                         result="blur"
-                        initial={{stdDeviation: 2}}
-                        animate={{stdDeviation: [2, 0, 2], transition: {duration: 3, repeat: Infinity, ease: 'linear'}}}
+                        stdDeviation={2}
                         />
-                    <feFlood floodColor="#0400ff" floodOpacity='0.5' result="color"/>
+                    <feFlood floodColor="#0400ff" floodOpacity='1' result="color"/>
                     <feComposite in="color" in2="blur" operator="in" result="glow"/>
                     <feMerge>
                         <feMergeNode in="glow"/>

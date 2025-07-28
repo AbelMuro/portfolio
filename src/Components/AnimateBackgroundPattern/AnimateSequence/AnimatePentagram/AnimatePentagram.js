@@ -64,7 +64,7 @@ function AnimatePentagram({scrollThresholds}) {
                                             in="SourceAlpha" 
                                             result="blur"
                                             initial={{stdDeviation: 0}}
-                                            animate={{stdDeviation: [0, 0.7, 0.2, 0.7, 0], transition: {duration: 3, repeat: Infinity, repeatType: 'loop', ease: 'linear'}}}
+                                            animate={{stdDeviation: 0.4, transition: {duration: 0.6}}}
                                             exit={{stdDeviation: 0}}
                                             /> 
                                         <feFlood floodColor="#0400ff" floodOpacity='1' result="color"/>
@@ -79,7 +79,7 @@ function AnimatePentagram({scrollThresholds}) {
                                             in="SourceAlpha" 
                                             result="blur"
                                             initial={{stdDeviation: 0}}
-                                            animate={{stdDeviation: [0, 0.2, 0.08, 0.2, 0], transition: {duration: 3, repeat: Infinity, repeatType: 'loop', ease: 'linear'}}}
+                                            animate={{stdDeviation: 0.08, transition: {duration: 0.6}}}
                                             exit={{stdDeviation: 0}}
                                             /> 
                                         <feFlood floodColor="#0400ff" floodOpacity='1' result="color"/>
@@ -94,7 +94,7 @@ function AnimatePentagram({scrollThresholds}) {
                                             in="SourceAlpha" 
                                             result="blur"
                                             initial={{stdDeviation: 0}}
-                                            animate={{stdDeviation: [0, 0.7, 0.2, 0.7, 0], transition: {duration: 3, repeat: Infinity, repeatType: 'loop', ease: 'linear'}}}
+                                            animate={{stdDeviation: 0.7, transition: {duration: 0.6}}}
                                             exit={{stdDeviation: 0}}
                                             /> 
                                         <feFlood floodColor="#0400ff" floodOpacity='1' result="color"/>

@@ -44,11 +44,11 @@ function OuterMostSquare() {
                     <motion.svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"} style={{scale: scaleSmooth}}>
                         <defs>
                             <filter id='glowEffectOuterMostSquare'>
-                                <motion.feGaussianBlur 
+                                <feGaussianBlur 
                                     in="SourceAlpha" 
                                     result="blur"
-                                    initial={{stdDeviation: 0.4}}
-                                    animate={{stdDeviation: [0.4, 0.1, 0.4], transition: {duration: 3, repeat: Infinity, ease: 'linear'}}}
+                                    stdDeviation={0.4}
+    
                                     /> 
                                 <feFlood floodColor="#0400ff" floodOpacity='1' result="color"/>
                                 <feComposite in="color" in2="blur" operator="in" result="glow"/>

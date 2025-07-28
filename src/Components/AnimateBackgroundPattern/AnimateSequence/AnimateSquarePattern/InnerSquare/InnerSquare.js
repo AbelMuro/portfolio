@@ -45,11 +45,10 @@ function InnerSquare(){
                     <svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"}>
                         <defs>
                             <filter id='glowEffectInnerSquare'>
-                                <motion.feGaussianBlur 
+                                <feGaussianBlur 
                                     in="SourceAlpha" 
                                     result="blur"
-                                    initial={{stdDeviation: 1}}
-                                    animate={{stdDeviation: [1, 0.5, 1], transition: {duration: 3, repeat: Infinity, ease: 'linear'}}}
+                                    stdDeviation={1}
                                     /> 
                                 <feFlood floodColor="#0400ff" floodOpacity='1' result="color"/>
                                 <feComposite in="color" in2="blur" operator="in" result="glow"/>
@@ -59,11 +58,10 @@ function InnerSquare(){
                                 </feMerge>
                             </filter>
                             <filter id='glowEffectInnerDesign'>
-                                <motion.feGaussianBlur 
+                                <feGaussianBlur 
                                     in="SourceAlpha" 
                                     result="blur"
-                                    initial={{stdDeviation: 1}}
-                                    animate={{stdDeviation: [1, 0.5, 1], transition: {duration: 3, repeat: Infinity, ease: 'linear'}}}
+                                    stdDeviation={1}
                                     /> 
                                 <feFlood floodColor="#0400ff" floodOpacity='1' result="color"/>
                                 <feComposite in="color" in2="blur" operator="in" result="glow"/>

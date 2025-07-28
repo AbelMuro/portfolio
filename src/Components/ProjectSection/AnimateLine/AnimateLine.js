@@ -13,14 +13,12 @@ function AnimateLine({scrollThresholds}) {
             <motion.svg className={styles.svg} viewBox={"0 0 30.055271 297.90417"}>
                 <defs>
                     <filter id='glowEffect'>
-                        <motion.feGaussianBlur 
-                            in="SourceAlpha" 
-                            
+                        <feGaussianBlur 
+                            in="SourceAlpha"    
                             result="blur"
-                            initial={{stdDeviation: 2}}
-                            animate={{stdDeviation: [2, 0, 2], transition: {duration: 3, repeat: Infinity, ease: 'linear'}}}
+                            stdDeviation={4}
                             />
-                        <feFlood floodColor="#0400ff" floodOpacity='0.5' result="color"/>
+                        <feFlood floodColor="#0400ff" floodOpacity='1' result="color"/>
                         <feComposite in="color" in2="blur" operator="in" result="glow"/>
                         <feMerge>
                             <feMergeNode in="glow"/>

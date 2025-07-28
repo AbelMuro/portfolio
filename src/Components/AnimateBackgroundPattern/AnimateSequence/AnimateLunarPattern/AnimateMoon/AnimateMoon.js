@@ -24,11 +24,10 @@ function AnimateMoon() {
                 <motion.svg viewBox={"0 0 206.40488 206.40488"} className={styles.svg}>
                     <defs>
                         <filter id='glowEffectLargeMoon'>
-                            <motion.feGaussianBlur 
+                            <feGaussianBlur 
                                 in="SourceAlpha" 
                                 result="blur"
-                                initial={{stdDeviation: 0.4}}
-                                animate={{stdDeviation: [0.4, 0.2, 0.4], transition: {duration: 3, repeat: Infinity, ease: 'linear'}}}
+                                stdDeviation={0.4}
                                 />
                             <feFlood floodColor="#0400ff" floodOpacity='1' result="color"/>
                             <feComposite in="color" in2="blur" operator="in" result="glow"/>
@@ -38,11 +37,10 @@ function AnimateMoon() {
                             </feMerge>
                         </filter>
                         <filter id='glowEffectSwingMoon'>
-                            <motion.feGaussianBlur 
+                            <feGaussianBlur 
                                 in="SourceAlpha" 
                                 result="blur"
-                                initial={{stdDeviation: 2}}
-                                animate={{stdDeviation: [2, 0.8, 2], transition: {duration: 3, repeat: Infinity, ease: 'linear'}}}
+                                stdDeviation={1.5}
                                 />
                             <feFlood floodColor="#0400ff" floodOpacity='1' result="color"/>
                             <feComposite in="color" in2="blur" operator="in" result="glow"/>
