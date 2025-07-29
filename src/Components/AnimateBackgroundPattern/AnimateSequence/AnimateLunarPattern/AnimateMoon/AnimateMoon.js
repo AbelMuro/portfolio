@@ -21,13 +21,13 @@ function AnimateMoon() {
 
     return(
         <motion.div id='moon' className={styles.container} style={{transform: transformContainer}}>
-                <motion.svg viewBox={"0 0 206.40488 206.40488"} className={styles.svg}>
+                <svg viewBox={"0 0 206.40488 206.40488"} className={styles.svg}>
                     <defs>
                         <filter id='glowEffectLargeMoon'>
                             <feGaussianBlur 
                                 in="SourceAlpha" 
                                 result="blur"
-                                stdDeviation={0.4}
+                                stdDeviation={0.2}
                                 />
                             <feFlood floodColor="#0400ff" floodOpacity='1' result="color"/>
                             <feComposite in="color" in2="blur" operator="in" result="glow"/>
@@ -53,7 +53,7 @@ function AnimateMoon() {
                     <Moon/>                     
                     <BlackPattern/>    
                     <SwingingMoon/>  
-                </motion.svg>
+                </svg>
         </motion.div>
     )
 }

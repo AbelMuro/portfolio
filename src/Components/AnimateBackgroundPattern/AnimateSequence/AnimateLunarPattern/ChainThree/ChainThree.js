@@ -25,7 +25,7 @@ function ChainThree() {
             {
                 mount &&
                 <motion.div id='chain three' className={styles.container} exit={{opacity: 0}}>
-                    <motion.svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"}>
+                    <svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"}>
                         <defs>
                             <filter id='glowEffectChainThree'>
                                 <feGaussianBlur 
@@ -41,7 +41,7 @@ function ChainThree() {
                                 </feMerge>
                             </filter>
                         </defs>
-                        <motion.g className={styles.group} style={{transform}} filter={'url(#glowEffectChainThree)'}>
+                        <motion.g className={styles.group} transform={transform} filter={'url(#glowEffectChainThree)'}>
                                 <path
                                     fill="none"
                                     fillOpacity={1}
@@ -78,7 +78,7 @@ function ChainThree() {
                                     cy={99.121437}
                                     rx={2.2789274}
                                     ry={2.2761486}
-                                    style={{transform: 'translate(2.5px, 20px)'}}
+                                    transform='translate(2.5, 20)'
                                     />
 
                                 <ellipse
@@ -96,7 +96,7 @@ function ChainThree() {
                                     cy={99.18689}
                                     rx={2.2789274}
                                     ry={2.2761486}
-                                    style={{transform: 'translate(8.5px, 35px)'}}
+                                    transform='translate(8.5, 35)'
                                     />
 
                                 <ellipse
@@ -114,7 +114,7 @@ function ChainThree() {
                                     cy={99.247375}
                                     rx={2.2789274}
                                     ry={2.2761486}
-                                    style={{transform: 'translate(22px, 42px)'}}
+                                    transform='translate(22, 42)'
                                     />
 
                                 <ellipse
@@ -132,7 +132,7 @@ function ChainThree() {
                                     cy={99.18869}
                                     rx={2.2789274}
                                     ry={2.2761486}
-                                    style={{transform: 'translate(32px, 35px)'}}
+                                    transform='translate(32, 35)'
                                     />
 
                                 <ellipse
@@ -150,10 +150,10 @@ function ChainThree() {
                                     cy={99.128799}
                                     rx={2.2789274}
                                     ry={2.2761486}
-                                    style={{transform: 'translate(37px, 20px)'}}
+                                    transform='translate(37, 20)'
                                     />
                         </motion.g>
-                    </motion.svg>            
+                    </svg>            
                 </motion.div> 
             }              
         </AnimatePresence>

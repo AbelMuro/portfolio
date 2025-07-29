@@ -25,7 +25,7 @@ function ChainFour() {
         <AnimatePresence>
             {mount &&
             <motion.div id='chain four' className={styles.container} exit={{opacity: 0}}>
-                <motion.svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"}>
+                <svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"}>
                     <defs>
                         <filter id='glowEffectChainFour'>
                             <feGaussianBlur 
@@ -41,7 +41,7 @@ function ChainFour() {
                             </feMerge>
                         </filter>
                     </defs>
-                    <motion.g className={styles.group} style={{transform}} filter={'url(#glowEffectChainFour)'}>
+                    <motion.g className={styles.group} transform={transform} filter={'url(#glowEffectChainFour)'}>
                             <path
                                 fill="none"
                                 fillOpacity={1}
@@ -77,10 +77,10 @@ function ChainFour() {
                                 cx={137.49643}
                                 cy={99.123276}
                                 r={2.7590666}
-                                style={{transform: 'translate(6px, 15px)'}}
+                                transform={'translate(6, 15)'}
                                 />
                     </motion.g>
-                </motion.svg>
+                </svg>
             </motion.div>}            
         </AnimatePresence>
 

@@ -48,7 +48,6 @@ function OuterMostSquare() {
                                     in="SourceAlpha" 
                                     result="blur"
                                     stdDeviation={0.4}
-    
                                     /> 
                                 <feFlood floodColor="#0400ff" floodOpacity='1' result="color"/>
                                 <feComposite in="color" in2="blur" operator="in" result="glow"/>
@@ -67,7 +66,8 @@ function OuterMostSquare() {
                                 strokeLinecap="round"
                                 strokeLinejoin="round"
                                 strokeDasharray={55}
-                                style={{strokeDashoffset: smoothDashoffsetOuterBorder, transform: 'translate(-47.8px, -13.5px)'}}
+                                strokeDashoffset={smoothDashoffsetOuterBorder}
+                                transform='translate(-47.8, -13.5)'
                                 d="m 150.67604,106.23255 9.34609,9.05688 -8.62065,8.73702 -9.3461,-9.05688 z"
                                 id="rect704-3-9-6"
                                 />
@@ -81,17 +81,17 @@ function OuterMostSquare() {
                                 strokeLinejoin="round"
                                 strokeMiterlimit={0}
                                 strokeDasharray={55}
-                                style={{strokeDashoffset: smoothStrokeDashoffsetInnerBorder, transform: 'translate(-47.8px, -13.5px) matrix(0.71813035,0.69590861,-0.70235073,0.71183106,0,0)'}}
+                                strokeDashoffset={smoothStrokeDashoffsetInnerBorder}
+                                transform='translate(-47.8, -13.5) matrix(0.71813035,0.69590861,-0.70235073,0.71183106,0,0)'
                                 d="m 182.95529,-27.496716 h 10.99335 v 10.367864 h -10.99335 z"
                                 id="rect704-3-9"
-                                initial={{opacity: 1}}
-                                exit={{opacity: 0}}
                                 />
                             <motion.image 
                                 filter={'url(#glowEffectOuterMostSquare)'}
                                 href={images['text']}
                                 width={16.5}
-                                style={{transform: 'translate(95px, 93.5px)', opacity: opacitySmooth}}
+                                transform={'translate(95, 93.5)'}
+                                opacity={opacitySmooth}
                                 />
                         </motion.svg>
                 </motion.div>  

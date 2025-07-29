@@ -27,7 +27,7 @@ function SwingingMoon() {
 
 
     return(
-        <motion.g className={styles.group} style={{transform}}>
+        <motion.g className={styles.group} transform={transform}>
             <motion.g className={styles.swing} initial={{rotate: 0}} animate={controlSwing}>
                 <motion.path
                     id="path12"
@@ -39,7 +39,8 @@ function SwingingMoon() {
                     strokeMiterlimit={0}
                     strokeDasharray={37}
                     strokeOpacity={1}
-                    style={{strokeDashoffset: smoothStrokeDashoffsetLine, transform: 'translate(-9px, -57px)'}}
+                    strokeDashoffset={smoothStrokeDashoffsetLine}
+                    transform={'translate(-9, -57)'}
                 />
                 <motion.path
                     filter={'url(#glowEffectSwingMoon)'}
@@ -53,7 +54,6 @@ function SwingingMoon() {
                         0.23,5.364 4.186,8.6881 7.912,9.522 
                         4.232,0.92 8.464,-2.208 7.107,-0.805 z"
                 
-                    fill="#0400ff"
                     fillOpacity={1}
                     stroke="#0400ff"
                     strokeWidth={1}
@@ -62,7 +62,8 @@ function SwingingMoon() {
                     strokeMiterlimit={0}
                     strokeDasharray={98.76}
                     strokeOpacity={1}
-                    style={{strokeDashoffset: smoothStrokeDashoffsetHangingMoon, fill: fillHangingMoon}}
+                    strokeDashoffset={smoothStrokeDashoffsetHangingMoon}
+                    fill={fillHangingMoon}
                 />
                 </motion.g>
             </motion.g>

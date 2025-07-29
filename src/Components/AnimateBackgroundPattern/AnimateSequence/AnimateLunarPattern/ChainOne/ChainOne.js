@@ -43,7 +43,7 @@ function ChainOne() {
                                 </feMerge>
                             </filter>
                         </defs>
-                        <motion.g className={styles.group} style={{transform}} filter={'url(#glowEffectChainOne)'}>
+                        <motion.g className={styles.group} transform={transform} filter={'url(#glowEffectChainOne)'}>
                                 <path
                                     fill="#0400ff"
                                     fillOpacity={1}
@@ -58,7 +58,6 @@ function ChainOne() {
                                     d="m 137.25784,98.876238 l 0.2,74.0554"
                                     id="path5-9"
                                     />
-                                    {/* moon   translate(4px, 79px)  */}
                                     <path
                                         fill="#0400ff"
                                         fillOpacity={1}
@@ -78,7 +77,7 @@ function ChainOne() {
                                             0.972,0.972 2.394,0.774 3.204,0.216 
                                             0.9,-0.792 1.08,-2.0988 1.08,-1.458 
                                         z"
-                                        style={{transform: 'translate(4px, 79px)'}}
+                                        transform={'translate(4, 79)'}
                                         id="path4-4-3"
                                         />
 
@@ -96,10 +95,9 @@ function ChainOne() {
                                         height={9}
                                         x={167.23331}
                                         y={-26.891945}
-                                        transform="rotate(45.004389)"
+                                        transform={'translate(0.5, 73) rotate(45.004389)'}
                                         strokeDasharray={40}
-                                        style={{strokeDashoffset: smoothStrokeDashoffset, transform: 'translate(0.5px, 73px) rotate(45.004389deg)'}}
-
+                                        strokeDashoffset={smoothStrokeDashoffset}
                                         />
 
                                     <ellipse
@@ -117,7 +115,7 @@ function ChainOne() {
                                         cy={98.987175}
                                         rx={2.2789274}
                                         ry={2.2761486}
-                                        style={{transform: 'translate(0px, 30px)'}}
+                                        transform={'translate(0, 30)'}
                                         />                                             
                         </motion.g>                 
                     </motion.svg>

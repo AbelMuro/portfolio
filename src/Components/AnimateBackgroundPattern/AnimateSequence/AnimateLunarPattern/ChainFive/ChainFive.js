@@ -27,7 +27,7 @@ function ChainFive(){
             {
             mount && 
             <motion.div id='chain five' className={styles.container} exit={{opacity: 0}}>
-                <motion.svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"}>
+                <svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"}>
                     <defs>
                         <filter id='glowEffectChainFive'>
                             <feGaussianBlur 
@@ -44,7 +44,7 @@ function ChainFive(){
                         </filter>
                     </defs>
 
-                    <motion.g className={styles.group} style={{transform}} filter={'url(#glowEffectChainFive)'}>
+                    <motion.g className={styles.group} transform={transform} filter={'url(#glowEffectChainFive)'}>
                         <path
                             id="path10"
                             fill="none"
@@ -81,7 +81,7 @@ function ChainFive(){
                             strokeLinejoin="round"
                             strokeMiterlimit={0}
                             strokeOpacity={1}
-                            style={{transform: 'translate(0.5px, 10px)'}}
+                            transform={'translate(0.5, 10)'}
                             />
 
                         <ellipse
@@ -98,7 +98,7 @@ function ChainFive(){
                             strokeLinejoin="round"
                             strokeMiterlimit={0}
                             strokeOpacity={1}
-                            style={{transform: 'translate(3.3px, 25px)'}}
+                            transform='translate(3.3, 25)'
                             />
 
                         <ellipse
@@ -115,7 +115,7 @@ function ChainFive(){
                             strokeLinejoin="round"
                             strokeMiterlimit={0}
                             strokeOpacity={1}
-                            style={{transform: 'translate(31px, 13px)'}}
+                            transform='translate(31, 13)'
                             />
 
                         <ellipse
@@ -132,7 +132,7 @@ function ChainFive(){
                             strokeLinejoin="round"
                             strokeMiterlimit={0}
                             strokeOpacity={1}
-                            style={{transform: 'translate(26.5px, 25px)'}}
+                            transform='translate(26.5, 25)'
                             />
 
                         <circle
@@ -149,7 +149,7 @@ function ChainFive(){
                             strokeMiterlimit={0}
                             strokeDasharray="none"
                             strokeOpacity={1}
-                            style={{transform: 'translate(14px, 35px)'}}
+                            transform='translate(14, 35)'
                             />
 
                         <ellipse
@@ -166,7 +166,7 @@ function ChainFive(){
                             strokeLinejoin="round"
                             strokeMiterlimit={0}
                             strokeOpacity={1}
-                            style={{transform: 'translate(33.7px, 0px)'}}
+                            transform='translate(33.7, 0)'
                             />
 
                         <ellipse
@@ -183,10 +183,10 @@ function ChainFive(){
                             strokeLinejoin="round"
                             strokeMiterlimit={0}
                             strokeOpacity={1}
-                            style={{transform: 'translate(35px, -13px)'}}
+                            transform='translate(35, -13)'
                             />
                     </motion.g>
-                </motion.svg>
+                </svg>
             </motion.div>
             }         
         </AnimatePresence>

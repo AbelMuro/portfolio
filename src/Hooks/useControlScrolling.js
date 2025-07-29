@@ -34,7 +34,7 @@ function useControlScrolling() {
 
             timeoutRef.current = setTimeout(() => {
                 stopScrolling.current= false;
-            }, 400)
+            }, 300)
         }
 
 

@@ -75,7 +75,7 @@ function InnerMostTriangle() {
                             </filter>
                             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath30">
                                 <path 
-                                    style={{transform: 'translate(-77.5px, -78px)'}}
+                                    transform='translate(-77.5, -78)'
                                     d="m 153.32703,106.92437
                                     h 134.6184
                                     v 134.82855
@@ -120,13 +120,15 @@ function InnerMostTriangle() {
                             stroke="#0400ff"
                             strokeWidth={4}
                             strokeDasharray={130}
-                            style={{strokeDashoffset: smoothStrokeDashoffset, transform: 'rotate(-15deg) translate(-76px, 24.3px)'}}
+                            strokeDashoffset={smoothStrokeDashoffset}
+                            transform={'rotate(-15) translate(-76, 24.3)'}
                             />
                         <motion.image
                             filter={'url(#glowEffectInnerTriangleDesign)'}
                             width={25}
                             href={images['sunEarthText']}
-                            style={{opacity: opacitySmooth, transform: 'translate(-14.6px, -8px)'}}
+                            opacity={opacitySmooth}
+                            transform={'translate(-14.6, -8)'}
                             x={101.79}
                             y={102.1}
                         />                            

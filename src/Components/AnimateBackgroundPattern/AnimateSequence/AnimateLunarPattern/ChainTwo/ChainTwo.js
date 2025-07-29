@@ -41,7 +41,7 @@ function ChainTwo() {
                                 </feMerge>
                             </filter>
                     </defs>
-                    <motion.g className={styles.group} style={{transform}} filter='url(#glowEffectChainTwo)'>
+                    <motion.g className={styles.group} transform={transform} filter='url(#glowEffectChainTwo)'>
                             {/* chain */}
                             <path
                                 fill="#0400ff"
@@ -73,7 +73,7 @@ function ChainTwo() {
                                     0,0 -2.7,1.48 -3.04,2.826 -0.2,1.1 1.0,3.206 1.0,3.206 
                                 z"
                                 id="path6"
-                                style={{transform: 'translate(3.5px, 55px)'}}
+                                transform='translate(3.5, 55)'
                                 />
                             <circle
                                 fill="none"
@@ -89,7 +89,7 @@ function ChainTwo() {
                                 cx={137.35896}
                                 cy={99.156044}
                                 r={2.7590666}
-                                style={{transform: 'translate(0px, 35px)'}}
+                                transform='translate(0, 35)'
                                 />
                         </motion.g>
                 </motion.svg>
