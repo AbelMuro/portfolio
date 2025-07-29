@@ -1,11 +1,12 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {LinearPentagram} from '~/Transitions';
-import {motion, useScroll, useTransform, useSpring} from 'framer-motion';
+import {motion, useScroll, useTransform, useSpring, useMotionValueEvent, AnimatePresence} from 'framer-motion';
 import * as styles from './styles.module.css';
 
 function Rect(props) {
     const {scrollY} = useScroll();
-    
+    const [mount, setMount] = useState(false);
+
     const strokeDashOffset = useTransform(scrollY, [2500, 4200], [52.0433, 0]);
     const strokeDashBack = useTransform(scrollY, [5800, 6000], [0, 52.0433]);
     const finalOffset = useTransform(scrollY, (value) => {
@@ -18,16 +19,28 @@ function Rect(props) {
     })
     const finalOffsetSmooth = useSpring(finalOffset, LinearPentagram);
     
+    useMotionValueEvent(scrollY, 'change', (value) => {
+        if(value >= 2000)
+            setMount(true);
+        else
+            setMount(false);
+    })
+
 
     return (
-        <motion.rect 
-            {...props} 
-            className={styles.squares} 
-            fill='none' 
-            stroke='#0400ff' 
-            strokeDasharray={52.0433} 
-            strokeDashoffset={finalOffsetSmooth}
-        />  
+        <AnimatePresence>
+            { mount && 
+            <motion.rect 
+                {...props} 
+                className={styles.squares} 
+                fill='none' 
+                stroke='#0400ff' 
+                strokeDasharray={52.0433} 
+                strokeDashoffset={finalOffsetSmooth}
+                exit={{opacity: 0}}
+            />  }            
+        </AnimatePresence>
+
     )
 }
 

@@ -39,16 +39,15 @@ function AnimateTechTitles({x, y}) {
             setTitle(titles.current[7]);
     }) 
 
-    return (
+    return title && (
         <motion.text x={x} y={y}    
             className={styles.title}
             fill="white"
             textAnchor='middle'
             fontSize={'0.12rem'}
             fontFamily="'AbelFont'"
-            style={{opacity: smoothOpacity}}
+            opacity={smoothOpacity}
             dy=".3em"
-            exit={{opacity: 0}}
             >
                 {title}
         </motion.text>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {LinearPentagram} from '~/Transitions';
 import {motion, useScroll, useTransform, useSpring, useMotionValueEvent, useMotionTemplate} from 'framer-motion';
 import icons from '~/assets/icons';
@@ -7,6 +7,7 @@ import * as styles from './styles.module.css';
 
 function TechIcon({name, x, y, size, scrollThresholds}) {
     const {scrollY} = useScroll();
+    const [mount, setMount] = useState(false);
 
     const scale = useTransform(scrollY, [5800, 6000], [1, 0]);
     const smoothScale = useSpring(scale, LinearPentagram);
@@ -22,8 +23,15 @@ function TechIcon({name, x, y, size, scrollThresholds}) {
         else if(y > 6700)
             smoothScale.jump(0);
     })
+
+    useMotionValueEvent(scrollY, 'change', (value) => {
+        if(value < scrollThresholds[0] - 300)
+            setMount(false);
+        else
+            setMount(true);
+    })
     
-    return(
+    return mount && (
         <motion.image 
             width={size} 
             className={styles.icon} 

@@ -1,10 +1,11 @@
-import React, {memo} from 'react';
+import React, {memo, useState} from 'react';
 import {LinearPentagram} from '~/Transitions';
 import {motion, useTransform, useSpring, useScroll, useMotionValueEvent, useMotionTemplate} from 'framer-motion';
 import * as styles from './styles.module.css';
 
 function Circle({scrollThresholds, scaleTo, rotateX, rotateY}) {
     const {scrollY} = useScroll();
+    const [mount, setMount] = useState(false);
 
     const strokeDashoffset = useTransform(scrollY, [5800, 6000], [0, 300]);
     const dashoffsetSpring = useSpring(strokeDashoffset, LinearPentagram);
@@ -31,7 +32,15 @@ function Circle({scrollThresholds, scaleTo, rotateX, rotateY}) {
             dashoffsetSpring.jump(300)
     })
 
-    return (
+    useMotionValueEvent(scrollY, 'change', (y) => {
+        if(y < scrollThresholds[0] - 300)
+            setMount(false);
+        else
+            setMount(true);
+    })
+
+
+    return mount && (
         <motion.circle
             className={styles.circle}
             cx={150.95853}
