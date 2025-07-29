@@ -23,7 +23,7 @@ function AnimatePentagram({scrollThresholds}) {
     const rotate3DForX = useTransform(scrollY, scrollRange, [0, 35, 0, -25, 0]);
     const rotate3DSpringY = useSpring(rotate3DForY, LinearPentagram);
     const rotate3DSpringX = useSpring(rotate3DForX, LinearPentagram);
-    const transform = useMotionTemplate`translate(-47.929077px, -13.484006px)`;
+    const transformRotate = useMotionTemplate`rotateX(${rotate3DSpringX}deg) rotateY(${rotate3DSpringY}deg) translateZ(0px)`;
 
     const scale = useTransform(scrollY, [800, 2000], [0.8, 5])
     const smoothScale = useSpring(scale, LinearRing);
@@ -52,7 +52,7 @@ function AnimatePentagram({scrollThresholds}) {
             <motion.div 
                 id='pentagram'             
                 className={styles.container}
-                style={{rotateY: rotate3DSpringY, rotateX: rotate3DSpringX}}
+                style={{transform: transformRotate}}
                 exit={{opacity: 0}}>
                 <motion.svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"} style={{scale: smoothScale}}>
                         <defs>
@@ -108,7 +108,7 @@ function AnimatePentagram({scrollThresholds}) {
                                 }
                             </AnimatePresence>
                         </defs>
-                        <motion.g transform={transform}>   
+                        <g transform={'translate(-47.929077, -13.484006)'}>   
                                 <AnimateCircles/>                        
                                 <Circle 
                                     filter={'url(#glowEffectPentagramOuterCircles)'}
@@ -268,7 +268,7 @@ function AnimatePentagram({scrollThresholds}) {
                                     strokeMiterlimit={0}
                                     strokeOpacity={1}
                                     />                          
-                        </motion.g>   
+                        </g>   
                 </motion.svg>
             </motion.div>
             }             
