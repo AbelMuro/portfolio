@@ -25,10 +25,10 @@ function InnerMostLines() {
             <motion.div 
                 id='inner most lines'
                 className={styles.container}
-                style={{scale: smoothScale}}
                 exit={{opacity: 0}}
                 >
-                <svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"}>
+                <svg xmlns="http://www.w3.org/2000/svg" className={styles.svg} viewBox={"0 0 206.40488 206.40488"}>
+                    <motion.g style={{scale: smoothScale}}>
                     { /* north line */ }
                         <motion.path 
                             id="path1429"
@@ -88,6 +88,9 @@ function InnerMostLines() {
                             strokeOpacity={1}
                             style={{strokeDashoffset: smoothDashoffset}} 
                             strokeDasharray='60' />
+
+                    </motion.g>
+
                     </svg>
             </motion.div>
             }

@@ -30,10 +30,8 @@ function OuterRing() {
                         initial={{rotate: 0, opacity: 1}} 
                         animate={{rotate: [0, 360], transition: {repeat: Infinity, duration: 18.9, ease: 'linear', delay: 1}}} 
                         exit={{opacity: 0}}
-                        style={{scale: smoothScale}}
                         >
-                    <svg 
-                        xmlns="http://www.w3.org/2000/svg" 
+                    <svg xmlns="http://www.w3.org/2000/svg" 
                         className={styles.svg} 
                         viewBox={"0 0 206.40488 206.40488"} 
                         >
@@ -52,12 +50,13 @@ function OuterRing() {
                                 </feMerge>
                             </filter>
                         </defs>
-                            <image
+                            <motion.image
                                 x={103.20244 - 100.2}
                                 y={103.20244 - 100.5}
                                 filter={'url(#glowEffectOuterRing)'}
                                 href={images['outerRing']}
                                 className={styles.outerRing}
+                                style={{scale: smoothScale}}
                             />
                     </svg>
 

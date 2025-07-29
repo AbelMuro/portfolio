@@ -58,7 +58,7 @@ function TrailingMouseAnimation(){
                         )
                     })} 
                 </AnimatePresence>
-                <svg width='0' height='0' xmlns="http://www.w3.org/2000/svg">
+                <svg xmlns="http://www.w3.org/2000/svg" width='0' height='0' xmlns="http://www.w3.org/2000/svg">
                         <defs>
                             <filter id="smokeEffect1">
                                 <feTurbulence type="fractalNoise" baseFrequency="0.08 0.1" numOctaves="138" result="noise"/>

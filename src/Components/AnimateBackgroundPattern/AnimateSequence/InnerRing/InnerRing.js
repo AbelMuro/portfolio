@@ -1,5 +1,4 @@
-import React, {useContext, useState} from 'react';
-import {ContainerContext} from '!/AnimateBackgroundPattern';
+import React, {useState} from 'react';
 import {LinearRing} from '~/Transitions';
 import { motion, useScroll, useMotionValueEvent, AnimatePresence, useTransform, useSpring} from 'framer-motion';
 import * as styles from './styles.module.css';
@@ -28,9 +27,10 @@ function InnerRing() {
                     initial={{rotate: 0, opacity: 1}} 
                     animate={{rotate: [360, 0], transition: {repeat: Infinity, duration: 21.9, ease: 'linear', delay: 2}}}
                     exit={{opacity: 0}}
-                    style={{scale: smoothScale}}
                     >
-                    <svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"}>
+                    <svg xmlns="http://www.w3.org/2000/svg" 
+                        className={styles.svg} 
+                        viewBox={"0 0 206.40488 206.40488"}>
                         <defs>
                             <filter id='glowEffectInnerRing'>
                                 <feGaussianBlur 
@@ -46,11 +46,12 @@ function InnerRing() {
                                 </feMerge>
                             </filter>
                         </defs>
-                        <image 
+                        <motion.image 
                             x={103.20244 - 85}
                             y={103.20244 - 85}
                             className={styles.ring}
                             href={images['innerRing']}
+                            style={{scale: smoothScale}}
                             filter={'url(#glowEffectInnerRing)'}
                             />
                     </svg>

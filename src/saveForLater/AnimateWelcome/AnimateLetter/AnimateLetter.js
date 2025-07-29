@@ -25,7 +25,7 @@ function AnimateLetter({letter}) {
     }, [mobile])
 
     return(
-        <svg 
+        <svg xmlns="http://www.w3.org/2000/svg" 
             xmlns='http://www.w3.org/2000/svg' 
             height={mobile ? '70' : '90'}
             ref={svgRef}>

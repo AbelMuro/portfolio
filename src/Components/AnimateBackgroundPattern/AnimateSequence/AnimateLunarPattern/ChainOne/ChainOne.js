@@ -27,7 +27,7 @@ function ChainOne() {
         <AnimatePresence>
             { mount &&
                 <motion.div id='chain one' className={styles.container} exit={{opacity: 0}}>
-                    <motion.svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"}>
+                    <motion.svg xmlns="http://www.w3.org/2000/svg"  className={styles.svg} viewBox={"0 0 206.40488 206.40488"}>
                         <defs>
                             <filter id='glowEffectChainOne'>
                                 <feGaussianBlur 

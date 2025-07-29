@@ -21,7 +21,7 @@ function AnimateMoon() {
 
     return(
         <motion.div id='moon' className={styles.container} style={{transform: transformContainer}}>
-                <svg viewBox={"0 0 206.40488 206.40488"} className={styles.svg}>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox={"0 0 206.40488 206.40488"} className={styles.svg}>
                     <defs>
                         <filter id='glowEffectLargeMoon'>
                             <feGaussianBlur 

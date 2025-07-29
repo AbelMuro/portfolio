@@ -23,10 +23,12 @@ function AnimatePentagram({scrollThresholds}) {
     const rotate3DForX = useTransform(scrollY, scrollRange, [0, 35, 0, -25, 0]);
     const rotate3DSpringY = useSpring(rotate3DForY, LinearPentagram);
     const rotate3DSpringX = useSpring(rotate3DForX, LinearPentagram);
-    const transformRotate = useMotionTemplate`rotateX(${rotate3DSpringX}deg) rotateY(${rotate3DSpringY}deg) translate3d(0px, 0px, 0px)`;
+    const transformRotate = useMotionTemplate`rotateX(${rotate3DSpringX}deg) rotateY(${rotate3DSpringY}deg)`;
 
     const scale = useTransform(scrollY, [800, 2000], [0.8, 5])
     const smoothScale = useSpring(scale, LinearRing);
+
+    const transformGroup = useMotionTemplate`translate(-47.929077px, -14px) scale(${smoothScale})`
 
     useMotionValueEvent(scrollY, 'change', (value) => {
         if(value > 7000)    
@@ -53,9 +55,8 @@ function AnimatePentagram({scrollThresholds}) {
             <motion.div 
                 id='pentagram'             
                 className={styles.container}
-                style={{transform: transformRotate}}
                 exit={{opacity: 0}}>
-                <motion.svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"} style={{scale: smoothScale}}>
+                <motion.svg xmlns="http://www.w3.org/2000/svg" className={styles.svg} viewBox={"0 0 206.40488 206.40488"} style={{transform: transformRotate}}> 
                         <defs>
                             <AnimatePresence>
                                 {!pauseBlur &&
@@ -109,8 +110,8 @@ function AnimatePentagram({scrollThresholds}) {
                                 }
                             </AnimatePresence>
                         </defs>
-                        <g transform={'translate(-47.929077, -13.484006)'}>   
-                                <AnimateCircles/>                        
+                        <AnimateCircles/>     
+                        <motion.g className={styles.group} transform={transformGroup}>                     
                                 <Circle 
                                     id="path695"
                                     cx={150.95853}
@@ -259,7 +260,7 @@ function AnimatePentagram({scrollThresholds}) {
                                     strokeMiterlimit={0}
                                     strokeOpacity={1}
                                     />                          
-                        </g>   
+                        </motion.g>   
                 </motion.svg>
             </motion.div>
             }             

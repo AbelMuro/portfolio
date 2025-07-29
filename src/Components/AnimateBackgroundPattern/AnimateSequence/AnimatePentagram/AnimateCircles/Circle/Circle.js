@@ -7,7 +7,7 @@ function Circle({scrollThresholds, scaleTo, rotateX, rotateY}) {
     const {scrollY} = useScroll();
     const [mount, setMount] = useState(false);
 
-    const strokeDashoffset = useTransform(scrollY, [5800, 6000], [0, 300]);
+    const strokeDashoffset = useTransform(scrollY, [5800, 6000], [0, 500]);
     const dashoffsetSpring = useSpring(strokeDashoffset, LinearPentagram);
 
     const scale = useTransform(scrollY, scrollThresholds, [1, scaleTo]);
@@ -29,7 +29,7 @@ function Circle({scrollThresholds, scaleTo, rotateX, rotateY}) {
         if(y < 5800)
             dashoffsetSpring.set(0);
         else if(y > 6700)
-            dashoffsetSpring.jump(300)
+            dashoffsetSpring.jump(500)
     })
 
     useMotionValueEvent(scrollY, 'change', (y) => {
@@ -37,21 +37,20 @@ function Circle({scrollThresholds, scaleTo, rotateX, rotateY}) {
             setMount(false);
         else
             setMount(true);
-    })
-
+    });
 
     return mount && (
         <motion.circle
             className={styles.circle}
-            cx={150.95853}
-            cy={115.17852}
-            r={14.348076}
+            cx={103}
+            cy={94}
+            r={71.74038}
             fill='none' 
             stroke='#0400ff'
-            strokeWidth='0.2'
+            strokeWidth='1'
             strokeLinejoin='bevel'
             strokeMiterlimit='0'
-            strokeDasharray='300'
+            strokeDasharray='500'
             strokeDashoffset={dashoffsetSpring}
             transform={transform}
             />

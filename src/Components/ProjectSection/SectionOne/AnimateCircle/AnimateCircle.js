@@ -6,7 +6,7 @@ import * as styles from './styles.module.css';
 function AnimateCircle() {
 
     return(
-        <svg className={styles.container} viewBox='0 0 206 206'>
+        <svg xmlns="http://www.w3.org/2000/svg" className={styles.container} viewBox='0 0 206 206'>
             <g transform='translate(3, 3)' >
                 <motion.image 
                     className={styles.image}

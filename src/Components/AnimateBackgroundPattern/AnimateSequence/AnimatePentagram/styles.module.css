@@ -5,10 +5,12 @@
     top: 0px;
     left: 0px;
     z-index: var(--sixth-layer);
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
 }
 
 .group{
-
+    transform-origin: 50% calc(50% + 1.5px) !important;
 }
 
 .svg{

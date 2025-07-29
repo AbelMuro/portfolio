@@ -45,7 +45,7 @@ function InnerMostTriangle() {
                     style={{transform}} 
                     exit={{opacity: 0}}
                 >
-                    <svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"}>
+                    <svg xmlns="http://www.w3.org/2000/svg" className={styles.svg} viewBox={"0 0 206.40488 206.40488"}>
                         <defs>
                             <filter id='glowEffectInnerTriangle'>
                                 <feGaussianBlur 

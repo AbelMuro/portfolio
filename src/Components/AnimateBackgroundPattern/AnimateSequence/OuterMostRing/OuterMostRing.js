@@ -27,9 +27,8 @@ function OuterMostRing(){
                     initial={{opacity: 1, rotate: 0}} 
                     animate={{rotate: [360, 0], transition: {repeat: Infinity, duration: 31.9, ease: 'linear'}}} 
                     exit={{opacity: 0}}
-                    style={{scale: smoothScale}}
                     >
-                    <svg className={styles.container} viewBox="0 0 206.40488 205.26718">
+                    <svg xmlns="http://www.w3.org/2000/svg" className={styles.container} viewBox="0 0 206.40488 205.26718">
                         <defs>
                             <filter id='glowEffectOuterMostRing'>
                                 <feGaussianBlur 
@@ -46,11 +45,12 @@ function OuterMostRing(){
                             </filter>
                         </defs>
 
-                        <image
+                        <motion.image
                             key='ring' 
                             x={103.20244 - 101} // half of image width
                             y={102.63359 - 100} // half of image height
                             className={styles.ring} 
+                            style={{scale: smoothScale}}
                             href={images['outerMostRing']} 
                             filter='url(#glowEffectOuterMostRing)'
                         />
