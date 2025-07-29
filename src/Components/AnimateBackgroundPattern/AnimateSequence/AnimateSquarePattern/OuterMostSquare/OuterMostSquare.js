@@ -4,18 +4,23 @@ import {motion, useTransform, useSpring, useScroll, useMotionValueEvent, Animate
 import images from './images';
 import * as styles from './styles.module.css';
 
+
+/* 
+    this is where i left off, i need to continue optimizing the components for safari
+*/
+
+
 function OuterMostSquare() {
     const [mount, setMount] = useState(false);
     const {scrollY} = useScroll();
 
-    const scale = useTransform(scrollY, [1800, 2000], [0.8, 5]);
+    const scale = useTransform(scrollY, [6500, 7000], [1, 2]);
     const scaleSmooth = useSpring(scale, LinearSquare);
-    const scaleMore = useTransform(scrollY, [6500, 7000], [5, 10])
     
-    const strokeDashoffsetOuterBorder = useTransform(scrollY, [2500, 4200], [55, 0]);
+    const strokeDashoffsetOuterBorder = useTransform(scrollY, [2500, 4200], [252.88, 0]);
     const smoothDashoffsetOuterBorder = useSpring(strokeDashoffsetOuterBorder, LinearPentagram);
 
-    const strokeDashoffsetInnerBorder = useTransform(scrollY, [7000, 7500], [55, 0]);
+    const strokeDashoffsetInnerBorder = useTransform(scrollY, [7000, 7500], [213.61, 0]);
     const smoothStrokeDashoffsetInnerBorder = useSpring(strokeDashoffsetInnerBorder, LinearSquare);
 
     const opacity = useTransform(scrollY, [6700, 7200], [0, 1]);
@@ -28,9 +33,6 @@ function OuterMostSquare() {
             setMount(true);
     })
 
-    useMotionValueEvent(scaleMore, 'change', (value) => {
-        scaleSmooth.set(value);
-    })
 
     return(
         <AnimatePresence>
@@ -41,7 +43,7 @@ function OuterMostSquare() {
                     className={styles.container} 
                     exit={{opacity: 0}}
                     >
-                    <motion.svg xmlns="http://www.w3.org/2000/svg"  className={styles.svg} viewBox={"0 0 206.40488 206.40488"} style={{scale: scaleSmooth}}>
+                    <motion.svg xmlns="http://www.w3.org/2000/svg" className={styles.svg} viewBox={"0 0 206.40488 206.40488"} style={{scale: scaleSmooth}}>
                         <defs>
                             <filter id='glowEffectOuterMostSquare'>
                                 <feGaussianBlur 
@@ -59,16 +61,15 @@ function OuterMostSquare() {
                         </defs>   
                         {/* outer border*/}
                             <motion.path
-                                filter={'url(#glowEffectOuterMostSquare)'}
                                 fill="none"
                                 stroke="#0400ff"
-                                strokeWidth={0.164006}
+                                strokeWidth={0.6}
                                 strokeLinecap="round"
                                 strokeLinejoin="round"
-                                strokeDasharray={55}
+                                strokeDasharray={252.88}
                                 strokeDashoffset={smoothDashoffsetOuterBorder}
-                                transform='translate(-47.8, -13.5)'
-                                d="m 150.67604,106.23255 9.34609,9.05688 -8.62065,8.73702 -9.3461,-9.05688 z"
+                                transform='translate(-49, -55)'
+                                d="m 150.67604,106.23255 46.73045,45.2844 -43.10325,43.6851 -46.7305,-45.2844 z"
                                 id="rect704-3-9-6"
                                 />
                             {/* inner border */}
@@ -76,21 +77,20 @@ function OuterMostSquare() {
                                 filter={'url(#glowEffectOuterMostSquare)'}
                                 fill="none"
                                 stroke="#0400ff"
-                                strokeWidth={0.138539}
+                                strokeWidth={0.7}
                                 strokeLinecap="round"
                                 strokeLinejoin="round"
-                                strokeMiterlimit={0}
-                                strokeDasharray={55}
+                                strokeDasharray={213.61}
                                 strokeDashoffset={smoothStrokeDashoffsetInnerBorder}
-                                transform='translate(-47.8, -13.5) matrix(0.71813035,0.69590861,-0.70235073,0.71183106,0,0)'
-                                d="m 182.95529,-27.496716 h 10.99335 v 10.367864 h -10.99335 z"
+                                transform='translate(-49, -46) rotate(44)'
+                                d="m 182.95529,-27.496716 h 50.69256 v 47.80737 h -50.69256 z"
                                 id="rect704-3-9"
                                 />
                             <motion.image 
                                 filter={'url(#glowEffectOuterMostSquare)'}
                                 href={images['text']}
-                                width={16.5}
-                                transform={'translate(95, 93.5)'}
+                                width={80}
+                                transform={'translate(63.7, 56)'}
                                 opacity={opacitySmooth}
                                 />
                         </motion.svg>
