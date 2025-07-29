@@ -5,6 +5,7 @@
     top: 0px;
     left: 0px;
     z-index: var(--sixth-layer);
+    will-change: transform;
 }
 
 .group{

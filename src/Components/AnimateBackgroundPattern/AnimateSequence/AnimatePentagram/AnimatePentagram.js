@@ -52,6 +52,7 @@ function AnimatePentagram({scrollThresholds}) {
             <motion.div 
                 id='pentagram'             
                 className={styles.container}
+                style={{rotateY: rotate3DSpringY, rotateX: rotate3DSpringX}}
                 exit={{opacity: 0}}>
                 <motion.svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"} style={{scale: smoothScale}}>
                         <defs>
