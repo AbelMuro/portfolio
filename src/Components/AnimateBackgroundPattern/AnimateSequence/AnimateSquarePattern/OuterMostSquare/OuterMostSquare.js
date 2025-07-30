@@ -75,7 +75,7 @@ function OuterMostSquare() {
                                 </feMerge>
                             </filter>
                         </defs>   
-                        <motion.g style={{scale: scaleSmooth, rotateX: rotateSmoothX, rotateY: rotateSmoothY}}>
+                        <motion.g style={{rotateX: rotateSmoothX, rotateY: rotateSmoothY}}>
                             {/* outer border*/}
                                 <motion.path
                                     fill="none"

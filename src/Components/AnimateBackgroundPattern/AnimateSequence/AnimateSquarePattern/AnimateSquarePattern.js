@@ -31,7 +31,7 @@ function AnimateSquarePattern() {
 
     return(
         mount &&
-        <motion.section id='square pattern' className={styles.container}>
+        <motion.section id='square pattern' className={styles.container} style={{rotateX: rotateSmoothX}}>
             <OuterMostSquare/>
             <OuterSquare/>
             <InnerSquare/>
