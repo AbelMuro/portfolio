@@ -24,7 +24,7 @@ function AnimateMoon() {
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox={"0 0 206.40488 206.40488"} className={styles.svg}>
                     <defs>
                         <filter id='glowEffectLargeMoon' filterUnits="userSpaceOnUse" x="-20%" y="-20%" width="140%" height="140%">
-                            <feDropShadow dx="0" dy="0" stdDeviation="2" floodColor="#0400ff" floodOpacity={1}/>
+                            <feDropShadow dx="0" dy="0" stdDeviation="1" floodColor="#0400ff" floodOpacity={1}/>
                         </filter>   
                         <filter id='glowEffectSwingMoon' filterUnits="userSpaceOnUse" x="-20%" y="-20%" width="140%" height="140%">
                             <feDropShadow dx="0" dy="0" stdDeviation="3" floodColor="#0400ff" floodOpacity={1}/>
