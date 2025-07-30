@@ -6,5 +6,5 @@
     top: 0px;
     z-index: var(--fifth-layer);
     transform-style: preserve-3d;
-    perspective: 30000px;
+    perspective: 3000px;
 }

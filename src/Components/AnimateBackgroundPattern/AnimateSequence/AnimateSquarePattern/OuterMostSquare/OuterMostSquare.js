@@ -50,7 +50,6 @@ function OuterMostSquare() {
             setMountTextInnerBorder(false);
     })
 
-
     return(
         <AnimatePresence>
             {

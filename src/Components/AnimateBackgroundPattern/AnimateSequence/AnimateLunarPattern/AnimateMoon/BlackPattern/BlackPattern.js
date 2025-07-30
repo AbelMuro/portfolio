@@ -5,12 +5,12 @@ import { motion, useScroll, useTransform, useSpring, useMotionTemplate} from 'fr
 function BlackPattern () {
     const {scrollY} = useScroll();
 
-    const fill = useTransform(scrollY, [16500, 17000], ['#00000000', '#000000']);
+    const fill = useTransform(scrollY, [16000, 16500], ['#00000000', '#000000']);
 
     const scale = useTransform(scrollY, [14000, 14500], [0, 1]);
     const smoothScale = useSpring(scale, LinearMoon);
 
-    const strokeDashoffset = useTransform(scrollY, [16000, 16500], [1211.6173095703125, 0])
+    const strokeDashoffset = useTransform(scrollY, [15000, 15500], [1211.6173095703125, 0])
     const smoothDashoffset = useSpring(strokeDashoffset, LinearMoon);
 
     const transform = useMotionTemplate`translate(-59.5px, -12px) scale(${smoothScale})`;
