@@ -59,13 +59,13 @@ function AnimatePentagram({scrollThresholds}) {
                 <motion.svg xmlns="http://www.w3.org/2000/svg" className={styles.svg} viewBox={"0 0 206.40488 206.40488"} style={{transform: transformRotate}}> 
                         <defs>
                             <filter id='glowEffectPentagramOuterCircles' filterUnits="userSpaceOnUse" x="-20%" y="-20%" width="140%" height="140%">
-                                <feDropShadow dx="0" dy="0" stdDeviation="10" floodColor="#0400ff" floodOpacity={1}/>
+                                <feDropShadow dx="0" dy="0" stdDeviation="3" floodColor="#0400ff" floodOpacity={1}/>
                             </filter>
                             <filter id='glowEffectPentagramInnerCircles' filterUnits="userSpaceOnUse" x="-20%" y="-20%" width="140%" height="140%">
-                                <feDropShadow dx="0" dy="0" stdDeviation="5" floodColor="#0400ff" floodOpacity={1}/>
+                                <feDropShadow dx="0" dy="0" stdDeviation="1" floodColor="#0400ff" floodOpacity={1}/>
                             </filter>
                             <filter id='glowEffectPentagramRect' filterUnits="userSpaceOnUse" x="-20%" y="-20%" width="140%" height="140%">
-                                <feDropShadow dx="0" dy="0" stdDeviation="2" floodColor="#0400ff" floodOpacity={1}/>
+                                <feDropShadow dx="0" dy="0" stdDeviation="1" floodColor="#0400ff" floodOpacity={1}/>
                             </filter>                         
                         </defs>
                         <AnimateCircles/>     
