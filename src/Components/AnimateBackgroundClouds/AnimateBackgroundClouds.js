@@ -76,7 +76,6 @@ function AnimateBackgroundClouds() {
     }
 
     useEffect(() => {
-        return;
         firstCloudControls.start({filter: ['blur(150px)', 'blur(110px)'], transition: {repeat: Infinity, duration: 2.5, repeatType: 'mirror'}});
         secondCloudControls.start({filter: ['blur(150px)', 'blur(110px)'], transition: {repeat: Infinity, duration: 2.5, repeatType: 'mirror'}});
         thirdCloudControls.start({filter: ['blur(150px)', 'blur(110px)'], transition: {repeat: Infinity, duration: 2.5, repeatType: 'mirror'}});
@@ -89,8 +88,6 @@ function AnimateBackgroundClouds() {
 
     return(
         <motion.section className={styles.container} style={{backgroundPosition}}>
-            {
-                /*
             <motion.div 
                 className={styles.cloudOne} 
                 initial={{filter: 'blur(70px)', top: '0px', left: '0px'}}
@@ -107,9 +104,6 @@ function AnimateBackgroundClouds() {
                 className={styles.cloudFour} 
                 initial={{filter: 'blur(140px)', top: '0px', right: '0px'}}
                 animate={fourthCloudControls}/>       
-                */         
-            }
-
         </motion.section>
     )   
 }
