@@ -12,7 +12,7 @@ function Moon() {
     const scaleGroup = useTransform(scrollY, [14000, 14500], [1, 18]);
     const smoothScaleGroup = useSpring(scaleGroup, LinearMoon);
 
-    const transform = useMotionTemplate`translate(-63.5px, -20px) scale(${smoothScaleGroup})`
+    const transform = useMotionTemplate`translate(-63px, -25px) scale(${smoothScaleGroup})`
 
     return(         
             <motion.path

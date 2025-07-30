@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {LinearSquare, LinearPentagram} from '~/Transitions';
-import {motion, useTransform, useSpring, useScroll, useMotionValueEvent, AnimatePresence} from 'framer-motion';
+import {motion, useTransform, useSpring, useScroll, useMotionValueEvent, AnimatePresence, useMotionTemplate} from 'framer-motion';
 import images from './images';
 import * as styles from './styles.module.css';
 
@@ -35,6 +35,8 @@ function OuterMostSquare() {
     const rotateSmoothY = useSpring(rotateY, LinearPentagram);
     const rotateSmoothX = useSpring(rotateX, LinearPentagram);
 
+    const transform = useMotionTemplate`scale(${scaleSmooth}) rotateX(${rotateSmoothX}deg) rotateY(${rotateSmoothY}deg)`
+
 
     useMotionValueEvent(scrollY, 'change', (value) => {
         if(value < 2000 || value > 12800)
@@ -57,7 +59,6 @@ function OuterMostSquare() {
                 <motion.div 
                     id='outer most square/pentagram square' 
                     className={styles.container} 
-                    style={{scale: scaleSmooth}}
                     exit={{opacity: 0}}
                     >
                     <svg xmlns="http://www.w3.org/2000/svg" className={styles.svg} viewBox={"0 0 206.40488 206.40488"}>
@@ -76,7 +77,7 @@ function OuterMostSquare() {
                                 </feMerge>
                             </filter>
                         </defs>   
-                        <motion.g style={{rotateX: rotateSmoothX, rotateY: rotateSmoothY}}>
+                        <motion.g transform={transform}>
                             {/* outer border*/}
                                 <motion.path
                                     fill="none"

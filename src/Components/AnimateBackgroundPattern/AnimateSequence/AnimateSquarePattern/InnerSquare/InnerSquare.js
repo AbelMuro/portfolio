@@ -80,7 +80,7 @@ function InnerSquare(){
                             strokeLinejoin="round"
                             strokeMiterlimit={0}
                             strokeDasharray={234}
-                            transform={'translate(-62, -53)'}
+                            transform={'translate(-62, -56)'}
                             strokeDashoffset={smoothStrokeDashoffsetOuterBorder}
                             d="m 149.39848,111.34959 54.7999,24.513 -23.5828,51.4715 -54.8001,-24.513 z"
                             id="rect704-3-9-2-1"
@@ -95,14 +95,14 @@ function InnerSquare(){
                             strokeMiterlimit={0}
                             strokeDasharray={183.06}
                             strokeDashoffset={smoothStrokeDashhoffsetInnerBorder}
-                            transform={'translate(-59, -45.6)'}
+                            transform={'translate(-59, -48)'}
                             d="m 149.73914,112.2145 42.9121,19.1952 -18.467,40.3059 -42.9122,-19.1954 z"
                             id="rect704-3-9-2-1-2"
                         />   
                         <motion.image 
                             filter={'url(#glowEffectInnerDesign)'}
                             opacity={opacitySmooth}
-                            transform='translate(-82.7, -52.3)'
+                            transform='translate(-82.7, -55.8)'
                             width="77.5"
                             x={147.1}
                             y={111}

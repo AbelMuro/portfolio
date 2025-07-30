@@ -121,14 +121,14 @@ function InnerMostTriangle() {
                             strokeWidth={4}
                             strokeDasharray={130}
                             strokeDashoffset={smoothStrokeDashoffset}
-                            transform={'rotate(-15) translate(-76, 24.3)'}
+                            transform={'rotate(-15) translate(-73.5, 18)'}
                             />
                         <motion.image
                             filter={'url(#glowEffectInnerTriangleDesign)'}
                             width={25}
                             href={images['sunEarthText']}
                             opacity={opacitySmooth}
-                            transform={'translate(-14.6, -8)'}
+                            transform={'translate(-14, -13.5)'}
                             x={101.79}
                             y={102.1}
                         />                            
