@@ -93,7 +93,6 @@ function OuterMostSquare() {
                                     />
                                 {/* inner border */}
                                 {mountTextInnerBorder && <motion.path
-                                    filter={'url(#glowEffectOuterMostSquare)'}
                                     fill="none"
                                     stroke="#0400ff"
                                     strokeWidth={0.7}
@@ -106,7 +105,6 @@ function OuterMostSquare() {
                                     id="rect704-3-9"
                                     />}
                                 {mountTextInnerBorder && <motion.image 
-                                    filter={'url(#glowEffectOuterMostSquare)'}
                                     href={images['text']}
                                     width={82.5}
                                     transform={'translate(62.6, 55.3)'}
