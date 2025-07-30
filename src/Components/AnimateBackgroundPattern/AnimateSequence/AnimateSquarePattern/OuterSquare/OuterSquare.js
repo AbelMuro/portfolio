@@ -46,18 +46,8 @@ function OuterSquare() {
                     exit={{opacity: 0}}>
                         <svg xmlns="http://www.w3.org/2000/svg" className={styles.svg} viewBox={"0 0 206.40488 206.40488"}>
                             <defs>
-                                <filter id='glowEffectOuterSquare'>
-                                    <feGaussianBlur 
-                                        in="SourceAlpha" 
-                                        result="blur"
-                                        stdDeviation={5}
-                                        /> 
-                                    <feFlood floodColor="#0400ff" floodOpacity='1' result="color"/>
-                                    <feComposite in="color" in2="blur" operator="in" result="glow"/>
-                                    <feMerge>
-                                        <feMergeNode in="glow"/>
-                                        <feMergeNode in="SourceGraphic"/>
-                                    </feMerge>
+                                <filter id='glowEffectOuterSquare' filterUnits="userSpaceOnUse" x="-20%" y="-20%" width="140%" height="140%">
+                                    <feDropShadow dx="0" dy="0" stdDeviation="5" floodColor="#0400ff" floodOpacity={1}/>
                                 </filter>
                             </defs>
                             <motion.path
