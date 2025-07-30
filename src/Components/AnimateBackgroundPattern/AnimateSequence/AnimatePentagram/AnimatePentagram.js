@@ -58,57 +58,15 @@ function AnimatePentagram({scrollThresholds}) {
                 exit={{opacity: 0}}>
                 <motion.svg xmlns="http://www.w3.org/2000/svg" className={styles.svg} viewBox={"0 0 206.40488 206.40488"} style={{transform: transformRotate}}> 
                         <defs>
-                            <AnimatePresence>
-                                {!pauseBlur &&
-                                    <>
-                                    <filter id='glowEffectPentagramOuterCircles'>
-                                        <motion.feGaussianBlur 
-                                            in="SourceAlpha" 
-                                            result="blur"
-                                            initial={{stdDeviation: 0}}
-                                            animate={{stdDeviation: 0.4}}
-                                            exit={{stdDeviation: 0}}
-                                            /> 
-                                        <feFlood floodColor="#0400ff" floodOpacity='0.6' result="color"/>
-                                        <feComposite in="color" in2="blur" operator="in" result="glow"/>
-                                        <feMerge>
-                                            <feMergeNode in="glow"/>
-                                            <feMergeNode in="SourceGraphic"/>
-                                        </feMerge>
-                                    </filter>
-                                    <filter id='glowEffectPentagramInnerCircles'>
-                                        <motion.feGaussianBlur 
-                                            in="SourceAlpha" 
-                                            result="blur"
-                                            initial={{stdDeviation: 0}}
-                                            animate={{stdDeviation: 0.3}}
-                                            exit={{stdDeviation: 0}}
-                                            /> 
-                                        <feFlood floodColor="#0400ff" floodOpacity='0.4' result="color"/>
-                                        <feComposite in="color" in2="blur" operator="in" result="glow"/>
-                                        <feMerge>
-                                            <feMergeNode in="glow"/>
-                                            <feMergeNode in="SourceGraphic"/>
-                                        </feMerge>
-                                    </filter>
-                                    <filter id='glowEffectPentagramRect'>
-                                        <motion.feGaussianBlur 
-                                            in="SourceAlpha" 
-                                            result="blur"
-                                            initial={{stdDeviation: 0}}
-                                            animate={{stdDeviation: 0.2}}
-                                            exit={{stdDeviation: 0}}
-                                            /> 
-                                        <feFlood floodColor="#0400ff" floodOpacity='0.4' result="color"/>
-                                        <feComposite in="color" in2="blur" operator="in" result="glow"/>
-                                        <feMerge>
-                                            <feMergeNode in="glow"/>
-                                            <feMergeNode in="SourceGraphic"/>
-                                        </feMerge>
-                                    </filter>                           
-                                    </>
-                                }
-                            </AnimatePresence>
+                            <filter id='glowEffectPentagramOuterCircles' filterUnits="userSpaceOnUse" x="-20%" y="-20%" width="140%" height="140%">
+                                <feDropShadow dx="0" dy="0" stdDeviation="10" floodColor="#0400ff" floodOpacity={1}/>
+                            </filter>
+                            <filter id='glowEffectPentagramInnerCircles' filterUnits="userSpaceOnUse" x="-20%" y="-20%" width="140%" height="140%">
+                                <feDropShadow dx="0" dy="0" stdDeviation="5" floodColor="#0400ff" floodOpacity={1}/>
+                            </filter>
+                            <filter id='glowEffectPentagramRect' filterUnits="userSpaceOnUse" x="-20%" y="-20%" width="140%" height="140%">
+                                <feDropShadow dx="0" dy="0" stdDeviation="2" floodColor="#0400ff" floodOpacity={1}/>
+                            </filter>                         
                         </defs>
                         <AnimateCircles/>     
                         <motion.g className={styles.group} transform={transformGroup}>                     

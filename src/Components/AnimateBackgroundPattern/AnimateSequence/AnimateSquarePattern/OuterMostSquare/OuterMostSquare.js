@@ -67,7 +67,7 @@ function OuterMostSquare() {
                                 <feDropShadow dx="0" dy="0" stdDeviation="1" floodColor="#0400ff" floodOpacity={1}/>
                             </filter>
                         </defs>   
-                        <motion.g transform={transform} filter={'url(#glowEffectOuterMostSquare)'}>
+                        <motion.g transform={transform}>
                             {/* outer border*/}
                                 <motion.path
                                     fill="none"
