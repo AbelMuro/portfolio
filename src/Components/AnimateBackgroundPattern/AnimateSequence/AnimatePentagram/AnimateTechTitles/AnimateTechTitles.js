@@ -14,7 +14,7 @@ function AnimateTechTitles({x, y}) {
     useMotionValueEvent(scrollY, 'change', (y) => {
         if(y < 5800)
             smoothOpacity.set(1);
-        else if(y > 6700)
+        else if(y > 6500)
             smoothOpacity.jump(0);
     })
 
@@ -40,7 +40,9 @@ function AnimateTechTitles({x, y}) {
     }) 
 
     return title && (
-        <motion.text x={x} y={y}    
+        <motion.text 
+            x={x} 
+            y={y}    
             className={styles.title}
             fill="white"
             textAnchor='middle'

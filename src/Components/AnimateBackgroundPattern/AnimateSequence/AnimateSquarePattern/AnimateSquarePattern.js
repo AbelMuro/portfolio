@@ -7,29 +7,18 @@ import {LinearPentagram} from '~/Transitions';
 import {motion, useTransform, useSpring, useScroll, useMotionValueEvent} from 'framer-motion';
 import * as styles from './styles.module.css';
 
-function AnimateSquarePattern({scrollThresholds}) {
+function AnimateSquarePattern() {
     const [mount, setMount] = useState(true); 
     const {scrollY} = useScroll();
-    const scrollRange = [
-        scrollThresholds[1], scrollThresholds[1] + 1000, 
-        scrollThresholds[1] + 2000, scrollThresholds[1] + 3000,
-        scrollThresholds[1] + 4000
-    ];
 
-    const rotateY = useTransform(scrollY, scrollRange, [0, -35, 0, -35, 0]);
-    const rotateX = useTransform(scrollY, scrollRange, [0, 35, 0, -25, 0]);
-    const rotateXMore = useTransform(scrollY, [7000, 8000], [0, 45]);
+    const rotateX = useTransform(scrollY, [7000, 8000], [0, 45]);
+    const rotateSmoothX = useSpring(rotateX, LinearPentagram);    
     const rotateXBack = useTransform(scrollY, [13000, 13200], [45, 0]);    
-    const rotateSmoothY = useSpring(rotateY, LinearPentagram);
-    const rotateSmoothX = useSpring(rotateX, LinearPentagram);
 
     useMotionValueEvent(rotateXBack, 'change', (value) => {
         rotateSmoothX.set(value);
     });
 
-    useMotionValueEvent(rotateXMore, 'change', (value) => {
-        rotateSmoothX.set(value);
-    });
 
     useMotionValueEvent(scrollY, 'change', (y) => {
         if(y < 1800)
@@ -42,7 +31,7 @@ function AnimateSquarePattern({scrollThresholds}) {
 
     return(
         mount &&
-        <motion.section id='square pattern' className={styles.container} style={{rotateX: rotateSmoothX, rotateY: rotateSmoothY}}>
+        <motion.section id='square pattern' className={styles.container} style={{rotateX: rotateSmoothX}}>
             <OuterMostSquare/>
             <OuterSquare/>
             <InnerSquare/>

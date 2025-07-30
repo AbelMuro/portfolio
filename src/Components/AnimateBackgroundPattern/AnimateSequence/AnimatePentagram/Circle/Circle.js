@@ -12,7 +12,7 @@ function Circle({strokeDasharray, strokeDashoffset, ...props}) {
     useMotionValueEvent(scrollY, 'change', (y) => {
          if (y < 5800) 
             finalOffsetSmooth.set(0);
-         else if(y >= 6700)
+         else if(y >= 6500)
             finalOffsetSmooth.jump(strokeDasharray); 
     });
 

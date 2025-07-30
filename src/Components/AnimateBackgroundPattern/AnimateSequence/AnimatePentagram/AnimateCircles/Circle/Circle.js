@@ -28,7 +28,7 @@ function Circle({scrollThresholds, scaleTo, rotateX, rotateY}) {
     useMotionValueEvent(scrollY, 'change', (y) => {
         if(y < 5800)
             dashoffsetSpring.set(0);
-        else if(y > 6700)
+        else if(y > 6500)
             dashoffsetSpring.jump(500)
     })
 

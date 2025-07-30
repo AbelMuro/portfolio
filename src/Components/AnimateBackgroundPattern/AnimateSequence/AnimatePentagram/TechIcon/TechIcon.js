@@ -20,7 +20,7 @@ function TechIcon({name, x, y, size, scrollThresholds}) {
         if(y < 5800)
             smoothScale.set(1)
 
-        else if(y > 6700)
+        else if(y > 6500)
             smoothScale.jump(0);
     })
 

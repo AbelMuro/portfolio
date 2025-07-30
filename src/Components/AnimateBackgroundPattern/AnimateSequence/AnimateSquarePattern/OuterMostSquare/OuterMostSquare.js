@@ -4,16 +4,19 @@ import {motion, useTransform, useSpring, useScroll, useMotionValueEvent, Animate
 import images from './images';
 import * as styles from './styles.module.css';
 
-
 /* 
     this is where i left off, i need to continue optimizing the components for safari
 */
-
 
 function OuterMostSquare() {
     const [mount, setMount] = useState(false);
     const [mountTextInnerBorder, setMountTextInnerBorder] = useState(false);
     const {scrollY} = useScroll();
+    const scrollRange = [
+        2100, 3100, 
+        4100, 5100,
+        6100
+    ];
 
     const scale = useTransform(scrollY, [6500, 7000], [1, 2]);
     const scaleSmooth = useSpring(scale, LinearSquare);
@@ -26,6 +29,12 @@ function OuterMostSquare() {
 
     const opacity = useTransform(scrollY, [6700, 7200], [0, 1]);
     const opacitySmooth = useSpring(opacity, LinearPentagram);
+
+    const rotateY = useTransform(scrollY, scrollRange, [0, -35, 0, -35, 0]);
+    const rotateX = useTransform(scrollY, scrollRange, [0, 35, 0, -25, 0]);
+    const rotateSmoothY = useSpring(rotateY, LinearPentagram);
+    const rotateSmoothX = useSpring(rotateX, LinearPentagram);
+
 
     useMotionValueEvent(scrollY, 'change', (value) => {
         if(value < 2000 || value > 12800)
@@ -67,7 +76,7 @@ function OuterMostSquare() {
                                 </feMerge>
                             </filter>
                         </defs>   
-                        <motion.g style={{scale: scaleSmooth}}>
+                        <motion.g style={{scale: scaleSmooth, rotateX: rotateSmoothX, rotateY: rotateSmoothY}}>
                             {/* outer border*/}
                                 <motion.path
                                     fill="none"
