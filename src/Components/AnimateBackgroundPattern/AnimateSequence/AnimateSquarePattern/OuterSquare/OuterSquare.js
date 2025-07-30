@@ -11,7 +11,7 @@ function OuterSquare() {
     const strokeDashoffset = useTransform(scrollY, [7300, 7800], [319.6, 0]);
     const smoothStrokeDashoffset = useSpring(strokeDashoffset, LinearSquare);
     
-    const strokeWidth = useTransform(scrollY, [7800, 8300], [2, 8]);
+    const strokeWidth = useTransform(scrollY, [7800, 8300], [2, 9]);
     const smoothStrokeWidth = useSpring(strokeWidth, LinearSquare)
 
     const opacity = useTransform(scrollY, [8000, 8300], [0, 1])

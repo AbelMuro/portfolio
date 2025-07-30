@@ -31,7 +31,7 @@ function AnimatePentagram({scrollThresholds}) {
     const transformGroup = useMotionTemplate`translate(-47.929077px, -14px) scale(${smoothScale})`
 
     useMotionValueEvent(scrollY, 'change', (value) => {
-        if(value > 7000)    
+        if(value > 6700)    
             setMount(false)
         else
             setMount(true);

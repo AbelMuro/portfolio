@@ -12,6 +12,7 @@ import * as styles from './styles.module.css';
 
 function OuterMostSquare() {
     const [mount, setMount] = useState(false);
+    const [mountTextInnerBorder, setMountTextInnerBorder] = useState(false);
     const {scrollY} = useScroll();
 
     const scale = useTransform(scrollY, [6500, 7000], [1, 2]);
@@ -33,6 +34,13 @@ function OuterMostSquare() {
             setMount(true);
     })
 
+    useMotionValueEvent(scrollY, 'change', (value) => {
+        if(value > 6000)
+            setMountTextInnerBorder(true);
+        else
+            setMountTextInnerBorder(false);
+    })
+
 
     return(
         <AnimatePresence>
@@ -43,7 +51,7 @@ function OuterMostSquare() {
                     className={styles.container} 
                     exit={{opacity: 0}}
                     >
-                    <motion.svg xmlns="http://www.w3.org/2000/svg" className={styles.svg} viewBox={"0 0 206.40488 206.40488"} style={{scale: scaleSmooth}}>
+                    <svg xmlns="http://www.w3.org/2000/svg" className={styles.svg} viewBox={"0 0 206.40488 206.40488"}>
                         <defs>
                             <filter id='glowEffectOuterMostSquare'>
                                 <feGaussianBlur 
@@ -59,41 +67,44 @@ function OuterMostSquare() {
                                 </feMerge>
                             </filter>
                         </defs>   
-                        {/* outer border*/}
-                            <motion.path
-                                fill="none"
-                                stroke="#0400ff"
-                                strokeWidth={0.6}
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeDasharray={252.88}
-                                strokeDashoffset={smoothDashoffsetOuterBorder}
-                                transform='translate(-49, -55)'
-                                d="m 150.67604,106.23255 46.73045,45.2844 -43.10325,43.6851 -46.7305,-45.2844 z"
-                                id="rect704-3-9-6"
-                                />
-                            {/* inner border */}
-                            <motion.path
-                                filter={'url(#glowEffectOuterMostSquare)'}
-                                fill="none"
-                                stroke="#0400ff"
-                                strokeWidth={0.7}
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeDasharray={213.61}
-                                strokeDashoffset={smoothStrokeDashoffsetInnerBorder}
-                                transform='translate(-49, -46) rotate(44)'
-                                d="m 182.95529,-27.496716 h 50.69256 v 47.80737 h -50.69256 z"
-                                id="rect704-3-9"
-                                />
-                            <motion.image 
-                                filter={'url(#glowEffectOuterMostSquare)'}
-                                href={images['text']}
-                                width={80}
-                                transform={'translate(63.7, 56)'}
-                                opacity={opacitySmooth}
-                                />
-                        </motion.svg>
+                        <motion.g style={{scale: scaleSmooth}}>
+                            {/* outer border*/}
+                                <motion.path
+                                    fill="none"
+                                    stroke="#0400ff"
+                                    strokeWidth={0.6}
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeDasharray={252.88}
+                                    strokeDashoffset={smoothDashoffsetOuterBorder}
+                                    transform='translate(-49, -55)'
+                                    d="m 150.67604,106.23255 46.73045,45.2844 -43.10325,43.6851 -46.7305,-45.2844 z"
+                                    id="rect704-3-9-6"
+                                    />
+                                {/* inner border */}
+                                {mountTextInnerBorder && <motion.path
+                                    filter={'url(#glowEffectOuterMostSquare)'}
+                                    fill="none"
+                                    stroke="#0400ff"
+                                    strokeWidth={0.7}
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeDasharray={213.61}
+                                    strokeDashoffset={smoothStrokeDashoffsetInnerBorder}
+                                    transform='translate(-56.5, -53) rotate(44)'
+                                    d="m 192.10305,-28.871552 h 53.227188 v 50.197738 h -53.227188 z"
+                                    id="rect704-3-9"
+                                    />}
+                                {mountTextInnerBorder && <motion.image 
+                                    filter={'url(#glowEffectOuterMostSquare)'}
+                                    href={images['text']}
+                                    width={82.5}
+                                    transform={'translate(62.6, 55.3)'}
+                                    opacity={opacitySmooth}
+                                    />}                            
+                        </motion.g>
+
+                    </svg>
                 </motion.div>  
             } 
         </AnimatePresence> 
