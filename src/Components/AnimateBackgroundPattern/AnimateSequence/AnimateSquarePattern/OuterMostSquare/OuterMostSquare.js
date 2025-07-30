@@ -59,7 +59,7 @@ function OuterMostSquare() {
                     className={styles.container} 
                     exit={{opacity: 0}}
                     >
-                    <svg xmlns="http://www.w3.org/2000/svg" className={styles.svg} viewBox={"0 0 206.40488 206.40488"}>
+                    <motion.svg xmlns="http://www.w3.org/2000/svg" className={styles.svg} viewBox={"0 0 206.40488 206.40488"} style={{scale: scaleSmooth}}>
                         <defs>
                             <filter id='glowEffectOuterMostSquare'>
                                 <feGaussianBlur 
@@ -112,7 +112,7 @@ function OuterMostSquare() {
                                     />}                            
                         </motion.g>
 
-                    </svg>
+                    </motion.svg>
                 </motion.div>  
             } 
         </AnimatePresence> 
