@@ -77,7 +77,7 @@ function OuterMostSquare() {
                                 </feMerge>
                             </filter>
                         </defs>   
-                        <motion.g transform={transform}>
+                        <motion.g transform={transform} filter={'url(#glowEffectOuterMostSquare)'}>
                             {/* outer border*/}
                                 <motion.path
                                     fill="none"
