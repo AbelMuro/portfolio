@@ -37,7 +37,6 @@ function InnerMostLines() {
 
                     { /* north line */ }
                         <motion.path 
-                            filter={'url(#glowEffectInnerLines)'}
                             id="path1429"
                             d="M 103.191,0.876 L 103.191,46.316"
                             fill="none"
@@ -53,7 +52,6 @@ function InnerMostLines() {
                             />
                         {/* east line*/}
                         <motion.path 
-                            filter={'url(#glowEffectInnerLines)'}
                             id="path1429-7"
                             d="M 210.403,103.396 L 154.008,103.993"
                             fill="none"
@@ -69,7 +67,6 @@ function InnerMostLines() {
                         />
                         {/* south line*/}
                         <motion.path 
-                            filter={'url(#glowEffectInnerLines)'}
                             id="path1429-7-8"
                             d="M 101.223,207.389 L 100.809,148.945"
                             fill="none"
@@ -85,7 +82,6 @@ function InnerMostLines() {
                             />
                         {/* west line*/}
                         <motion.path 
-                            filter={'url(#glowEffectInnerLines)'}
                             id="path1429-5"
                             d="M 1.923,104.057 L 52.723,104.002"
                             fill="none"

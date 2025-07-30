@@ -4,6 +4,10 @@ import {motion, useMotionValueEvent, useScroll, AnimatePresence, useTransform, u
 import * as styles from './styles.module.css';
 import images from './images';
 
+/* 
+    this is where i left off, i need to further optimize the circle designs in the app for safari
+*/
+
 function OuterMostRing(){
     const [mount, setMount] = useState(true);
     const {scrollY} = useScroll();
