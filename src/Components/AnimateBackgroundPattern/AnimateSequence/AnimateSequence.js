@@ -11,6 +11,7 @@ import * as styles from './styles.module.css';
 
 /* 
     this is where i left off, i need to continue optimizing the components for safari and the other browsers
+    i also need to learn how to delete branches that i created remotely and locally
 */
 
 function AnimateSequence() {
