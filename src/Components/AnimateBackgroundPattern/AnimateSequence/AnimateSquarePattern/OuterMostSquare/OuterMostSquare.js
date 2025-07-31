@@ -1,25 +1,35 @@
 import React, {useState} from 'react';
 import {LinearSquare, LinearPentagram} from '~/Transitions';
-import {motion, useTransform, useSpring, useScroll, useMotionValueEvent, AnimatePresence} from 'framer-motion';
+import {motion, useTransform, useSpring, useScroll, useMotionValueEvent, AnimatePresence, useMotionTemplate} from 'framer-motion';
 import images from './images';
 import * as styles from './styles.module.css';
 
 function OuterMostSquare() {
     const [mount, setMount] = useState(false);
+    const [mountTextInnerBorder, setMountTextInnerBorder] = useState(false);
     const {scrollY} = useScroll();
+    const scrollRange = [
+        2100, 3100, 
+        4100, 5100,
+        6100
+    ];
 
-    const scale = useTransform(scrollY, [1800, 2000], [0.8, 5]);
+    const scale = useTransform(scrollY, [6500, 7000], [1, 2]);
     const scaleSmooth = useSpring(scale, LinearSquare);
-    const scaleMore = useTransform(scrollY, [6500, 7000], [5, 10])
     
-    const strokeDashoffsetOuterBorder = useTransform(scrollY, [2500, 4200], [55, 0]);
+    const strokeDashoffsetOuterBorder = useTransform(scrollY, [2500, 4200], [252.88, 0]);
     const smoothDashoffsetOuterBorder = useSpring(strokeDashoffsetOuterBorder, LinearPentagram);
 
-    const strokeDashoffsetInnerBorder = useTransform(scrollY, [7000, 7500], [55, 0]);
+    const strokeDashoffsetInnerBorder = useTransform(scrollY, [7000, 7500], [413.70, 0]);
     const smoothStrokeDashoffsetInnerBorder = useSpring(strokeDashoffsetInnerBorder, LinearSquare);
 
     const opacity = useTransform(scrollY, [6700, 7200], [0, 1]);
     const opacitySmooth = useSpring(opacity, LinearPentagram);
+
+    const rotateY = useTransform(scrollY, scrollRange, [0, -35, 0, -35, 0]);
+    const rotateX = useTransform(scrollY, scrollRange, [0, 35, 0, -25, 0]);
+    const rotateSmoothY = useSpring(rotateY, LinearPentagram);
+    const rotateSmoothX = useSpring(rotateX, LinearPentagram);
 
     useMotionValueEvent(scrollY, 'change', (value) => {
         if(value < 2000 || value > 12800)
@@ -28,8 +38,11 @@ function OuterMostSquare() {
             setMount(true);
     })
 
-    useMotionValueEvent(scaleMore, 'change', (value) => {
-        scaleSmooth.set(value);
+    useMotionValueEvent(scrollY, 'change', (value) => {
+        if(value > 6000)
+            setMountTextInnerBorder(true);
+        else
+            setMountTextInnerBorder(false);
     })
 
     return(
@@ -39,53 +52,52 @@ function OuterMostSquare() {
                 <motion.div 
                     id='outer most square/pentagram square' 
                     className={styles.container} 
+                    style={{rotateX: rotateSmoothX, rotateY: rotateSmoothY}}
+                    initial={{opacity: 0}}
+                    animate={{opacity: 1}}
                     exit={{opacity: 0}}
                     >
-                    <motion.svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"} style={{scale: scaleSmooth}}>
+                    <motion.svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"}>
                         <defs>
                             <filter id='glowEffectOuterMostSquare' filterUnits="userSpaceOnUse" x="-20%" y="-20%" width="140%" height="140%">
                                 <feDropShadow dx="0" dy="0" stdDeviation="1" floodColor="#0400ff" floodOpacity={1}/>
                             </filter>  
                         </defs>
-                        <g transform="translate(-47.8, -13.5)">        
-                            {/* outer border*/}
+                         <motion.g style={{scale: scaleSmooth}}>
+                                {/* outer border*/}
                                 <motion.path
-                                    filter={'url(#glowEffectOuterMostSquare)'}
                                     fill="none"
                                     stroke="#0400ff"
-                                    strokeWidth={0.164006}
+                                    strokeWidth={0.6}
                                     strokeLinecap="round"
                                     strokeLinejoin="round"
-                                    strokeDasharray={55}
-                                    style={{strokeDashoffset: smoothDashoffsetOuterBorder}}
-                                    d="m 150.67604,106.23255 9.34609,9.05688 -8.62065,8.73702 -9.3461,-9.05688 z"
+                                    strokeDasharray={252.88}
+                                    strokeDashoffset={smoothDashoffsetOuterBorder}
+                                    transform='translate(-49, -55)'
+                                    d="m 150.67604,106.23255 46.73045,45.2844 -43.10325,43.6851 -46.7305,-45.2844 z"
                                     id="rect704-3-9-6"
                                     />
+                            </motion.g>
                                 {/* inner border */}
-                                <motion.path
-                                    filter={'url(#glowEffectOuterMostSquare)'}
+                                {mountTextInnerBorder && <motion.path
                                     fill="none"
                                     stroke="#0400ff"
-                                    strokeWidth={0.138539}
+                                    strokeWidth={1.2}
                                     strokeLinecap="round"
                                     strokeLinejoin="round"
-                                    strokeMiterlimit={0}
-                                    strokeDasharray={55}
-                                    style={{strokeDashoffset: smoothStrokeDashoffsetInnerBorder}}
-                                    d="m 182.95529,-27.496716 h 10.99335 v 10.367864 h -10.99335 z"
+                                    strokeDasharray={413.70}
+                                    strokeDashoffset={smoothStrokeDashoffsetInnerBorder}
+                                    transform='translate(-57.5, -90.5) rotate(44)'
+                                    d="m 192.10305,-28.871552 h 106.454376 v 100.395476 h -106.454376 z"
                                     id="rect704-3-9"
-                                    transform="matrix(0.71813035,0.69590861,-0.70235073,0.71183106,0,0)"
-                                    initial={{opacity: 1}}
-                                    exit={{opacity: 0}}
-                                    />
-                            </g>
-                            <motion.g transform='translate(94, 92.5)' style={{opacity: opacitySmooth}}>
-                                <motion.image 
-                                    filter={'url(#glowEffectOuterMostSquare)'}
+                                    />}
+                                {mountTextInnerBorder && <motion.image 
                                     href={images['text']}
-                                    width={18.3}
-                                />
-                            </motion.g>
+                                    width={178}
+                                    transform={'translate(15, 6)'}
+                                    opacity={opacitySmooth}
+                                    />}        
+                                    
                         </motion.svg>
                 </motion.div>  
             } 

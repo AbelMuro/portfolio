@@ -41,7 +41,7 @@ function ChainTwo() {
                                 strokeLinecap="round"
                                 strokeLinejoin="round"
                                 strokeMiterlimit={0}
-                                stroke-dasharray="2.89722, 1.44861, 0.72431, 1.44861"
+                                strokeDasharray="2.89722, 1.44861, 0.72431, 1.44861"
                                 strokeDashoffset={0}
                                 strokeOpacity={1}
                                 d="m 137.35835,99.015007 0.2,51.8008"

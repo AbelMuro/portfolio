@@ -44,7 +44,7 @@ function ChainFive(){
                                     strokeLinecap="round"
                                     strokeLinejoin="round"
                                     strokeMiterlimit={0}
-                                    stroke-dasharray="0.869168, 1.738336"
+                                    strokeDasharray="0.869168, 1.738336"
                                     strokeDashoffset={0}
                                     strokeOpacity={1}
                                     d="m 137.60705,99.076401
