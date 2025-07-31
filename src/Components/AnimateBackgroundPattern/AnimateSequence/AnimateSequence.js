@@ -9,6 +9,9 @@ import AnimateSquarePattern from './AnimateSquarePattern';
 import AnimateLunarPattern from './AnimateLunarPattern';
 import * as styles from './styles.module.css';
 
+/* 
+    this is where i left off, i need to continue optimizing the components for safari and the other browsers
+*/
 
 function AnimateSequence() {
 
