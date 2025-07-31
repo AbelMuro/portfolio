@@ -20,10 +20,10 @@ function OuterMostSquare() {
     const strokeDashoffsetOuterBorder = useTransform(scrollY, [2500, 4200], [252.88, 0]);
     const smoothDashoffsetOuterBorder = useSpring(strokeDashoffsetOuterBorder, LinearPentagram);
 
-    const strokeDashoffsetInnerBorder = useTransform(scrollY, [7000, 7500], [413.70, 0]);
+    const strokeDashoffsetInnerBorder = useTransform(scrollY, [7200, 7700], [413.70, 0]);
     const smoothStrokeDashoffsetInnerBorder = useSpring(strokeDashoffsetInnerBorder, LinearSquare);
 
-    const opacity = useTransform(scrollY, [6700, 7200], [0, 1]);
+    const opacity = useTransform(scrollY, [7200, 7500], [0, 1]);
     const opacitySmooth = useSpring(opacity, LinearPentagram);
 
     const rotateY = useTransform(scrollY, scrollRange, [0, -35, 0, -35, 0]);
@@ -39,7 +39,7 @@ function OuterMostSquare() {
     })
 
     useMotionValueEvent(scrollY, 'change', (value) => {
-        if(value > 6000)
+        if(value > 7200)
             setMountTextInnerBorder(true);
         else
             setMountTextInnerBorder(false);
@@ -78,9 +78,12 @@ function OuterMostSquare() {
                                     id="rect704-3-9-6"
                                     />
                             </motion.g>
-                                {/* inner border */}
+                            {/* inner border */}
+                            <AnimatePresence>
                                 {mountTextInnerBorder && <motion.path
                                     fill="none"
+                                    initial={{opacity: 1}}
+                                    exit={{opacity: 0}}
                                     stroke="#0400ff"
                                     strokeWidth={1.2}
                                     strokeLinecap="round"
@@ -91,13 +94,19 @@ function OuterMostSquare() {
                                     d="m 192.10305,-28.871552 h 106.454376 v 100.395476 h -106.454376 z"
                                     id="rect704-3-9"
                                     />}
-                                {mountTextInnerBorder && <motion.image 
-                                    href={images['text']}
-                                    width={178}
-                                    transform={'translate(15, 6)'}
-                                    opacity={opacitySmooth}
-                                    />}        
-                                    
+                            </AnimatePresence>
+                            <AnimatePresence>
+                                {mountTextInnerBorder && 
+                                <motion.g initial={{opacity: 1}} exit={{opacity: 0}}>
+                                    <motion.image 
+                                        href={images['text']}
+                                        width={178}
+                                        transform={'translate(15, 6)'}
+                                        opacity={opacitySmooth}
+                                        />                                    
+                                </motion.g> 
+                                }                                        
+                            </AnimatePresence>     
                         </motion.svg>
                 </motion.div>  
             } 
