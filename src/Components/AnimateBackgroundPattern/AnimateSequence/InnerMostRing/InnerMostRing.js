@@ -36,20 +36,9 @@ function InnerMostRing() {
                         viewBox={"0 0 206.40488 206.40488"}
                         >
                             <defs>
-                                <filter id='glowEffectInnerMostRing'>
-                                    <motion.feGaussianBlur 
-                                        in="SourceAlpha" 
-                                        result="blur"
-                                        initial={{stdDeviation: 5}}
-                                        animate={{stdDeviation: [5, 3, 5], transition: {duration: 3, repeat: Infinity, ease: 'linear'}}}
-                                        />
-                                    <feFlood floodColor="#0400ff" floodOpacity='0.9' result="color"/>
-                                    <feComposite in="color" in2="blur" operator="in" result="glow"/>
-                                    <feMerge>
-                                        <feMergeNode in="glow"/>
-                                        <feMergeNode in="SourceGraphic"/>
-                                    </feMerge>
-                                </filter>
+                                <filter id='glowEffectInnerMostRing' filterUnits="userSpaceOnUse" x="-20%" y="-20%" width="140%" height="140%">
+                                    <feDropShadow dx="0" dy="0" stdDeviation="3" floodColor="#0400ff" floodOpacity={1}/>
+                                </filter>  
                             </defs>
                             <image
                                 x={103.20244 - 87.5}

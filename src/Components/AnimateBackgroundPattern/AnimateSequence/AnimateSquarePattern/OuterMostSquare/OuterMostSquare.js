@@ -43,20 +43,9 @@ function OuterMostSquare() {
                     >
                     <motion.svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"} style={{scale: scaleSmooth}}>
                         <defs>
-                            <filter id='glowEffectOuterMostSquare'>
-                                <motion.feGaussianBlur 
-                                    in="SourceAlpha" 
-                                    result="blur"
-                                    initial={{stdDeviation: 0.2}}
-                                    animate={{stdDeviation: [0.7, 0.2, 0.7], transition: {duration: 3, repeat: Infinity, ease: 'linear'}}}
-                                    /> 
-                                <feFlood floodColor="#0400ff" floodOpacity='0.9' result="color"/>
-                                <feComposite in="color" in2="blur" operator="in" result="glow"/>
-                                <feMerge>
-                                    <feMergeNode in="glow"/>
-                                    <feMergeNode in="SourceGraphic"/>
-                                </feMerge>
-                            </filter>
+                            <filter id='glowEffectOuterMostSquare' filterUnits="userSpaceOnUse" x="-20%" y="-20%" width="140%" height="140%">
+                                <feDropShadow dx="0" dy="0" stdDeviation="1" floodColor="#0400ff" floodOpacity={1}/>
+                            </filter>  
                         </defs>
                         <g transform="translate(-47.8, -13.5)">        
                             {/* outer border*/}

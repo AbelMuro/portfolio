@@ -40,34 +40,12 @@ function InnerSquare(){
                 <motion.div id='inner square' className={styles.container} style={{transform}} initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>
                     <motion.svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"}>
                         <defs>
-                            <filter id='glowEffectInnerSquare'>
-                                <motion.feGaussianBlur 
-                                    in="SourceAlpha" 
-                                    result="blur"
-                                    initial={{stdDeviation: 0.2}}
-                                    animate={{stdDeviation: [0.7, 0.2, 0.7], transition: {duration: 3, repeat: Infinity, ease: 'linear'}}}
-                                    /> 
-                                <feFlood floodColor="#0400ff" floodOpacity='0.7' result="color"/>
-                                <feComposite in="color" in2="blur" operator="in" result="glow"/>
-                                <feMerge>
-                                    <feMergeNode in="glow"/>
-                                    <feMergeNode in="SourceGraphic"/>
-                                </feMerge>
-                            </filter>
-                            <filter id='glowEffectSunEarth'>
-                                <motion.feGaussianBlur 
-                                    in="SourceAlpha" 
-                                    result="blur"
-                                    initial={{stdDeviation: 1}}
-                                    animate={{stdDeviation: [2, 1, 2], transition: {duration: 3, repeat: Infinity, ease: 'linear'}}}
-                                    /> 
-                                <feFlood floodColor="#0400ff" floodOpacity='0.8' result="color"/>
-                                <feComposite in="color" in2="blur" operator="in" result="glow"/>
-                                <feMerge>
-                                    <feMergeNode in="glow"/>
-                                    <feMergeNode in="SourceGraphic"/>
-                                </feMerge>
-                            </filter>
+                               <filter id='glowEffectInnerSquare' filterUnits="userSpaceOnUse" x="-20%" y="-20%" width="140%" height="140%">
+                                    <feDropShadow dx="0" dy="0" stdDeviation="3" floodColor="#0400ff" floodOpacity={1}/>
+                                </filter>  
+                                <filter id='glowEffectInnerSquareDesign' filterUnits="userSpaceOnUse" x="-20%" y="-20%" width="140%" height="140%">
+                                    <feDropShadow dx="0" dy="0" stdDeviation="3" floodColor="#0400ff" floodOpacity={1}/>
+                                </filter> 
                         </defs>
                             <motion.path
                                 filter={'url(#glowEffectInnerSquare)'}
@@ -97,7 +75,7 @@ function InnerSquare(){
                             />   
                         <g transform='translate(-83, -52)'>
                             <motion.image 
-                                filter={'url(#glowEffectSunEarth)'}
+                                filter={'url(#glowEffectInnerSquareDesign)'}
                                 style={{opacity: opacitySmooth}}
                                 width="77.5"
                                 x={147.1}

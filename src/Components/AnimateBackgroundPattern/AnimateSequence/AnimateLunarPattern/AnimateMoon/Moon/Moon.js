@@ -17,7 +17,7 @@ function Moon() {
     return(         
         <motion.g className={styles.group} style={{transform}}>
             <motion.path
-                filter={'url(#glowEffectMoon)'}
+                filter={'url(#glowEffectLargeMoon)'}
                 id="path4"
                 fill='#0400ff'
                 stroke='#0400ff'

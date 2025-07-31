@@ -23,20 +23,22 @@ function AnimateMoon() {
         <motion.div id='moon' className={styles.container} style={{transform: transformContainer}}>
                 <motion.svg viewBox={"0 0 206.40488 206.40488"} className={styles.svg}>
                     <defs>
-                        <filter id='glowEffectMoon'>
+                        <filter id='glowEffectLargeMoon'>
                             <motion.feGaussianBlur 
                                 in="SourceAlpha" 
                                 result="blur"
-                                initial={{stdDeviation: 0.02}}
-                                animate={{stdDeviation: [0.04, 0.02, 0.04], transition: {duration: 3, repeat: Infinity, ease: 'linear'}}}
+                                stdDeviation={0.04}
                                 />
-                            <feFlood floodColor="#0400ff" floodOpacity='0.7' result="color"/>
+                            <feFlood floodColor="#0400ff" floodOpacity='1' result="color"/>
                             <feComposite in="color" in2="blur" operator="in" result="glow"/>
                             <feMerge>
                                 <feMergeNode in="glow"/>
                                 <feMergeNode in="SourceGraphic"/>
                             </feMerge>
                         </filter>
+                        <filter id='glowEffectSmallMoon' filterUnits="userSpaceOnUse" x="-20%" y="-20%" width="140%" height="140%">
+                            <feDropShadow dx="0" dy="0" stdDeviation="4" floodColor="#0400ff" floodOpacity={1}/>
+                        </filter> 
                     </defs>
                     <Moon/>                     
                     <BlackPattern/>    

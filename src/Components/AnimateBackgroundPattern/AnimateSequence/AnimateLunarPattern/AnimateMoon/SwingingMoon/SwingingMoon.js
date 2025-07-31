@@ -32,6 +32,7 @@ function SwingingMoon() {
                 className={styles.group}                 
                 initial={{scale: 0}}
                 animate={{scale: 1}}
+                filter={'url(#glowEffectSmallMoon)'}
                 > 
                 <motion.path
                     id="path12"

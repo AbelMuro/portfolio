@@ -42,20 +42,9 @@ function InnerMostTriangle() {
                 <motion.div id='inner most triangle' className={styles.container} style={{transform}} exit={{opacity: 0}}>
                     <motion.svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"}>
                         <defs>
-                            <filter id='glowEffectInnerTriangle'>
-                                <motion.feGaussianBlur 
-                                    in="SourceAlpha" 
-                                    result="blur"
-                                    initial={{stdDeviation: 0.08}}
-                                    animate={{stdDeviation: [0.3, 0.08, 0.3], transition: {duration: 3, repeat: Infinity, ease: 'linear'}}}
-                                    /> 
-                                <feFlood floodColor="#0400ff" floodOpacity='0.7' result="color"/>
-                                <feComposite in="color" in2="blur" operator="in" result="glow"/>
-                                <feMerge>
-                                    <feMergeNode in="glow"/>
-                                    <feMergeNode in="SourceGraphic"/>
-                                </feMerge>
-                            </filter>
+                            <filter id='glowEffectInnerTriangle' filterUnits="userSpaceOnUse" x="-20%" y="-20%" width="140%" height="140%">
+                                <feDropShadow dx="0" dy="0" stdDeviation="7" floodColor="#0400ff" floodOpacity={1}/>
+                            </filter>  
                             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath30">
                                 <path 
                                     style={{transform: 'translate(-77.5px, -78px)'}}
@@ -92,6 +81,7 @@ function InnerMostTriangle() {
                         {/* outer border for triangle*/}
                         <g transform='translate(-67, 42.5)'>
                             <motion.path
+                                filter={'url(#glowEffectInnerTriangle)'}
                                 className={styles.outer_border}
                                 id="path26"
                                 d="m 163.28463,116.90532
