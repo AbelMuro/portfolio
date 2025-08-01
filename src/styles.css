@@ -16,6 +16,9 @@
     box-sizing: border-box;
 }
 
+g{
+    will-change: transform;
+}
 
 :root{
     --font: 'AbelFont';
