@@ -57,8 +57,9 @@ function AnimatePentagram({scrollThresholds}) {
                                 <feDropShadow dx="0" dy="0" stdDeviation="3" floodColor="#0400ff" floodOpacity={1}/>
                             </filter>  
                         </defs>
-                        <motion.g className={styles.group} style={{transform: transformGroup}}>   
-                                <AnimateCircles/>                        
+
+                        <AnimateCircles/>  
+                        <motion.g className={styles.group} style={{transform: transformGroup}}>                         
                                 <Circle 
                                     id="path695"
                                     cx={150.95853}
