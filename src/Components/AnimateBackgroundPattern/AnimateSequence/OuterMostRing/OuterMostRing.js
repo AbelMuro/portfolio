@@ -40,7 +40,6 @@ function OuterMostRing(){
                                 style={{scale: smoothScale}}
                                 className={styles.ring} 
                                 href={images['outerMostRing']} 
-                                filter='url(#glowEffectOuterMostRing)'
                             />
                     </svg>
                 </motion.div>
