@@ -19,6 +19,7 @@
 .ring{
     width: 87px;
     object-fit: cover;
+    transform-origin: calc(50% - 0.2px) calc(50% - 0.2px) !important;
 }
 
 @media(max-width: 920px){

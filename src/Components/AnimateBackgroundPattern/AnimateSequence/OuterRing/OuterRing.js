@@ -39,20 +39,16 @@ function OuterRing() {
                                 <feDropShadow dx="0" dy="0" stdDeviation="3" floodColor="#0400ff" floodOpacity={1}/>
                             </filter>  
                         </defs>
-                        <motion.g     
+                        <motion.image
+                            x={31.5}
+                            y={31}
                             initial={{rotate: 0, opacity: 1}} 
                             animate={{rotate: [0, 360], transition: {repeat: Infinity, duration: 18.9, ease: 'linear', delay: 1}}} 
                             style={{scale: smoothScale}}
-                            className={styles.group}>
-                                <motion.image
-                                    x={31.5}
-                                    y={31}
-                                    filter={'url(#glowEffectOuterRing)'}
-                                    href={images['outerRing']}
-                                    className={styles.outerRing}
-                                />                            
-                        </motion.g>
-
+                            filter={'url(#glowEffectOuterRing)'}
+                            href={images['outerRing']}
+                            className={styles.outerRing}
+                        />                            
                     </svg>
 
                </motion.div>     

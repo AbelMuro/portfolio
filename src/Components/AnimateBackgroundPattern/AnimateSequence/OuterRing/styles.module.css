@@ -19,7 +19,8 @@
 
 .outerRing{
     width: 145px;
-    object-fit: contain
+    object-fit: contain;
+    transform-origin: calc(50% - 0.3px) calc(50%) !important;
 }
 
 @media(max-width: 920px){

@@ -32,19 +32,16 @@ function OuterMostRing(){
                                 <feDropShadow dx="0" dy="0" stdDeviation="5" floodColor="#0400ff" floodOpacity={1}/>
                             </filter>  
                         </defs>
-                        <motion.g     
-                            className={styles.group}                       
-                            initial={{opacity: 1, rotate: 0}} 
-                            animate={{rotate: [360, 0], transition: {repeat: Infinity, duration: 31, ease: 'linear'}}} >
-                                <motion.image
-                                    x={2.20244} 
-                                    y={2.63359} 
-                                    style={{scale: smoothScale}}
-                                    className={styles.ring} 
-                                    href={images['outerMostRing']} 
-                                    filter='url(#glowEffectOuterMostRing)'
-                                />
-                        </motion.g>
+                            <motion.image
+                                x={2.20244} 
+                                y={2.63359} 
+                                initial={{opacity: 1, rotate: 0}} 
+                                animate={{rotate: [360, 0], transition: {repeat: Infinity, duration: 31, ease: 'linear'}}} 
+                                style={{scale: smoothScale}}
+                                className={styles.ring} 
+                                href={images['outerMostRing']} 
+                                filter='url(#glowEffectOuterMostRing)'
+                            />
                     </svg>
                 </motion.div>
             }

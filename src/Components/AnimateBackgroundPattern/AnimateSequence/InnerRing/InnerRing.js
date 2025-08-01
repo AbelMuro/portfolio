@@ -32,21 +32,16 @@ function InnerRing() {
                                 <feDropShadow dx="0" dy="0" stdDeviation="3" floodColor="#0400ff" floodOpacity={1}/>
                             </filter>  
                         </defs>
-                        <motion.g
-                            className={styles.group}
+                        <motion.image 
+                            x={47}
+                            y={46}
                             initial={{rotate: 0, opacity: 1}} 
                             animate={{rotate: [360, 0], transition: {repeat: Infinity, duration: 21.9, ease: 'linear', delay: 2}}}
                             style={{scale: smoothScale}}
-                        >
-                            <motion.image 
-                                x={47}
-                                y={46}
-                                className={styles.ring}
-                                href={images['innerRing']}
-                                filter={'url(#glowEffectInnerRing)'}
-                                />                            
-                        </motion.g>
-
+                            className={styles.ring}
+                            href={images['innerRing']}
+                            filter={'url(#glowEffectInnerRing)'}
+                            />                            
                     </svg>
                 </motion.div>
             }
