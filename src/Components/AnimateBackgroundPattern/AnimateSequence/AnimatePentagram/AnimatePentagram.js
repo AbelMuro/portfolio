@@ -4,7 +4,7 @@ import Rect from './Rect';
 import TechIcon from './TechIcon';
 import Circle from './Circle';
 import {LinearPentagram, LinearRing} from '~/Transitions';
-import {motion, useScroll, useTransform, useSpring, useMotionValueEvent, AnimatePresence} from 'framer-motion';
+import {motion, useScroll, useTransform, useSpring, useMotionValueEvent, AnimatePresence, useMotionTemplate} from 'framer-motion';
 import AnimateCircles from './AnimateCircles';
 import * as styles from './styles.module.css';
 
@@ -12,7 +12,6 @@ import * as styles from './styles.module.css';
 function AnimatePentagram({scrollThresholds}) {
     const [mount, setMount] = useState(true);
     const timeout = useRef();
-    const [pauseBlur, setPauseBlur] = useState(false);
     const {scrollY} = useScroll(); 
     const scrollRange = [
         scrollThresholds[1], scrollThresholds[1] + 1000, 
@@ -27,22 +26,14 @@ function AnimatePentagram({scrollThresholds}) {
     const scale = useTransform(scrollY, [800, 2000], [0.8, 5])
     const smoothScale = useSpring(scale, LinearRing);
 
+    const transformGroup = useMotionTemplate`translate(-47.929077px, -13.484006px) scale(${smoothScale})`
+
     useMotionValueEvent(scrollY, 'change', (value) => {
         if(value > 7000)
             setMount(false)
         else
             setMount(true);
     });
-
-    useMotionValueEvent(smoothScale, 'change', () => {
-        setPauseBlur(true);
-
-        if(timeout.current) clearTimeout(timeout.current);
-        
-        timeout.current = setTimeout(() => {
-            setPauseBlur(false);
-        }, 1500)
-    })
 
 
     return( 
@@ -51,7 +42,7 @@ function AnimatePentagram({scrollThresholds}) {
             <motion.div 
                 id='pentagram'             
                 className={styles.container}
-                style={{rotateY: rotate3DSpringY, rotateX: rotate3DSpringX, scale: smoothScale}}
+                style={{rotateY: rotate3DSpringY, rotateX: rotate3DSpringX}}
                 exit={{opacity: 0}}
                 >
                 <svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"}>
@@ -66,7 +57,7 @@ function AnimatePentagram({scrollThresholds}) {
                                 <feDropShadow dx="0" dy="0" stdDeviation="3" floodColor="#0400ff" floodOpacity={1}/>
                             </filter>  
                         </defs>
-                        <g transform='translate(-47.929077, -13.484006)'>   
+                        <motion.g className={styles.group} style={{transform: transformGroup}}>   
                                 <AnimateCircles/>                        
                                 <Circle 
                                     id="path695"
@@ -216,7 +207,7 @@ function AnimatePentagram({scrollThresholds}) {
                                     strokeMiterlimit={0}
                                     strokeOpacity={1}
                                     />                          
-                        </g>   
+                        </motion.g>   
                 </svg>
             </motion.div>
             }             
