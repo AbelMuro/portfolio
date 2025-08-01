@@ -21,6 +21,7 @@
     width: 145px;
     object-fit: contain;
     transform-origin: calc(50% - 0.3px) calc(50%) !important;
+    will-change: transform;
 }
 
 @media(max-width: 920px){
