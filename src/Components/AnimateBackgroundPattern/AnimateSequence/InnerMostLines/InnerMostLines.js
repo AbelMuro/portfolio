@@ -6,6 +6,8 @@ import * as styles from './styles.module.css';
 /* 
     this is where i left off, i need to finish optimizing this component with its scale animation
     then i will need to find another glow effect that is more optimized for safari
+
+    oh and dont forget to translate the pentagram design so that its more centered
 */
 
 
