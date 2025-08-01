@@ -36,7 +36,6 @@ function OuterMostRing(){
                             </filter>  
                         </defs>
                         <image
-                            key='ring' 
                             x={103.20244 - 101} // half of image width
                             y={102.63359 - 100} // half of image height
                             className={styles.ring} 
