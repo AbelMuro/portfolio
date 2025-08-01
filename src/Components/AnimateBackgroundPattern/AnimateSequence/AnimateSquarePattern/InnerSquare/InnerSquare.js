@@ -56,7 +56,7 @@ function InnerSquare(){
                                 strokeLinejoin="round"
                                 strokeMiterlimit={0}
                                 strokeDasharray={234}
-                                style={{strokeDashoffset: smoothStrokeDashoffsetOuterBorder, transform: 'translate(-62px, -53px)'}}
+                                style={{strokeDashoffset: smoothStrokeDashoffsetOuterBorder, transform: 'translate(-61px, -55px)'}}
                                 d="m 149.39848,111.34959 54.7999,24.513 -23.5828,51.4715 -54.8001,-24.513 z"
                                 id="rect704-3-9-2-1"
                                 />
@@ -69,15 +69,15 @@ function InnerSquare(){
                                 strokeLinejoin="round"
                                 strokeMiterlimit={0}
                                 strokeDasharray={183.06}
-                                style={{strokeDashoffset: smoothStrokeDashhoffsetInnerBorder, transform: 'translate(-59px, -45.6px)'}}
+                                style={{strokeDashoffset: smoothStrokeDashhoffsetInnerBorder, transform: 'translate(-57.8px, -47.5px)'}}
                                 d="m 149.73914,112.2145 42.9121,19.1952 -18.467,40.3059 -42.9122,-19.1954 z"
                                 id="rect704-3-9-2-1-2"
                             />   
-                        <g transform='translate(-83, -52)'>
+                        <g transform='translate(-81.5, -54)'>
                             <motion.image 
                                 filter={'url(#glowEffectInnerSquareDesign)'}
                                 style={{opacity: opacitySmooth}}
-                                width="77.5"
+                                width="77"
                                 x={147.1}
                                 y={111}
                                 href={images['innerSquareDesign']}

@@ -82,7 +82,7 @@ function AnimatePentagram({scrollThresholds}) {
                                     strokeDashoffset={0}
                                     strokeOpacity={1}
                                     />
-                                <TechIcon name={'react'} x={150.71886 - 0.6} y={104.37801 - 0.6} size={'1.4'} scrollThresholds={[3000, 3100]}/>
+                                <TechIcon name={'react'} x={149.8} y={103.5} size={'2'} scrollThresholds={[3000, 3100]}/>
                                 <Circle 
                                     id="path697"
                                     cx={150.71886}

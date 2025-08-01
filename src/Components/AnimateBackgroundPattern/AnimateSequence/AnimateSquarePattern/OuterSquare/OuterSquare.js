@@ -50,12 +50,12 @@ function OuterSquare() {
                                         filter={'url(#glowEffectOuterSquare)'}
                                         fill="none"
                                         stroke="#0400ff"
-                                        strokeWidth='5'
+                                        strokeWidth='7'
                                         strokeLinecap="round"
                                         strokeLinejoin="round"
                                         strokeMiterlimit={0}
                                         strokeDasharray={319.6}
-                                        style={{strokeDashoffset: smoothStrokeDashoffset, strokeWidth: smoothStrokeWidth, transform: 'translate(-59px, -69px)'}}
+                                        style={{strokeDashoffset: smoothStrokeDashoffset, strokeWidth: smoothStrokeWidth, transform: 'translate(-58px, -69px)'}}
                                         d="m 149.75952,109.57877 67.75454,45.87268 -43.83645,63.50708 -67.75461,-45.87282 z"
                                         id="rect704-3-9-2"
                                     />

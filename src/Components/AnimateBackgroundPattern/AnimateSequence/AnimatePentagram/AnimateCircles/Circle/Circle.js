@@ -9,13 +9,15 @@ function Circle({scrollThresholds, scaleTo, rotateX, rotateY}) {
     const strokeDashoffset = useTransform(scrollY, [5800, 6000], [0, 300]);
     const dashoffsetSpring = useSpring(strokeDashoffset, LinearPentagram);
 
+    const opacity = useTransform(scrollY, [6700, 6800], [1, 0]);
+
     const scale = useTransform(scrollY, scrollThresholds, [1, scaleTo]);
     const scaleWithSpring = useSpring(scale, LinearPentagram);
     const scaleBack = useTransform(scrollY, [5500, 5700], [scaleTo, 1]);    
 
     const rotate3DForX = useTransform(scrollY, [scrollThresholds[1], scrollThresholds[1] + 1000, scrollThresholds[1] + 2000], rotateX);
-    const rotate3DForY = useTransform(scrollY, [scrollThresholds[1], scrollThresholds[1] + 1000, scrollThresholds[1] + 2000], rotateY)
-    const rotate3DSpringX = useSpring(rotate3DForX, LinearPentagram)
+    const rotate3DForY = useTransform(scrollY, [scrollThresholds[1], scrollThresholds[1] + 1000, scrollThresholds[1] + 2000], rotateY);
+    const rotate3DSpringX = useSpring(rotate3DForX, LinearPentagram);
     const rotate3DSpringY = useSpring(rotate3DForY, LinearPentagram);
 
 
@@ -26,7 +28,7 @@ function Circle({scrollThresholds, scaleTo, rotateX, rotateY}) {
     useMotionValueEvent(scrollY, 'change', (y) => {
         if(y < 5800)
             dashoffsetSpring.set(0);
-        else if(y > 6700)
+        else if(y >= 6900)
             dashoffsetSpring.jump(300)
     })
 
@@ -42,7 +44,7 @@ function Circle({scrollThresholds, scaleTo, rotateX, rotateY}) {
             strokeLinejoin='bevel'
             strokeMiterlimit='0'
             strokeDasharray='300'
-            style={{scale: scaleWithSpring, rotateX: rotate3DSpringX, rotateY: rotate3DSpringY, strokeDashoffset: dashoffsetSpring }}
+            style={{scale: scaleWithSpring, rotateX: rotate3DSpringX, rotateY: rotate3DSpringY, strokeDashoffset: dashoffsetSpring, opacity }}
             />
             
         )

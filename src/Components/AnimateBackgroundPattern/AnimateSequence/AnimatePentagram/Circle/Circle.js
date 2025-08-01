@@ -9,10 +9,12 @@ function Circle({strokeDasharray, strokeDashoffset, ...props}) {
     const dashoffset = useTransform(scrollY, [5800, 6000], [0, strokeDasharray]);
     const finalOffsetSmooth = useSpring(dashoffset, LinearPentagram);
 
+    const opacity = useTransform(scrollY, [6500, 6800], [1, 0]);
+
     useMotionValueEvent(scrollY, 'change', (y) => {
          if (y < 5800) 
             finalOffsetSmooth.set(0);
-         else if(y >= 6700)
+         else if(y >= 6900)
             finalOffsetSmooth.jump(strokeDasharray); 
     });
 
@@ -22,7 +24,7 @@ function Circle({strokeDasharray, strokeDashoffset, ...props}) {
             {...props} 
             className={styles.circle} 
             strokeDasharray={strokeDasharray}
-            style={{strokeDashoffset: finalOffsetSmooth}} 
+            style={{strokeDashoffset: finalOffsetSmooth, opacity}} 
         />
     )
 }

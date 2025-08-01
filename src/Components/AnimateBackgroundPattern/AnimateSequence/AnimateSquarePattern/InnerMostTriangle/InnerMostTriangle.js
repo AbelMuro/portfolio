@@ -79,7 +79,7 @@ function InnerMostTriangle() {
                             </clipPath>
                         </defs>
                         {/* outer border for triangle*/}
-                        <g transform='translate(-67, 42.5)'>
+                        <g transform='translate(-65, 36)'>
                             <motion.path
                                 filter={'url(#glowEffectInnerTriangle)'}
                                 className={styles.outer_border}
@@ -96,7 +96,7 @@ function InnerMostTriangle() {
                                 style={{strokeDashoffset: smoothStrokeDashoffset, transform: 'rotate(-15deg)'}}
                                 />
                         </g>
-                        <g transform='translate(-14.6, -8)'>
+                        <g transform='translate(-13, -14)'>
                             <motion.image
                                 filter={'url(#glowEffectInnerTriangle)'}
                                 width={25}

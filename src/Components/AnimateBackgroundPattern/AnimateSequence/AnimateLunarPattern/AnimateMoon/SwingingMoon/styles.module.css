@@ -3,7 +3,7 @@
 }
 
 .parent_group{
-    transform-origin: calc(137.53329467773437px) calc(98.33193969726562px) !important;
+    transform-origin: calc(50%) calc(50% - 35px) !important;
 }
 
 .group{
