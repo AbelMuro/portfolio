@@ -43,7 +43,6 @@ function InnerMostRing() {
                                 initial={{rotate: 0}} 
                                 animate={{rotate: [0, 360], transition: {repeat: Infinity, duration: 14.9, ease: 'linear', delay: 3}}} 
                                 style={{scale: smoothScale}}
-                                filter={'url(#glowEffectInnerMostRing)'}
                                 className={styles.ring}
                                 href={images['innerMostRing']}/>                            
                     </svg>                    

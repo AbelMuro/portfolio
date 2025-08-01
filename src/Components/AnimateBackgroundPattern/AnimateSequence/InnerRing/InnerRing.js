@@ -40,7 +40,6 @@ function InnerRing() {
                             style={{scale: smoothScale}}
                             className={styles.ring}
                             href={images['innerRing']}
-                            filter={'url(#glowEffectInnerRing)'}
                             />                            
                     </svg>
                 </motion.div>

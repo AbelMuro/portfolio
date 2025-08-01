@@ -45,7 +45,6 @@ function OuterRing() {
                             initial={{rotate: 0, opacity: 1}} 
                             animate={{rotate: [0, 360], transition: {repeat: Infinity, duration: 18.9, ease: 'linear', delay: 1}}} 
                             style={{scale: smoothScale}}
-                            filter={'url(#glowEffectOuterRing)'}
                             href={images['outerRing']}
                             className={styles.outerRing}
                         />                            
