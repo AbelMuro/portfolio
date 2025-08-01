@@ -12,10 +12,6 @@
     height: 100%;
 }
 
-.group{
-    transform-origin: calc(50% - 0.2px) calc(50%) !important;
-}
-
 .ring{
     width: 115px;
     object-fit: cover;

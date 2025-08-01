@@ -3,6 +3,12 @@ import {LinearRing} from '~/Transitions';
 import {motion, useTransform, useSpring, useScroll, useMotionValueEvent, AnimatePresence} from 'framer-motion';
 import * as styles from './styles.module.css';
 
+/* 
+    this is where i left off, i need to finish optimizing this component with its scale animation
+    then i will need to find another glow effect that is more optimized for safari
+*/
+
+
 function InnerMostLines() {
     const [mount, setMount] = useState(true);
     const {scrollY} = useScroll();
@@ -28,66 +34,70 @@ function InnerMostLines() {
                 style={{scale: smoothScale}}
                 exit={{opacity: 0}}
                 >
-                <svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"}>
+                <svg className={styles.svg} viewBox={"0 0 200 200"}>
+                    <g transform='translate(74, 75)'>
                     { /* north line */ }
                         <motion.path 
                             id="path1429"
-                            d="M 103.191,0.876 L 103.191,46.316"
+                            d="M 25.7978,0.219 L 25.7978,11.579"
                             fill="none"
                             fillOpacity={1}
                             stroke="#0400ff"
-                            strokeWidth={2}
+                            strokeWidth={0.6}
                             strokeLinecap="round"
                             strokeLinejoin="bevel"
                             strokeMiterlimit={0}
                             strokeOpacity={1}
-                            style={{strokeDashoffset: smoothDashoffset}} 
+                            style={{strokeDashoffset: smoothDashoffset, transform: 'translate(0px, -3px)'}} 
                             strokeDasharray='60' 
                             />
                         {/* east line*/}
                         <motion.path 
                             id="path1429-7"
-                            d="M 210.403,103.396 L 154.008,103.993"
+                            d="M 52.6008,25.849 L 40,25.9983"
                             fill="none"
                             fillOpacity={1}
                             stroke="#0400ff"
-                            strokeWidth={2}
+                            strokeWidth={0.6}
                             strokeLinecap="round"
                             strokeLinejoin="bevel"
                             strokeMiterlimit={1}
                             strokeOpacity={1} 
-                            style={{strokeDashoffset: smoothDashoffset}} 
+                            style={{strokeDashoffset: smoothDashoffset, transform: 'translate(1px, 0px)'}} 
                             strokeDasharray='60' 
                         />
                         {/* south line*/}
                         <motion.path 
                             id="path1429-7-8"
-                            d="M 101.223,207.389 L 100.809,148.945"
+                            d="M 25.3058,51.8473 L 25.2023,39"
                             fill="none"
                             fillOpacity={1}
                             stroke="#0400ff"
-                            strokeWidth={2}
+                            strokeWidth={0.6}
                             strokeLinecap="round"
                             strokeLinejoin="bevel"
                             strokeMiterlimit={0}
                             strokeOpacity={1}
-                            style={{strokeDashoffset: smoothDashoffset}} 
+                            style={{strokeDashoffset: smoothDashoffset, transform: 'translate(1.5px, 0.5px)'}} 
                             strokeDasharray='60' 
                             />
                         {/* west line*/}
                         <motion.path 
                             id="path1429-5"
-                            d="M 1.923,104.057 L 52.723,104.002"
+                             d="M 0.4808,26.0143 L 13.1808,26.0005"
                             fill="none"
                             fillOpacity={1}
                             stroke="#0400ff"
-                            strokeWidth={2}
+                            strokeWidth={0.6}
                             strokeLinecap="round"
                             strokeLinejoin="bevel"
                             strokeMiterlimit={0}
                             strokeOpacity={1}
-                            style={{strokeDashoffset: smoothDashoffset}} 
+                            style={{strokeDashoffset: smoothDashoffset, transform: 'translate(-1.5px, -0.5px)'}} 
                             strokeDasharray='60' />
+
+                    </g>
+
                     </svg>
             </motion.div>
             }

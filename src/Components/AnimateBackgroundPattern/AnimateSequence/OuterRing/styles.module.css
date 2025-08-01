@@ -13,10 +13,6 @@
     height: 100%;
 }
 
-.group{
-   transform-origin: calc(50% - 0.3px) calc(50%) !important;
-}
-
 .outerRing{
     width: 145px;
     object-fit: contain;
