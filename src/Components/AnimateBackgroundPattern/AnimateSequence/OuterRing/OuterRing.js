@@ -27,10 +27,7 @@ function OuterRing() {
                 <motion.div      
                         id='outer ring'   
                         className={styles.container}                
-                        initial={{rotate: 0, opacity: 1}} 
-                        animate={{rotate: [0, 360], transition: {repeat: Infinity, duration: 18.9, ease: 'linear', delay: 1}}} 
                         exit={{opacity: 0}}
-                        style={{scale: smoothScale}}
                         >
                     <svg 
                         xmlns="http://www.w3.org/2000/svg" 
@@ -42,13 +39,20 @@ function OuterRing() {
                                 <feDropShadow dx="0" dy="0" stdDeviation="3" floodColor="#0400ff" floodOpacity={1}/>
                             </filter>  
                         </defs>
-                            <image
-                                x={103.20244 - 100.2}
-                                y={103.20244 - 100.5}
-                                filter={'url(#glowEffectOuterRing)'}
-                                href={images['outerRing']}
-                                className={styles.outerRing}
-                            />
+                        <motion.g     
+                            initial={{rotate: 0, opacity: 1}} 
+                            animate={{rotate: [0, 360], transition: {repeat: Infinity, duration: 18.9, ease: 'linear', delay: 1}}} 
+                            style={{scale: smoothScale}}
+                            className={styles.group}>
+                                <motion.image
+                                    x={31.5}
+                                    y={31}
+                                    filter={'url(#glowEffectOuterRing)'}
+                                    href={images['outerRing']}
+                                    className={styles.outerRing}
+                                />                            
+                        </motion.g>
+
                     </svg>
 
                </motion.div>     

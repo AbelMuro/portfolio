@@ -25,27 +25,28 @@ function InnerRing() {
                 <motion.div 
                     id='inner ring' 
                     className={styles.container}
-                    initial={{rotate: 0, opacity: 1}} 
-                    animate={{rotate: [360, 0], transition: {repeat: Infinity, duration: 21.9, ease: 'linear', delay: 2}}}
-                    exit={{opacity: 0}}
-                    style={{scale: smoothScale}}
-                    >
-                    <svg 
-                        className={styles.svg} 
-                        viewBox={"0 0 206.40488 206.40488"} 
-                        >
+                    exit={{opacity: 0}}>
+                    <svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"} >
                         <defs>
                             <filter id='glowEffectInnerRing' filterUnits="userSpaceOnUse" x="-20%" y="-20%" width="140%" height="140%">
                                 <feDropShadow dx="0" dy="0" stdDeviation="3" floodColor="#0400ff" floodOpacity={1}/>
                             </filter>  
                         </defs>
-                        <image 
-                            x={103.20244 - 85}
-                            y={103.20244 - 85}
-                            className={styles.ring}
-                            href={images['innerRing']}
-                            filter={'url(#glowEffectInnerRing)'}
-                            />
+                        <motion.g
+                            className={styles.group}
+                            initial={{rotate: 0, opacity: 1}} 
+                            animate={{rotate: [360, 0], transition: {repeat: Infinity, duration: 21.9, ease: 'linear', delay: 2}}}
+                            style={{scale: smoothScale}}
+                        >
+                            <motion.image 
+                                x={47}
+                                y={46}
+                                className={styles.ring}
+                                href={images['innerRing']}
+                                filter={'url(#glowEffectInnerRing)'}
+                                />                            
+                        </motion.g>
+
                     </svg>
                 </motion.div>
             }

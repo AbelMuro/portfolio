@@ -26,10 +26,7 @@ function InnerMostRing() {
                 <motion.div
                     id='inner most ring'
                     className={styles.container}
-                    initial={{rotate: 0}} 
-                    animate={{rotate: [0, 360], transition: {repeat: Infinity, duration: 14.9, ease: 'linear', delay: 3}}} 
                     exit={{opacity: 0, transition: {duration: 0.7}}}
-                    style={{scale: smoothScale}}
                     >
                     <svg 
                         className={styles.svg} 
@@ -40,12 +37,20 @@ function InnerMostRing() {
                                     <feDropShadow dx="0" dy="0" stdDeviation="3" floodColor="#0400ff" floodOpacity={1}/>
                                 </filter>  
                             </defs>
-                            <image
-                                x={103.20244 - 87.5}
-                                y={103.20244 - 87.5}
+                        <motion.g
+                            className={styles.group}
+                            initial={{rotate: 0}} 
+                            animate={{rotate: [0, 360], transition: {repeat: Infinity, duration: 14.9, ease: 'linear', delay: 3}}} 
+                            style={{scale: smoothScale}}
+                            >
+                            <motion.image
+                                x={60}
+                                y={60}
                                 filter={'url(#glowEffectInnerMostRing)'}
                                 className={styles.ring}
-                                href={images['innerMostRing']}/>
+                                href={images['innerMostRing']}/>                            
+                        </motion.g>
+
                     </svg>                    
                 </motion.div>
 
