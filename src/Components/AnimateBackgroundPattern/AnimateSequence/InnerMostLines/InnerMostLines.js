@@ -1,6 +1,6 @@
-import React, {useContext, useState} from 'react';
+import React, {useState} from 'react';
 import {LinearRing} from '~/Transitions';
-import {motion, useTransform, useSpring, useScroll, useMotionValueEvent, AnimatePresence} from 'framer-motion';
+import {motion, useTransform, useSpring, useScroll, useMotionValueEvent, AnimatePresence, useMotionTemplate} from 'framer-motion';
 import * as styles from './styles.module.css';
 
 /* 
@@ -14,8 +14,9 @@ import * as styles from './styles.module.css';
 function InnerMostLines() {
     const [mount, setMount] = useState(true);
     const {scrollY} = useScroll();
-    const scale = useTransform(scrollY, [600, 1800], [1, 5])
+    const scale = useTransform(scrollY, [600, 1800], [1, 2.3])
     const smoothScale = useSpring(scale, LinearRing);
+    const transform = useMotionTemplate`translate(74px, 75px) scale(${smoothScale})`
 
     const strokeDashoffset = useTransform(scrollY, [2000, 3000], [0, 60]);
     const smoothDashoffset = useSpring(strokeDashoffset, LinearRing);
@@ -37,7 +38,7 @@ function InnerMostLines() {
                 exit={{opacity: 0}}
                 >
                 <svg className={styles.svg} viewBox={"0 0 200 200"}>
-                    <g transform='translate(74, 75)'>
+                    <motion.g style={{transform}}>
                     { /* north line */ }
                         <motion.path 
                             id="path1429"
@@ -50,7 +51,7 @@ function InnerMostLines() {
                             strokeLinejoin="bevel"
                             strokeMiterlimit={0}
                             strokeOpacity={1}
-                            style={{strokeDashoffset: smoothDashoffset, transform: 'translate(0px, -3px)'}} 
+                            style={{strokeDashoffset: smoothDashoffset, transform: 'translate(0.5px, -3px)'}} 
                             strokeDasharray='60' 
                             />
                         {/* east line*/}
@@ -65,7 +66,7 @@ function InnerMostLines() {
                             strokeLinejoin="bevel"
                             strokeMiterlimit={1}
                             strokeOpacity={1} 
-                            style={{strokeDashoffset: smoothDashoffset, transform: 'translate(1px, 0px)'}} 
+                            style={{strokeDashoffset: smoothDashoffset, transform: 'translate(1px, -1px)'}} 
                             strokeDasharray='60' 
                         />
                         {/* south line*/}
@@ -95,10 +96,10 @@ function InnerMostLines() {
                             strokeLinejoin="bevel"
                             strokeMiterlimit={0}
                             strokeOpacity={1}
-                            style={{strokeDashoffset: smoothDashoffset, transform: 'translate(-1.5px, -0.5px)'}} 
+                            style={{strokeDashoffset: smoothDashoffset, transform: 'translate(-1.5px, -1.5px)'}} 
                             strokeDasharray='60' />
 
-                    </g>
+                    </motion.g>
 
                     </svg>
             </motion.div>

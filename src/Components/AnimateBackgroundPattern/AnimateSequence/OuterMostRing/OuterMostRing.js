@@ -29,7 +29,13 @@ function OuterMostRing(){
                     <svg className={styles.container} viewBox="0 0 206 205" >
                         <defs>
                             <filter id='glowEffectOuterMostRing' filterUnits="userSpaceOnUse" x="-20%" y="-20%" width="140%" height="140%">
-                                <feDropShadow dx="0" dy="0" stdDeviation="5" floodColor="#0400ff" floodOpacity={1}/>
+                                    <feFlood floodColor="#0400ff" floodOpacity="1" result="floodFill" />
+                                    <feComposite in="floodFill" in2="SourceGraphic" operator="in" result="coloredShape" />
+                                    <feGaussianBlur in="coloredShape" stdDeviation="5" result="blurredGlow" />
+                                    <feMerge>
+                                        <feMergeNode in="blurredGlow" />
+                                        <feMergeNode in="SourceGraphic" />
+                                    </feMerge>
                             </filter>  
                         </defs>
                             <motion.image
@@ -40,6 +46,7 @@ function OuterMostRing(){
                                 style={{scale: smoothScale}}
                                 className={styles.ring} 
                                 href={images['outerMostRing']} 
+                                filter={'url(#glowEffectOuterMostRing)'}
                             />
                     </svg>
                 </motion.div>

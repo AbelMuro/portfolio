@@ -1,4 +1,4 @@
-import React, {useState, useRef} from 'react';
+import React, {useState} from 'react';
 import AnimateTechTitles from './AnimateTechTitles';
 import Rect from './Rect';
 import TechIcon from './TechIcon';
@@ -11,7 +11,6 @@ import * as styles from './styles.module.css';
 
 function AnimatePentagram({scrollThresholds}) {
     const [mount, setMount] = useState(true);
-    const timeout = useRef();
     const {scrollY} = useScroll(); 
     const scrollRange = [
         scrollThresholds[1], scrollThresholds[1] + 1000, 
@@ -26,7 +25,7 @@ function AnimatePentagram({scrollThresholds}) {
     const scale = useTransform(scrollY, [800, 2000], [0.8, 5])
     const smoothScale = useSpring(scale, LinearRing);
 
-    const transformGroup = useMotionTemplate`translate(-47.929077px, -13.484006px) scale(${smoothScale})`
+    const transformGroup = useMotionTemplate`translate(-47px, -13px) scale(${smoothScale})`
 
     useMotionValueEvent(scrollY, 'change', (value) => {
         if(value > 7000)
