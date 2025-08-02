@@ -40,8 +40,8 @@ function OuterRing() {
                             </filter>  
                         </defs>
                         <motion.image
-                            x={31.5}
-                            y={31}
+                            x={21}
+                            y={20}
                             initial={{rotate: 0, opacity: 1}} 
                             animate={{rotate: [0, 360], transition: {repeat: Infinity, duration: 18.9, ease: 'linear', delay: 1}}} 
                             style={{scale: smoothScale}}

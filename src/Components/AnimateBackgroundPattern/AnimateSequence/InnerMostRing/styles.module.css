@@ -14,15 +14,8 @@
 }
 
 .ring{
-    width: 87px;
+    width: 109px;
     object-fit: cover;
     transform-origin: calc(50% - 0.2px) calc(50% - 0.2px) !important;
     will-change: transform;
-}
-
-@media(max-width: 920px){
-    .container{
-        width: 49%;
-        height: 49vw;
-    }
 }

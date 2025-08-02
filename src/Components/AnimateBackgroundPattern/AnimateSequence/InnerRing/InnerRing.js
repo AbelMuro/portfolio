@@ -33,8 +33,8 @@ function InnerRing() {
                             </filter>  
                         </defs>
                         <motion.image 
-                            x={47}
-                            y={46}
+                            x={37}
+                            y={36}
                             initial={{rotate: 0, opacity: 1}} 
                             animate={{rotate: [360, 0], transition: {repeat: Infinity, duration: 21.9, ease: 'linear', delay: 2}}}
                             style={{scale: smoothScale}}
