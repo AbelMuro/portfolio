@@ -18,15 +18,12 @@
 
 
 .ring{
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
     transform-origin: calc(50% + 1px) 50% !important;
     will-change: transform;
 }
 
-.glowEffect{
-    filter: blur(7px)
-}
 
 
 @media(max-width: 920px){
