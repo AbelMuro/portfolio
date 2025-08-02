@@ -29,25 +29,33 @@ function OuterMostRing(){
                     <svg className={styles.container} viewBox="0 0 206 205" >
                         <defs>
                             <filter id='glowEffectOuterMostRing' filterUnits="userSpaceOnUse" x="-20%" y="-20%" width="140%" height="140%">
-                                    <feFlood floodColor="#0400ff" floodOpacity="1" result="floodFill" />
-                                    <feComposite in="floodFill" in2="SourceGraphic" operator="in" result="coloredShape" />
-                                    <feGaussianBlur in="coloredShape" stdDeviation="1" result="blurredGlow" />
-                                    <feMerge>
-                                        <feMergeNode in="blurredGlow" />
-                                        <feMergeNode in="SourceGraphic" />
-                                    </feMerge>
+                                <feFlood floodColor="#0400ff" floodOpacity="1" result="floodFill" />
+                                <feComposite in="floodFill" in2="SourceGraphic" operator="in" result="coloredShape" />
+                                <feGaussianBlur in="coloredShape" stdDeviation="1" result="blurredGlow" />
+                                <feMerge>
+                                    <feMergeNode in="blurredGlow" />
+                                    <feMergeNode in="SourceGraphic" />
+                                </feMerge>
                             </filter>  
                         </defs>
-                            <motion.image
-                                x={2.20244} 
-                                y={2.63359} 
-                                initial={{opacity: 1, rotate: 0}} 
-                                animate={{rotate: [360, 0], transition: {repeat: Infinity, duration: 31, ease: 'linear'}}} 
-                                style={{scale: smoothScale}}
-                                className={styles.ring} 
-                                href={images['outerMostRing']} 
-                                filter={'url(#glowEffectOuterMostRing)'}
-                            />
+                        <motion.circle 
+                            cx={103}
+                            cy={103}
+                            stroke={'#0400ff'} 
+                            strokeWidth={12} 
+                            r={83} 
+                            style={{scale: smoothScale}}
+                            fill={'none'} 
+                            className={styles.glowEffect}/>
+                        <motion.image
+                            x={2.20244} 
+                            y={2.63359} 
+                            initial={{opacity: 1, rotate: 0}} 
+                            animate={{rotate: [360, 0], transition: {repeat: Infinity, duration: 31, ease: 'linear'}}} 
+                            style={{scale: smoothScale}}
+                            className={styles.ring} 
+                            href={images['outerMostRing']} 
+                        />                            
                     </svg>
                 </motion.div>
             }

@@ -24,6 +24,10 @@
     will-change: transform;
 }
 
+.glowEffect{
+    filter: blur(7px)
+}
+
 
 @media(max-width: 920px){
     .container{
