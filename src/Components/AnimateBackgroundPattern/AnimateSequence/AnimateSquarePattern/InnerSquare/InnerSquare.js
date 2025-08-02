@@ -17,6 +17,9 @@ function InnerSquare(){
     const opacity = useTransform(scrollY, [8500, 9000], [0, 1]);
     const opacitySmooth = useSpring(opacity, LinearSquare);
 
+    const opacityGlowEffect = useTransform(scrollY, [8900, 9100], [0, 1]);
+    const opacitySmoothGlowEffect = useSpring(opacityGlowEffect, LinearSquare);
+
     const z = useTransform(scrollY, [8500, 9000], [0, 100]);
     const smoothZ = useSpring(z, LinearSquare);
     const translateZBack = useTransform(scrollY, [11600, 12000], [100, 0]);
@@ -48,7 +51,6 @@ function InnerSquare(){
                                 </filter> 
                         </defs>
                             <motion.path
-                                filter={'url(#glowEffectInnerSquare)'}
                                 stroke="#0400ff"
                                 strokeWidth={1}
                                 fill='none'
@@ -61,7 +63,6 @@ function InnerSquare(){
                                 id="rect704-3-9-2-1"
                                 />
                             <motion.path
-                                filter={'url(#glowEffectInnerSquare)'}
                                 stroke="#0400ff"
                                 strokeWidth={1}
                                 fill='none'
@@ -73,9 +74,13 @@ function InnerSquare(){
                                 d="m 149.73914,112.2145 42.9121,19.1952 -18.467,40.3059 -42.9122,-19.1954 z"
                                 id="rect704-3-9-2-1-2"
                             />   
+                            <motion.image
+                                href={images['glowEffect']}
+                                className={styles.glowEffect}
+                                style={{transform: 'translate(56px, 45px)', opacity: opacitySmoothGlowEffect}}
+                            />
                         <g transform='translate(-81.5, -54)'>
                             <motion.image 
-                                filter={'url(#glowEffectInnerSquareDesign)'}
                                 style={{opacity: opacitySmooth}}
                                 width="77"
                                 x={147.1}

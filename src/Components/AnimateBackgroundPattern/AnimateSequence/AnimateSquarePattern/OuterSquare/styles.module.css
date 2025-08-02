@@ -5,12 +5,13 @@
     left: 0px;
     top: 0px;
     z-index: var(--third-layer);
-    
-    
 }
 
 .svg{
     width: 100%;
     height: 100%;
-    
+}
+
+.glowEffect{
+    width: 149px;
 }

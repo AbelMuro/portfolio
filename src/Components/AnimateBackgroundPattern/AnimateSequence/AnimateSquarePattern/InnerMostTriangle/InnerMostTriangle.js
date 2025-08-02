@@ -11,6 +11,10 @@ function InnerMostTriangle() {
     const opacity = useTransform(scrollY, [9500, 10000], [0, 1])
     const opacitySmooth = useSpring(opacity, LinearSquare);
 
+    const opacityGlowEffect = useTransform(scrollY, [9500, 9700], [0, 1]);
+    const opacitySmoothGlowEffect = useSpring(opacityGlowEffect, LinearSquare);
+    const opacityBackGlowEffect = useTransform(scrollY, [13000, 13200], [1, 0])
+
     const strokeDashoffset = useTransform(scrollY, [9000, 9500], [130, 0]);
     const smoothStrokeDashoffset = useSpring(strokeDashoffset, LinearSquare);
     const strokeDashoffsetBack = useTransform(scrollY, [13200, 13500], [0, 130]);
@@ -27,6 +31,10 @@ function InnerMostTriangle() {
     useMotionValueEvent(translateZBack, 'change', (value) => {
         smoothZ.set(value);
     });
+
+    useMotionValueEvent(opacityBackGlowEffect, 'change', (value) => {
+        opacitySmoothGlowEffect.set(value);
+    })
 
     useMotionValueEvent(scrollY, 'change', (value) => {
         if(value < 8000 || value > 14000)
@@ -81,7 +89,6 @@ function InnerMostTriangle() {
                         {/* outer border for triangle*/}
                         <g transform='translate(-65, 36)'>
                             <motion.path
-                                filter={'url(#glowEffectInnerTriangle)'}
                                 className={styles.outer_border}
                                 id="path26"
                                 d="m 163.28463,116.90532
@@ -96,9 +103,16 @@ function InnerMostTriangle() {
                                 style={{strokeDashoffset: smoothStrokeDashoffset, transform: 'rotate(-15deg)'}}
                                 />
                         </g>
+                        <motion.image
+                            href={images['glowEffect']}
+                            x={55}
+                            y={52.5}
+                            className={styles.glowEffect}
+                            style={{opacity: opacitySmoothGlowEffect}}
+                        />
                         <g transform='translate(-13, -14)'>
                             <motion.image
-                                filter={'url(#glowEffectInnerTriangle)'}
+                                filter={'glowEffectInnerTriangle'}
                                 width={25}
                                 href={images['sunEarthText']}
                                 style={{opacity: opacitySmooth}}

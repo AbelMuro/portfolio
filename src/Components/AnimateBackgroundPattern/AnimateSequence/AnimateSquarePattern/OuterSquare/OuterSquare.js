@@ -11,11 +11,14 @@ function OuterSquare() {
     const strokeDashoffset = useTransform(scrollY, [7300, 7800], [319.6, 0]);
     const smoothStrokeDashoffset = useSpring(strokeDashoffset, LinearSquare);
     
-    const strokeWidth = useTransform(scrollY, [7800, 8300], [2, 8]);
-    const smoothStrokeWidth = useSpring(strokeWidth, LinearSquare)
+    const strokeWidth = useTransform(scrollY, [7800, 8300], [2, 9]);
+    const smoothStrokeWidth = useSpring(strokeWidth, LinearSquare);
 
     const opacity = useTransform(scrollY, [8000, 8300], [0, 1])
     const opacitySmooth = useSpring(opacity, LinearSquare);
+
+    const opacityGlowEffect = useTransform(scrollY, [8300, 8500], [0, 1]);
+    const opacitySmoothGlowEffect = useSpring(opacityGlowEffect, LinearSquare);
 
     const z = useTransform(scrollY, [8300, 8600], [0, 60]);
     const smoothZ = useSpring(z, LinearSquare);
@@ -46,23 +49,26 @@ function OuterSquare() {
                                         <feDropShadow dx="0" dy="0" stdDeviation="3" floodColor="#0400ff" floodOpacity={1}/>
                                     </filter>  
                                 </defs>
-                                    <motion.path
-                                        filter={'url(#glowEffectOuterSquare)'}
-                                        fill="none"
-                                        stroke="#0400ff"
-                                        strokeWidth='7'
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeMiterlimit={0}
-                                        strokeDasharray={319.6}
-                                        style={{strokeDashoffset: smoothStrokeDashoffset, strokeWidth: smoothStrokeWidth, transform: 'translate(-58px, -69px)'}}
-                                        d="m 149.75952,109.57877 67.75454,45.87268 -43.83645,63.50708 -67.75461,-45.87282 z"
-                                        id="rect704-3-9-2"
+                                <motion.path
+                                    fill="none"
+                                    stroke="#0400ff"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeMiterlimit={0}
+                                    strokeDasharray={319.6}
+                                    style={{strokeDashoffset: smoothStrokeDashoffset, strokeWidth: smoothStrokeWidth, transform: 'translate(-58px, -69px)'}}
+                                    d="m 149.75952,109.57877 67.75454,45.87268 -43.83645,63.50708 -67.75461,-45.87282 z"
+                                    id="rect704-3-9-2"
+                                />
+                                <motion.image 
+                                    className={styles.glowEffect}
+                                    href={images['glowEffect']}
+                                    style={{transform: 'translate(31px, 21px)', opacity: opacitySmoothGlowEffect}}
                                     />
-                                    <motion.image
-                                        style={{opacity: opacitySmooth, transform: 'translate(46.9px, 40px)'}}
-                                        href={images['text']}
-                                        width={113}/>                          
+                                <motion.image
+                                    style={{opacity: opacitySmooth, transform: 'translate(46.9px, 40px)'}}
+                                    href={images['text']}
+                                    width={113}/>                          
                         </motion.svg>                                              
                 </motion.div>
 
