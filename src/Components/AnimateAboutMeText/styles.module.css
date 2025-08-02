@@ -1,6 +1,6 @@
 .containerOne, .containerTwo{
     width: 800px;
-    height: 500px;
+    height: 600px;
     position: fixed;
     inset: 0;
     margin: auto;
