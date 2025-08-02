@@ -43,7 +43,7 @@ function OuterSquare() {
                             <motion.svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"}>
                                 <defs>
                                     <filter id='glowEffectOuterSquare' filterUnits="userSpaceOnUse" x="-20%" y="-20%" width="140%" height="140%">
-                                        <feDropShadow dx="0" dy="0" stdDeviation="8" floodColor="#0400ff" floodOpacity={1}/>
+                                        <feDropShadow dx="0" dy="0" stdDeviation="3" floodColor="#0400ff" floodOpacity={1}/>
                                     </filter>  
                                 </defs>
                                     <motion.path
