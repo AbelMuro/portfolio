@@ -4,10 +4,7 @@ import {motion, useTransform, useSpring, useScroll, useMotionValueEvent, Animate
 import * as styles from './styles.module.css';
 
 /* 
-    this is where i left off, i need to finish optimizing this component with its scale animation
-    then i will need to find another glow effect that is more optimized for safari
-
-    oh and dont forget to translate the pentagram design so that its more centered
+    this is where i left off, i need to find a better design for the following component
 */
 
 
@@ -18,15 +15,16 @@ function InnerMostLines() {
     const smoothScale = useSpring(scale, LinearRing);
     const transform = useMotionTemplate`translate(74px, 75px) scale(${smoothScale})`
 
-    const strokeDashoffset = useTransform(scrollY, [2000, 3000], [0, 60]);
+    const strokeDashoffset = useTransform(scrollY, [2000, 2400], [0, 13]);
     const smoothDashoffset = useSpring(strokeDashoffset, LinearRing);
 
     useMotionValueEvent(scrollY, 'change', (value) => {
-        if(value > 3700)
+        if(value > 3000)
             setMount(false);
         else
             setMount(true);
     })
+
 
     return(
         <AnimatePresence>
@@ -52,7 +50,9 @@ function InnerMostLines() {
                             strokeMiterlimit={0}
                             strokeOpacity={1}
                             style={{strokeDashoffset: smoothDashoffset, transform: 'translate(0.5px, -3px)'}} 
-                            strokeDasharray='60' 
+                            strokeDasharray='13' 
+                            initial={{opacity: 1}}
+                            exit={{opacity: 0}}
                             />
                         {/* east line*/}
                         <motion.path 
@@ -67,7 +67,9 @@ function InnerMostLines() {
                             strokeMiterlimit={1}
                             strokeOpacity={1} 
                             style={{strokeDashoffset: smoothDashoffset, transform: 'translate(1px, -1px)'}} 
-                            strokeDasharray='60' 
+                            strokeDasharray='13' 
+                            initial={{opacity: 1}}
+                            exit={{opacity: 0}}
                         />
                         {/* south line*/}
                         <motion.path 
@@ -82,7 +84,9 @@ function InnerMostLines() {
                             strokeMiterlimit={0}
                             strokeOpacity={1}
                             style={{strokeDashoffset: smoothDashoffset, transform: 'translate(1.5px, 0.5px)'}} 
-                            strokeDasharray='60' 
+                            initial={{opacity: 1}}
+                            exit={{opacity: 0}}
+                            strokeDasharray='13' 
                             />
                         {/* west line*/}
                         <motion.path 
@@ -96,8 +100,10 @@ function InnerMostLines() {
                             strokeLinejoin="bevel"
                             strokeMiterlimit={0}
                             strokeOpacity={1}
+                            initial={{opacity: 1}}
+                            exit={{opacity: 0}}
                             style={{strokeDashoffset: smoothDashoffset, transform: 'translate(-1.5px, -1.5px)'}} 
-                            strokeDasharray='60' />
+                            strokeDasharray='13' />
 
                     </motion.g>
 

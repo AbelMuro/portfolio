@@ -1,6 +1,6 @@
 import React, {memo, useState} from 'react';
 import {LinearPentagram} from '~/Transitions';
-import {motion, useTransform, useSpring, useScroll, useMotionValueEvent} from 'framer-motion';
+import {motion, useTransform, useSpring, useScroll, useMotionValueEvent, AnimatePresence} from 'framer-motion';
 import * as styles from './styles.module.css';
 
 function Circle({scrollThresholds, scaleTo, rotateX, rotateY}) {
@@ -42,21 +42,27 @@ function Circle({scrollThresholds, scaleTo, rotateX, rotateY}) {
 
 
 
-    return mount && (
-        <motion.circle
-            className={styles.circle}
-            cx={103}
-            cy={96.5}
-            r={70}
-            fill='none' 
-            stroke='#0400ff'
-            strokeWidth='1'
-            strokeLinejoin='bevel'
-            strokeMiterlimit='0'
-            strokeDasharray='440'
-            style={{scale: scaleWithSpring, rotateX: rotate3DSpringX, rotateY: rotate3DSpringY ,strokeDashoffset: dashoffsetSpring, opacity}}
-            />
-            
+    return (
+        <AnimatePresence>
+            {mount && 
+                <motion.circle
+                    className={styles.circle}
+                    cx={103}
+                    cy={96.5}
+                    r={70}
+                    fill='none' 
+                    stroke='#0400ff'
+                    strokeLinejoin='bevel'
+                    strokeMiterlimit='0'
+                    strokeDasharray='440'
+                    initial={{strokeWidth: 0}}
+                    animate={{strokeWidth: 1}}
+                    exit={{strokeWidth: 0}}
+                    style={{scale: scaleWithSpring, rotateX: rotate3DSpringX, rotateY: rotate3DSpringY ,strokeDashoffset: dashoffsetSpring, opacity}}
+                    />                
+            }
+
+        </AnimatePresence>
         )
 }
 
