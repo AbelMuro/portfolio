@@ -27,7 +27,7 @@ function AnimateMoon() {
                             <motion.feGaussianBlur 
                                 in="SourceAlpha" 
                                 result="blur"
-                                stdDeviation={0.04}
+                                stdDeviation={0.1}
                                 />
                             <feFlood floodColor="#0400ff" floodOpacity='1' result="color"/>
                             <feComposite in="color" in2="blur" operator="in" result="glow"/>
