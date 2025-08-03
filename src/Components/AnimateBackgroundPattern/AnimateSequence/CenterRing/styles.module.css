@@ -4,9 +4,8 @@
     position: absolute;
     inset: 0;
     margin: auto;
-    z-index: var(--fifth-layer);
+    z-index: var(--fourth-layer);
 }
-
 
 .svg{
     width: 100%;
@@ -14,8 +13,8 @@
 }
 
 .ring{
-    width: 109px;
+    width: 135px;
     object-fit: cover;
-    transform-origin: calc(50% - 0.2px) calc(50% - 0.2px) !important;
+    transform-origin: calc(50% - 0.2px) calc(50%) !important;
     will-change: transform;
 }

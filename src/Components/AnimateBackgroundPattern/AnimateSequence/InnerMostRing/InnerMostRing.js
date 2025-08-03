@@ -25,7 +25,7 @@ function InnerMostRing() {
         <AnimatePresence>
             {mount &&
             <motion.div 
-                id='inner most lines'
+                id='inner most ring'
                 className={styles.container}
                 initial={scrollY.get() > 1700 && {opacity: 0}}
                 animate={scrollY.get() > 1700 && {opacity: 1}}

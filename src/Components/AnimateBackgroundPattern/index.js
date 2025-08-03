@@ -1,4 +1,3 @@
-import AnimateBackgroundPattern, {ContainerContext} from './AnimateBackgroundPattern.js';
+import AnimateBackgroundPattern from './AnimateBackgroundPattern.js';
 
-export {ContainerContext}
 export default AnimateBackgroundPattern;

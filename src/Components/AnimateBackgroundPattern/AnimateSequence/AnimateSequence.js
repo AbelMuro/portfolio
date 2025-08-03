@@ -1,8 +1,8 @@
 import React from 'react';
 import OuterMostRing from './OuterMostRing';
 import OuterRing from './OuterRing';
+import CenterRing from './CenterRing';
 import InnerRing from './InnerRing';
-import InnerSecondRing from './InnerSecondRing';
 import InnerMostRing from './InnerMostRing';
 import AnimatePentagram from './AnimatePentagram';
 import AnimateSquarePattern from './AnimateSquarePattern';
@@ -15,8 +15,8 @@ function AnimateSequence() {
         <article className={styles.container}>
             <OuterMostRing/>
             <OuterRing/>
+            <CenterRing/>
             <InnerRing/>
-            <InnerSecondRing/>
             <InnerMostRing/>
             <AnimatePentagram scrollThresholds={[900, 2100]}/>
             <AnimateSquarePattern scrollThresholds={[900, 2100]}/>     

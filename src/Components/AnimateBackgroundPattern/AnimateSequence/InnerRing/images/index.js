@@ -1,3 +1,3 @@
-import innerRing from './inner ring.png';
+import innerRing from "./inner ring.png";
 
-export default {innerRing};
+export default {innerRing}
