@@ -10,6 +10,11 @@ import ContactMeSection from './Components/ContactMeSection';
 import DisplayScrollDownMessage from './Components/DisplayScrollDownMessage';
 import './styles.css';
 
+/* this is where i left off, i believe im finished with everything, now i need to create a backend API
+    with node.js
+
+*/
+
 
 function App() {
 
