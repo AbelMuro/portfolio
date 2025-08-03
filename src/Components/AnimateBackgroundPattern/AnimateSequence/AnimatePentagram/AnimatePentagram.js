@@ -22,10 +22,10 @@ function AnimatePentagram({scrollThresholds}) {
     const rotate3DSpringY = useSpring(rotate3DForY, LinearPentagram);
     const rotate3DSpringX = useSpring(rotate3DForX, LinearPentagram);
 
-    const scale = useTransform(scrollY, [800, 2000], [0.8, 5])
+    const scale = useTransform(scrollY, [1000, 2200], [0.8, 5])
     const smoothScale = useSpring(scale, LinearRing);
 
-    const transformGroup = useMotionTemplate`translate(-47px, -13px) scale(${smoothScale})`
+    const transformGroup = useMotionTemplate`translate(-46px, -13px) scale(${smoothScale})`
 
     useMotionValueEvent(scrollY, 'change', (value) => {
         if(value > 7000)

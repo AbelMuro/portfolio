@@ -1,15 +1,17 @@
-import React, {useContext, useState} from "react";
-import {ContainerContext} from '!/AnimateBackgroundPattern';
+import React, {useState} from 'react';
 import {LinearRing} from '~/Transitions';
-import {motion, useScroll, AnimatePresence, useMotionValueEvent, useTransform, useSpring} from 'framer-motion';
-import * as styles from './styles.module.css';
+import {motion, useTransform, useSpring, useScroll, useMotionValueEvent, AnimatePresence, useMotionTemplate} from 'framer-motion';
 import images from './images';
+import * as styles from './styles.module.css';
+
 
 function InnerMostRing() {
     const [mount, setMount] = useState(true);
     const {scrollY} = useScroll();
-    const scale = useTransform(scrollY, [600, 1800], [1, 5])
+    
+    const scale = useTransform(scrollY, [800, 2000], [1, 5])
     const smoothScale = useSpring(scale, LinearRing);
+    const transform = useMotionTemplate`translate(76.5px, 75px) scale(${smoothScale})`
 
     useMotionValueEvent(scrollY, 'change', (value) => {
         if(value > 1800)
@@ -19,35 +21,41 @@ function InnerMostRing() {
     })
 
 
-    return( 
+    return(
         <AnimatePresence>
-            {
-                mount &&
-                <motion.div
-                    id='inner most ring'
-                    className={styles.container}
-                    exit={{opacity: 0, transition: {duration: 0.7}}}
-                    >
-                    <svg className={styles.svg} viewBox={"0 0 206.40488 206.40488"}>
-                            <defs>
-                                <filter id='glowEffectInnerMostRing' filterUnits="userSpaceOnUse" x="-20%" y="-20%" width="140%" height="140%">
-                                    <feDropShadow dx="0" dy="0" stdDeviation="3" floodColor="#0400ff" floodOpacity={1}/>
-                                </filter>  
-                            </defs>
-                            <motion.image
-                                x={50}
-                                y={49}
-                                initial={{rotate: 0}} 
-                                animate={{rotate: [0, 360], transition: {repeat: Infinity, duration: 14.9, ease: 'linear', delay: 3}}} 
-                                style={{scale: smoothScale}}
-                                className={styles.ring}
-                                href={images['innerMostRing']}/>                            
-                    </svg>                    
-                </motion.div>
+            {mount &&
+            <motion.div 
+                id='inner most lines'
+                className={styles.container}
+                initial={scrollY.get() > 1700 && {opacity: 0}}
+                animate={scrollY.get() > 1700 && {opacity: 1}}
+                exit={{opacity: 0}}
+                >
+                <svg className={styles.svg} viewBox={"0 0 200 200"}>
+                    <motion.image
+                        x={65}
+                        y={65}
+                        href={images['glowEffect']}
+                        className={styles.glowEffect}
+                        style={{scale: smoothScale}}
+                        />  
 
+                    <motion.g 
+                        initial={{rotate: 0}}
+                        animate={{rotate: [360, 0], transition: {repeat: Infinity, duration: 16, ease: 'linear', delay: 4}}} 
+                        >
+                        <motion.image 
+                            href={images['innerMostRing']}
+                            style={{transform}}
+                            className={styles.ring}
+                            />                      
+                    </motion.g>
+
+
+                </svg>
+            </motion.div>
             }
         </AnimatePresence>
-
     )
 }
 

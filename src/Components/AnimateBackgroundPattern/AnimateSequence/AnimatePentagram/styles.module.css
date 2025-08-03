@@ -13,5 +13,5 @@
 }
 
 .group{
-    transform-origin: calc(50%) calc(50% + 1.3px) !important;
+    transform-origin: calc(50% + 0.4px) calc(50% + 1.3px) !important;
 }

@@ -47,7 +47,7 @@ function Circle({scrollThresholds, scaleTo, rotateX, rotateY}) {
             {mount && 
                 <motion.circle
                     className={styles.circle}
-                    cx={103}
+                    cx={103.4}
                     cy={96.5}
                     r={70}
                     fill='none' 
