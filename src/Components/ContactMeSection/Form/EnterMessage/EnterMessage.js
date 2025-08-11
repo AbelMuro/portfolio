@@ -35,6 +35,7 @@ function EnterMessage(){
                         Enter message:
                     </motion.label>
                     <motion.textarea 
+                        name='message'
                         key='textarea'
                         layout
                         id='message' 

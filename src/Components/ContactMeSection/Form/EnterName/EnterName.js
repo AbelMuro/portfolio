@@ -33,6 +33,7 @@ function EnterName() {
                         Enter name:
                     </motion.label>
                     <motion.input 
+                        name='name'
                         key='input'
                         layout
                         id='name' 

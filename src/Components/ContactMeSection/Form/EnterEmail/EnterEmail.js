@@ -36,6 +36,7 @@ function EnterEmail() {
                         Enter email:
                     </motion.label>
                     <motion.input 
+                        name='email'
                         key='input'
                         layout
                         id='email' 

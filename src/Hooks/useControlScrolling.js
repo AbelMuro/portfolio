@@ -20,6 +20,7 @@ function useControlScrolling() {
     useEffect(() => {
         const handleWheel = (e) => {
             e.preventDefault(); 
+            console.log(e.deltaMode);
 
             if(stopScrolling.current) return;
             stopScrolling.current = true;
@@ -34,7 +35,7 @@ function useControlScrolling() {
 
             timeoutRef.current = setTimeout(() => {
                 stopScrolling.current= false;
-            }, 300)
+            }, 350)
         }
 
 
