@@ -59,7 +59,7 @@ function Form() {
                 <EnterEmail reset={reset} setReset={setReset}/>
                 <EnterMessage reset={reset} setReset={setReset}/>
                 <motion.button className={styles.submit} layout> 
-                    {loading ? <ClipLoader size='40' color='white'/> : 'Submit' }
+                    {loading ? <ClipLoader size='40px' color='white'/> : 'Submit' }
                 </motion.button>                 
             </LayoutGroup>
             <DisplayPopupMessage open={open} setOpen={setOpen}/>

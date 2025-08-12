@@ -19,7 +19,6 @@ function DisplayProject({projectTitle, src, href}) {
     const handleMouseMove = (e) => {
         const x = e.nativeEvent.offsetX;
         const y = e.nativeEvent.offsetY;
-        console.log(x, y);
         if(y > 166) {
             handleMouseLeave();
             return;
