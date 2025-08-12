@@ -1,8 +1,8 @@
-import React, {useState, memo} from 'react';
-import {motion, LayoutGroup, AnimatePresence} from 'framer-motion';
+import React, {useState, memo, useEffect} from 'react';
+import {motion, AnimatePresence} from 'framer-motion';
 import * as styles from './styles.module.css';
 
-function EnterMessage(){
+function EnterMessage({reset, setReset}){
     const [message, setMessage] = useState('');
     const [error, setError] = useState('');
 
@@ -26,6 +26,16 @@ function EnterMessage(){
         e.target.setCustomValidity(' ');
         setError("Can't be empty.");
     }
+
+    useEffect(() => {
+        if(!reset) return;
+
+        setMessage('');
+        setError('');
+        setReset(false);
+
+        
+    }, [reset])
 
     
     return(

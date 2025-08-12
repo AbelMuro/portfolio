@@ -34,48 +34,29 @@
 }
 
 .navPlay{
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    right: 0;
-    left: 0;
-    bottom: 100px;
-    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .play{
-    width: 100px;
-    height: 100px;
-    background-color: white;
-    mask-image: url(../icons/play-icon.svg);
-    mask-size: 100px 100px;
-    mask-position: center;
-    mask-repeat: no-repeat;
+    text-align: left;
+    color: white;
+    font-family: 'AbelFont';
+    font-size: 1.25rem;
+    font-weight: 800;
+    background-color: transparent;
+    border: none;
     cursor: pointer;
 }
 
 
-.pause{
-    width: 100px;
-    height: 100px;
-    background-color: white;
-    mask-image: url(../icons/pause-icon.svg);
-    mask-size: 100px 100px;
-    mask-position: center;
-    mask-repeat: no-repeat;
-    cursor: pointer;
+.play:hover{
+    color: #0400ffff;
 }
 
-
-.play:hover, .pause:hover{
-    background-color: #0400ffff;
-}
-
-.play:active, .pause:active{
-    background-color: rgb(3, 0, 165);
+.play:active{
+    color: rgb(3, 0, 165);
 }
 
 

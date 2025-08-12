@@ -1,8 +1,8 @@
-import React, {useState, memo} from 'react';
-import {motion, LayoutGroup, AnimatePresence} from 'framer-motion';
+import React, {useState, memo, useEffect} from 'react';
+import {motion, AnimatePresence} from 'framer-motion';
 import * as styles from './styles.module.css';
 
-function EnterName() {
+function EnterName({reset, setReset}) {
     const [name, setName] = useState('');
     const [error, setError] = useState('');
 
@@ -23,7 +23,16 @@ function EnterName() {
         e.target.setCustomValidity(' ');
         setError("Can't be empty.");
     }
+    
+    useEffect(() => {
+        if(!reset) return;
 
+        setName('');
+        setError('');
+        setReset(false);
+
+        
+    }, [reset])
 
 
     return( 

@@ -1,15 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 import EnterName from './EnterName';
 import EnterEmail from './EnterEmail';
 import EnterMessage from './EnterMessage';
+import DisplayPopupMessage from './DisplayPopupMessage';
+import {ClipLoader} from 'react-spinners'
 import {motion, LayoutGroup} from 'framer-motion';
 import * as styles from './styles.module.css';
 
-/* 
-    this is where i left off, i need to display a message to the user letting them know that their message has been submitted
-*/
 
 function Form() {
+    const [open, setOpen] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const [reset, setReset] = useState(false);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -18,6 +20,8 @@ function Form() {
         const message = e.target.elements.message.value;
 
         try{
+            setLoading(true);
+
             const response = await fetch('http://localhost:4000/send_email', {
                 method: 'POST',
                 headers: {
@@ -29,6 +33,8 @@ function Form() {
             if(response.status === 200){
                 const result = await response.text();
                 console.log(result);
+                setOpen(true);
+                setReset(true);
             }
 
             else{
@@ -36,24 +42,27 @@ function Form() {
                 console.log(result);
             }
 
+            setLoading(false)
+
         }
         catch(error){
             const message = error.message;
             console.log(message);
+            setLoading(false);
         }
-
     }
 
     return(
         <motion.form layout className={styles.form} onSubmit={handleSubmit}>
             <LayoutGroup>              
-                <EnterName />            
-                <EnterEmail />
-                <EnterMessage />
+                <EnterName reset={reset} setReset={setReset}/>            
+                <EnterEmail reset={reset} setReset={setReset}/>
+                <EnterMessage reset={reset} setReset={setReset}/>
                 <motion.button className={styles.submit} layout> 
-                    Submit
+                    {loading ? <ClipLoader size='40' color='white'/> : 'Submit' }
                 </motion.button>                 
             </LayoutGroup>
+            <DisplayPopupMessage open={open} setOpen={setOpen}/>
         </motion.form>
     )
 }

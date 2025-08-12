@@ -105,8 +105,12 @@ function NavigationBar() {
                                     </ul>
                                     {
                                         play ? 
-                                            <button className={styles.pause} onClick={handlePause}/> :
-                                            <button className={styles.play} onClick={handlePlay}/>
+                                            <button className={styles.play} onClick={handlePause}> 
+                                                Pause Music
+                                            </button> :
+                                            <button className={styles.play} onClick={handlePlay}>
+                                                Play Music
+                                            </button>
                                     }
                                     
 

@@ -46,13 +46,15 @@ function MobileNavBar({play, handlePlay, handlePause, handleLink}) {
                                 Contact Me
                             </a>
                         </motion.li>  
-                        <motion.li className={styles.navPlay} variants={menuItemVariant}>
-                            {
-                                play ? 
-                                    <button className={styles.pause} onClick={handlePause}/> :
-                                    <button className={styles.play} onClick={handlePlay}/>
-                            }
-                        </motion.li>           
+                        {
+                            play ? 
+                                <motion.button className={styles.play} onClick={handlePause} variants={menuItemVariant}> 
+                                    Pause Music
+                                </motion.button> :
+                                <motion.button className={styles.play} onClick={handlePlay} variants={menuItemVariant}>
+                                    Play Music
+                                </motion.button>
+                        }        
                     </ul>
                 </motion.section>}                
             </AnimatePresence>

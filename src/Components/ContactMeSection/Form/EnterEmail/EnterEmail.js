@@ -1,8 +1,8 @@
-import React, {useState, memo} from 'react';
-import {AnimatePresence, motion, LayoutGroup} from 'framer-motion';
+import React, {useState, memo, useEffect} from 'react';
+import {AnimatePresence, motion} from 'framer-motion';
 import * as styles from './styles.module.css'
 
-function EnterEmail() {
+function EnterEmail({reset, setReset}) {
     const [email, setEmail] = useState('');
     const [error, setError] = useState('');
 
@@ -27,7 +27,14 @@ function EnterEmail() {
         setError("Can't be empty.");
     }
 
+    useEffect(() => {
+        if(!reset) return;
 
+        setEmail('');
+        setError('');
+        setReset(false);
+        
+    }, [reset])
 
     return(
             <motion.fieldset layout={'position'} className={styles.container} transition={{ layout: { duration: 0.3, ease: "linear" } }}>
