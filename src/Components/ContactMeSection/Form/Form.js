@@ -22,7 +22,7 @@ function Form() {
         try{
             setLoading(true);
 
-            const response = await fetch('http://localhost:4000/send_email', {
+            const response = await fetch('https://portfolio-server-abel-muro.netlify.app/send_email', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
