@@ -20,7 +20,6 @@ function useControlScrolling() {
     useEffect(() => {
         const handleWheel = (e) => {
             e.preventDefault(); 
-            console.log(e.deltaMode);
 
             if(stopScrolling.current) return;
             stopScrolling.current = true;
