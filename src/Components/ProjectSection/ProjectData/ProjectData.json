@@ -366,8 +366,12 @@
         "href": "https://kanban-task-manager-front-end.netlify.app/",
         "src": "todoApp",
         "projectTitle": "Kanban Todo App"
+    },
+    {
+        "href": "https://world-class-checkers.netlify.app/",
+        "src": "checkersApp",
+        "projectTitle": "Checkers App"
     }
-      
       
   ]
   

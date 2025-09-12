@@ -1,10 +1,7 @@
-import React, {useRef, useState} from 'react';
+import React, {useRef} from 'react';
 import AllProjects from '../ProjectData';
-import AnimateVerticalText from './AnimateVerticalText';
-import AnimateCircle from './AnimateCircle';
 import DisplayProject from '../DisplayProject';
 import {useMount} from '~/Hooks';
-import {useScroll, useMotionValueEvent} from 'framer-motion';
 import * as styles from './styles.module.css';
 
 function SectionOne() {
@@ -21,17 +18,9 @@ function SectionOne() {
                             const src = project.src;
                             const href = project.href;
                             return (
-                                    <div className={styles.project} key={title}>
-                                        <DisplayProject projectTitle={title} src={src} href={href}/>
-                                    </div>
+                                <DisplayProject projectTitle={title} src={src} href={href} key={title}/>
                             )
-                        })}
-                    <div className={styles.designText}>
-                        <AnimateVerticalText scrollThresholds={[18500, 19200]}/>
-                    </div>   
-                    <div className={styles.designCircle}>
-                        <AnimateCircle/>
-                    </div>            
+                        })}          
                 </>
             } 
         </section>
