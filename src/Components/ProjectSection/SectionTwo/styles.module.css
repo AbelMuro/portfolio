@@ -1,5 +1,6 @@
 .container{
     width: 1200px;
+    height: 1240px;
     margin: 0px auto 100px auto;
     display: grid;
     justify-items: center;
@@ -19,12 +20,14 @@
 
 @media(max-width: 705px){
     .container{
+        height: 1750px;
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media(max-width: 500px){
     .container{
+        height: 3280px;
         grid-template-columns: 1fr;
     }
 }

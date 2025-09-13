@@ -6,7 +6,7 @@ import * as styles from './styles.module.css';
 
 function SectionOne() {
     const [mount, target] = useMount('section one')
-    const projects = useRef(AllProjects.slice(0, 19));   
+    const projects = useRef(AllProjects.slice(0, 21));   
 
     return(
         <section className={styles.container} ref={target}>       

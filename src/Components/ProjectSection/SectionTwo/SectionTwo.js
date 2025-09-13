@@ -8,7 +8,7 @@ import * as styles from './styles.module.css';
 
 function SectionTwo() {
     const [mount, target] = useMount('section two');
-    const projects = useRef(AllProjects.slice(19, 32));
+    const projects = useRef(AllProjects.slice(21, 36));
 
     return (
         <motion.section className={styles.container} initial={{opacity: 0}} animate={{opacity: 1}} ref={target}>

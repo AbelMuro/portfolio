@@ -8,7 +8,8 @@ import {useScroll, useMotionValueEvent, AnimatePresence} from 'framer-motion';
 import * as styles from './styles.module.css';
 
 /* 
-    this is where i left off,  i need to set a static height for all the Section components,
+    this is where i left off,  i want to refactor the ProjectSection component
+    into displaying a certain amount of projects at a time based on the scroll position
 
 */
 

@@ -7,7 +7,7 @@ import * as styles from './styles.module.css';
 
 function SectionThree() {
     const [mount, target] = useMount('section three');
-    const projects = useRef(AllProjects.slice(32, 44));
+    const projects = useRef(AllProjects.slice(36, 48));
 
     return(
         <motion.section className={styles.container} ref={target}>
