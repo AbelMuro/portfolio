@@ -1,4 +1,9 @@
 .container{
+    min-height: 200px;
+}
+
+
+.project{
     width: 200px;
     display: flex;
     flex-direction: column;

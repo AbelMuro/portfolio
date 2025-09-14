@@ -1,7 +1,6 @@
 .container{
     width: 1200px;
-    height: 1702px;
-    position: relative;
+    height: 6500px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 10px;
@@ -14,8 +13,6 @@
     overflow: hidden;
 }
 
-
-
 @media(max-width: 1400px){
     .container{
         width: 90%;
@@ -24,7 +21,7 @@
 
 @media(max-width: 705px){
     .container {
-        height: 2413px;
+        height: 12000px;
         grid-template-columns: repeat(2, 1fr);
         grid-auto-rows: initial;
     }
