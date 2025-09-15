@@ -1,7 +1,6 @@
 import React, {useRef, useState} from 'react';
-import {useScroll, useMotionValueEvent} from 'framer-motion';
 import images from '../ProjectData/images';
-import {motion, useTransform, useMotionValue, useSpring} from 'framer-motion'
+import {useScroll, useMotionValueEvent, motion, useTransform, useMotionValue, useSpring} from 'framer-motion'
 import * as styles from './styles.module.css';
 
 function DisplayProject({projectTitle, src, href}) {
@@ -41,7 +40,6 @@ function DisplayProject({projectTitle, src, href}) {
             setMount(false);
         else
             setMount(true);
-
     })
 
 
@@ -51,17 +49,22 @@ function DisplayProject({projectTitle, src, href}) {
                 onMouseMove={handleMouseMove}
                 onMouseLeave={handleMouseLeave}
                 >
-                <div className={styles.wrapper} onClick={handleLink}>
+                <motion.div className={styles.wrapper} onClick={handleLink}>
                     <motion.div 
                         className={styles.mask} 
+                        initial={{scale: 0}}
+                        animate={{scale: 1}}
                         style={{rotateX: smoothRotateX, rotateY: smoothRotateY}}
                         >
                             <img className={styles.image} src={images[src]}/>  
                     </motion.div>                
-                </div>
-                <h2 className={styles.title}>
+                </motion.div>
+                <motion.h2 
+                    initial={{opacity: 0}}
+                    animate={{opacity: 1}}
+                    className={styles.title}>
                     {projectTitle}
-                </h2>
+                </motion.h2>
             </div> }          
         </div>
 

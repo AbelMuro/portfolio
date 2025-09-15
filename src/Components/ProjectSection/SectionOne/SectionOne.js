@@ -6,13 +6,6 @@ import DisplayProject from '../DisplayProject';
 import * as styles from './styles.module.css';
 
 
-/* 
-    this is where i left off, i need to find the proper values for the temp variable
-    in tablet and mobile states,
-    also, i need to find the correct static height values for the .container element
-    in tablet and mobile.
-*/
-
 function SectionOne() {
     const [tablet] = useMediaQuery('(max-width: 705px)');
     const [mobile] = useMediaQuery('(max-width: 500px)');
@@ -23,9 +16,9 @@ function SectionOne() {
     useMotionValueEvent(scrollYProgress, 'change', (value) => {
         let temp;
         if(mobile)
-            temp = 0.5;
+            temp = 2.4;
         else if(tablet)
-            temp = 0.8;
+            temp = 2.2;
         else
             temp = 2.5;
         const index = ((value * AllProjects.length)/2) * temp;
