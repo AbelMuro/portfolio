@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useRef} from 'react';
 import useMediaQuery from '~/Hooks/useMediaQuery.js';
-import {useScroll, useMotionValueEvent} from 'framer-motion';
+import {useScroll, useMotionValueEvent, motion} from 'framer-motion';
 import AllProjects from '../ProjectData';
 import DisplayProject from '../DisplayProject';
 import * as styles from './styles.module.css';
@@ -25,12 +25,9 @@ function SectionOne() {
         setDisplayProjects(AllProjects.slice(0, index));
     });
 
-    useEffect(() => {
-        console.log(displayProjects);
-    }, [displayProjects])
 
     return(
-        <section className={styles.container} ref={target}>       
+        <motion.section className={styles.container} ref={target} layout>       
             {displayProjects.map((project, i) => {
                     const title = project.projectTitle;
                     const src = project.src;
@@ -41,7 +38,7 @@ function SectionOne() {
                     )
                 })}          
 
-        </section>
+        </motion.section>
     )
 };
 

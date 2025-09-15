@@ -44,7 +44,7 @@ function DisplayProject({projectTitle, src, href}) {
 
 
     return (
-        <div className={styles.container} ref={projectRef}>
+        <motion.div className={styles.container} ref={projectRef} layout>
             {mount && <div className={styles.project}
                 onMouseMove={handleMouseMove}
                 onMouseLeave={handleMouseLeave}
@@ -66,7 +66,7 @@ function DisplayProject({projectTitle, src, href}) {
                     {projectTitle}
                 </motion.h2>
             </div> }          
-        </div>
+        </motion.div>
 
     )
 }
