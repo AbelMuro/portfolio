@@ -18,6 +18,7 @@
 
 :root{
     --font: 'AbelFont';
+    --loading-layer: 200;
     --eight-layer: 175;
     --seventh-layer: 150;
     --sixth-layer: 125;

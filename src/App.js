@@ -8,11 +8,12 @@ import AnimateBackgroundClouds from './Components/AnimateBackgroundClouds';
 import ProjectSection from './Components/ProjectSection'
 import ContactMeSection from './Components/ContactMeSection';
 import DisplayScrollDownMessage from './Components/DisplayScrollDownMessage';
+import LoadingScreen from './Components/LoadingScreen';
 import './styles.css';
 
-/* this is where i left off, i believe im finished with everything, now i need to create a backend API
-    with node.js
-
+/* 
+    this is where i left off, i want to continue working on the loading component
+    make sure to render the LoadingScreen component
 */
 
 

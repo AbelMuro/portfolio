@@ -72,6 +72,7 @@ import noteTakingApp from './note taking app.png';
 import techBookClubLandingPage from './tech book club landing page.png';
 import onlineChessApp from './online chess app.png';
 import checkersApp from './checkers app.png';
+import newWeatherApp from './new weather app.png';
 
 export default {
     "dark pink mastercard": darkPinkMastercard,
@@ -147,5 +148,6 @@ export default {
     "noteTakingApp": noteTakingApp,
     "techBookClubLandingPage": techBookClubLandingPage,
     "onlineChessApp": onlineChessApp,
-    "checkersApp": checkersApp
+    "checkersApp": checkersApp,
+    "newWeatherApp": newWeatherApp,
 }

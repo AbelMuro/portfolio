@@ -371,6 +371,11 @@
         "href": "https://world-class-checkers.netlify.app/",
         "src": "checkersApp",
         "projectTitle": "Checkers App"
+    },
+    {
+        "href": "https://abels-weather-app.netlify.app/",
+        "src": "newWeatherApp",
+        "projectTitle": "New Weather App"
     }
       
   ]
