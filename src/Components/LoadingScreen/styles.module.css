@@ -9,6 +9,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transform-origin: top center;
+    border: 7px solid blue;
 }
 
 .content{
