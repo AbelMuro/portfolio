@@ -1,0 +1,19 @@
+.progress{
+    width: 350px;
+    height: 30px;
+    padding: 7px;
+    border-radius: 15px;
+    background-color: darkblue;
+}
+
+.progress_bar{
+    height: 100%;
+    background-color: blue;
+    border-radius: 15px;
+}
+
+.progress_percent{
+    color: white;
+    font-family: 'AbelFont';
+    font-size: 2rem;
+}
