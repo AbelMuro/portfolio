@@ -10,7 +10,6 @@
     justify-content: center;
     align-items: center;
     transform-origin: top center;
-    border: 7px solid blue;
 }
 
 .content{
@@ -25,4 +24,51 @@
     color: white;
     font-family: 'AbelFont';
     font-size: 2rem;
+}
+
+.triangleDesign{
+    width: 500px;
+    object-fit: contain;
+}
+
+
+.topBorder, .bottomBorder, 
+.leftBorder, .rightBorder{
+    position: absolute;
+}
+
+.topBorder{
+    top: 0px;
+    left: 0;  
+    right: 0;
+    margin: auto;  
+    width: 800px;
+    height: 10px;
+}
+
+.bottomBorder{
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 800px;
+    height: 10px;
+}
+
+.leftBorder{
+    left: 0px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 10px;
+    height: 800px;
+}
+
+.rightBorder{
+    right: 0px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 10px;
+    height: 800px;
 }

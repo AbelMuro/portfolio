@@ -1,3 +1,22 @@
+.content{
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    color: white;
+    font-family: 'AbelFont';
+    font-size: 2rem;
+}
+
 .progress{
     width: 350px;
     height: 30px;
@@ -8,7 +27,7 @@
 
 .progress_bar{
     height: 100%;
-    background-color: blue;
+    background-color: #0000ff;
     border-radius: 15px;
 }
 
@@ -17,3 +36,4 @@
     font-family: 'AbelFont';
     font-size: 2rem;
 }
+

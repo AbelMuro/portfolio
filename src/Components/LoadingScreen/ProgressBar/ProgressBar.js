@@ -16,6 +16,28 @@ import * as styles from './styles.module.css';
 function ProgressBar({setMount}){
     const [percent, setPercent] = useState(0);
 
+    const displayMessage = () => {
+        if(percent < 30)
+            return 'Hold on... let me think.';
+        else if(percent >= 30 && percent < 60)
+            return 'Dusting off that brain of mine..';
+        else if(percent >= 60 && percent <= 99)
+            return 'Almost done..'
+        else 
+            return "I'm finished!";
+    }
+
+    const removeScrollBar = () => {
+        const body = document.querySelector('body');
+        body.style.overflow = 'hidden';
+    }
+
+    const restoreScrollBar = () => {
+        const body = document.querySelector('body');
+        body.style.overflow = '';
+    }
+
+
     const preloadImages = () => {
         const allImages = [
             ...Object.entries(projectImages), 
@@ -39,9 +61,7 @@ function ProgressBar({setMount}){
                 image.src = src;
                 image.onload = () => {
                     resolve();
-                    setTimeout(() => {
-                        setPercent((prev) => Math.ceil(prev + ((1/n) * 100)));                        
-                    }, i * 100)
+                    setTimeout(() => setPercent((prev) => prev < 100 ? Math.ceil(prev + ((1/n) * 100)) : 100), i * 100)
                 }
                 image.onerror = () => {
                     reject(new Error(`${name} image couldn't be loaded`));
@@ -53,10 +73,10 @@ function ProgressBar({setMount}){
     }
 
     useEffect(() => {
+        removeScrollBar();
         preloadImages()
             .then(() => {
                 console.log('All images have been pre-loaded');
-                //setPercent(100);
             })
             .catch((error) => {
                 const message = error.message;
@@ -66,20 +86,39 @@ function ProgressBar({setMount}){
 
 
     useEffect(() => {
-        if(percent === 100)
-            setMount(false);
-    
+        if(percent >= 100)
+            setTimeout(() => {
+                //restoreScrollBar();
+                //setMount(false);
+            }, 1000);
     }, [percent])
 
+
+    useEffect(() => {
+        const handleScroll = () => {
+            window.scrollTo(0, 0);
+        }
+
+        window.addEventListener('scroll', handleScroll)
+
+        return () => {
+            window.removeEventListener('scroll',handleScroll)
+        }
+
+    }, [])
+
     return(
-        <>
+        <div className={styles.content}>
+            <h2 className={styles.title}>
+               {displayMessage()}
+            </h2>
             <div className={styles.progress}>
                 <div className={styles.progress_bar} style={{width: `${Math.ceil(percent)}%`}}></div>
             </div>        
             <h3 className={styles.progress_percent}>
                 {`Loading [${percent}]%`}
             </h3>  
-        </>
+        </div>
 
     )
 }

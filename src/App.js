@@ -12,10 +12,7 @@ import LoadingScreen from './Components/LoadingScreen';
 import './styles.css';
 
 /* 
-    this is where i left off, i want to add a few more details to the loading component
-    i want to change the message from  'Hold on.. let me think..' to 'OK im finished!'
-
-    when the percent state reaches 100
+    this is where i left off, i want to create an animation for the triangle design in the loading component
 
 
 */
