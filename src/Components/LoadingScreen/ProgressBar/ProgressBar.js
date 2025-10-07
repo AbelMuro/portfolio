@@ -88,8 +88,8 @@ function ProgressBar({setMount}){
     useEffect(() => {
         if(percent >= 100)
             setTimeout(() => {
-                //restoreScrollBar();
-                //setMount(false);
+                restoreScrollBar();
+                setMount(false);
             }, 1000);
     }, [percent])
 
