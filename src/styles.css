@@ -3,9 +3,17 @@
     src: url('/public/fonts/Nunito-VariableFont_wght.ttf');
 }
 
+/* 
+    @font-face{
+        font-family: 'AbelCursive';
+        src: url('/public/fonts/GreatVibes-Regular.ttf')
+    }
+*/
+
+
 @font-face{
     font-family: 'AbelCursive';
-    src: url('/public/fonts/GreatVibes-Regular.ttf')
+    src: url('/public/fonts/ImperialScript-Regular.ttf');
 }
 
 
@@ -18,6 +26,7 @@
 
 :root{
     --font: 'AbelFont';
+    --font-cursive: 'AbelCursive';
     --loading-layer: 200;
     --eight-layer: 175;
     --seventh-layer: 150;

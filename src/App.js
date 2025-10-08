@@ -12,7 +12,7 @@ import LoadingScreen from './Components/LoadingScreen';
 import './styles.css';
 
 /* 
-    this is where i left off, i want to create an animation for the triangle design in the loading component
+    this is where i left off, i want to continue finishing up the handwriting animation effect on the loading component
 
 
 */

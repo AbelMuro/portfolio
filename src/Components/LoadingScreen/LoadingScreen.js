@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import AnimateTrianglePattern from './AnimateTrianglePattern';
+import AnimateHandwriting from './AnimateHandwriting';
 import {motion, AnimatePresence} from 'framer-motion';
 import ProgressBar from './ProgressBar';
 import images from './images';
@@ -17,7 +18,7 @@ function LoadingScreen() {
                 exit={{scaleY: 0}}
                 transition={{duration: 0.7}}
                 >
-                    <AnimateTrianglePattern/>
+                    <AnimateHandwriting/>
                     <ProgressBar setMount={setMount}/>         
                     <img className={styles.topBorder} src={images['topBorder']}/>     
                     <img className={styles.bottomBorder} src={images['bottomBorder']}/>
