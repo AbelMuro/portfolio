@@ -1,22 +1,20 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useRef} from 'react';
 import {motion} from 'framer-motion';
 import * as styles from './styles.module.css';
 
-function AnimateLetter({letter, index}) {
+function AnimateLetter({letter, width, index}) {
+    const textElement = useRef();
+    const svgElement = useRef();
 
     useEffect(() => {
-        return
-        document.fonts.ready.then(() => {
-            const bbox = textElement.getBBox();
-            svgElement.setAttribute('width', bbox.width + 20);                
-        })
+
     }, [])
 
     return(
-        <svg viewBox='0 0 200 200' className={styles.letter}>
             <motion.text 
-                x="10"
+                x="-20"
                 y="160"
+                ref={textElement}
                 fontFamily="AbelsFont"
                 fill="none"
                 strokeWidth="1"
@@ -28,10 +26,9 @@ function AnimateLetter({letter, index}) {
                     duration: 1.3,
                     delay: index
                 }}
-                className={styles.font}>
+                className={styles.letter}>
                     {letter}
             </motion.text>     
-        </svg> 
     )
 }
 

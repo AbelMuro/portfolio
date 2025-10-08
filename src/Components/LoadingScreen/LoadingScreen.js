@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import AnimateTrianglePattern from './AnimateTrianglePattern';
 import AnimateHandwriting from './AnimateHandwriting';
 import {motion, AnimatePresence} from 'framer-motion';
 import ProgressBar from './ProgressBar';
