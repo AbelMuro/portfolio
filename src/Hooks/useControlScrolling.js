@@ -20,6 +20,8 @@ function useControlScrolling() {
     useEffect(() => {
         const handleWheel = (e) => {
             e.preventDefault(); 
+            const isMomentumMouse = e.wheelDeltaY ? e.wheelDeltaY === -3 * e.deltaY : e.deltaMode === 0;
+            if(isMomentumMouse) return;
 
             if(stopScrolling.current) return;
             stopScrolling.current = true;
