@@ -19,8 +19,10 @@ function useControlScrolling() {
 
     useEffect(() => {
         const handleWheel = (e) => {
-            const isMomentumMouse = e.wheelDeltaY ? e.wheelDeltaY === -3 * e.deltaY : e.deltaMode === 0;
-            if(isMomentumMouse) return;
+            const isMomentumMouse = e.wheelDeltaY ? 
+                e.wheelDeltaY === -3 * e.deltaY                 // momentum mouses have a 'wheelDeltaY' value that is a multiple of 'e.deltaY'
+                : e.deltaMode === 0;                            // deltaMode returns 0 for pixels-based scrolling, 1 for line-based scrolling, 2 for page-based scrolling
+            if(isMomentumMouse) return;                                 //momentum mouses typically use pixel-based scrolling
 
             e.preventDefault(); 
 
