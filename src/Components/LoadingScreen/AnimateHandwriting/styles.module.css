@@ -2,4 +2,31 @@
     width: 700px;
     height: 100px;
     overflow: visible;
+    transition: all 0.2s linear;
+}
+
+
+@media(max-width: 750px){
+    .container{
+        width: 400px;
+    }
+
+    .group{
+        transform: scale(0.6) translate(100px, 20px);
+    }   
+
+    .text{
+        stroke-width: 1px;
+        stroke: white;
+    }
+}
+
+@media(max-width: 460px){
+    .container{
+        width: 350px;
+    }
+
+    .group{
+        transform: scale(0.5) translate(150px, 35px);
+    }  
 }

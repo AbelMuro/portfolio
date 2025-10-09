@@ -11,12 +11,6 @@ import DisplayScrollDownMessage from './Components/DisplayScrollDownMessage';
 import LoadingScreen from './Components/LoadingScreen';
 import './styles.css';
 
-/* 
-    this is where i left off, i want to continue finishing up the handwriting animation effect on the loading component
-
-
-*/
-
 
 function App() {
 

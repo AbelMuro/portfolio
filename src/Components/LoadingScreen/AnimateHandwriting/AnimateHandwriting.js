@@ -27,9 +27,9 @@ function AnimateHandwriting() {
 
     return(
        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 11.199999809265137 286.3500061035156 46.22884750366211" data-asc="0.88" preserveAspectRatio="xMidYMin slice"  className={styles.container}>
-            <g transform="scale(1)">
+            <g className={styles.group}>
                 <mask id='myMask'>
-                    <path d={d.current} fill="white"/>              
+                    <path d={d.current} fill="white" className={styles.text}/>              
                 </mask>
 
                 <motion.path 
@@ -39,6 +39,7 @@ function AnimateHandwriting() {
                     opacity={1}
                     fill={'white'}    
                     mask={'url(#myMask)'}
+                    className={styles.text}
                     />
             </g>
         </svg>
