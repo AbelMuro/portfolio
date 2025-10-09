@@ -18,10 +18,6 @@ function LoadingScreen() {
                 >
                     <AnimateHandwriting/>
                     <ProgressBar setMount={setMount}/>         
-                    <img className={styles.topBorder} src={images['topBorder']}/>   
-                    <img className={styles.bottomBorder} src={images['bottomBorder']}/>   
-                    <img className={styles.leftBorder} src={images['leftBorder']}/>   
-                    <img className={styles.rightBorder} src={images['rightBorder']}/>     
             </motion.section>
             }           
         </AnimatePresence>
