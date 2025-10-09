@@ -89,7 +89,7 @@ function ProgressBar({setMount}){
         if(percent >= 100)
             setTimeout(() => {
                 restoreScrollBar();
-                //setMount(false);
+                setMount(false);
             }, 1000);
     }, [percent])
 

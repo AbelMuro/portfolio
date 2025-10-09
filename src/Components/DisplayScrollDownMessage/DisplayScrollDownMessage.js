@@ -5,16 +5,15 @@ import * as styles from './styles.module.css';
 
 function DisplayScrollDownMessage() {
     const [mount, setMount] = useState(true);
-    const {scrollY} = useScroll();
+    const {scrollYProgress} = useScroll();
     const timeoutRef = useRef()
 
-    useMotionValueEvent(scrollY, 'change', (y) => {
-        if(y > 28000){
+    useMotionValueEvent(scrollYProgress, 'change', (y) => {
+        if(y === 1){
             setMount(false);
             clearTimeout(timeoutRef.current)
             return;
         }
-
 
         clearTimeout(timeoutRef.current);
         setMount(false);

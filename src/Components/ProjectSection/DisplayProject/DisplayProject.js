@@ -35,7 +35,6 @@ function DisplayProject({projectTitle, src, href}) {
     }
 
     useMotionValueEvent(scrollYProgress, 'change', (value) => {
-        console.log(value);
         if(value === 1)
             setMount(false);
         else

@@ -9,18 +9,19 @@ function LoadingScreen() {
     const [mount, setMount] = useState(true);
 
     return(
-
         <AnimatePresence>
             {mount && 
             <motion.section 
                 className={styles.loading}
-                exit={{scaleY: 0}}
-                transition={{duration: 0.7}}
+                exit={{opacity: 0}}
+                transition={{duration: 1.7}}
                 >
                     <AnimateHandwriting/>
                     <ProgressBar setMount={setMount}/>         
-                    <img className={styles.topBorder} src={images['topBorder']}/>     
-                    <img className={styles.bottomBorder} src={images['bottomBorder']}/>
+                    <img className={styles.topBorder} src={images['topBorder']}/>   
+                    <img className={styles.bottomBorder} src={images['bottomBorder']}/>   
+                    <img className={styles.leftBorder} src={images['leftBorder']}/>   
+                    <img className={styles.rightBorder} src={images['rightBorder']}/>     
             </motion.section>
             }           
         </AnimatePresence>
