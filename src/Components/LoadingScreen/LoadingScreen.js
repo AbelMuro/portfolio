@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import AnimateHandwriting from './AnimateHandwriting';
 import {motion, AnimatePresence} from 'framer-motion';
 import ProgressBar from './ProgressBar';
-import images from './images';
 import * as styles from './styles.module.css';
 
 function LoadingScreen() {
