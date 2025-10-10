@@ -13,7 +13,7 @@ function ContactMeSection() {
         else if(link === 'frontendmentor')
             window.open('https://www.frontendmentor.io/profile/AbelMuro', '_blank');
         else if(link === 'resume')
-            window.open('https://drive.google.com/file/d/1_vtH62i5n-2qPBAQhWORXBE05JaOqldW/view?usp=sharing', '_blank');
+            window.open('https://drive.google.com/file/d/1RsuLDZb1Cv7HFm2BN6QaFTLbt7O_hymB/view?usp=sharing', '_blank');
     }
 
     return(
