@@ -1,18 +1,25 @@
 import React, {useEffect} from 'react';
-import {useControlScrolling} from '~/Hooks';
+import {useControlScrolling, useMediaQuery} from '~/Hooks';
 import NavigationBar from './Components/NavigationBar';
 import DisplayHeadings from './Components/DisplayHeadings';
 import AnimateAboutMeText from './Components/AnimateAboutMeText';
 import AnimateBackgroundPattern from './Components/AnimateBackgroundPattern';
+import MobileBackgroundPattern from './Components/MobileBackgroundPattern';
 import AnimateBackgroundClouds from './Components/AnimateBackgroundClouds';
 import ProjectSection from './Components/ProjectSection'
 import ContactMeSection from './Components/ContactMeSection';
 import DisplayScrollDownMessage from './Components/DisplayScrollDownMessage';
+import DisplayMobileHeadings from './Components/DisplayMobileHeadings';
 import LoadingScreen from './Components/LoadingScreen';
 import './styles.css';
 
+/* 
+    this is where i left off, i need to continue working on the DisplayMobileHeadings component
+*/
+
 
 function App() {
+    const [mobile] = useMediaQuery('(max-width: 600px)');
 
     useControlScrolling();
 
@@ -27,11 +34,13 @@ function App() {
 
     return(
         <>
-            <LoadingScreen/>
+            {/*<LoadingScreen/>*/}
             <NavigationBar/>
-            <DisplayHeadings/>
+            {mobile ? <DisplayMobileHeadings/> : <DisplayHeadings/>}
             <AnimateAboutMeText/>
-            <AnimateBackgroundPattern/>
+
+            {mobile ? <MobileBackgroundPattern/> : <AnimateBackgroundPattern/>}
+
             <AnimateBackgroundClouds/> 
             <ProjectSection/>
             <ContactMeSection/>

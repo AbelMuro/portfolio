@@ -1,0 +1,29 @@
+.rings{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.outerMostRing, .outerRing, .centerRing, .innerRing{
+    object-fit: contain;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+}
+
+.outerMostRing{
+    width: 90%;
+}
+
+.outerRing{
+    width: 65%;
+}
+
+.centerRing{
+    width: 50%;
+}
+
+.innerRing{
+    width: 35%;
+}
