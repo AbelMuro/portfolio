@@ -1,10 +1,12 @@
 import React from 'react';
+import MobileAboutMeText from './MobileAboutMeText';
 import images from './images'
 import * as styles from './styles.module.css';
 
 function MobileSquarePattern(){
     return(
         <section className={styles.squareDesign}>
+            <MobileAboutMeText/>
             <img className={styles.outerMostSquare} src={images['outerMostSquare']}/>
             <img className={styles.outerSquare} src={images['outerSquare']}/>
             <img className={styles.outerSquareGlow} src={images['outerSquareGlow']}/>

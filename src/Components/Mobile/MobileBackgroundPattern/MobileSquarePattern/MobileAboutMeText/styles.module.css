@@ -1,0 +1,19 @@
+.aboutMe{
+    width: 90%;
+    margin: auto;
+    height: 100vh;
+    padding-top: 50%;
+    color: white;
+    font-family: 'AbelFont';
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 35px;
+    text-align: center;
+    position: relative;
+    z-index: var(--seventh-layer);
+}
+
+.aboutMe > span{
+    font-weight: 1000;
+    font-style: italic;
+}

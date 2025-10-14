@@ -4,19 +4,22 @@ import NavigationBar from './Components/NavigationBar';
 import DisplayHeadings from './Components/DisplayHeadings';
 import AnimateAboutMeText from './Components/AnimateAboutMeText';
 import AnimateBackgroundPattern from './Components/AnimateBackgroundPattern';
-import MobileBackgroundPattern from './Components/MobileBackgroundPattern';
+
 import AnimateBackgroundClouds from './Components/AnimateBackgroundClouds';
 import ProjectSection from './Components/ProjectSection'
 import ContactMeSection from './Components/ContactMeSection';
 import DisplayScrollDownMessage from './Components/DisplayScrollDownMessage';
-import DisplayMobileHeadings from './Components/DisplayMobileHeadings';
+
+import MobileBackgroundPattern from './Components/Mobile/MobileBackgroundPattern';
+import DisplayMobileHeadings from './Components/Mobile/DisplayMobileHeadings';
+import MobileProjectSection from './Components/Mobile/MobileProjectSection';
+
 import LoadingScreen from './Components/LoadingScreen';
 import './styles.css';
 
 /* 
-    this is where i left off, i need to work on the responsiveness of the <MobileSquarePattern/> component
+    this is where i left off, i need to continue working on the <MobileMoonPattern/> component
 */
-
 
 function App() {
     const [mobile] = useMediaQuery('(max-width: 600px)');
@@ -36,13 +39,21 @@ function App() {
         <>
             {/*<LoadingScreen/>*/}
             <NavigationBar/>
-            {mobile ? <DisplayMobileHeadings/> : <DisplayHeadings/>}
-            <AnimateAboutMeText/>
-
-            {mobile ? <MobileBackgroundPattern/> : <AnimateBackgroundPattern/>}
-
+            {
+                mobile ? 
+                <>
+                    <DisplayMobileHeadings/> 
+                    <MobileBackgroundPattern/> 
+                    <MobileProjectSection/>
+                </> : 
+                <> 
+                    <DisplayHeadings/>
+                    <AnimateAboutMeText/>
+                    <AnimateBackgroundPattern/>
+                    <ProjectSection/>
+                </>
+            }
             <AnimateBackgroundClouds/> 
-            <ProjectSection/>
             <ContactMeSection/>
             <DisplayScrollDownMessage/>
         </>

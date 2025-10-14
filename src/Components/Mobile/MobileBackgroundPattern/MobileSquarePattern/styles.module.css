@@ -11,41 +11,42 @@
     position: absolute;
     inset: 0;
     margin: auto;
-    object-fit: contain;    
+    object-fit: contain;   
+    z-index: var(--second-layer); 
 }
 
 .outerMostSquare{
-    width: 400px;
+    width: 90%;
 }
+
+
 
 
 .outerSquare{
-    width: 375px;
+    width: 87%;
 }
 
 .outerSquareGlow{
-    width: 330px;
+    width: 73%;
 }
 
 
 
 .innerSquare{
-    width: 350px;
+    width: 83%;
 }
 
 .innerSquareGlowEffect{
-    width: 190px;
+    width: 45%;
 }
 
 
 .innerMostTriangle{
-    width: 290px;
-    left: 48px;
-    bottom: 15px;
+    width: 80%;
+    bottom: 20px;
 }
 
 .innerMostTriangleGlow{
-    width: 130px;
-    bottom: 15px;
+    width: 38%;
 }
 
