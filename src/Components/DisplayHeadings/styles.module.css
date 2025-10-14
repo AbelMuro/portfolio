@@ -6,7 +6,6 @@
     inset: 0;
     margin: auto;
     z-index: var(--seventh-layer);
-    ;
     color: white;
     font-family: 'AbelFont';
     font-size: 7rem;
@@ -25,7 +24,6 @@
     inset: 0;
     margin: auto;
     z-index: var(--seventh-layer);
-    ;
     color: white;
     font-family: 'AbelFont';
     font-size: 4rem;

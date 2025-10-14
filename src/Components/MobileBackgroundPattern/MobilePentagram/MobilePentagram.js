@@ -1,4 +1,5 @@
 import React from 'react';
+import AnimateTechTitles from './AnimateTechTitles';
 import TechIcon from './TechIcon';
 import * as styles from './styles.module.css';
 
@@ -152,7 +153,7 @@ function MobilePentagram() {
                             strokeDashoffset={0}
                             strokeOpacity={1}
                             />
-                        {/*<AnimateTechTitles x={144.39165 + 6.50} y={108.76334 + 5.3}/> */ }                    
+                        <AnimateTechTitles x={144.39165 + 6.50} y={108.76334 + 5.3}/>                 
                         <rect 
                             id="rect704"
                             x={144.39165}

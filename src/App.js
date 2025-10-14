@@ -14,7 +14,7 @@ import LoadingScreen from './Components/LoadingScreen';
 import './styles.css';
 
 /* 
-    this is where i left off, i need to continue working on the DisplayMobileHeadings component
+    this is where i left off, i need to start working on the <MobilePentagram/>
 */
 
 
