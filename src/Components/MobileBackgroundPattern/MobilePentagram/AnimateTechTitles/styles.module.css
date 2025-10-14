@@ -1,0 +1,12 @@
+.title{
+    width: 100%;
+    height: 40px;
+    color: white;
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: 'AbelFont';
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    z-index: var(--second-layer);
+}

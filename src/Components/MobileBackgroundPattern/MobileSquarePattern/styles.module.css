@@ -1,0 +1,51 @@
+.squareDesign{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.outerMostSquare, .outerSquare, 
+.outerSquareGlow,
+.innerSquare, .innerSquareGlowEffect,
+.innerMostTriangleGlow, .innerMostTriangle{
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    object-fit: contain;    
+}
+
+.outerMostSquare{
+    width: 400px;
+}
+
+
+.outerSquare{
+    width: 375px;
+}
+
+.outerSquareGlow{
+    width: 330px;
+}
+
+
+
+.innerSquare{
+    width: 350px;
+}
+
+.innerSquareGlowEffect{
+    width: 190px;
+}
+
+
+.innerMostTriangle{
+    width: 290px;
+    left: 48px;
+    bottom: 15px;
+}
+
+.innerMostTriangleGlow{
+    width: 130px;
+    bottom: 15px;
+}
+
