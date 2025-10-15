@@ -19,6 +19,7 @@ import './styles.css';
 
 /* 
     this is where i left off, i need to continue working on the <MobileMoonPattern/> component
+    i need to re-organize the chain elements
 */
 
 function App() {
