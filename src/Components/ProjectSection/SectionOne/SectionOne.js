@@ -1,7 +1,7 @@
 import React, {useState, useEffect, useRef} from 'react';
 import useMediaQuery from '~/Hooks/useMediaQuery.js';
 import {useScroll, useMotionValueEvent, motion} from 'framer-motion';
-import AllProjects from '../ProjectData';
+import AllProjects from '~/assets/ProjectData';
 import DisplayProject from '../DisplayProject';
 import * as styles from './styles.module.css';
 

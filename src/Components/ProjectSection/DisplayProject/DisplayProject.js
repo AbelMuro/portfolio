@@ -1,5 +1,5 @@
 import React, {useRef, useState} from 'react';
-import images from '../ProjectData/images';
+import images from '~/assets/ProjectData/images';
 import {useScroll, useMotionValueEvent, motion, useTransform, useMotionValue, useSpring} from 'framer-motion'
 import * as styles from './styles.module.css';
 

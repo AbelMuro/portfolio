@@ -1,0 +1,24 @@
+.project{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+}
+
+.project_image{
+    width: 300px;
+    object-fit: contain;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.project_title{
+    font-family: 'AbelFont';
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0px;
+    color: white;
+    text-align: center;
+    pointer-events: none;
+}

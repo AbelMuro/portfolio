@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import projectImages from '~/Components/ProjectSection/ProjectData/images'
+import projectImages from '~/assets/ProjectData/images'
 import OuterMostRing from '~/Components/AnimateBackgroundPattern/AnimateSequence/OuterMostRing/images';
 import OuterRing from '~/Components/AnimateBackgroundPattern/AnimateSequence/OuterRing/images';
 import InnerRing from '~/Components/AnimateBackgroundPattern/AnimateSequence/InnerRing/images';

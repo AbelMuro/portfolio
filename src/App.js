@@ -38,7 +38,7 @@ function App() {
 
     return(
         <>
-            {/*<LoadingScreen/>*/}
+            <LoadingScreen/>
             <NavigationBar/>
             {
                 mobile ? 

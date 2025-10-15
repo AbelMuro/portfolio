@@ -1,5 +1,5 @@
 import React, {useRef} from 'react';
-import AllProjects from '../ProjectData';
+import AllProjects from '~/assets/ProjectData';
 import DisplayProject from '../DisplayProject';
 import { useMount } from '~/Hooks';
 import {motion} from 'framer-motion';
