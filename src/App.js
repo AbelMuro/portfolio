@@ -20,8 +20,6 @@ import './styles.css';
 
 /* 
     i need to fix the Mobile navigation bar bug, more specifically, the 'contact me' button 
-
-    im thinking of using a 'for' loop to continue scrolling down the document until we reach the very end
 */
 
 function App() {
