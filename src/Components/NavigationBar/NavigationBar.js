@@ -30,7 +30,6 @@ function NavigationBar() {
     const handleMobileLink = (link) => {
         if(link === 'intro')
             window.scrollTo({top: 0, behavior: 'smooth'});
-
         else if(link === 'about me')
             window.scrollTo({top: 4700, behavior: 'smooth'});
         else if(link === 'projects')
@@ -39,7 +38,7 @@ function NavigationBar() {
             window.scrollTo({top: 32289, behavior: 'instant'});
             setTimeout(() => {
                 window.scrollTo({top: 32289, behavior: 'instant'});
-            }, 10)
+            }, 100)
         }
     }
 
