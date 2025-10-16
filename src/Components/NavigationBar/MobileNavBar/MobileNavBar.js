@@ -42,7 +42,7 @@ function MobileNavBar({play, handlePlay, handlePause, handleLink}) {
                             </a>
                         </motion.li>
                         <motion.li className={styles.navItem} variants={menuItemVariant}>
-                            <a onClick={() => handleOpen('contact me')}>
+                            <a href='#contactMe'>
                                 Contact Me
                             </a>
                         </motion.li>  
