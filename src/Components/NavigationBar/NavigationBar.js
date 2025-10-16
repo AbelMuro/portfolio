@@ -32,9 +32,9 @@ function NavigationBar() {
             window.scrollTo({top: 0, behavior: 'smooth'});
 
         else if(link === 'about me')
-            window.scrollTo({top: 5000, behavior: 'smooth'});
+            window.scrollTo({top: 4700, behavior: 'smooth'});
         else if(link === 'projects')
-            window.scrollTo({top: 6000, behavior: 'smooth'});
+            window.scrollTo({top: 5500, behavior: 'smooth'});
         else{
             window.scrollTo({top: 999999, behavior: 'instant'});
         }  
