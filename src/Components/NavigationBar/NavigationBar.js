@@ -23,7 +23,7 @@ function NavigationBar() {
         else if(link === 'projects')
             window.scrollTo({top: 17800, behavior: 'smooth'});
         else{
-            window.scrollTo({top: 99999, behavior: 'instant'});
+            window.scrollTo({top: 28071, behavior: 'instant'});
         }  
     }
 
@@ -36,7 +36,7 @@ function NavigationBar() {
         else if(link === 'projects')
             window.scrollTo({top: 5500, behavior: 'smooth'});
         else{
-            window.scrollTo({top: 9999, behavior: 'instant'});
+            window.scrollTo({top: 32289, behavior: 'instant'});
         }  
     }
 
