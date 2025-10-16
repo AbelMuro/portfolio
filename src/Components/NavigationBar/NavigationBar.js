@@ -37,10 +37,10 @@ function NavigationBar() {
             window.scrollTo({top: 5500, behavior: 'smooth'});
         else{
             window.scrollTo({top: 32289, behavior: 'instant'});
-            window.scrollTo({top: 32289, behavior: 'instant'});
+            setTimeout(() => {
+                window.scrollTo({top: 32289, behavior: 'instant'});
+            }, 10)
         }
-            
-     
     }
 
     useMotionValueEvent(scrollYProgress, 'change', () => {
