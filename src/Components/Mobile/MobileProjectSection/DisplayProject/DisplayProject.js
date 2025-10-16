@@ -9,7 +9,6 @@ function DisplayProject({title, src, href}){
     const [mount, setMount] = useState(false);
 
     useMotionValueEvent(scrollYProgress, 'change', (value) => {
-        console.log(value);
         if(value === 1)
             setMount(true);
         else
