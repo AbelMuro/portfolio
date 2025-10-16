@@ -13,6 +13,7 @@ import DisplayScrollDownMessage from './Components/DisplayScrollDownMessage';
 import MobileBackgroundPattern from './Components/Mobile/MobileBackgroundPattern';
 import DisplayMobileHeadings from './Components/Mobile/DisplayMobileHeadings';
 import MobileProjectSection from './Components/Mobile/MobileProjectSection';
+import MobileBackgroundClouds from './Components/Mobile/MobileBackgroundClouds';
 
 import LoadingScreen from './Components/LoadingScreen';
 import './styles.css';
@@ -42,18 +43,19 @@ function App() {
             {
                 mobile ? 
                 <>
+                    <MobileBackgroundClouds/>
                     <DisplayMobileHeadings/> 
                     <MobileBackgroundPattern/> 
                     <MobileProjectSection/>
                 </> : 
                 <> 
+                    <AnimateBackgroundClouds/> 
                     <DisplayHeadings/>
                     <AnimateAboutMeText/>
                     <AnimateBackgroundPattern/>
                     <ProjectSection/>
                 </>
             }
-            <AnimateBackgroundClouds/> 
             <ContactMeSection/>
             <DisplayScrollDownMessage/>
         </>

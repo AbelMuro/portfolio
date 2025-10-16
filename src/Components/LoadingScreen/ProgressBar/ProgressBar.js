@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useLayoutEffect, useEffect, useState} from 'react';
 import projectImages from '~/assets/ProjectData/images'
 import OuterMostRing from '~/Components/AnimateBackgroundPattern/AnimateSequence/OuterMostRing/images';
 import OuterRing from '~/Components/AnimateBackgroundPattern/AnimateSequence/OuterRing/images';
@@ -72,7 +72,7 @@ function ProgressBar({setMount}){
         return Promise.all(promises);
     }
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         removeScrollBar();
         preloadImages()
             .then(() => {

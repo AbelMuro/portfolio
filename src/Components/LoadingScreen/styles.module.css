@@ -1,6 +1,6 @@
 .loading{
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
     background-color: rgb(0, 0, 20);
     position: fixed;
     top: 0px;
@@ -12,63 +12,12 @@
     transform-origin: top center;
 }
 
-.content{
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    justify-content: center;
-    align-items: center;
-}
-
-.content > h2{
+.title{
     color: white;
-    font-family: 'AbelFont';
-    font-size: 2rem;
-}
-
-.triangleDesign{
-    width: 500px;
-    object-fit: contain;
-}
-
-
-.topBorder, .bottomBorder, 
-.leftBorder, .rightBorder{
-    position: absolute;
-}
-
-.topBorder{
-    top: 0px;
-    left: -400px;  
-    right: 0;
-    margin: auto;  
-    width: 300px;
-    height: 10px;
-}
-
-.bottomBorder{
-    bottom: 0px;
-    left: 0;
-    right: -400px;
+    font-family: 'AbelCursive';
+    font-size: 3.5rem;
+    text-align: center;
+    width: 100%;
+    height: 70px;
     margin: auto;
-    width: 300px;
-    height: 10px;
-}
-
-.leftBorder{
-    left: 0px;
-    top: -300px;
-    bottom: 0;
-    margin: auto;
-    width: 10px;
-    height: 300px;
-}
-
-.rightBorder{
-    right: 0px;
-    top: 0;
-    bottom: -300px;
-    margin: auto;
-    width: 10px;
-    height: 300px;
 }

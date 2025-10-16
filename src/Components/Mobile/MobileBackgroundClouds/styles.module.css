@@ -4,36 +4,18 @@
     position: fixed;
     top: 0px;
     left: 0px;
-    background-image: url('../../assets/images/background-dots.svg');
+    background-image: url('../../../assets/images/background-dots.svg');
     background-size: 300px 300px;
     background-repeat: repeat;
     z-index: var(--first-layer);
     background-color: #010001;
 }
 
-.cloudOne, .cloudTwo, .cloudThree, .cloudFour{
+.cloudOne{
+    width: 300px;
+    height: 400px;
     border-radius: 100%;
     position: absolute;
     background-color: #00009b;
     will-change: transform;
-}
-
-.cloudOne{
-    width: 550px;
-    height: 450px
-}
-
-.cloudTwo{
-    width: 650px;
-    height: 330px;
-}
-
-.cloudThree{
-    width: 500px;
-    height: 400px;
-}
-
-.cloudFour{
-    width: 400px;
-    height: 400px;
 }

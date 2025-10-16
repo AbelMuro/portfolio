@@ -24,8 +24,20 @@ function NavigationBar() {
             window.scrollTo({top: 17800, behavior: 'smooth'});
         else{
             window.scrollTo({top: 28071, behavior: 'instant'});
-        }
-            
+        }  
+    }
+
+    const handleMobileLink = (link) => {
+        if(link === 'intro')
+            window.scrollTo({top: 0, behavior: 'smooth'});
+
+        else if(link === 'about me')
+            window.scrollTo({top: 5000, behavior: 'smooth'});
+        else if(link === 'projects')
+            window.scrollTo({top: 6000, behavior: 'smooth'});
+        else{
+            window.scrollTo({top: 999999, behavior: 'instant'});
+        }  
     }
 
     useMotionValueEvent(scrollYProgress, 'change', () => {
@@ -74,7 +86,7 @@ function NavigationBar() {
     return (
         <AnimatePresence>
             {mount && <>
-                        {mobile ? <MobileNavBar play={play} handlePlay={handlePlay} handlePause={handlePause} handleLink={handleLink}/>  : 
+                        {mobile ? <MobileNavBar play={play} handlePlay={handlePlay} handlePause={handlePause} handleLink={handleMobileLink}/>  : 
                             <motion.nav 
                                 className={styles.navBar}
                                 initial={{opacity: 0}}
