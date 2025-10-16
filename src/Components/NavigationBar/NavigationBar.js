@@ -37,8 +37,10 @@ function NavigationBar() {
         else{
             window.scrollTo({top: 32289, behavior: 'instant'});
             setTimeout(() => {
-                window.scrollTo({top: 32289, behavior: 'instant'});
-            }, 100)
+                requestAnimationFrame(() => {
+                    window.scrollTo({top: 32289, behavior: 'smooth'});
+                })
+            }, 500)
         }
     }
 
