@@ -17,7 +17,6 @@ function NavigationBar() {
     const handleLink = (link) => {
         if(link === 'intro')
             window.scrollTo({top: 0, behavior: 'smooth'});
-
         else if(link === 'about me')
             window.scrollTo({top: 10200, behavior: 'smooth'});
         else if(link === 'projects')
@@ -37,9 +36,6 @@ function NavigationBar() {
             window.scrollTo({top: 32289, behavior: 'instant'});
             setTimeout(() => {
                 window.scrollTo({top: 32289, behavior: 'instant'});
-                requestAnimationFrame(() => {
-                    window.scrollTo({top: 32289, behavior: 'instant'});
-                })
             }, 10)
         }
     }
