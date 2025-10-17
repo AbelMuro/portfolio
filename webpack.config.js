@@ -22,7 +22,7 @@ module.exports = {
           }),
     ],
     devServer: {
-        host: '10.0.0.248',
+        host: '172.31.144.1',
         port: 3000,
         allowedHosts: 'all'
     },

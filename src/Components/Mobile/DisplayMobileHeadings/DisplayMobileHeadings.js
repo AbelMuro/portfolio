@@ -7,7 +7,6 @@ function DisplayMobileHeadings(){
     const {scrollY} = useScroll();
 
     useMotionValueEvent(scrollY, 'change', (value) => {
-        console.log(value)
         if(value >= 0 && value < 200)
             setHeading(['Welcome.', 'large']);
         else if(value >= 200 && value <= 600)
