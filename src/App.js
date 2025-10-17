@@ -22,10 +22,6 @@ import MobileBackgroundClouds from './Components/Mobile/MobileBackgroundClouds';
 import LoadingScreen from './Components/LoadingScreen';
 import './styles.css';
 
-/* 
-    i need to fix the Mobile navigation bar bug, more specifically, the 'contact me' button 
-*/
-
 function App() {
     const [mobile] = useMediaQuery('(max-width: 600px)');
 
