@@ -1,5 +1,9 @@
 import React, {useEffect} from 'react';
 import {useControlScrolling, useMediaQuery} from '~/Hooks';
+
+import {Provider} from 'react-redux';
+import Store from '~/Store';
+
 import NavigationBar from './Components/NavigationBar';
 import DisplayHeadings from './Components/DisplayHeadings';
 import AnimateAboutMeText from './Components/AnimateAboutMeText';
@@ -36,8 +40,9 @@ function App() {
         });
     }, [])
 
+
     return(
-        <>
+        <Provider store={Store}>
             <LoadingScreen/>
             <NavigationBar/>
             {
@@ -58,7 +63,7 @@ function App() {
             }
             <ContactMeSection/>
             <DisplayScrollDownMessage/>
-        </>
+        </Provider>
     )
 }
 

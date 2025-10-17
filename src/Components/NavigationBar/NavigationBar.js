@@ -2,6 +2,7 @@ import React, {useState, useRef, useEffect} from 'react';
 import * as styles from './styles.module.css';
 import MobileNavBar from './MobileNavBar';
 import {motion, useScroll, useMotionValueEvent, AnimatePresence} from 'framer-motion';
+import {useDispatch} from 'react-redux';
 import {useMediaQuery} from '~/Hooks';
 import audioFiles from './Audio';
 
@@ -13,6 +14,7 @@ function NavigationBar() {
     const {scrollYProgress} = useScroll();
     const [mobile] = useMediaQuery("(max-width: 600px)");
     const audioRef = useRef();
+    const dispatch = useDispatch();
 
     const handleLink = (link) => {
         if(link === 'intro')
@@ -32,6 +34,13 @@ function NavigationBar() {
             window.scrollTo({top: 4700, behavior: 'smooth'});
         else if(link === 'projects')
             window.scrollTo({top: 5500, behavior: 'smooth'});
+        else{                                                           //scrolling down to the Contact Me section will be problematic, since the Project section is dynamically mounting components
+            dispatch({type: 'DISPLAY_ALL_PROJECTS'})
+            setTimeout(() => {
+                window.scrollTo({top: 99999, behavior: 'instant'});
+                dispatch({type: 'HIDE_ALL_PROJECTS'})
+            }, 800)
+        }   
     }
 
     useMotionValueEvent(scrollYProgress, 'change', () => {
