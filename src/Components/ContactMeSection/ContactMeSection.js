@@ -17,7 +17,7 @@ function ContactMeSection() {
     }
 
     return(
-            <section className={styles.container}>
+            <section className={styles.container} id='contactMe'>
                 <LayoutGroup>
                     <motion.h2 layout>
                         Contact Me
