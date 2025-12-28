@@ -376,6 +376,11 @@
         "href": "https://abels-weather-app.netlify.app/",
         "src": "newWeatherApp",
         "projectTitle": "New Weather App"
+    },
+    {
+        "href": "https://bookmark-manager-app-front-end.netlify.app/",
+        "src": "bookmarkManagerApp",
+        "projectTitle": "Bookmark Manager App"
     }
       
   ]

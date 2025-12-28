@@ -1,6 +1,6 @@
 .container{
     width: 1200px;
-    height: 6000px;
+    height: 6200px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 10px;
@@ -21,7 +21,7 @@
 
 @media(max-width: 705px){
     .container {
-        height: 8694px;
+        height: 9000px;
         grid-template-columns: repeat(2, 1fr);
         grid-auto-rows: initial;
     }

@@ -73,6 +73,7 @@ import techBookClubLandingPage from './tech book club landing page.png';
 import onlineChessApp from './online chess app.png';
 import checkersApp from './checkers app.png';
 import newWeatherApp from './new weather app.png';
+import bookmarkManagerApp from './Bookmark manager app.png';
 
 export default {
     "dark pink mastercard": darkPinkMastercard,
@@ -150,4 +151,5 @@ export default {
     "onlineChessApp": onlineChessApp,
     "checkersApp": checkersApp,
     "newWeatherApp": newWeatherApp,
+    "bookmarkManagerApp": bookmarkManagerApp
 }

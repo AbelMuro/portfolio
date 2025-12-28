@@ -1,12 +1,8 @@
 import React, {useState} from 'react';
-import SectionOne from './SectionOne';
+import AllProjects from './AllProjects';
 import {useScroll, useMotionValueEvent, AnimatePresence} from 'framer-motion';
 import * as styles from './styles.module.css';
 
-/* 
-    this is where i left off,  i want to refactor the ProjectSection component
-    into displaying a certain amount of projects at a time based on the scroll position
-*/
 
 function ProjectSection() {
     const [mount, setMount] = useState(false);
@@ -25,7 +21,7 @@ function ProjectSection() {
             {
                 mount &&                
                     <article className={styles.container}>
-                        <SectionOne />
+                        <AllProjects />
                     </article>         
             }                   
         </AnimatePresence>
