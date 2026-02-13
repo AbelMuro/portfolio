@@ -381,6 +381,11 @@
         "href": "https://bookmark-manager-app-front-end.netlify.app/",
         "src": "bookmarkManagerApp",
         "projectTitle": "Bookmark Manager App"
+    },
+    {
+      "href": "https://feedback-front-end.netlify.app/",
+      "src": "feedbackApp",
+      "projectTitle": "Feedback App"
     }
       
   ]

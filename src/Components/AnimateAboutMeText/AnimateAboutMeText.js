@@ -3,13 +3,6 @@ import {LinearText} from '~/Transitions';
 import {motion, useScroll, useTransform, useSpring, useMotionValueEvent, AnimatePresence} from 'framer-motion';
 import * as styles from './styles.module.css';
 
-
-/* 
-    this is where i left off, i finished the fade out animation for this component,
-    now i need to unmount this component, and start implementing the lunar design in the
-    <AnimateLunar/> component
-*/
-
 function AnimateAboutMeText() {
     const [mount, setMount] = useState(false);
     const {scrollY} = useScroll();
@@ -57,7 +50,7 @@ function AnimateAboutMeText() {
                             style={{maskSize: maskSizeBlue, maskPosition: maskPositionBlue }}
                             >
                             I’m a full-stack web developer and UX/UI designer based 
-                            in the Bay Area, California. For the past seven years, 
+                            in the Bay Area, California. For the past five years, 
                             I’ve been crafting web applications that fuse technical 
                             precision with elegant design. Perfection isn’t just a goal—it’s my standard. 
                             I invest the countless hours required to produce clean, performant code 
@@ -76,7 +69,7 @@ function AnimateAboutMeText() {
                             style={{maskSize: maskSizeWhite, maskPosition: maskPositionWhite}}
                             >
                             I’m a full-stack web developer and UX/UI designer based 
-                            in the Bay Area, California. For the past seven years, 
+                            in the Bay Area, California. For the past five years, 
                             I’ve been crafting web applications that fuse technical 
                             precision with elegant design. Perfection isn’t just a goal—it’s my standard. 
                             I invest the countless hours required to produce clean, performant code 
