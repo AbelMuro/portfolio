@@ -386,6 +386,11 @@
       "href": "https://feedback-front-end.netlify.app/",
       "src": "feedbackApp",
       "projectTitle": "Feedback App"
+    },
+    {
+      "href": "https://code-editor-abel.netlify.app/",
+      "src": "codeEditorApp",
+      "projectTitle": "Code Editor App"
     }
       
   ]

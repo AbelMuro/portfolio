@@ -75,6 +75,7 @@ import checkersApp from './checkers app.png';
 import newWeatherApp from './new weather app.png';
 import bookmarkManagerApp from './Bookmark manager app.png';
 import feedbackApp from './feedback app.png';
+import codeEditorApp from './code-editor-app.png'
 
 export default {
     "dark pink mastercard": darkPinkMastercard,
@@ -153,5 +154,6 @@ export default {
     "checkersApp": checkersApp,
     "newWeatherApp": newWeatherApp,
     "bookmarkManagerApp": bookmarkManagerApp,
-    "feedbackApp": feedbackApp
+    "feedbackApp": feedbackApp,
+    "codeEditorApp": codeEditorApp,
 }
